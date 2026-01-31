@@ -12,6 +12,10 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.use(ToastPlugin)
+    if (typeof window !== 'undefined') {
+      import('@erag/vue-toastification').then(({ default: ToastPlugin }) => {
+        app.use(ToastPlugin)
+      })
+    }
   }
 } satisfies Theme
