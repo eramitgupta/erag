@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import {
   type ToastPosition,
   type ToastType,
@@ -13,6 +13,34 @@ const modal = useModal()
 const currentPosition = ref<ToastPosition>('bottom-right')
 const duration = ref(4000)
 
+const TOAST_CONFIG = {
+  success: {
+    title: 'Good job!',
+    message: 'Data has been saved successfully.'
+  },
+  error: {
+    title: 'Oops!',
+    message: 'Something went wrong with the server.'
+  },
+  warning: {
+    title: 'Attention',
+    message: 'Your session is about to expire.'
+  },
+  info: {
+    title: 'Did you know?',
+    message: 'New updates are available for download.'
+  }
+} as const
+
+const POSITION_OPTIONS = [
+  { value: 'top-left', label: 'Top Left' },
+  { value: 'top-center', label: 'Top Center' },
+  { value: 'top-right', label: 'Top Right' },
+  { value: 'bottom-left', label: 'Bottom Left' },
+  { value: 'bottom-center', label: 'Bottom Center' },
+  { value: 'bottom-right', label: 'Bottom Right' }
+] as const
+
 /**
  * Update global position when dropdown changes
  */
@@ -20,28 +48,17 @@ const updatePosition = () => {
   toast.setPosition(currentPosition.value)
 }
 
+// Watch for position changes
+watch(currentPosition, updatePosition)
+
 /**
- * Trigger toast based on selected position
+ * Trigger toast based on type
  */
 const trigger = (type: ToastType) => {
-  const titles = {
-    success: 'Good job!',
-    error: 'Oops!',
-    warning: 'Attention',
-    info: 'Did you know?'
-  }
-
-  const messages = {
-    success: 'Data has been saved successfully.',
-    error: 'Something went wrong with the server.',
-    warning: 'Your session is about to expire.',
-    info: 'New updates are available for download.'
-  }
-
-  // ✅ position comes from dropdown
+  const config = TOAST_CONFIG[type]
   toast[type](
-      messages[type],
-      titles[type],
+      config.message,
+      config.title,
       duration.value,
       currentPosition.value
   )
@@ -72,8 +89,7 @@ const triggerRapid = () => {
 const deleteAccount = async () => {
   const isConfirmed = await modal.confirm({
     title: 'Deactivate account',
-    message:
-        'Are you sure you want to deactivate your account? This action cannot be undone.',
+    message: 'Are you sure you want to deactivate your account? This action cannot be undone.',
     confirmText: 'Deactivate',
     cancelText: 'Cancel',
     type: 'danger'
@@ -89,6 +105,7 @@ const deleteAccount = async () => {
   }
 }
 </script>
+
 <template>
   <div class="playground-container">
     <h1>🍞 Toast Playground</h1>
@@ -96,28 +113,39 @@ const deleteAccount = async () => {
 
     <div class="controls">
       <div>
-        <h1>Dialog Test</h1>
+        <h3>Dialog Test</h3>
         <button class="btn error" @click="deleteAccount">
           Delete Account
         </button>
       </div>
-      <br>
-      <br>
+
+      <hr />
+
       <div class="control-group">
-        <label>Position:</label>
-        <select v-model="currentPosition" @change="updatePosition">
-          <option value="top-left">Top Left</option>
-          <option value="top-center">Top Center</option>
-          <option value="top-right">Top Right</option>
-          <option value="bottom-left">Bottom Left</option>
-          <option value="bottom-center">Bottom Center</option>
-          <option value="bottom-right">Bottom Right</option>
+        <label for="position-select">Position:</label>
+        <select
+            id="position-select"
+            v-model="currentPosition"
+        >
+          <option
+              v-for="option in POSITION_OPTIONS"
+              :key="option.value"
+              :value="option.value"
+          >
+            {{ option.label }}
+          </option>
         </select>
       </div>
 
       <div class="control-group">
-        <label>Duration (ms):</label>
-        <input type="number" v-model="duration" step="500" />
+        <label for="duration-input">Duration (ms):</label>
+        <input
+            id="duration-input"
+            v-model.number="duration"
+            type="number"
+            step="500"
+            min="1000"
+        />
       </div>
 
       <hr />
@@ -129,11 +157,10 @@ const deleteAccount = async () => {
         <button class="btn info" @click="trigger('info')">Info Toast</button>
       </div>
 
-      <div class="buttons" style="margin-top: 10px;">
+      <div class="buttons">
         <button class="btn" @click="triggerCustom">Long Message</button>
         <button class="btn" @click="triggerRapid">Trigger 5x Rapidly</button>
       </div>
-
     </div>
   </div>
 </template>
@@ -145,19 +172,38 @@ const deleteAccount = async () => {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
-h1 { margin-bottom: 0.5rem; }
-p { color: #666; margin-bottom: 2rem; }
+h1 {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #666;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
 
 .controls {
   background: white;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 400px;
+  max-width: 25rem;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
 }
 
 .control-group {
@@ -167,29 +213,73 @@ p { color: #666; margin-bottom: 2rem; }
   align-items: flex-start;
 }
 
-label { font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; }
-select, input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; }
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3125rem;
+  color: #333;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #2980b9;
+}
 
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 0.625rem;
+  margin-top: 0.625rem;
 }
 
 .btn {
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   cursor: pointer;
   font-weight: 600;
   background: #eee;
-  transition: opacity 0.2s;
+  font-size: 0.875rem;
+  transition: all 0.2s;
 }
-.btn:hover { opacity: 0.8; }
 
-/* Match colors to your toast themes */
-.success { background: #27ae60; color: white; }
-.error { background: #c0392b; color: white; }
-.warning { background: #d35400; color: white; }
-.info { background: #2980b9; color: white; }
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.success {
+  background: #27ae60;
+  color: white;
+}
+
+.error {
+  background: #c0392b;
+  color: white;
+}
+
+.warning {
+  background: #d35400;
+  color: white;
+}
+
+.info {
+  background: #2980b9;
+  color: white;
+}
 </style>
