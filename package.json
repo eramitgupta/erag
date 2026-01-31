@@ -6,5 +6,8 @@
     "erag:dev": "vitepress dev docs",
     "erag:build": "vitepress build docs",
     "erag:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@erag/vue-toastification": "^1.1.3"
   }
 }
