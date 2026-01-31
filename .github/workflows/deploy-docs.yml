@@ -32,12 +32,12 @@ jobs:
         run: npm install
 
       - name: Build VitePress
-        run: npm run docs:build
+        run: npm run erag:build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
 
   deploy:
     environment:

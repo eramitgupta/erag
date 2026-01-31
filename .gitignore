@@ -1,49 +1,28 @@
-# Node dependencies
+# Node
 node_modules/
-
-# Logs
 npm-debug.log*
-yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+
+# VitePress build output
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
 
 # Environment files
 .env
-.env.*.local
+.env.*
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# Editor / IDE
-.vscode/
+# IDEs
 .idea/
-*.swp
-*.swo
+.vscode/
 
-# Build outputs
-dist/
-build/
-.out/
+# Logs
+logs/
+*.log
+
+# Cache
 .cache/
-
-# Vite / VitePress
-.vitepress/cache/
-docs/.vitepress/cache/
-docs/.vitepress/dist/
-
-# Astro
-.astro/
-.astro-cache/
-
-# Coverage
-coverage/
-
-# Temporary files
-tmp/
-temp/
-
-# Lockfiles (optional – keep ONE if team needs)
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
