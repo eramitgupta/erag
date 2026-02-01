@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Erag Docs",
   description: 'Open source documentation by Er Amit Gupta',
-  base: '/erag/',
+  base: '/',
   cleanUrls: false,
   themeConfig: {
     nav: [
