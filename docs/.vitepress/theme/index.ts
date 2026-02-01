@@ -3,7 +3,6 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import '@erag/vue-toastification/dist/style.css'
-import ToastPlugin from "@erag/vue-toastification";
 
 export default {
   extends: DefaultTheme,
@@ -12,6 +11,10 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.use(ToastPlugin)
+    if (typeof window !== 'undefined') {
+      import('@erag/vue-toastification').then(({ default: ToastPlugin }) => {
+        app.use(ToastPlugin)
+      })
+    }
   }
 } satisfies Theme
