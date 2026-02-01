@@ -1,17 +1,15 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "Erag Docs"
-  tagline: My great project tagline
+  tagline: "Open-source Laravel packages, Vue & React integrations, and modern web documentation"
   actions:
     - theme: brand
       text: Get Started
-      link: /projects/laravel-disposable-email/
+      link: /packages/laravel-disposable-email/
 ---
 
-###
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap;">
 
@@ -49,25 +47,44 @@ hero:
 
 </div>
 
+<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px">
 
-###
-
-<div style="display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap;">
   <a href="https://linkedin.com/in/eramitgupta" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white&style=for-the-badge" height="26" />
   </a>
 
   <a href="https://twitter.com/_eramitgupta" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo" />
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?logo=twitter&logoColor=white&style=for-the-badge" height="26" />
   </a>
 
-  <a href="https://github.com/_eramitgupta" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge" height="25" alt="github logo" />
+  <a href="https://github.com/eramitgupta" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge" height="26" />
   </a>
 
 </div>
 
+---
 
-###
+## 👋 About This Documentation
 
+Welcome to **Erag Docs** — a collection of **open-source Laravel packages and frontend integrations** built and maintained by **Er Amit Gupta**, a Senior Full Stack Engineer.
 
+This documentation focuses on:
+- 📦 Laravel package development
+- ⚡ Vue.js, React.js & Inertia.js integrations
+- 🧠 Clean architecture & developer experience
+- 🚀 Practical, production-ready examples
+
+---
+
+## 📬 Get in Touch
+
+Have a project idea, an open-source collaboration, or a Laravel/Vue question?  
+I’m always open to meaningful discussions and building **clean, scalable, and developer-friendly solutions**.
+
+### 🌐 Connect with Me
+- 💼 **LinkedIn:** https://linkedin.com/in/eramitgupta
+- 🐦 **Twitter/X:** https://twitter.com/_eramitgupta
+- 💻 **GitHub:** https://github.com/eramitgupta
+
+> 🚀 *Let’s build open-source-first, scalable software together.*
