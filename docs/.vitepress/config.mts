@@ -114,11 +114,7 @@ export default defineConfig({
       options: {
         appId: '50ZXKABVY5',
         apiKey: '544d121096852fb243589be8c64f108a',
-        indexName: 'Erag Documentation',
-        askAi: {
-          assistantId: 'g0Fs5gMvhjmQ',
-          sidePanel: true
-        }
+        indexName: 'Erag Documentation'
       }
     }
   }
