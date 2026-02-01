@@ -110,7 +110,12 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/eramitgupta' }
     ],
     search: {
-      provider: 'local'
+      provider: 'algolia',
+      options: {
+        appId: '50ZXKABVY5',
+        apiKey: '544d121096852fb243589be8c64f108a',
+        indexName: 'Erag Documentation',
+      }
     }
   }
 })
