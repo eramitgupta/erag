@@ -27,8 +27,8 @@ export default defineConfig({
       '/projects/': [
         {
           text: 'Laravel Disposable Email',
-          collapsible: true,
           collapsed: true,
+          collapsible: true,
           items: [
             { text: 'Introduction', link: '/projects/laravel-disposable-email/' },
             { text: 'Features', link: '/projects/laravel-disposable-email/features' },
@@ -58,8 +58,8 @@ export default defineConfig({
         },
         {
           text: 'Laravel Lang Sync Inertia',
-          collapsible: true,
           collapsed: true,
+          collapsible: true,
           items: [
             { text: 'Introduction', link: '/projects/laravel-lang-sync-inertia/' },
             { text: 'Features', link: '/projects/laravel-lang-sync-inertia/features' },
@@ -74,8 +74,8 @@ export default defineConfig({
         },
         {
           text: 'Vue Toastification',
-          collapsible: true,
           collapsed: true,
+          collapsible: true,
           items: [
             { text: 'Introduction', link: '/projects/vue-toastification/' },
             { text: 'Features', link: '/projects/vue-toastification/features' },
@@ -90,8 +90,8 @@ export default defineConfig({
         },
         {
           text: 'Laravel Case Mapper Request',
-          collapsible: true,
           collapsed: true,
+          collapsible: true,
           items: [
             { text: 'Introduction', link: '/projects/laravel-case-mapper-request/' },
             { text: 'Features', link: '/projects/laravel-case-mapper-request/features' },
