@@ -5,7 +5,6 @@ keywords:
   - vue toast installation
   - vue 3 toast install
   - vue confirmation modal install
-  - @erag/vue-toastification install
   - vue toast npm package
   - vue notification setup
   - typescript vue toast install

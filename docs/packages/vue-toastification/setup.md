@@ -6,7 +6,6 @@ keywords:
   - vue modal setup
   - vue 3 toast plugin
   - vue notification plugin setup
-  - @erag/vue-toastification setup
   - vue confirmation modal setup
 ---
 

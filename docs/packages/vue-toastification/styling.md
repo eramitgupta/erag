@@ -8,7 +8,6 @@ keywords:
   - erag toast styling
   - scoped css vue plugin
   - vue toast css prefix
-  - @erag/vue-toastification styling
 ---
 
 # Styling

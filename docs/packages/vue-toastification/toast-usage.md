@@ -7,7 +7,6 @@ keywords:
   - vue composition api toast
   - vue success error toast
   - vue toast dynamic type
-  - @erag/vue-toastification
 ---
 
 # Toast Usage 🍞

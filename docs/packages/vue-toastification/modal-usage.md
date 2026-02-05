@@ -6,7 +6,6 @@ keywords:
   - vue modal usage
   - vue 3 confirm dialog
   - vue promise based modal
-  - @erag/vue-toastification modal
   - vue delete confirmation
   - vue warning modal
 ---
