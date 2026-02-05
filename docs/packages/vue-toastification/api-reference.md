@@ -8,7 +8,6 @@ keywords:
   - useModal vue
   - vue notification api
   - vue confirmation modal api
-  - @erag/vue-toastification api
 ---
 
 ## 🎨 API Reference
@@ -80,5 +79,3 @@ These options control how the confirmation modal looks and behaves:
 | `confirmText` | `string`                          | Text for the confirm button      |
 | `cancelText`  | `string`                          | Text for the cancel button       |
 | `type`        | `'danger' \| 'warning' \| 'info'` | Button style (red, orange, blue) |
-
----
