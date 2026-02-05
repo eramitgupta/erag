@@ -123,9 +123,8 @@ export default defineConfig({
             { text: 'Setup', link: '/packages/vue-toastification/setup' },
             { text: 'Toast Usage', link: '/packages/vue-toastification/toast-usage' },
             { text: 'Modal Usage', link: '/packages/vue-toastification/modal-usage' },
-            { text: 'API Reference', link: '/packages/vue-toastification/api' },
+            { text: 'API Reference', link: '/packages/vue-toastification/api-reference' },
             { text: 'Styling', link: '/packages/vue-toastification/styling' },
-            { text: 'License', link: '/packages/vue-toastification/license' },
           ]
         },
         {
