@@ -28,6 +28,7 @@ export default defineConfig({
     ],
 
     ['link', { rel: 'canonical', href: 'https://erag.in/' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
 
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Erag — Open Source Documentation' }],
