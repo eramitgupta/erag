@@ -94,10 +94,8 @@ export default defineConfig({
             { text: 'Installation', link: '/packages/laravel-pwa/installation' },
             { text: 'Configuration', link: '/packages/laravel-pwa/configuration' },
             { text: 'Usage', link: '/packages/laravel-pwa/usage' },
-            { text: 'Facade Usage', link: '/packages/laravel-pwa/facade' },
             { text: 'Logo Upload', link: '/packages/laravel-pwa/logo-upload' },
             { text: 'Screenshots', link: '/packages/laravel-pwa/screenshots' },
-            { text: 'Contribution', link: '/packages/laravel-pwa/contribution' }
           ]
         },
         {
