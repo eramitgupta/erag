@@ -1,11 +1,11 @@
 ---
 title: API Reference
-description: Complete API reference for @erag/vue-toastification. Learn how to use useToast() and useModal() composables in Vue 3 with clear examples.
+description: Complete API reference for @erag/vue-toastification. Learn how to use useToast() and useConfirmation() composables in Vue 3 with clear examples.
 keywords:
   - vue toast api
   - vue modal api
   - useToast vue
-  - useModal vue
+  - useConfirmation vue
   - vue notification api
   - vue confirmation modal api
 ---
@@ -15,7 +15,7 @@ keywords:
 This package exposes two main composables:
 
 - `useToast()` → for showing toast notifications
-- `useModal()` → for showing confirmation dialogs
+- `useConfirmation()` → for showing confirmation dialogs
 
 Both are easy to use, promise-based, and fully typed.
 
@@ -51,9 +51,9 @@ You can also control **duration** and **position** per toast if needed.
 
 ---
 
-## 💬 `useModal()`
+## 💬 `useConfirmation()`
 
-The `useModal()` composable is used to show **confirmation dialogs**.
+The `useConfirmation()` composable is used to show **confirmation dialogs**.
 
 It is **promise-based**, which means your code waits until the user clicks **Confirm** or **Cancel**.
 
@@ -79,3 +79,4 @@ These options control how the confirmation modal looks and behaves:
 | `confirmText` | `string`                          | Text for the confirm button      |
 | `cancelText`  | `string`                          | Text for the cancel button       |
 | `type`        | `'danger' \| 'warning' \| 'info'` | Button style (red, orange, blue) |
+| `icon`        | `string`                          | Custom icon (overrides default icons) |

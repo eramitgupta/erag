@@ -27,12 +27,12 @@ With **@erag/vue-toastification**, modals are designed to be:
 
 ## 💬 Basic Modal Example
 
-Import the `useModal` composable and call `confirm()`.
+Import the `useConfirmation` composable and call `confirm()`.
 
 ```ts
-import { useModal } from '@erag/vue-toastification';
+import { useConfirmation } from '@erag/vue-toastification';
 
-const modal = useModal();
+const modal = useConfirmation();
 
 const ok = await modal.confirm({
   title: 'Delete?',
@@ -52,9 +52,9 @@ This is the most common use case for confirmation modals.
 
 ```vue
 <script setup lang="ts">
-import { useModal, useToast } from '@erag/vue-toastification';
+import { useConfirmation, useToast } from '@erag/vue-toastification';
 
-const modal = useModal();
+const modal = useConfirmation();
 const toast = useToast();
 
 const handleDelete = async () => {
@@ -160,6 +160,20 @@ const logout = async () => {
     }
 };
 ```
+___
+
+## 🎨 Custom Icon (Override Default)
+
+You can pass a custom SVG icon.
+When `icon` is provided, **default icons are not used**.
+
+```ts
+await modal.confirm({
+  title: 'Custom Icon',
+  message: 'This modal uses a custom icon.',
+  icon: `<svg viewBox="0 0 24 24">...</svg>`
+});
+```
 
 ---
 
@@ -172,5 +186,5 @@ const logout = async () => {
 | `confirmText` | `string`                          | Confirm button label     |
 | `cancelText`  | `string`                          | Cancel button label      |
 | `type`        | `'danger' \| 'warning' \| 'info'` | Button style & intent    |
-
+| `icon`        | `string`                          | Custom icon (overrides default icons) |
 ---

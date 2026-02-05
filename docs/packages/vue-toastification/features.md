@@ -28,7 +28,7 @@ This library is designed **only for Vue 3** and fully embraces the **Composition
 
 You work with simple composables:
 - `useToast()` for notifications
-- `useModal()` for confirmation dialogs
+- `useConfirmation()` for confirmation dialogs
 
 No global event buses or messy patterns.
 

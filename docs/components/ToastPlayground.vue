@@ -3,12 +3,12 @@ import { ref, watch } from 'vue'
 import {
   type ToastPosition,
   type ToastType,
-  useModal,
+  useConfirmation,
   useToast
 } from '@erag/vue-toastification'
 
 const toast = useToast()
-const modal = useModal()
+const modal = useConfirmation()
 
 const currentPosition = ref<ToastPosition>('bottom-right')
 const duration = ref(4000)
