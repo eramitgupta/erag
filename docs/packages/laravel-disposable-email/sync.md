@@ -1,3 +1,8 @@
+---
+title: Sync From Remote
+description: Learn how to sync disposable email domains from a remote repository in Laravel Disposable Email to stay protected against new temporary email providers.
+keywords: Laravel Disposable Email sync, sync disposable email domains, remote disposable email list Laravel, block temporary emails Laravel
+---
 
 ## 🔄 Sync From Remote
 

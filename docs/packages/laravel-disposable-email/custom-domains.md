@@ -1,3 +1,8 @@
+---
+title: Add Custom Disposable Domains
+description: Learn how to add your own disposable email domains in Laravel Disposable Email without modifying package code or running extra commands.
+keywords: Laravel disposable email custom domains, email blacklist Laravel, block disposable emails, Laravel email validation
+---
 
 ## 🧩 Add Your Own Disposable Domains
 

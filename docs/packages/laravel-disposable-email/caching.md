@@ -1,3 +1,9 @@
+---
+title: Caching Support
+description: Enable and configure caching for Laravel Disposable Email to improve performance in high-traffic applications.
+keywords: Laravel Disposable Email, caching, email validation, Laravel performance
+---
+
 ## 🧠 Caching Support
 
 Laravel Disposable Email Detection supports optional caching to improve performance,

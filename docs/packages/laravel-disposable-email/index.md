@@ -1,6 +1,7 @@
 ---
-title: Laravel Disposable Email – Installation
-description: How to install Laravel Disposable Email package step by step.
+title: Laravel Disposable Email – Introduction
+description: Laravel Disposable Email is a Laravel package that detects and blocks disposable or temporary email addresses to prevent fake signups and abuse.
+keywords: Laravel Disposable Email, block disposable emails Laravel, temporary email detection Laravel, fake signup prevention Laravel
 ---
 
 <div>

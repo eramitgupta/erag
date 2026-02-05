@@ -1,3 +1,9 @@
+---
+title: Features
+description: Explore all features of Laravel Disposable Email including 110k+ disposable domains, smart validation rules, runtime checks, Blade directives, remote sync, and caching.
+keywords: Laravel Disposable Email features, block disposable emails Laravel, email validation Laravel, disposable domain blacklist
+---
+
 - 🔥 **110,646+ Known Disposable Email Domains**  
   Comes preloaded with a large and actively maintainable list of disposable and temporary email domains to block fake signups instantly.
 

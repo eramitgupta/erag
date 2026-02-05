@@ -1,3 +1,9 @@
+---
+title: Configuration
+description: Learn how to configure Laravel Disposable Email, including blacklist paths, remote domain sources, and caching options.
+keywords: Laravel Disposable Email configuration, email blacklist, disposable email domains, Laravel caching
+---
+
 ## 🛠 Configuration
 
 Laravel Disposable Email Detection works out of the box with sensible defaults.  

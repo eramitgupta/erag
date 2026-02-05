@@ -1,3 +1,9 @@
+---
+title: Usage
+description: Learn how to use Laravel Disposable Email to block disposable email addresses using validation rules, runtime checks, facades, and Blade directives.
+keywords: Laravel Disposable Email usage, disposable email validation Laravel, runtime email check Laravel, Blade directive disposable email
+---
+
 ## ⚙ Usage
 
 Laravel Disposable Email Detection allows you to detect and block disposable email addresses at different levels of your application, including request validation, runtime logic, and Blade views.
