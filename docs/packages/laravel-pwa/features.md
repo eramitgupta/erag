@@ -1,3 +1,9 @@
+---
+title: Features
+description: Explore the features of Laravel PWA including automatic setup, add to home screen support, service workers, manifest customization, and frontend compatibility.
+keywords: Laravel PWA features, Laravel progressive web app, add to home screen Laravel, service worker Laravel
+---
+
 ## ✨ Features
 
 - ⚙️ **Automatic PWA setup**  

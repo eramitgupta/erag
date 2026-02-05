@@ -1,3 +1,9 @@
+---
+title: Installation
+description: Learn how to install and set up Laravel PWA step by step, including package installation, configuration publishing, and required Blade directives.
+keywords: Laravel PWA installation, install Laravel PWA, progressive web app Laravel setup, service worker Laravel, PWA Blade directives
+---
+
 ## Installation 📦
 
 Getting started with **Laravel PWA** is quick and straightforward.  

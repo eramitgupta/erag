@@ -1,3 +1,9 @@
+---
+title: Configuration
+description: Learn how to configure Laravel PWA using the config/pwa.php file to customize manifest settings, install behavior, debug mode, and Livewire support.
+keywords: Laravel PWA configuration, config pwa php, Laravel progressive web app settings, PWA manifest Laravel
+---
+
 ## Configuration ⚙️
 
 Laravel PWA can be customized using a single configuration file:  

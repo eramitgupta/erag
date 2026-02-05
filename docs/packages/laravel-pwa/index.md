@@ -1,5 +1,7 @@
 ---
-title: Laravel PWA
+title: Laravel PWA – Introduction
+description: Laravel PWA is a Laravel package that helps you add Progressive Web App features like installability, offline support, and service workers without complex setup.
+keywords: Laravel PWA, Progressive Web App Laravel, service worker Laravel, add PWA to Laravel, Laravel offline support
 ---
 
 ## Introduction

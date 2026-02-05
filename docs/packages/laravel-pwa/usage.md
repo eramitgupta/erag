@@ -1,3 +1,9 @@
+---
+title: Usage
+description: Learn how to use Laravel PWA by adding Blade directives, registering the service worker, updating the manifest, and dynamically changing PWA settings.
+keywords: Laravel PWA usage, Blade directives PWA, service worker Laravel, PWA manifest Laravel, Laravel progressive web app usage
+---
+
 ## Usage 🛠️
 
 Laravel PWA is designed to be easy to use.  

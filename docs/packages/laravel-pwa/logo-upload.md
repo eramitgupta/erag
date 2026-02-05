@@ -1,3 +1,10 @@
+---
+title: Upload App Logo
+description: Learn how to upload and update your Progressive Web App logo dynamically in Laravel PWA without rebuilding or editing the manifest manually.
+keywords: Laravel PWA logo upload, update PWA logo Laravel, PWA manifest logo Laravel, Laravel PWA branding
+---
+
+
 ## Uploading Logo via PWA 🌟
 
 Laravel PWA allows you to **update your app logo dynamically** without manually editing files or rebuilding the project.  

@@ -1,3 +1,9 @@
+---
+title: Screenshots
+description: View real screenshots of Laravel PWA including the install prompt, offline fallback page, and app experience on mobile and desktop.
+keywords: Laravel PWA screenshots, Laravel progressive web app examples, PWA install prompt Laravel, offline page Laravel PWA
+---
+
 ## Screenshots 📸
 
 Here are some real screenshots showing how **Laravel PWA** works once it is enabled in your application.
