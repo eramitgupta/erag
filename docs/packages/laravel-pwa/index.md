@@ -2,18 +2,14 @@
 title: Laravel PWA
 ---
 
-# PWA Easy Setup for Laravel - Livewire, Vue.js & React.js
+## Introduction
 
-<center>
-<img width="956" src="https://github.com/user-attachments/assets/d28879ad-84ef-4886-b454-cf10e53cddd9">
-</center>
+[Laravel PWA](https://github.com/eramitgupta/laravel-pwa) is a simple package that helps you add **Progressive Web App (PWA)** features to your Laravel application without complexity.
 
-<div align="center">
+Setting up a PWA usually requires working with manifest files, service workers, install prompts, and browser-specific behavior. This package handles all of that for you, so you can focus on building your application instead of dealing with PWA setup details.
 
-[![Packagist License](https://img.shields.io/badge/Licence-MIT-blue)](https://github.com/eramitgupta/laravel-pwa/blob/main/LICENSE)
-[![Latest Stable Version](https://img.shields.io/packagist/v/erag/laravel-pwa?label=Stable)](https://packagist.org/packages/erag/laravel-pwa)
-[![Total Downloads](https://img.shields.io/packagist/dt/erag/laravel-pwa.svg?label=Downloads)](https://packagist.org/packages/erag/laravel-pwa)
+With Laravel PWA, your app can be installed on a user’s device, work offline, and behave more like a native app. It works smoothly with **Blade**, **Livewire**, **Vue**, and **React**, making it easy to use in almost any Laravel project.
 
-</div>
+Whether you’re building a **SaaS product**, **admin panel**, **dashboard**, or a **public website**, Laravel PWA helps you deliver a faster, more reliable, and app-like experience to your users.
 
-Laravel PWA is a package designed to seamlessly integrate Progressive Web Application (PWA) functionality into your Laravel projects.
+The package follows Laravel conventions, supports modern Laravel versions, and is designed to be easy to install, configure, and maintain in real-world applications.

@@ -4,14 +4,14 @@
 
 ---
 
-**Laravel Disposable Email Detection** is a **powerful and developer-friendly Laravel package** built to **identify and block disposable or temporary email addresses** at every critical stage of your application — including **user registration**, **form validation**, and **runtime business logic**.
+**[Laravel Disposable Email Detection](https://github.com/eramitgupta/laravel-disposable-email)** is a simple Laravel package that helps you **detect and block temporary or disposable email addresses** in your application.
 
-Disposable email services are frequently used to **bypass email verification**, **create fake or throwaway accounts**, **abuse free trials**, and **generate spam**. Over time, this leads to **poor data quality**, **security vulnerabilities**, **database pollution**, and **higher maintenance costs**. In modern applications, relying solely on Laravel’s default email validation is **no longer enough**.
+Many people use disposable email services to **skip email verification**, **create fake accounts**, or **misuse free trials**. Over time, this results in **spam signups**, **unreliable users**, and a **messy database**. Basic email validation alone is no longer enough to handle these problems.
 
-This package provides a **clean, reliable, and scalable solution** to prevent disposable email usage **without adding complexity to your codebase**. It integrates **seamlessly with Laravel’s validation system**, ensuring that temporary email addresses are **blocked before they ever reach your database**.
+This package makes it easy to stop such emails **before they are saved in your database**. It works naturally with Laravel’s validation system and can also be used anywhere in your code when you need to check an email address.
 
-Designed for **real-world production environments**, Laravel Disposable Email Detection is ideal for applications where **user trust matters**, **email-driven workflows are essential**, and **long-term data integrity is critical**. It supports both **validation-time enforcement** and **runtime checks**, making it suitable for **form submissions**, **APIs**, **imports**, and **custom access-control logic**.
+It is built for real projects where **user trust is important** and **emails are part of your workflow**. You can use it during form validation, API requests, background jobs, or any custom logic where email quality matters.
 
-Whether you’re building a **SaaS platform**, **subscription-based service**, **admin dashboard**, or **public registration system**, this package helps you **reduce fake signups**, **protect your application from abuse**, and **maintain a clean, trustworthy user base**.
+Whether you are building a **SaaS product**, **subscription system**, **admin panel**, or a **public signup flow**, this package helps you **reduce fake registrations**, **prevent abuse**, and **keep your user data clean**.
 
-Fully compatible with **Laravel 10, 11, and 12**, the package follows **Laravel best practices** and is built with **performance, scalability, and long-term maintainability** in mind.
+The package works with **Laravel 10, 11, and 12**, follows Laravel conventions, and is designed to be **easy to use, fast, and reliable** in production.
