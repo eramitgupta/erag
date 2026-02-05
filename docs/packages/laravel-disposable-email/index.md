@@ -1,3 +1,8 @@
+---
+title: Laravel Disposable Email – Installation
+description: How to install Laravel Disposable Email package step by step.
+---
+
 <div>
     <img width="956" alt="Laravel Disposable Email Detection" src="https://github.com/user-attachments/assets/cd7c0b65-912f-40d7-a9d5-fd44d37f055b">
 </div>
