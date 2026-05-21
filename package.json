@@ -1,13 +1,10 @@
 {
-  "devDependencies": {
-    "vitepress": "^2.0.0-alpha.16"
-  },
+  "name": "erag-docs-workspace",
+  "private": true,
   "scripts": {
-    "erag:dev": "vitepress dev docs",
-    "erag:build": "vitepress build docs",
-    "erag:preview": "vitepress preview docs"
+    "dev": "node scripts/dev.mjs"
   },
-  "dependencies": {
-    "@erag/vue-toastification": "^1.1.4"
+  "devDependencies": {
+    "http-proxy": "^1.18.1"
   }
 }

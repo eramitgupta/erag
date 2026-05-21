@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eramitgupta.github.io/laravel-lang-sync-inertia/sitemap.xml

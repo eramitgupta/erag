@@ -4,6 +4,15 @@ on:
   push:
     branches:
       - main
+      - master
+      - docs
+    paths:
+      - '.github/workflows/deploy-docs.yml'
+      - 'index.html'
+      - 'laravel-disposable-email-docs/**'
+      - 'laravel-inertia-toast-docs/**'
+      - 'laravel-lang-sync-inertia-docs/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -25,28 +34,45 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: npm
+          node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm ci --prefix laravel-disposable-email-docs
+          npm ci --prefix laravel-inertia-toast-docs
+          npm ci --prefix laravel-lang-sync-inertia-docs
 
-      - name: Build VitePress
-        run: npm run erag:build
+      - name: Build docs
+        run: |
+          npm run build --prefix laravel-disposable-email-docs
+          npm run build --prefix laravel-inertia-toast-docs
+          npm run build --prefix laravel-lang-sync-inertia-docs
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p site/laravel-disposable-email
+          mkdir -p site/laravel-inertia-toast
+          mkdir -p site/laravel-lang-sync-inertia
+          cp index.html site/index.html
+          cp -R laravel-disposable-email-docs/docs/.vitepress/dist/* site/laravel-disposable-email/
+          cp -R laravel-inertia-toast-docs/docs/.vitepress/dist/* site/laravel-inertia-toast/
+          cp -R laravel-lang-sync-inertia-docs/docs/.vitepress/dist/* site/laravel-lang-sync-inertia/
+          touch site/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: site
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
