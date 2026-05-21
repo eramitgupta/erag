@@ -13,19 +13,19 @@ const apps = [
   {
     name: 'disposable-email',
     prefix: '/laravel-disposable-email',
-    cwd: join(rootDir, 'laravel-disposable-email-docs'),
+    cwd: join(rootDir, 'laravel-disposable-email'),
     port: 5173
   },
   {
     name: 'inertia-toast',
     prefix: '/laravel-inertia-toast',
-    cwd: join(rootDir, 'laravel-inertia-toast-docs'),
+    cwd: join(rootDir, 'laravel-inertia-toast'),
     port: 5174
   },
   {
     name: 'lang-sync',
     prefix: '/laravel-lang-sync-inertia',
-    cwd: join(rootDir, 'laravel-lang-sync-inertia-docs'),
+    cwd: join(rootDir, 'laravel-lang-sync-inertia'),
     port: 5175
   }
 ]

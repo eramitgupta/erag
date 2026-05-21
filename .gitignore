@@ -14,6 +14,7 @@ docs/.vitepress/dist/
 
 # OS files
 .DS_Store
+.idea
 Thumbs.db
 
 # IDEs

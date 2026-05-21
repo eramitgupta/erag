@@ -9,9 +9,9 @@ on:
     paths:
       - '.github/workflows/deploy-docs.yml'
       - 'index.html'
-      - 'laravel-disposable-email-docs/**'
-      - 'laravel-inertia-toast-docs/**'
-      - 'laravel-lang-sync-inertia-docs/**'
+      - 'laravel-disposable-email/**'
+      - 'laravel-inertia-toast/**'
+      - 'laravel-lang-sync-inertia/**'
   workflow_dispatch:
 
 permissions:
@@ -38,15 +38,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci --prefix laravel-disposable-email-docs
-          npm ci --prefix laravel-inertia-toast-docs
-          npm ci --prefix laravel-lang-sync-inertia-docs
+          npm ci --prefix laravel-disposable-email
+          npm ci --prefix laravel-inertia-toast
+          npm ci --prefix laravel-lang-sync-inertia
 
       - name: Build docs
         run: |
-          npm run build --prefix laravel-disposable-email-docs
-          npm run build --prefix laravel-inertia-toast-docs
-          npm run build --prefix laravel-lang-sync-inertia-docs
+          npm run build --prefix laravel-disposable-email
+          npm run build --prefix laravel-inertia-toast
+          npm run build --prefix laravel-lang-sync-inertia
 
       - name: Prepare Pages artifact
         run: |
@@ -54,9 +54,9 @@ jobs:
           mkdir -p site/laravel-inertia-toast
           mkdir -p site/laravel-lang-sync-inertia
           cp index.html site/index.html
-          cp -R laravel-disposable-email-docs/docs/.vitepress/dist/* site/laravel-disposable-email/
-          cp -R laravel-inertia-toast-docs/docs/.vitepress/dist/* site/laravel-inertia-toast/
-          cp -R laravel-lang-sync-inertia-docs/docs/.vitepress/dist/* site/laravel-lang-sync-inertia/
+          cp -R laravel-disposable-email/docs/.vitepress/dist/* site/laravel-disposable-email/
+          cp -R laravel-inertia-toast/docs/.vitepress/dist/* site/laravel-inertia-toast/
+          cp -R laravel-lang-sync-inertia/docs/.vitepress/dist/* site/laravel-lang-sync-inertia/
           touch site/.nojekyll
 
       - name: Upload artifact
