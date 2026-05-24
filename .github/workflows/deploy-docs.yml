@@ -9,6 +9,7 @@ on:
     paths:
       - '.github/workflows/deploy-docs.yml'
       - 'index.html'
+      - 'public/**'
       - 'laravel-disposable-email/**'
       - 'laravel-inertia-toast/**'
       - 'laravel-lang-sync-inertia/**'
@@ -54,6 +55,7 @@ jobs:
           mkdir -p site/laravel-inertia-toast
           mkdir -p site/laravel-lang-sync-inertia
           cp index.html site/index.html
+          cp -R public/. site/
           cp -R laravel-disposable-email/docs/.vitepress/dist/* site/laravel-disposable-email/
           cp -R laravel-inertia-toast/docs/.vitepress/dist/* site/laravel-inertia-toast/
           cp -R laravel-lang-sync-inertia/docs/.vitepress/dist/* site/laravel-lang-sync-inertia/
