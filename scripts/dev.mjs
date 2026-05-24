@@ -8,6 +8,7 @@ import httpProxy from 'http-proxy'
 
 const rootDir = process.cwd()
 const indexPath = join(rootDir, 'index.html')
+const robotsPath = join(rootDir, 'public', 'robots.txt')
 
 const apps = [
   {
@@ -94,6 +95,15 @@ const server = createServer((req, res) => {
       'Cache-Control': 'no-store'
     })
     res.end(readFileSync(indexPath))
+    return
+  }
+
+  if (url === '/robots.txt' && existsSync(robotsPath)) {
+    res.writeHead(200, {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'no-store'
+    })
+    res.end(readFileSync(robotsPath))
     return
   }
 
