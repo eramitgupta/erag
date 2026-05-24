@@ -7,7 +7,7 @@ import { createServer as createNetServer } from 'node:net'
 import httpProxy from 'http-proxy'
 
 const rootDir = process.cwd()
-const indexHtml = readFileSync(join(rootDir, 'index.html'))
+const indexPath = join(rootDir, 'index.html')
 
 const apps = [
   {
@@ -89,8 +89,11 @@ const server = createServer((req, res) => {
   const url = req.url || '/'
 
   if (url === '/' || url === '/index.html') {
-    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-    res.end(indexHtml)
+    res.writeHead(200, {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'no-store'
+    })
+    res.end(readFileSync(indexPath))
     return
   }
 

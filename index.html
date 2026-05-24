@@ -10,12 +10,14 @@
   >
   <meta
     name="keywords"
-    content="Laravel packages, PHP developer, Laravel documentation, Vue.js, React.js, Inertia.js, Livewire, Tailwind CSS, Open Source, Full Stack Engineer"
+    content="Laravel packages, PHP developer, Laravel documentation, Vue.js, React.js, Inertia.js, Livewire, Open Source, Full Stack Engineer"
   >
   <meta name="author" content="Er Amit Gupta">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#f53003">
+  <meta name="theme-color" content="#103b45">
   <link rel="canonical" href="https://erag.in/">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64">
+  <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=180">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Erag — Open Source Documentation">
@@ -25,6 +27,7 @@
   >
   <meta property="og:url" content="https://erag.in/">
   <meta property="og:site_name" content="Erag">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=512">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Erag Documentation">
@@ -33,6 +36,7 @@
     content="Laravel packages, PHP docs, and Vue.js, React.js integrations by Er Amit Gupta."
   >
   <meta name="twitter:creator" content="@_eramitgupta">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=512">
 
   <script type="application/ld+json">
     {
@@ -41,8 +45,10 @@
       "name": "Er Amit Gupta",
       "jobTitle": "Sr. Full Stack Engineer",
       "url": "https://erag.in/",
+      "image": "https://avatars.githubusercontent.com/u/72160684?v=4&size=512",
       "sameAs": [
-        "https://github.com/eramitgupta"
+        "https://github.com/eramitgupta",
+        "https://www.linkedin.com/in/eramitgupta/"
       ],
       "worksFor": {
         "@type": "Organization",
@@ -54,19 +60,21 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #fdf7f5;
-      --surface: rgba(255, 255, 255, 0.92);
-      --surface-strong: #ffffff;
-      --text: #16161d;
-      --muted: #5d6474;
-      --line: rgba(15, 23, 42, 0.08);
-      --line-strong: rgba(15, 23, 42, 0.14);
-      --brand: #f53003;
-      --brand-deep: #db2800;
-      --brand-soft: rgba(245, 48, 3, 0.1);
-      --violet: #7c3aed;
-      --shadow: 0 24px 64px rgba(15, 23, 42, 0.08);
-      --shadow-soft: 0 16px 36px rgba(15, 23, 42, 0.06);
+      --page: #f5fbf8;
+      --ink: #102022;
+      --muted: #52666b;
+      --faint: #7b8e92;
+      --surface: #ffffff;
+      --surface-soft: #eef8f5;
+      --line: rgba(16, 32, 34, 0.11);
+      --line-strong: rgba(16, 32, 34, 0.18);
+      --teal: #0f766e;
+      --teal-deep: #103b45;
+      --mint: #62d2a2;
+      --amber: #f3b23f;
+      --coral: #e85d75;
+      --blue: #3178c6;
+      --shadow: 0 22px 54px rgba(16, 59, 69, 0.11);
     }
 
     * {
@@ -79,12 +87,15 @@
 
     body {
       margin: 0;
-      color: var(--text);
+      color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(245, 48, 3, 0.1), transparent 26%),
-        radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 24%),
-        linear-gradient(180deg, #fff8f6 0%, #fffafd 34%, #ffffff 100%);
+        linear-gradient(90deg, rgba(16, 59, 69, 0.055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16, 59, 69, 0.055) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(98, 210, 162, 0.24), transparent 30%),
+        radial-gradient(circle at top right, rgba(243, 178, 63, 0.2), transparent 28%),
+        linear-gradient(180deg, #f7fcfa 0%, #eef8f5 48%, #ffffff 100%);
+      background-size: 28px 28px, 28px 28px, auto, auto, auto;
     }
 
     a {
@@ -93,7 +104,7 @@
     }
 
     .shell {
-      width: min(1180px, calc(100% - 32px));
+      width: min(1200px, calc(100% - 32px));
       margin: 0 auto;
     }
 
@@ -101,9 +112,10 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      overflow-x: clip;
       backdrop-filter: saturate(180%) blur(18px);
-      background: rgba(255, 250, 248, 0.9);
-      border-bottom: 1px solid rgba(245, 48, 3, 0.08);
+      background: rgba(247, 252, 250, 0.88);
+      border-bottom: 1px solid var(--line);
     }
 
     .topbar-inner {
@@ -118,35 +130,37 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
+      min-width: 0;
       font-weight: 800;
       font-size: 1.05rem;
     }
 
     .brand-mark {
-      display: inline-grid;
-      place-items: center;
       width: 42px;
       height: 42px;
-      border-radius: 12px;
-      color: #fff;
-      background: linear-gradient(135deg, var(--brand) 0%, var(--violet) 100%);
-      box-shadow: 0 18px 30px rgba(124, 58, 237, 0.18);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 16px 28px rgba(16, 59, 69, 0.16);
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
       gap: 2px;
+      min-width: 0;
     }
 
     .brand-text strong {
       line-height: 1;
+      white-space: nowrap;
     }
 
     .brand-text span {
       color: var(--muted);
       font-size: 0.84rem;
       font-weight: 600;
+      white-space: nowrap;
     }
 
     .nav {
@@ -160,77 +174,255 @@
     .nav a {
       min-height: 40px;
       padding: 0 14px;
-      border-radius: 999px;
+      border-radius: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       color: var(--muted);
       font-weight: 600;
     }
 
+    .nav-icon {
+      display: none;
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex: 0 0 auto;
+    }
+
+    .nav-icon-filled {
+      fill: currentColor;
+      stroke: none;
+    }
+
     .nav a:hover {
-      background: rgba(15, 23, 42, 0.05);
-      color: var(--text);
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--teal-deep);
     }
 
     .nav .nav-cta {
       color: #fff;
-      background: linear-gradient(135deg, var(--brand) 0%, var(--violet) 100%);
-      box-shadow: 0 14px 28px rgba(124, 58, 237, 0.18);
+      background: var(--teal-deep);
+      box-shadow: 0 14px 28px rgba(16, 59, 69, 0.16);
     }
 
     .hero {
-      padding: 64px 0 36px;
+      padding: 48px 0 24px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 28px;
-      align-items: center;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .hero-panel,
+    .doc-card,
+    .reference-panel,
+    .profile-card,
+    .footer-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .hero-banner {
+      padding: 34px;
+      color: #f8fffc;
+      background:
+        linear-gradient(135deg, rgba(16, 59, 69, 0.94), rgba(15, 118, 110, 0.92)),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+      background-size: auto, 22px 22px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      min-height: 36px;
-      padding: 0 14px;
-      border-radius: 999px;
-      color: var(--brand-deep);
-      background: var(--brand-soft);
-      font-size: 0.85rem;
-      font-weight: 700;
+      min-height: 30px;
+      padding: 0 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 6px;
+      color: #cbfff0;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .live-dot {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #62d2a2;
+      box-shadow: 0 0 0 0 rgba(98, 210, 162, 0.58);
+      animation: livePulse 1.6s ease-out infinite;
+    }
+
+    @keyframes livePulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(98, 210, 162, 0.58);
+      }
+
+      100% {
+        box-shadow: 0 0 0 9px rgba(98, 210, 162, 0);
+      }
     }
 
     h1 {
-      margin: 18px 0 16px;
-      font-size: clamp(2.2rem, 4.8vw, 3.8rem);
-      line-height: 0.96;
+      max-width: 100%;
+      margin: 18px 0 14px;
+      font-size: clamp(2.35rem, 5vw, 4.3rem);
+      line-height: 0.98;
       letter-spacing: 0;
     }
 
     .hero h1 span {
       display: block;
-      background: linear-gradient(135deg, var(--brand) 0%, #ff6a3d 40%, var(--violet) 100%);
+      background: linear-gradient(135deg, #bfffe9 0%, #f6c95c 56%, #ff9bb0 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
+    .hero-copy {
+      min-width: 0;
+    }
+
     .lead {
-      max-width: 42rem;
+      max-width: 100%;
       margin: 0;
-      color: var(--muted);
+      color: rgba(248, 255, 252, 0.82);
       font-size: 1.08rem;
       line-height: 1.8;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
+    .doc-search {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
       gap: 12px;
       margin-top: 28px;
+      min-height: 56px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: rgba(248, 255, 252, 0.72);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .doc-search > * {
+      min-width: 0;
+    }
+
+    .doc-search strong {
+      color: #ffffff;
+      font-size: 0.92rem;
+    }
+
+    .tech-cloud {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tech-chip {
+      position: relative;
+      display: grid;
+      place-items: center;
+      gap: 8px;
+      min-height: 112px;
+      padding: 18px 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--teal-deep);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 20px 38px rgba(16, 59, 69, 0.12);
+      overflow: hidden;
+      transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+    }
+
+    .tech-chip::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: color-mix(in srgb, var(--icon-color) 12%, transparent);
+      opacity: 0;
+      transform: scale(0.94);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      pointer-events: none;
+    }
+
+    .tech-chip:hover,
+    .tech-chip:focus-within {
+      border-color: color-mix(in srgb, var(--icon-color) 62%, var(--line));
+      box-shadow:
+        0 22px 44px rgba(16, 59, 69, 0.14),
+        0 0 0 4px color-mix(in srgb, var(--icon-color) 18%, transparent);
+      transform: translateY(-4px);
+    }
+
+    .tech-chip:hover::before,
+    .tech-chip:focus-within::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .tech-icon {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      color: var(--icon-color);
+      background: var(--surface-soft);
+      font-weight: 900;
+      font-size: 0.95rem;
+      line-height: 1;
+      transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .tech-chip:hover .tech-icon,
+    .tech-chip:focus-within .tech-icon {
+      background: #ffffff;
+      box-shadow: 0 10px 22px color-mix(in srgb, var(--icon-color) 22%, transparent);
+      transform: scale(1.08);
+    }
+
+    .tech-icon svg {
+      display: block;
+      width: 36px;
+      height: 36px;
+    }
+
+    .tech-label {
+      position: relative;
+      z-index: 1;
+      color: var(--teal-deep);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-align: center;
+      transition: color 0.22s ease;
+    }
+
+    .tech-chip:hover .tech-label,
+    .tech-chip:focus-within .tech-label {
+      color: var(--icon-color);
     }
 
     .button {
@@ -239,7 +431,7 @@
       justify-content: center;
       min-height: 48px;
       padding: 0 18px;
-      border-radius: 999px;
+      border-radius: 8px;
       border: 1px solid transparent;
       font-weight: 700;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -251,49 +443,62 @@
 
     .button-primary {
       color: #fff;
-      background: linear-gradient(135deg, var(--brand) 0%, var(--violet) 100%);
-      box-shadow: 0 18px 30px rgba(124, 58, 237, 0.18);
+      background: var(--teal-deep);
+      box-shadow: 0 18px 30px rgba(16, 59, 69, 0.18);
     }
 
     .button-secondary {
       border-color: var(--line-strong);
       background: rgba(255, 255, 255, 0.82);
-      color: var(--text);
+      color: var(--teal-deep);
     }
 
     .section {
-      padding: 28px 0 56px;
+      padding: 32px 0;
     }
 
     .section-head {
-      margin-bottom: 22px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
     }
 
     .section-head h2 {
       margin: 0 0 10px;
-      font-size: clamp(2rem, 3vw, 2.7rem);
-      line-height: 1.05;
+      font-size: clamp(1.65rem, 3vw, 2.3rem);
+      line-height: 1.08;
     }
 
     .section-head p {
       margin: 0;
-      max-width: 42rem;
+      max-width: 48rem;
       color: var(--muted);
       line-height: 1.75;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
     .docs-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .doc-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
       padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--surface-strong);
-      box-shadow: var(--shadow-soft);
+      border-radius: 8px;
     }
 
     .doc-card .tag {
@@ -301,62 +506,114 @@
       min-height: 32px;
       align-items: center;
       padding: 0 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.05);
-      color: var(--muted);
+      border-radius: 6px;
+      background: var(--surface-soft);
+      color: var(--teal-deep);
       font-size: 0.8rem;
       font-weight: 700;
+      width: fit-content;
     }
 
     .doc-card h3 {
       margin: 16px 0 10px;
-      font-size: 1.25rem;
+      font-size: 1.28rem;
       line-height: 1.25;
     }
 
     .doc-card p {
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       color: var(--muted);
       line-height: 1.7;
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 8px;
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topic-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .topic-list li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex: 0 0 auto;
     }
 
     .doc-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: auto;
     }
 
     .doc-link {
       min-height: 40px;
       padding: 0 14px;
-      border-radius: 999px;
+      border-radius: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       color: #fff;
-      background: linear-gradient(135deg, var(--brand) 0%, var(--violet) 100%);
+      background: var(--teal);
     }
 
     .doc-link.alt {
-      background: rgba(15, 23, 42, 0.05);
-      color: var(--text);
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--teal-deep);
+    }
+
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .reference-panel {
+      min-height: 130px;
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .reference-panel strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--teal-deep);
+    }
+
+    .reference-panel span {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.94rem;
     }
 
     .about-band {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-      gap: 20px;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+      gap: 16px;
       align-items: stretch;
     }
 
     .about-card,
     .profile-card {
-      padding: 26px;
+      padding: 24px;
       border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--surface-strong);
-      box-shadow: var(--shadow-soft);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow);
     }
 
     .about-card p,
@@ -369,20 +626,21 @@
     .about-points {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 12px;
       margin-top: 20px;
     }
 
     .point {
       padding: 16px;
-      border-radius: 18px;
+      border-radius: 8px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.84);
+      background: var(--surface-soft);
     }
 
     .point strong {
       display: block;
       margin-bottom: 6px;
+      color: var(--teal-deep);
       font-size: 0.98rem;
     }
 
@@ -392,20 +650,30 @@
       font-size: 0.94rem;
     }
 
-    .profile-card {
-      background:
-        radial-gradient(circle at top right, rgba(124, 58, 237, 0.12), transparent 36%),
-        radial-gradient(circle at bottom left, rgba(245, 48, 3, 0.12), transparent 32%),
-        var(--surface-strong);
+    .profile-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .profile-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.94);
+      box-shadow: 0 16px 30px rgba(16, 59, 69, 0.13);
+      flex: 0 0 auto;
     }
 
     .profile-title {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       font-size: 1.35rem;
     }
 
     .profile-meta {
-      margin: 0 0 16px;
+      margin: 0;
       color: var(--muted);
       line-height: 1.7;
     }
@@ -418,14 +686,12 @@
     }
 
     footer {
-      padding: 0 0 44px;
+      padding: 24px 0 44px;
     }
 
     .footer-card {
       padding: 20px 24px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.86);
+      border-radius: 8px;
       color: var(--muted);
       display: flex;
       align-items: center;
@@ -435,10 +701,13 @@
     }
 
     @media (max-width: 980px) {
+      .hero-grid,
       .docs-grid,
+      .reference-grid,
       .about-band {
         grid-template-columns: 1fr;
       }
+
     }
 
     @media (max-width: 720px) {
@@ -448,17 +717,128 @@
 
       .topbar-inner {
         min-height: auto;
-        padding: 14px 0;
+        padding: 12px 0 10px;
         align-items: flex-start;
         flex-direction: column;
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-text {
+        display: none;
+      }
+
+      .nav {
+        width: 100%;
+        margin-left: 0;
+        padding: 2px 12px 6px;
+        gap: 12px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow-x: visible;
+      }
+
+      .nav a {
+        width: min(46px, calc((100vw - 72px) / 5));
+        min-width: 40px;
+        min-height: 42px;
+        padding: 0;
+        flex: 0 1 46px;
+        font-size: 0.9rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .nav .nav-cta {
+        color: #ffffff;
+        background: var(--teal-deep);
+        border-color: var(--teal-deep);
+      }
+
+      .nav-icon {
+        display: block;
+      }
+
+      .nav-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
       }
 
       .hero {
-        padding-top: 40px;
+        padding: 24px 0 18px;
+      }
+
+      .hero-panel {
+        border-radius: 8px;
+      }
+
+      .hero-banner {
+        padding: 22px;
       }
 
       h1 {
-        font-size: clamp(2rem, 9vw, 3rem);
+        margin-top: 14px;
+        font-size: clamp(2rem, 12vw, 2.85rem);
+        line-height: 1.02;
+      }
+
+      .lead {
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .doc-search {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 6px;
+        margin-top: 20px;
+        padding: 14px;
+      }
+
+      .tech-cloud {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px 8px;
+      }
+
+      .tech-chip {
+        min-height: 78px;
+        padding: 14px 6px 10px;
+      }
+
+      .tech-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+      }
+
+      .tech-icon svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .tech-label {
+        font-size: 0.72rem;
+      }
+
+      .section {
+        padding: 24px 0;
+      }
+
+      .section-head {
+        display: block;
+        margin-bottom: 14px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(1.55rem, 8vw, 2rem);
       }
 
       .about-points {
@@ -467,8 +847,51 @@
 
       .about-card,
       .profile-card,
-      .doc-card {
+      .doc-card,
+      .reference-panel {
         padding: 20px;
+      }
+
+      .doc-card {
+        min-height: auto;
+      }
+
+      .doc-links,
+      .profile-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .doc-link,
+      .button {
+        width: 100%;
+      }
+
+      .profile-head {
+        align-items: flex-start;
+      }
+
+      .footer-card {
+        align-items: flex-start;
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .shell {
+        width: min(100% - 20px, 1180px);
+      }
+
+      .hero-banner {
+        padding: 18px;
+      }
+
+      .eyebrow {
+        font-size: 0.72rem;
+      }
+
+      .profile-head {
+        display: grid;
       }
     }
   </style>
@@ -477,7 +900,6 @@
   <header class="topbar">
     <div class="shell topbar-inner">
       <a class="brand" href="/">
-        <span class="brand-mark">E</span>
         <span class="brand-text">
           <strong>Erag</strong>
           <span>Open Source Documentation</span>
@@ -485,10 +907,42 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#docs">Docs</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="https://github.com/eramitgupta">GitHub</a>
+        <a href="#home" aria-label="Home" title="Home">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5"></path>
+            <path d="M5 10.5V20h14v-9.5"></path>
+            <path d="M9 20v-6h6v6"></path>
+          </svg>
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="#docs" aria-label="Docs" title="Docs">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 4h10l4 4v12H5z"></path>
+            <path d="M15 4v5h4"></path>
+            <path d="M8 13h8"></path>
+            <path d="M8 17h6"></path>
+          </svg>
+          <span class="nav-label">Docs</span>
+        </a>
+        <a href="#about" aria-label="About" title="About">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c1.7-4 4.4-6 8-6s6.3 2 8 6"></path>
+          </svg>
+          <span class="nav-label">About</span>
+        </a>
+        <a class="nav-cta" href="https://github.com/eramitgupta" aria-label="GitHub" title="GitHub">
+          <svg class="nav-icon nav-icon-filled" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.11-.75.41-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.72 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.18 1.19a10.94 10.94 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.11 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.07.79 2.16v3.03c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"></path>
+          </svg>
+          <span class="nav-label">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/eramitgupta/" aria-label="LinkedIn" title="LinkedIn">
+          <svg class="nav-icon nav-icon-filled" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.25 0h3.83v1.5h.05c.53-.95 1.84-1.95 3.78-1.95 4.04 0 4.79 2.66 4.79 6.12V20.75h-4v-4.72c0-1.13-.02-2.58-1.57-2.58-1.58 0-1.82 1.23-1.82 2.5v4.8h-4v-11Z"></path>
+          </svg>
+          <span class="nav-label">LinkedIn</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -496,33 +950,104 @@
   <main>
     <section class="hero" id="home">
       <div class="shell hero-grid">
-        <div>
-          <div class="eyebrow">Engineered Open Source</div>
-          <h1>
-            Build with
-            <span>PHP, Laravel, Vue.js, React.js</span>
-          </h1>
-          <p class="lead">
-            Erag is the open source documentation space of Er Amit Gupta, Sr. Full Stack Engineer.
-            It brings Laravel packages, frontend integrations, implementation guides, and production-focused reference material together in one clean hub.
-          </p>
+        <div class="hero-panel">
+          <div class="hero-banner">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Ship Ready</div>
+              <h1>
+                Knowledge base for
+                <span>Laravel package docs.</span>
+              </h1>
+              <p class="lead">
+                Browse installation guides, configuration notes, API references, frontend integration examples, and production usage patterns for Erag open source packages.
+              </p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#docs">Browse Documentation</a>
-            <a class="button button-secondary" href="#about">About Erag</a>
+              <a class="doc-search" href="#docs" aria-label="Browse documentation packages">
+                <span>Search</span>
+                <strong>Find docs by package, framework, or workflow</strong>
+                <span>Browse all</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Technology stack">
+      <div class="shell">
+        <div class="tech-cloud">
+          <div class="tech-chip" style="--icon-color: #4f5b93;">
+            <strong class="tech-icon">
+              <svg viewBox="0 0 128 128" aria-hidden="true">
+                <ellipse cx="64" cy="64" rx="60" ry="32" fill="#777bb3"></ellipse>
+                <text x="64" y="75" fill="#ffffff" font-size="34" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">php</text>
+              </svg>
+            </strong>
+            <span class="tech-label">PHP</span>
+          </div>
+          <div class="tech-chip" style="--icon-color: #ff2d20;">
+            <strong class="tech-icon">
+              <svg viewBox="0 0 128 128" aria-hidden="true">
+                <path fill="#f05340" d="M26.027.137C25.824.215 20.086 3.484 13.281 7.395 5.035 12.137.801 14.633.574 14.867c-.18.203-.383.555-.445.777-.172.575-.184 84.704-.012 85.31.063.234.266.577.449.769.445.468 49.672 28.773 50.27 28.91.277.066.59.054.898-.032.672-.168 49.77-28.41 50.207-28.87.18-.2.383-.544.45-.778.085-.277.116-4.676.116-13.938V73.48l11.969-6.875c11.285-6.488 11.977-6.894 12.266-7.34l.297-.48V44.207c0-15.871.031-14.976-.598-15.55-.168-.15-5.918-3.505-12.789-7.462l-12.48-7.18h-1.387L87.574 21.027c-6.722 3.868-12.437 7.172-12.715 7.352-.277.183-.609.523-.746.77l-.246.425-.054 13.734-.051 13.738-10.082 5.809c-5.547 3.187-10.164 5.828-10.262 5.852-.18.05-.191-1.258-.191-26.504V15.633l-.266-.457c-.332-.555 1.16.332-13.824-8.281C26.57-.332 26.871-.18 26.027.137Zm11.551 10.52c5.258 3.015 9.559 5.511 9.559 5.542 0 .031-4.61 2.696-10.242 5.934l-10.25 5.883-10.23-5.883C10.793 18.895 6.188 16.23 6.188 16.2c0-.032 4.598-2.696 10.219-5.926l10.207-5.871.703.383c.394.215 5.015 2.855 10.261 5.871Zm73.153 13.535c5.535 3.188 10.113 5.82 10.156 5.864.117.105-20.184 11.773-20.461 11.761-.278-.007-20.329-11.57-20.321-11.71.012-.16 20.184-11.766 20.387-11.735.094.023 4.703 2.644 10.239 5.82ZM14.828 25.875l9.758 5.617.055 27.813.05 27.816.239.375c.125.2.36.469.531.594.16.117 5.59 3.21 12.063 6.863l11.758 6.64v11.766c0 6.457-.043 11.754-.098 11.754-.043 0-10.207-5.816-22.582-12.937L4.105 99.238l-.03-39.773-.02-39.762.5.277c.289.153 4.906 2.805 10.273 5.895Zm34.453 19.578v25.629l-.394.258c-.536.34-20.075 11.57-20.14 11.57-.032 0-.055-11.57-.055-25.715l.011-25.703 10.207-5.871c5.613-3.23 10.242-5.852 10.297-5.832.039.023.074 11.574.074 25.664Zm38.942-5.894 10.23 5.882v11.66c0 11.063-.012 11.657-.18 11.594-.109-.043-4.738-2.695-10.293-5.894l-10.113-5.809V45.336c0-6.418.031-11.66.062-11.66.043 0 4.672 2.644 10.293 5.883Zm34.87 5.703c0 6.383-.042 11.648-.085 11.699-.074.117-20.309 11.777-20.438 11.777-.03 0-.062-5.242-.062-11.66V45.422l10.207-5.875c5.62-3.226 10.25-5.871 10.293-5.871.054 0 .086 5.21.086 11.586ZM86.23 66.47c8.606 4.953 10.09 5.84 9.942 5.957-.098.062-3.36 1.937-7.242 4.156-3.883 2.215-13.942 7.95-22.36 12.746l-15.297 8.727-.488-.266c-2.922-1.598-19.875-11.242-19.875-11.316-.008-.16 44.855-25.942 45.035-25.875.086.031 4.715 2.672 10.285 5.871Zm12.204 21.09-.035 11.68-22.485 12.937c-12.371 7.121-22.539 12.938-22.59 12.938-.054 0-.097-4.754-.097-11.754v-11.766l22.539-12.851C88.148 81.676 98.324 75.89 98.38 75.88c.043 0 .062 5.254.054 11.68Z"></path>
+              </svg>
+            </strong>
+            <span class="tech-label">Laravel</span>
+          </div>
+          <div class="tech-chip" style="--icon-color: #9553e9;">
+            <strong class="tech-icon">
+              <svg viewBox="0 0 128 128" aria-hidden="true">
+                <path fill="#8163eb" d="M92.433 28.433H55.625L91.192 64 55.625 99.567h36.808L128 64zm-55.625 0H0L35.567 64 0 99.567h36.808L72.375 64z"></path>
+              </svg>
+            </strong>
+            <span class="tech-label">Inertia.js</span>
+          </div>
+          <div class="tech-chip" style="--icon-color: #42b883;">
+            <strong class="tech-icon">
+              <svg viewBox="0 0 128 128" aria-hidden="true">
+                <path fill="#41b883" d="M10 18h28l26 45 26-45h28L64 112z"></path>
+                <path fill="#35495e" d="M38 18h18l8 14 8-14h18L64 64z"></path>
+              </svg>
+            </strong>
+            <span class="tech-label">Vue</span>
+          </div>
+          <div class="tech-chip" style="--icon-color: #61dafb;">
+            <strong class="tech-icon">
+              <svg viewBox="0 0 128 128" aria-hidden="true">
+                <g fill="#61dafb">
+                  <circle cx="64" cy="64" r="11.4"></circle>
+                  <ellipse cx="64" cy="64" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="8"></ellipse>
+                  <ellipse cx="64" cy="64" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="8" transform="rotate(60 64 64)"></ellipse>
+                  <ellipse cx="64" cy="64" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="8" transform="rotate(120 64 64)"></ellipse>
+                </g>
+              </svg>
+            </strong>
+            <span class="tech-label">React</span>
+          </div>
+          <div class="tech-chip" style="--icon-color: #3178c6;">
+            <strong class="tech-icon">
+              <svg viewBox="0 0 128 128" aria-hidden="true">
+                <rect width="128" height="128" rx="12" fill="#3178c6"></rect>
+                <text x="64" y="78" fill="#ffffff" font-size="44" font-family="Arial, sans-serif" font-weight="800" text-anchor="middle">TS</text>
+              </svg>
+            </strong>
+            <span class="tech-label">TypeScript</span>
           </div>
         </div>
-
       </div>
     </section>
 
     <section class="section" id="docs">
       <div class="shell">
         <div class="section-head">
-          <h2>Documentation Links</h2>
-          <p>
-            Open package-specific guides, installation steps, configuration notes, framework examples, and API references from one place.
-          </p>
+          <div>
+            <span class="section-kicker">Packages</span>
+            <h2>Documentation Links</h2>
+            <p>
+              Open package-specific guides, installation steps, configuration notes, framework examples, and API references from one place.
+            </p>
+          </div>
         </div>
 
         <div class="docs-grid">
@@ -530,8 +1055,13 @@
             <span class="tag">Laravel package</span>
             <h3>Laravel Disposable Email</h3>
             <p>Disposable email validation, blacklist syncing, caching, and runtime usage for Laravel applications.</p>
+            <ul class="topic-list">
+              <li>Installation and config publishing</li>
+              <li>Validation rule usage</li>
+              <li>Blacklist sync scheduling</li>
+            </ul>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-disposable-email/index.html">Docs</a>
+              <a class="doc-link" href="/laravel-disposable-email/">Open Docs</a>
               <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-disposable-email">GitHub Link</a>
             </div>
           </article>
@@ -540,8 +1070,13 @@
             <span class="tag">Inertia integration</span>
             <h3>Laravel Inertia Toast</h3>
             <p>Toast notifications and confirmation dialogs for Laravel, Inertia.js, Vue 3, and React workflows.</p>
+            <ul class="topic-list">
+              <li>Laravel middleware setup</li>
+              <li>Vue and React adapters</li>
+              <li>Modal and styling examples</li>
+            </ul>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-inertia-toast/">Docs</a>
+              <a class="doc-link" href="/laravel-inertia-toast/">Open Docs</a>
               <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-inertia-toast">GitHub Link</a>
             </div>
           </article>
@@ -550,8 +1085,13 @@
             <span class="tag">Localization tooling</span>
             <h3>Laravel Lang Sync Inertia</h3>
             <p>Focused documentation for syncing Laravel translation files with Inertia.js applications using Vue and React.</p>
+            <ul class="topic-list">
+              <li>Export command workflow</li>
+              <li>Vue and React helpers</li>
+              <li>API and config reference</li>
+            </ul>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-lang-sync-inertia/index.html">Docs</a>
+              <a class="doc-link" href="/laravel-lang-sync-inertia/">Open Docs</a>
               <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-lang-sync-inertia">GitHub Link</a>
             </div>
           </article>
@@ -559,54 +1099,102 @@
       </div>
     </section>
 
+    <section class="section" id="reference">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Reference</span>
+            <h2>Start From The Right Page</h2>
+            <p>
+              The hub is organized around common documentation tasks so a visitor can jump directly to setup, framework examples, or API details.
+            </p>
+          </div>
+        </div>
+
+        <div class="reference-grid">
+          <a class="reference-panel" href="/laravel-disposable-email/getting-started.html">
+            <strong>Getting Started</strong>
+            <span>Install packages, publish config, and confirm the first working setup.</span>
+          </a>
+          <a class="reference-panel" href="/laravel-inertia-toast/vue.html">
+            <strong>Vue Examples</strong>
+            <span>Use package features in Vue-driven Inertia pages.</span>
+          </a>
+          <a class="reference-panel" href="/laravel-inertia-toast/react.html">
+            <strong>React Examples</strong>
+            <span>Wire package behavior into React and Inertia application flows.</span>
+          </a>
+          <a class="reference-panel" href="/laravel-lang-sync-inertia/api.html">
+            <strong>API Reference</strong>
+            <span>Review commands, helpers, configuration, and runtime contracts.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="about">
       <div class="shell">
         <div class="section-head">
-          <h2>About Erag</h2>
-          <p>
-            Erag is an open source documentation and package hub maintained by Er Amit Gupta. Its focus is simple:
-            reusable Laravel tooling, strong developer experience, and frontend integrations that work well in real projects.
-          </p>
+          <div>
+            <span class="section-kicker">Maintainer</span>
+            <h2>About Erag</h2>
+            <p>
+              I developed erag.in to help Laravel developers solve real problems with practical packages,
+              clear documentation, and implementation-focused examples.
+            </p>
+          </div>
         </div>
 
         <div class="about-band">
           <div class="about-card">
             <p>
-              The documentation published here covers production-minded packages and engineering workflows. The emphasis is not only on installation, but also on implementation quality across Laravel, PHP, Vue.js, React.js, Inertia.js, and modern web tooling.
+              My focus is on building tools that remove repeated work from Laravel projects, improve developer experience, and make common workflows easier to implement. Erag brings my open source packages and documentation together so developers can install, configure, and use them without digging through scattered notes.
             </p>
 
             <div class="about-points">
               <div class="point">
-                <strong>Laravel packages</strong>
-                <span>Validation, localization, notifications, and reusable backend tooling.</span>
+                <strong>Full stack development</strong>
+                <span>PHP, Laravel, Vue.js, React.js, Inertia.js, Alpine.js, Livewire, Ajax, and MySQL.</span>
               </div>
               <div class="point">
-                <strong>Frontend integration</strong>
-                <span>Vue.js and React.js examples with Laravel-compatible usage patterns.</span>
+                <strong>Open source packages</strong>
+                <span>Reusable Laravel tooling with installation steps, configuration, examples, and API references.</span>
               </div>
               <div class="point">
-                <strong>Clean documentation</strong>
-                <span>Setup, configuration, usage, edge cases, and API references in one place.</span>
+                <strong>Practical implementation</strong>
+                <span>Documentation focused on real project usage, edge cases, and maintainable workflows.</span>
               </div>
               <div class="point">
-                <strong>Open source focus</strong>
-                <span>GitHub-first maintenance with package-level documentation entry points.</span>
+                <strong>Collaboration</strong>
+                <span>Clear communication, version control, and delivery-focused engineering for web projects.</span>
               </div>
             </div>
           </div>
 
           <aside class="profile-card">
-            <h3 class="profile-title">Er Amit Gupta</h3>
-            <p class="profile-meta">
-              Sr. Full Stack Engineer specializing in PHP, Laravel, Vue.js, React.js, and modern web technologies.
-            </p>
+            <div class="profile-head">
+              <img
+                class="profile-avatar"
+                src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=128"
+                alt="Er Amit Gupta"
+                width="64"
+                height="64"
+              >
+              <div>
+                <h3 class="profile-title">Er Amit Gupta</h3>
+                <p class="profile-meta">
+                  Sr. Full Stack Engineer turning Laravel ideas into clean, production-ready web products.
+                </p>
+              </div>
+            </div>
             <p>
-              This hub aggregates package docs and related engineering references under the `Erag` brand so visitors can move quickly between packages and supporting documentation.
+              Every package documented here is created with one goal: solve a real Laravel development problem,
+              document the solution clearly, and make it easy for other developers to adopt in their own projects.
             </p>
 
             <div class="profile-actions">
               <a class="button button-primary" href="https://github.com/eramitgupta">GitHub Profile</a>
-              <a class="button button-secondary" href="https://erag.in/">erag.in</a>
+              <a class="button button-secondary" href="https://www.linkedin.com/in/eramitgupta/">LinkedIn Profile</a>
             </div>
           </aside>
         </div>
@@ -617,7 +1205,7 @@
   <footer>
     <div class="shell">
       <div class="footer-card">
-        <span>Erag · Open source documentation by Er Amit Gupta</span>
+        <span>Copyright © 2026 Er Amit Gupta</span>
         <span>PHP · Laravel · Vue.js · React.js</span>
       </div>
     </div>
