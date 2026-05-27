@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://erag.in/</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/getting-started.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/vue.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/react.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/api.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/index.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/introduction.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/validation-and-runtime.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/configuration.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/sync-and-blacklist.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/caching.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/demo.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/laravel.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/index.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/introduction.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/schedule-syncing-automatically.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/troubleshooting.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/contributing.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/deprecated-5-0-0.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/installation.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/modal-usage.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/styling.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/api-reference.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-inertia-toast/contributing.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/installation.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/config.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/laravel.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/exporting.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/vue.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/react.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/contributing.html</loc>
+  <lastmod>2026-05-27T04:47:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

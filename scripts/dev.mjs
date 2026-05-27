@@ -1,14 +1,19 @@
 import { createServer } from 'node:http'
 import { spawn } from 'node:child_process'
 import { readFileSync, existsSync } from 'node:fs'
-import { join } from 'node:path'
+import { extname, join } from 'node:path'
 import process from 'node:process'
 import { createServer as createNetServer } from 'node:net'
 import httpProxy from 'http-proxy'
 
 const rootDir = process.cwd()
 const indexPath = join(rootDir, 'index.html')
-const robotsPath = join(rootDir, 'public', 'robots.txt')
+const publicDir = join(rootDir, 'public')
+
+const contentTypes = {
+  '.txt': 'text/plain; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8'
+}
 
 const apps = [
   {
@@ -98,12 +103,14 @@ const server = createServer((req, res) => {
     return
   }
 
-  if (url === '/robots.txt' && existsSync(robotsPath)) {
+  const publicPath = join(publicDir, url.replace(/^\/+/, ''))
+
+  if ((url === '/robots.txt' || url === '/sitemap.xml') && existsSync(publicPath)) {
     res.writeHead(200, {
-      'Content-Type': 'text/plain; charset=utf-8',
+      'Content-Type': contentTypes[extname(publicPath)] || 'application/octet-stream',
       'Cache-Control': 'no-store'
     })
-    res.end(readFileSync(robotsPath))
+    res.end(readFileSync(publicPath))
     return
   }
 
