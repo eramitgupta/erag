@@ -6,11 +6,8 @@ export default defineConfig({
     title: 'Laravel Inertia Toast',
     description:
         'Laravel Inertia Toast documentation for toast notifications and confirmation dialogs with Laravel, Inertia.js, Vue 3, and React.',
-    cleanUrls: true,
+    cleanUrls: false,
     lastUpdated: true,
-    sitemap: {
-        hostname: 'https://eramitgupta.github.io/laravel-inertia-toast/',
-    },
     head: [
         [
             'link',
@@ -52,14 +49,14 @@ export default defineConfig({
             'meta',
             {
                 property: 'og:url',
-                content: 'https://eramitgupta.github.io/laravel-inertia-toast/',
+                content: 'https://eramitgupta.github.io/laravel-inertia-toast/index.html',
             },
         ],
         [
             'link',
             {
                 rel: 'canonical',
-                href: 'https://eramitgupta.github.io/laravel-inertia-toast/',
+                href: 'https://eramitgupta.github.io/laravel-inertia-toast/index.html',
             },
         ],
         [
