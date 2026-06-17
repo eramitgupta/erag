@@ -14,7 +14,7 @@ layout: home
 hero:
     name: 'Laravel Lang Sync Inertia'
     text: 'Laravel translations for your Inertia frontend'
-    tagline: 'Sync Laravel lang files once, then use clean Vue and React helpers for keys, replacements, pluralization, and direct string fallback.'
+    tagline: 'Sync Laravel lang files once, then use clean Vue, React, and Svelte helpers for keys, replacements, pluralization, and direct string fallback.'
     image:
         src: /hero-orb.svg
         alt: Laravel Lang Sync Inertia
@@ -24,8 +24,8 @@ features:
       title: 'Laravel sync'
       details: 'Call `syncLangFiles()` in a controller and share selected Laravel lang files with the Inertia page.'
     - icon: '◆'
-      title: 'Vue and React'
-      details: 'Use dedicated Vue and React entry points with the same helper names and behavior.'
+      title: 'Vue, React and Svelte'
+      details: 'Use dedicated Vue, React, and Svelte entry points with the same helper names and behavior.'
     - icon: '⌘'
       title: 'Key replacement'
       details: 'Use Laravel-style replacements like `Welcome, :name` with `__()` or `trans()`.'
@@ -56,7 +56,7 @@ After that, your frontend can read translations with a very small API.
 
 - Call `syncLangFiles()` in the controller.
 - Keep translations in Laravel language files.
-- Use `lang()` in Vue or React.
+- Use `lang()` in Vue, React, or Svelte.
 - Render translations with `__()` or `trans()`.
 
 ::: code-group
@@ -116,6 +116,19 @@ export default function Dashboard() {
 }
 ```
 
+```svelte [Svelte]
+<script lang="ts">
+import { lang } from '@erag/lang-sync-inertia/svelte';
+
+const { __, trans } = lang();
+</script>
+
+<section>
+    <h1>{__('auth.greeting')}</h1>
+    <p>{trans('auth.welcome', { name: 'Amit' })}</p>
+</section>
+```
+
 :::
 
 ## Packages
@@ -132,7 +145,7 @@ php artisan lang:publish
 php artisan erag:install-lang
 ```
 
-```bash [Vue/React package]
+```bash [Vue/React/Svelte package]
 npm install @erag/lang-sync-inertia
 ```
 
@@ -146,5 +159,5 @@ This package is useful when:
 
 - your translations already live in Laravel lang files
 - your frontend is built with Inertia.js
-- you want the same translation flow in Vue and React
+- you want the same translation flow in Vue, React, or Svelte
 - you need placeholder replacement without custom glue code

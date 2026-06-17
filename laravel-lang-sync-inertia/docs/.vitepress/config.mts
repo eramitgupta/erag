@@ -9,7 +9,7 @@ export default defineConfig({
     title: 'Laravel Lang Sync Inertia',
 
     description:
-        'Bridge Laravel translation files to Inertia.js apps with first-class Vue and React support. Powerful i18n sync for modern Laravel applications.',
+        'Bridge Laravel translation files to Inertia.js apps with first-class Vue, React, and Svelte support. Powerful i18n sync for modern Laravel applications.',
 
     head: [
         // Basic SEO
@@ -19,7 +19,7 @@ export default defineConfig({
             {
                 name: 'keywords',
                 content:
-                    'Laravel i18n, Laravel localization, Inertia translations, Vue i18n Laravel, React i18n Laravel, Laravel language sync',
+                    'Laravel i18n, Laravel localization, Inertia translations, Vue i18n Laravel, React i18n Laravel, Svelte i18n Laravel, Laravel language sync',
             },
         ],
         ['meta', { name: 'robots', content: 'index, follow' }],
@@ -50,7 +50,7 @@ export default defineConfig({
             {
                 property: 'og:title',
                 content:
-                    'Laravel Lang Sync Inertia – Laravel i18n for Vue & React (Inertia.js)',
+                    'Laravel Lang Sync Inertia – Laravel i18n for Vue, React & Svelte (Inertia.js)',
             },
         ],
         [
@@ -58,7 +58,7 @@ export default defineConfig({
             {
                 property: 'og:description',
                 content:
-                    'Bridge Laravel translation files to Inertia.js apps with Vue and React support.',
+                    'Bridge Laravel translation files to Inertia.js apps with Vue, React, and Svelte support.',
             },
         ],
         [
@@ -98,7 +98,7 @@ export default defineConfig({
             {
                 name: 'twitter:description',
                 content:
-                    'Bridge Laravel translation files to Inertia.js apps with Vue and React support.',
+                    'Bridge Laravel translation files to Inertia.js apps with Vue, React, and Svelte support.',
             },
         ],
         [
@@ -129,7 +129,7 @@ export default defineConfig({
                 '@type': 'SoftwareSourceCode',
                 name: 'Laravel Lang Sync Inertia',
                 description:
-                    'Bridge Laravel translation files to Inertia.js apps with Vue and React support.',
+                    'Bridge Laravel translation files to Inertia.js apps with Vue, React, and Svelte support.',
                 url: 'https://eramitgupta.github.io/laravel-lang-sync-inertia/',
                 codeRepository:
                     'https://github.com/eramitgupta/laravel-lang-sync-inertia',
@@ -158,6 +158,7 @@ export default defineConfig({
                     { text: 'Export to JSON', link: '/exporting.html' },
                     { text: 'Vue', link: '/vue.html' },
                     { text: 'React', link: '/react.html' },
+                    { text: 'Svelte', link: '/svelte.html' },
                 ],
             },
             {
