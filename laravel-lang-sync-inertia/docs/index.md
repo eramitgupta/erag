@@ -117,7 +117,7 @@ export default function Dashboard() {
 ```
 
 ```svelte [Svelte]
-<script lang="ts">
+<script module lang="ts">
 import { lang } from '@erag/lang-sync-inertia/svelte';
 
 const { __, trans } = lang();

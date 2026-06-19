@@ -65,7 +65,7 @@ return [
 ```
 
 ```svelte [js/Pages/Dashboard.svelte]
-<script lang="ts">
+<script module lang="ts">
 import { lang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __, transChoice } = lang();
@@ -89,7 +89,7 @@ There are 3 apples
 ## Component example
 
 ```svelte
-<script lang="ts">
+<script module lang="ts">
 import { lang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __, transChoice } = lang();
