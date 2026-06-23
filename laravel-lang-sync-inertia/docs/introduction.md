@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Introduction to Laravel Lang Sync Inertia for sharing Laravel translations with Inertia.js Vue and React apps.
+description: Introduction to Laravel Lang Sync Inertia for sharing Laravel translations with Inertia.js Vue, React, and Svelte apps.
 head:
     - [
           'meta',
@@ -13,20 +13,20 @@ head:
 
 # Introduction
 
-`Laravel Lang Sync Inertia` is a Laravel package that bridges your backend translation files with your Inertia.js frontend. Load any language file in a controller and access it instantly in Vue or React without manually passing props.
+`Laravel Lang Sync Inertia` is a Laravel package that bridges your backend translation files with your Inertia.js frontend. Load any language file in a controller and access it instantly in Vue, React, or Svelte without manually passing props.
 
 It allows Laravel language files to be shared automatically through Inertia, so your frontend can use translations with a small API instead of manually wiring props on every response.
 
 This is useful when your project already stores translations in Laravel language files and you want the same source of truth across backend and frontend screens. Instead of duplicating translation logic, the package lets Laravel stay in control while Inertia delivers the shared data to your client-side pages.
 
-The overall goal is simple: keep your translation workflow native to Laravel, but make the translated content immediately available inside your Vue or React components.
+The overall goal is simple: keep your translation workflow native to Laravel, but make the translated content immediately available inside your Vue, React, or Svelte components.
 
 ## Features
 
 - Automatic translation sharing via Inertia.js middleware
 - Load single or multiple language files with one call
 - Dynamic placeholder replacement with Laravel-style `:name` syntax
-- Works with both Vue 3 and React
+- Works with Vue 3, React, and Svelte 5
 - Auto-switches locale folder based on Laravel's current locale
 - Export PHP language files to frontend-ready JSON
 - Clean helper API with `trans()` and `__()`
@@ -52,7 +52,7 @@ Output -> Hello! / Welcome, Amit!
 Supported use cases:
 
 - single or multiple language file loading
-- Vue 3 and React apps
+- Vue 3, React, and Svelte 5 apps
 - placeholder replacement with `:name` values
 - locale-based loading from Laravel's current app locale
 - optional JSON export for frontend-ready files

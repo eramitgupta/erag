@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Install Laravel Lang Sync Inertia for Laravel backend and Vue or React frontend apps.
+description: Install Laravel Lang Sync Inertia for Laravel backend and Vue, React, or Svelte frontend apps.
 head:
   - ['meta', { name: 'keywords', content: 'Laravel Lang Sync Inertia installation, composer require erag/laravel-lang-sync-inertia, npm install @erag/lang-sync-inertia' }]
 ---
@@ -10,7 +10,7 @@ head:
 Install the package in two parts:
 
 - `erag/laravel-lang-sync-inertia` for the Laravel backend
-- `@erag/lang-sync-inertia` for Vue or React frontend usage
+- `@erag/lang-sync-inertia` for Vue, React, or Svelte frontend usage
 
 ## Backend package
 
@@ -20,7 +20,7 @@ Install the package in two parts:
 composer require erag/laravel-lang-sync-inertia
 ```
 
-```bash [Vue/React package]
+```bash [Vue/React/Svelte package]
 npm install @erag/lang-sync-inertia
 ```
 
@@ -46,4 +46,4 @@ Once installation is complete:
 
 1. Create or update your language files in `lang/{locale}`.
 2. Call `syncLangFiles()` before returning your Inertia response.
-3. Use `lang()` in Vue or React to read translations on the frontend.
+3. Use `lang()` in Vue, React, or Svelte to read translations on the frontend.
