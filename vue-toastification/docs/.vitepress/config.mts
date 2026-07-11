@@ -1,3 +1,4 @@
+// CI-trigger: library export pushed successfully
 import { defineConfig } from 'vitepress'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
