@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
+import { existsSync } from 'node:fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const librarySrc = resolve(__dirname, '../../../../vue-toastification/src')
+const localPath = resolve(__dirname, '../../../../vue-toastification/src')
+const ciPath = resolve(__dirname, '../../../vue-toastification-library/src')
+const librarySrc = existsSync(localPath) ? localPath : ciPath
 
 
 const siteOrigin = 'https://erag.in'

@@ -36,6 +36,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout vue-toastification library
+        uses: actions/checkout@v4
+        with:
+          repository: eramitgupta/vue-toastification
+          path: vue-toastification-library
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
