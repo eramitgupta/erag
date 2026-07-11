@@ -372,4 +372,60 @@
   <priority>0.60</priority>
 </url>
 
+<!-- Vue Toastification Docs -->
+<url>
+  <loc>https://erag.in/vue-toastification/</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/installation.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/setup.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/features.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/playground.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/toast-usage.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/modal-usage.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/styling.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/vue-toastification/api.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+
 </urlset>

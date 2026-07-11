@@ -51,6 +51,12 @@ const apps = [
     prefix: '/laravel-pwa',
     cwd: join(rootDir, 'laravel-pwa'),
     port: 5180
+  },
+  {
+    name: 'vue-toastification',
+    prefix: '/vue-toastification',
+    cwd: join(rootDir, 'vue-toastification'),
+    port: 5181
   }
 ]
 

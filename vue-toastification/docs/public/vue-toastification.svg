@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498db" />
+      <stop offset="100%" stop-color="#2980b9" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5dade2" />
+      <stop offset="100%" stop-color="#3498db" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#1b4f72" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <rect x="16" y="16" width="96" height="96" rx="24" fill="url(#blueGrad)" filter="url(#shadow)" />
+  <!-- Modal box illustration -->
+  <rect x="32" y="32" width="64" height="42" rx="8" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-width="2" />
+  <circle cx="44" cy="42" r="3" fill="#ffffff" />
+  <circle cx="54" cy="42" r="3" fill="#ffffff" />
+  <circle cx="64" cy="42" r="3" fill="#ffffff" />
+  <!-- Floating Toast illustration -->
+  <g filter="url(#shadow)">
+    <rect x="44" y="60" width="60" height="30" rx="10" fill="#ffffff" />
+    <!-- Toast indicator -->
+    <rect x="52" y="70" width="10" height="10" rx="3" fill="#2ecc71" />
+    <!-- Toast text lines -->
+    <line x1="68" y1="71" x2="94" y2="71" stroke="#34495e" stroke-width="2" stroke-linecap="round" />
+    <line x1="68" y1="79" x2="88" y2="79" stroke="#95a5a6" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>
