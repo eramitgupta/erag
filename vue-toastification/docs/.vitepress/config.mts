@@ -148,7 +148,8 @@ export default defineConfig({
     resolve: {
       alias: {
         '@erag/vue-toastification': librarySrc
-      }
+      },
+      dedupe: ['vue']
     }
   }
 })
