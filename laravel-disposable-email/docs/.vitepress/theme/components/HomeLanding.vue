@@ -190,5 +190,129 @@ import { withBase } from 'vitepress'
         <a :href="withBase('/caching.html')">Caching notes</a>
       </div>
     </div>
+
+    <!-- FAQ Accordion section -->
+    <div class="home-faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details class="faq-item">
+        <summary>Does this package run validation checks offline?</summary>
+        <div class="faq-content">
+          <p>Yes. The package ships with a pre-downloaded database of over 110,000+ known disposable domains stored locally, allowing checks to execute instantly at validation layer without making slow external HTTP API requests.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How often are the disposable domains updated?</summary>
+        <div class="faq-content">
+          <p>You can sync and refresh the local list of disposable domains at any time by running the <code>php artisan disposable:sync</code> command. This command fetches the newest updates directly from trusted remote repositories.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I configure whitelisted domains or subdomains?</summary>
+        <div class="faq-content">
+          <p>Absolutely. You can define dynamic whitelisted domains directly in your <code>config/disposable-email.php</code> settings. Whitelisted domains will bypass checking to prevent false positives for company-specific testing addresses.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is there any lookup performance overhead?</summary>
+        <div class="faq-content">
+          <p>No. Lookups are executed as simple array-key searches. For highly active registration forms, you can configure the cache settings in the configuration to keep domain checks stored in memory for optimal speed.</p>
+        </div>
+      </details>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.home-faq-section {
+  max-width: 100%;
+  margin: 24px auto 0 auto;
+  padding: 40px 0 80px 0;
+  text-align: left;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.home-faq-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.faq-item[open] {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  outline: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--vp-c-brand-1);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.faq-content p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+  margin: 16px 0 0 0 !important;
+}
+
+@media (max-width: 768px) {
+  .home-faq-section {
+    margin: 48px auto 0 auto;
+    padding: 48px 24px;
+  }
+  .home-faq-section h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
