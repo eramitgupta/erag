@@ -8,6 +8,10 @@ Main documentation workspace for Erag open source packages.
 - `laravel-disposable-email/` - VitePress docs for Laravel Disposable Email.
 - `laravel-inertia-toast/` - VitePress docs for Laravel Inertia Toast.
 - `laravel-lang-sync-inertia/` - VitePress docs for Laravel Lang Sync Inertia.
+- `phone-number-vue/` - VitePress docs for Phone Number Vue.
+- `phone-number-react/` - VitePress docs for Phone Number React.
+- `laravel-pwa/` - VitePress docs for Laravel PWA.
+- `vue-toastification/` - VitePress docs for Vue Toastification.
 
 ## Local Setup
 
@@ -23,6 +27,10 @@ Install dependencies for each documentation package:
 cd laravel-disposable-email && npm install
 cd ../laravel-inertia-toast && npm install
 cd ../laravel-lang-sync-inertia && npm install
+cd ../phone-number-vue && npm install
+cd ../phone-number-react && npm install
+cd ../laravel-pwa && npm install
+cd ../vue-toastification && npm install
 cd ..
 ```
 
