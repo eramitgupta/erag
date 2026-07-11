@@ -1,0 +1,49 @@
+<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft background glow -->
+  <circle cx="260" cy="260" r="180" fill="url(#bgGlow)" opacity="0.15" />
+  
+  <!-- Outer orbital lines -->
+  <circle cx="260" cy="260" r="160" stroke="#42b883" stroke-width="4" stroke-dasharray="8 8" opacity="0.3" />
+  <circle cx="260" cy="260" r="130" stroke="#35495e" stroke-width="2" opacity="0.2" />
+
+  <!-- Main glassmorphic orb -->
+  <circle cx="260" cy="260" r="110" fill="url(#orbGrad)" />
+  <circle cx="260" cy="260" r="109.5" stroke="#ffffff" stroke-opacity="0.5" />
+
+  <!-- Phone Handset Icon -->
+  <g filter="url(#phoneShadow)">
+    <path d="M225 180H237C243.6 180 249 185.4 249 192V212C249 218.6 243.6 224 237 224H229C193.1 224 164 194.9 164 159V151C164 144.4 169.4 139 176 139H196C202.6 139 208 144.4 208 151V163C208 169.6 202.6 175 196 175H189.6C197.8 201.2 218.8 222.2 245 230.4V224" 
+          stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Floating Vue Logo Tag -->
+  <g filter="url(#badgeShadow)">
+    <rect x="270" y="270" width="120" height="100" rx="16" fill="#35495e" />
+    <!-- Vue Icon inside badge -->
+    <path d="M310 305H322L330 320L338 305H350L330 340L310 305Z" fill="#42b883" />
+    <path d="M320 305H328L330 309L332 305H340L330 323L320 305Z" fill="#35495e" />
+    <!-- Border -->
+    <rect x="270.5" y="270.5" width="119" height="99" rx="15.5" stroke="#ffffff" stroke-opacity="0.15" />
+  </g>
+
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 260) rotate(90) scale(180)">
+      <stop stop-color="#42b883" />
+      <stop offset="1" stop-color="#42b883" stop-opacity="0" />
+    </radialGradient>
+    
+    <linearGradient id="orbGrad" x1="150" y1="150" x2="370" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42b883" />
+      <stop offset="0.6" stop-color="#2d8c64" />
+      <stop offset="1" stop-color="#35495e" />
+    </linearGradient>
+
+    <filter id="phoneShadow" x="144" y="125" width="130" height="130" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1e3a2f" flood-opacity="0.3" />
+    </filter>
+
+    <filter id="badgeShadow" x="250" y="256" width="160" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#111827" flood-opacity="0.25" />
+    </filter>
+  </defs>
+</svg>

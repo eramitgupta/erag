@@ -1,0 +1,51 @@
+<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft background glow -->
+  <circle cx="260" cy="260" r="180" fill="url(#bgGlow)" opacity="0.15" />
+  
+  <!-- Orbital lines (React-style ellipses) -->
+  <ellipse cx="260" cy="260" rx="160" ry="70" stroke="#0ea5e9" stroke-width="3" opacity="0.25" transform="rotate(30 260 260)" />
+  <ellipse cx="260" cy="260" rx="160" ry="70" stroke="#0ea5e9" stroke-width="3" opacity="0.25" transform="rotate(-30 260 260)" />
+
+  <!-- Main glassmorphic orb -->
+  <circle cx="260" cy="260" r="110" fill="url(#orbGrad)" />
+  <circle cx="260" cy="260" r="109.5" stroke="#ffffff" stroke-opacity="0.5" />
+
+  <!-- Phone Handset Icon -->
+  <g filter="url(#phoneShadow)">
+    <path d="M225 180H237C243.6 180 249 185.4 249 192V212C249 218.6 243.6 224 237 224H229C193.1 224 164 194.9 164 159V151C164 144.4 169.4 139 176 139H196C202.6 139 208 144.4 208 151V163C208 169.6 202.6 175 196 175H189.6C197.8 201.2 218.8 222.2 245 230.4V224" 
+          stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Floating React Badge -->
+  <g filter="url(#badgeShadow)">
+    <rect x="270" y="270" width="120" height="100" rx="16" fill="#1e293b" />
+    <!-- React Atom Icon inside badge -->
+    <ellipse cx="330" cy="320" rx="22" ry="8" stroke="#0ea5e9" stroke-width="2" transform="rotate(30 330 320)" />
+    <ellipse cx="330" cy="320" rx="22" ry="8" stroke="#0ea5e9" stroke-width="2" transform="rotate(-30 330 320)" />
+    <ellipse cx="330" cy="320" rx="22" ry="8" stroke="#0ea5e9" stroke-width="2" transform="rotate(90 330 320)" />
+    <circle cx="330" cy="320" r="4" fill="#0ea5e9" />
+    <!-- Border -->
+    <rect x="270.5" y="270.5" width="119" height="99" rx="15.5" stroke="#ffffff" stroke-opacity="0.15" />
+  </g>
+
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 260) rotate(90) scale(180)">
+      <stop stop-color="#0ea5e9" />
+      <stop offset="1" stop-color="#0ea5e9" stop-opacity="0" />
+    </radialGradient>
+    
+    <linearGradient id="orbGrad" x1="150" y1="150" x2="370" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0ea5e9" />
+      <stop offset="0.6" stop-color="#0284c7" />
+      <stop offset="1" stop-color="#1e3a8a" />
+    </linearGradient>
+
+    <filter id="phoneShadow" x="144" y="125" width="130" height="130" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1e293b" flood-opacity="0.3" />
+    </filter>
+
+    <filter id="badgeShadow" x="250" y="256" width="160" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+  </defs>
+</svg>

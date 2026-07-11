@@ -198,4 +198,116 @@
   <priority>0.60</priority>
 </url>
 
+<!-- Phone Number Vue Docs -->
+<url>
+  <loc>https://erag.in/phone-number-vue/</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/introduction.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/installation.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/usage.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/examples.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/custom-data.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/api.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/types.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-vue/contributing.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
+<!-- Phone Number React Docs -->
+<url>
+  <loc>https://erag.in/phone-number-react/</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/introduction.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/installation.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/usage.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/examples.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/custom-data.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/api.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/types.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/phone-number-react/contributing.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
 </urlset>

@@ -492,8 +492,8 @@
 
     .docs-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
     }
 
     .doc-card {
@@ -581,8 +581,8 @@
 
     .reference-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
     }
 
     .reference-panel {
@@ -1105,39 +1105,36 @@
               <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-lang-sync-inertia">GitHub Link</a>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="reference">
-      <div class="shell">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Reference</span>
-            <h2>Start From The Right Page</h2>
-            <p>
-              The hub is organized around common documentation tasks so a visitor can jump directly to setup, framework examples, or API details.
-            </p>
-          </div>
-        </div>
+          <article class="doc-card">
+            <span class="tag">Vue Composable</span>
+            <h3>Phone Number Vue</h3>
+            <p>Minimal headless Vue composable for country-aware phone inputs, local normalization, masks, and validation.</p>
+            <ul class="topic-list">
+              <li>Headless usePhoneNumber composable</li>
+              <li>Bundled country &amp; dial-code metadata</li>
+              <li>No masking library dependencies</li>
+            </ul>
+            <div class="doc-links">
+              <a class="doc-link" href="/phone-number-vue/">Open Docs</a>
+              <a class="doc-link alt" href="https://github.com/eramitgupta/phone-number-vue">GitHub Link</a>
+            </div>
+          </article>
 
-        <div class="reference-grid">
-          <a class="reference-panel" href="/laravel-disposable-email/getting-started.html">
-            <strong>Getting Started</strong>
-            <span>Install packages, publish config, and confirm the first working setup.</span>
-          </a>
-          <a class="reference-panel" href="/laravel-inertia-toast/vue.html">
-            <strong>Vue Examples</strong>
-            <span>Use package features in Vue-driven Inertia pages.</span>
-          </a>
-          <a class="reference-panel" href="/laravel-inertia-toast/react.html">
-            <strong>React Examples</strong>
-            <span>Wire package behavior into React and Inertia application flows.</span>
-          </a>
-          <a class="reference-panel" href="/laravel-lang-sync-inertia/api.html">
-            <strong>API Reference</strong>
-            <span>Review commands, helpers, configuration, and runtime contracts.</span>
-          </a>
+          <article class="doc-card">
+            <span class="tag">React Hook</span>
+            <h3>Phone Number React</h3>
+            <p>Minimal headless React hook for country-aware phone inputs, local normalization, masks, and validation.</p>
+            <ul class="topic-list">
+              <li>Headless usePhoneNumber hook</li>
+              <li>Bundled country &amp; dial-code metadata</li>
+              <li>No masking library dependencies</li>
+            </ul>
+            <div class="doc-links">
+              <a class="doc-link" href="/phone-number-react/">Open Docs</a>
+              <a class="doc-link alt" href="https://github.com/eramitgupta/phone-number-react">GitHub Link</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>

@@ -1,0 +1,77 @@
+/* Phone Number Vue — VitePress Theme */
+@import 'vitepress/dist/client/theme-default/styles/vars.css';
+
+:root {
+  --vp-c-brand-1: #42b883;
+  --vp-c-brand-2: #35495e;
+  --vp-c-brand-3: #2d8c64;
+  --vp-c-brand-soft: rgba(66, 184, 131, 0.14);
+
+  --vp-button-brand-bg: #42b883;
+  --vp-button-brand-hover-bg: #35a574;
+  --vp-button-brand-active-bg: #2d8c64;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-text: #ffffff;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #42b883 0%, #35495e 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(66,184,131,0.18) 0%, transparent 70%);
+  --vp-home-hero-image-filter: blur(40px);
+
+  --vp-c-tip-1: #42b883;
+  --vp-c-tip-2: #42b883;
+  --vp-c-tip-3: rgba(66, 184, 131, 0.1);
+  --vp-c-tip-soft: rgba(66, 184, 131, 0.1);
+
+  --vp-badge-tip-text: #fff;
+  --vp-badge-tip-bg: #42b883;
+}
+
+.dark {
+  --vp-c-brand-1: #4ec994;
+  --vp-c-brand-2: #42b883;
+  --vp-c-brand-3: #35a574;
+  --vp-c-brand-soft: rgba(66, 184, 131, 0.18);
+}
+
+/* Custom code block accent */
+.vp-doc :not(pre) > code {
+  color: #35495e;
+  background-color: rgba(66, 184, 131, 0.1);
+}
+
+.dark .vp-doc :not(pre) > code {
+  color: #4ec994;
+  background-color: rgba(66, 184, 131, 0.15);
+}
+
+/* Sidebar active item */
+.VPSidebarItem.is-active .text {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* Badge */
+.VPBadge.tip {
+  background-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+/* API table highlight */
+.vp-doc table th {
+  background-color: rgba(66, 184, 131, 0.08);
+}
+
+/* Home feature cards hover */
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+.feat-icon {
+  color: var(--vp-c-brand-1);
+  width: 24px;
+  height: 24px;
+}

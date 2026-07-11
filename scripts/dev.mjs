@@ -33,6 +33,18 @@ const apps = [
     prefix: '/laravel-lang-sync-inertia',
     cwd: join(rootDir, 'laravel-lang-sync-inertia'),
     port: 5175
+  },
+  {
+    name: 'phone-number-vue',
+    prefix: '/phone-number-vue',
+    cwd: join(rootDir, 'phone-number-vue'),
+    port: 5176
+  },
+  {
+    name: 'phone-number-react',
+    prefix: '/phone-number-react',
+    cwd: join(rootDir, 'phone-number-react'),
+    port: 5177
   }
 ]
 
