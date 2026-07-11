@@ -34,7 +34,7 @@ pnpm add @erag/phone-number-react
 | Requirement | Version |
 | ----------- | ------- |
 | React | `^18.0.0 \|\| ^19.0.0` |
-| Node.js | `>=16` |
+| Node.js | `>=22` |
 | TypeScript | `^5.0` (optional but recommended) |
 
 ## Verify the install
