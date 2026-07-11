@@ -1,0 +1,144 @@
+import { defineConfig } from 'vitepress'
+
+const siteOrigin = 'https://erag.in'
+const siteBase = '/laravel-pwa'
+const siteUrl = `${siteOrigin}${siteBase}`
+
+const searchConsoleVerification = 'OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM'
+
+const canonicalUrl = (page: string): string => {
+  const path = page
+    .replace(/(^|\/)index\.md$/, '$1')
+    .replace(/\.md$/, '.html')
+
+  if (!path || path === '/') {
+    return `${siteUrl}/`
+  }
+  return `${siteUrl}/${path.replace(/^\//, '')}`
+}
+
+export default defineConfig({
+  base: `${siteBase}/`,
+  lang: 'en-US',
+  title: 'Laravel PWA',
+  description:
+    'Seamless Progressive Web App (PWA) integration for Laravel. Auto-generate manifest, register service workers, customize installation prompts, and upload logos dynamically.',
+  cleanUrls: false,
+  lastUpdated: true,
+  sitemap: {
+    hostname: siteOrigin,
+    transformItems: (items) => items.map((item) => ({
+      ...item,
+      url: `${siteBase}/${item.url}`.replace(/\/+/g, '/'),
+    })),
+  },
+  head: [
+    ['link', { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=64' }],
+    ['meta', { name: 'theme-color', content: '#000000' }],
+    ['meta', { name: 'author', content: 'Er Amit Gupta' }],
+    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content:
+          'Laravel PWA setup, Progressive Web App Laravel, Laravel service worker, PWA manifest generator, add to home screen Laravel, erag/laravel-pwa, Laravel PWA package',
+      },
+    ],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Laravel PWA — Erag' }],
+    ['meta', { property: 'og:title', content: 'Laravel PWA — Progressive Web App Setup' }],
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content:
+          'Seamless Progressive Web App integration for Laravel. Automatically configure, generate manifest, and register service workers.',
+      },
+    ],
+    ['meta', { property: 'og:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
+    ['meta', { name: 'twitter:title', content: 'Laravel PWA — Progressive Web App Setup' }],
+    [
+      'meta',
+      {
+        name: 'twitter:description',
+        content:
+          'Seamless Progressive Web App integration for Laravel. Automatically configure, generate manifest, and register service workers.',
+      },
+    ],
+    ['meta', { name: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { name: 'google-site-verification', content: searchConsoleVerification }],
+  ],
+  transformHead({ page }) {
+    const url = canonicalUrl(page)
+    return [
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:url', content: url }],
+      [
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareSourceCode',
+          name: 'erag/laravel-pwa',
+          description:
+            'Seamless Progressive Web App (PWA) integration for Laravel applications.',
+          url,
+          codeRepository: 'https://github.com/eramitgupta/laravel-pwa',
+          programmingLanguage: 'PHP',
+          license: 'https://opensource.org/licenses/MIT',
+          author: {
+            '@type': 'Person',
+            name: 'Er Amit Gupta',
+            url: 'https://erag.in/',
+          },
+        }),
+      ],
+    ]
+  },
+  themeConfig: {
+    logoLink: `${siteBase}/index.html`,
+    nav: [
+      { text: 'Guide', link: '/introduction.html' },
+      { text: 'Configuration', link: '/configuration.html' },
+      { text: 'Blade Directives', link: '/directives.html' },
+    ],
+    sidebar: [
+      {
+        text: 'Getting Started',
+        items: [
+          { text: 'Overview', link: '/index.html' },
+          { text: 'Introduction', link: '/introduction.html' },
+          { text: 'Installation', link: '/installation.html' },
+        ],
+      },
+      {
+        text: 'Usage',
+        items: [
+          { text: 'Configuration Settings', link: '/configuration.html' },
+          { text: 'Blade Directives', link: '/directives.html' },
+          { text: 'Install & Offline Prompts', link: '/install-prompt.html' },
+          { text: 'PWA Facade API', link: '/facade.html' },
+          { text: 'Dynamic Logo Upload', link: '/logo-upload.html' },
+          { text: 'Framework Integrations', link: '/frameworks.html' },
+        ],
+      },
+      {
+        text: 'Reference',
+        items: [
+          { text: 'Contributing', link: '/contributing.html' },
+        ],
+      },
+    ],
+    search: { provider: 'local' },
+    outline: { level: [2, 3], label: 'On this page' },
+    docFooter: { prev: 'Previous', next: 'Next' },
+    footer: { message: 'MIT License. Copyright Er Amit Gupta' },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/eramitgupta/laravel-pwa' },
+    ],
+  },
+})

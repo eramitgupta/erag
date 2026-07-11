@@ -1,0 +1,267 @@
+/* Laravel PWA — VitePress Theme Redesign */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'vitepress/dist/client/theme-default/styles/vars.css';
+
+:root {
+  --vp-font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  --vp-c-brand-1: #09090b;
+  --vp-c-brand-2: #27272a;
+  --vp-c-brand-3: #3f3f46;
+  --vp-c-brand-soft: rgba(9, 9, 11, 0.08);
+
+  --vp-button-brand-bg: #09090b;
+  --vp-button-brand-hover-bg: #27272a;
+  --vp-button-brand-active-bg: #3f3f46;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-active-text: #ffffff;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #09090b 0%, #71717a 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(9,9,11,0.1) 0%, transparent 70%);
+  --vp-home-hero-image-filter: blur(44px);
+
+  --vp-c-tip-1: #09090b;
+  --vp-c-tip-2: #27272a;
+  --vp-c-tip-3: rgba(9, 9, 11, 0.05);
+  --vp-c-tip-soft: rgba(9, 9, 11, 0.05);
+
+  --vp-badge-tip-text: #fff;
+  --vp-badge-tip-bg: #09090b;
+}
+
+.dark {
+  --vp-c-brand-1: #ffffff;
+  --vp-c-brand-2: #f4f4f5;
+  --vp-c-brand-3: #e4e4e7;
+  --vp-c-brand-soft: rgba(255, 255, 255, 0.12);
+  
+  --vp-button-brand-bg: #ffffff;
+  --vp-button-brand-hover-bg: #e4e4e7;
+  --vp-button-brand-active-bg: #d4d4d8;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-text: #09090b;
+  --vp-button-brand-hover-text: #09090b;
+  --vp-button-brand-active-text: #09090b;
+
+  --vp-home-hero-name-background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  
+  --vp-c-tip-1: #ffffff;
+  --vp-c-tip-2: #e4e4e7;
+  --vp-c-tip-3: rgba(255, 255, 255, 0.08);
+  --vp-c-tip-soft: rgba(255, 255, 255, 0.08);
+
+  --vp-badge-tip-text: #09090b;
+  --vp-badge-tip-bg: #ffffff;
+  
+  /* Absolute black mode */
+  --vp-c-bg: #000000;
+  --vp-c-bg-alt: #09090b;
+  --vp-c-bg-soft: #09090b;
+  --vp-c-bg-elv: #18181b;
+}
+
+/* Custom code block styling */
+.vp-doc :not(pre) > code {
+  color: #09090b;
+  background-color: rgba(9, 9, 11, 0.06);
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.dark .vp-doc :not(pre) > code {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Code block shadow & border styling */
+.vp-doc div[class*="language-"] {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 16px 0;
+}
+
+/* Active sidebar items with left border animation */
+.VPSidebarItem.is-active .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-link.is-active {
+  border-left: 2px solid var(--vp-c-brand-1);
+  padding-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Premium card borders for VitePress Home Feature Cards */
+.VPFeature {
+  border-radius: 12px !important;
+  border: 1px solid var(--vp-c-bg-soft) !important;
+  background: var(--vp-c-bg-soft) !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s !important;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.feat-icon {
+  color: var(--vp-c-brand-1);
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.VPFeature:hover .feat-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* API Tables visual enhancement */
+.vp-doc table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.vp-doc table th {
+  background-color: var(--vp-c-bg-alt);
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc table td, .vp-doc table th {
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 12px 16px;
+}
+
+.vp-doc table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Homepage FAQ and Description Styles */
+.home-container {
+  max-width: 1152px;
+  margin: 64px auto;
+  padding: 0 24px;
+}
+
+.home-desc, .home-faq {
+  margin-bottom: 64px;
+}
+
+.home-desc h2, .home-faq h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
+}
+
+.home-desc p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--vp-c-text-2);
+}
+
+.faq-item {
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+.faq-item h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 12px 0 !important;
+  color: var(--vp-c-brand-1);
+}
+
+.faq-item p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin: 0 !important;
+  color: var(--vp-c-text-2);
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin: 48px auto;
+  }
+  .home-desc h2, .home-faq h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Framework Logos Grid Styles */
+.framework-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.framework-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 18px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s ease;
+}
+
+.framework-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.framework-card svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.framework-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 !important;
+  color: var(--vp-c-text-1);
+}
+
+/* Custom Hero Image Scale up */
+.VPHero .image-src {
+  width: 100% !important;
+  max-width: 460px !important;
+  height: auto !important;
+}
+
+
+

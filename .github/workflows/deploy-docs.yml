@@ -15,6 +15,7 @@ on:
       - 'laravel-lang-sync-inertia/**'
       - 'phone-number-vue/**'
       - 'phone-number-react/**'
+      - 'laravel-pwa/**'
   workflow_dispatch:
 
 permissions:
@@ -46,6 +47,7 @@ jobs:
           npm ci --prefix laravel-lang-sync-inertia
           npm ci --prefix phone-number-vue
           npm ci --prefix phone-number-react
+          npm ci --prefix laravel-pwa
 
       - name: Build docs
         run: |
@@ -54,6 +56,7 @@ jobs:
           npm run build --prefix laravel-lang-sync-inertia
           npm run build --prefix phone-number-vue
           npm run build --prefix phone-number-react
+          npm run build --prefix laravel-pwa
 
       - name: Prepare Pages artifact
         run: |
@@ -62,6 +65,7 @@ jobs:
           mkdir -p site/laravel-lang-sync-inertia
           mkdir -p site/phone-number-vue
           mkdir -p site/phone-number-react
+          mkdir -p site/laravel-pwa
           cp index.html site/index.html
           cp -R public/. site/
           cp -R laravel-disposable-email/docs/.vitepress/dist/* site/laravel-disposable-email/
@@ -69,6 +73,7 @@ jobs:
           cp -R laravel-lang-sync-inertia/docs/.vitepress/dist/* site/laravel-lang-sync-inertia/
           cp -R phone-number-vue/docs/.vitepress/dist/* site/phone-number-vue/
           cp -R phone-number-react/docs/.vitepress/dist/* site/phone-number-react/
+          cp -R laravel-pwa/docs/.vitepress/dist/* site/laravel-pwa/
           touch site/.nojekyll
 
       - name: Upload artifact

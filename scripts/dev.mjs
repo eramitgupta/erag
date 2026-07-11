@@ -45,6 +45,12 @@ const apps = [
     prefix: '/phone-number-react',
     cwd: join(rootDir, 'phone-number-react'),
     port: 5177
+  },
+  {
+    name: 'laravel-pwa',
+    prefix: '/laravel-pwa',
+    cwd: join(rootDir, 'laravel-pwa'),
+    port: 5180
   }
 ]
 

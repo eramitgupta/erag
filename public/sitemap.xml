@@ -310,4 +310,66 @@
   <priority>0.60</priority>
 </url>
 
+<!-- Laravel PWA Docs -->
+<url>
+  <loc>https://erag.in/laravel-pwa/</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/introduction.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/installation.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/configuration.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/directives.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/facade.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/logo-upload.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/install-prompt.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/frameworks.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-pwa/contributing.html</loc>
+  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
 </urlset>
