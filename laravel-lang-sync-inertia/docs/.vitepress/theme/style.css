@@ -636,3 +636,123 @@ body {
 .dark .VPHome {
   background: transparent;
 }
+
+/* Home container & FAQ Styles */
+.home-container {
+  max-width: 1152px;
+  margin: 80px auto;
+  padding: 0 24px;
+  text-align: left;
+}
+
+.home-faq {
+  margin-top: 56px;
+}
+
+.home-faq h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+
+/* Collapsible FAQ Accordion Styles */
+.faq-item {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.faq-item[open] {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  outline: none;
+}
+
+/* Hide default marker in different browsers */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--vp-c-brand-1);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.faq-content p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+  margin: 16px 0 0 0 !important;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin: 48px auto;
+  }
+  .home-faq h2, .home-desc h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Home Description Style rules */
+.home-desc {
+  margin-bottom: 56px;
+}
+
+.home-desc h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+.home-desc p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--vp-c-text-2);
+}
+
+
+

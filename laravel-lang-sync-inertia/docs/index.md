@@ -131,33 +131,43 @@ const { __, trans } = lang();
 
 :::
 
-## Packages
+<div class="home-container">
+<section class="home-desc">
+<h2>Translation Syncing Made Simple</h2>
+<p>Laravel Lang Sync Inertia is an open-source package built to bridge the translation gap in hybrid Inertia.js architectures. Instead of writing custom JSON endpoints or copying translations manually to your frontend directory, it automates localization file syncing. The package loads, parses, and formats your existing server-side PHP array translations into lightweight frontend modules. With ready-to-use helpers for Vue, React, and Svelte, your client-side views stay perfectly synchronized with Laravel's active locale dynamically.</p>
+</section>
 
-Choose the package you want to install first.
+<section class="home-faq">
+<h2>Frequently Asked Questions</h2>
 
-::: code-group
+<details class="faq-item">
+<summary>Why use this package over manual prop sharing?</summary>
+<div class="faq-content">
+<p>While you can manually pass translation objects through Inertia middleware, doing so for entire language libraries can result in massive payload sizes. This package handles automatic dynamic syncing, locale matching, legacy placeholder fallbacks, and localized frontend hooks efficiently without manual setup.</p>
+</div>
+</details>
 
-```bash [Laravel package]
-composer require erag/laravel-lang-sync-inertia
+<details class="faq-item">
+<summary>How does locale determination work?</summary>
+<div class="faq-content">
+<p>The package automatically respects Laravel's dynamic runtime locale. When you update the locale via app()->setLocale() on the server, the corresponding lang files will be dynamically loaded and shared with Inertia frontend hooks on the next render cycle.</p>
+</div>
+</details>
 
-php artisan lang:publish
+<details class="faq-item">
+<summary>Can I bundle translations for production caching?</summary>
+<div class="faq-content">
+<p>Yes. The package includes artisan exporter commands to compile PHP translation files into JSON assets, allowing them to be cached in the browser or via Service Workers for offline capabilities.</p>
+</div>
+</details>
 
-php artisan erag:install-lang
-```
+<details class="faq-item">
+<summary>Does it support pluralization and replacements?</summary>
+<div class="faq-content">
+<p>Absolutely. It implements full pluralization interval support (using transChoice helper rules) and parameter replacement matching standard Laravel behavior in Vue, React, and Svelte.</p>
+</div>
+</details>
+</section>
+</div>
 
-```bash [Vue/React/Svelte package]
-npm install @erag/lang-sync-inertia
-```
 
-:::
-
-## Why use it
-
-`Laravel Lang Sync Inertia` connects Laravel translation files to your Inertia frontend without manually passing props in every response.
-
-This package is useful when:
-
-- your translations already live in Laravel lang files
-- your frontend is built with Inertia.js
-- you want the same translation flow in Vue, React, or Svelte
-- you need placeholder replacement without custom glue code
