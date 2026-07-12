@@ -25,6 +25,7 @@ The overall goal is simple: keep your translation workflow native to Laravel, bu
 
 - Automatic translation sharing via Inertia.js middleware
 - Load single or multiple language files with one call
+- Load nested language directories via dot notation
 - Dynamic placeholder replacement with Laravel-style `:name` syntax
 - Works with Vue 3, React, and Svelte 5
 - Auto-switches locale folder based on Laravel's current locale
@@ -49,9 +50,12 @@ Frontend -> __('auth.greeting') or trans('auth.welcome', { name: 'Amit' })
 Output -> Hello! / Welcome, Amit!
 ```
 
+Nested language directories work the same way. For example, `syncLangFiles('admin.users')` reads `lang/{locale}/admin/users.php` and lets the frontend resolve keys like `__('admin.users.name')`.
+
 Supported use cases:
 
 - single or multiple language file loading
+- nested language directory loading via dot notation
 - Vue 3, React, and Svelte 5 apps
 - placeholder replacement with `:name` values
 - locale-based loading from Laravel's current app locale

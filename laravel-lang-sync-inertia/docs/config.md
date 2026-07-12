@@ -48,6 +48,14 @@ This is the directory used when `syncLangFiles()` reads translation files such a
 ```text
 lang/en/auth.php
 lang/hi/auth.php
+lang/en/admin/users.php
+lang/hi/admin/users.php
+```
+
+Nested files can be loaded with dot notation:
+
+```php
+syncLangFiles('admin.users');
 ```
 
 ## `output_lang`

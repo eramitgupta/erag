@@ -31,6 +31,23 @@ syncLangFiles('auth');
 syncLangFiles(['auth', 'validation', 'pagination']);
 ```
 
+## Nested language directories
+
+Use dot notation when a translation group lives inside a nested directory:
+
+```php
+syncLangFiles('admin.users');
+```
+
+This reads `lang/{locale}/admin/users.php` and shares the data under the same nested key path:
+
+```text
+Controller -> syncLangFiles('admin.users')
+Laravel -> lang/{locale}/admin/users.php
+Inertia -> page.props.lang.admin.users
+Frontend -> __('admin.users.name')
+```
+
 ## Dashboard example
 
 ```php
@@ -249,3 +266,17 @@ lang/
 ```
 
 If `App::getLocale()` returns `hi`, the package reads `lang/hi/messages.php`.
+
+Nested directories follow the same locale rule:
+
+```text
+lang/
+├── en/
+│   └── admin/
+│       └── users.php
+└── hi/
+    └── admin/
+        └── users.php
+```
+
+For this structure, `syncLangFiles('admin.users')` reads the current locale's `admin/users.php` file and the frontend uses keys like `admin.users.name`.

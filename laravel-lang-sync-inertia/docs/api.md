@@ -33,6 +33,14 @@ Multiple files:
 syncLangFiles(['auth', 'validation', 'pagination'])
 ```
 
+Nested language directories:
+
+```text
+syncLangFiles('admin.users')
+```
+
+This loads `lang/{locale}/admin/users.php`, shares it as `page.props.lang.admin.users`, and resolves with keys like `__('admin.users.name')`.
+
 ## Full flow
 
 ::: code-group
@@ -60,6 +68,8 @@ When you call `syncLangFiles('auth')` in your controller:
 2. The translation array is passed to Inertia as a shared prop under `page.props.lang`.
 3. The frontend helper reads from `page.props.lang` and resolves keys like `auth.greeting`.
 4. Placeholders like `:name` and `{name}` are replaced at runtime with the values you pass.
+
+When you call `syncLangFiles('admin.users')`, the same flow reads `lang/{locale}/admin/users.php` and frontend helpers resolve the full nested key path, such as `admin.users.name`.
 
 ## `__(key, replaces?)`
 

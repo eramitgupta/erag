@@ -41,6 +41,9 @@ features:
     - icon: '◐'
       title: 'Locale aware'
       details: 'Translations are loaded from `lang/{locale}` using Laravel’s current application locale.'
+    - icon: '▣'
+      title: 'Nested directories'
+      details: 'Load files like `lang/en/admin/users.php` with `syncLangFiles("admin.users")` and resolve `__("admin.users.name")`.'
     - icon: '⇪'
       title: 'JSON export'
       details: 'Generate frontend-ready JSON files from PHP lang files, then load the exported JSON automatically.'
@@ -131,6 +134,18 @@ const { __, trans } = lang();
 
 :::
 
+Nested Laravel language directories are also supported:
+
+```php
+syncLangFiles('admin.users');
+```
+
+This reads `lang/{locale}/admin/users.php`, then your frontend can call:
+
+```ts
+__('admin.users.name');
+```
+
 <div class="home-container">
 <section class="home-desc">
 <h2>Translation Syncing Made Simple</h2>
@@ -169,5 +184,3 @@ const { __, trans } = lang();
 </details>
 </section>
 </div>
-
-
