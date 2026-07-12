@@ -51,7 +51,7 @@ File: `resources/js/lang/en/auth.json`
 
 Use `:name` for new translation strings. `{name}` is still supported for existing language files and is exported unchanged.
 
-Nested input files keep their directory structure. For example, `lang/en/admin/users.php` is generated as `resources/js/lang/en/admin/users.json` and resolves with keys like `admin.users.name`.
+Nested input files keep their directory structure. For example, `lang/en/admin/auth.php` is generated as `resources/js/lang/en/admin/auth.json` and resolves with keys like `admin.auth.name`.
 
 ## Generated structure
 
@@ -60,13 +60,13 @@ resources/js/lang/
 ├── en/
 │   ├── auth.json
 │   ├── admin/
-│   │   └── users.json
+│   │   └── auth.json
 │   ├── validation.json
 │   └── pagination.json
 └── hi/
     ├── auth.json
     ├── admin/
-    │   └── users.json
+    │   └── auth.json
     └── validation.json
 ```
 

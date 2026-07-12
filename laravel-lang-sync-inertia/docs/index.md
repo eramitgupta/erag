@@ -43,7 +43,13 @@ features:
       details: 'Translations are loaded from `lang/{locale}` using Laravel’s current application locale.'
     - icon: '▣'
       title: 'Nested directories'
-      details: 'Load files like `lang/en/admin/users.php` with `syncLangFiles("admin.users")` and resolve `__("admin.users.name")`.'
+      details: 'Load files like `lang/en/admin/auth.php` with `syncLangFiles("admin.auth")` and resolve `__("admin.auth.name")`.'
+    - icon: '⊕'
+      title: 'Multiple files'
+      details: 'Sync route-level groups like `syncLangFiles(["admin.auth", "auth"])` before rendering the Inertia page.'
+    - icon: '◫'
+      title: 'Shared lang prop'
+      details: 'Translations are exposed through `page.props.lang`, so components can read them without manual props.'
     - icon: '⇪'
       title: 'JSON export'
       details: 'Generate frontend-ready JSON files from PHP lang files, then load the exported JSON automatically.'
@@ -137,13 +143,13 @@ const { __, trans } = lang();
 Nested Laravel language directories are also supported:
 
 ```php
-syncLangFiles('admin.users');
+syncLangFiles('admin.auth');
 ```
 
-This reads `lang/{locale}/admin/users.php`, then your frontend can call:
+This reads `lang/{locale}/admin/auth.php`, then your frontend can call:
 
 ```ts
-__('admin.users.name');
+__('admin.auth.name');
 ```
 
 <div class="home-container">

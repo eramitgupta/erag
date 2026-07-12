@@ -36,10 +36,10 @@ syncLangFiles(['auth', 'validation', 'pagination'])
 Nested language directories:
 
 ```text
-syncLangFiles('admin.users')
+syncLangFiles('admin.auth')
 ```
 
-This loads `lang/{locale}/admin/users.php`, shares it as `page.props.lang.admin.users`, and resolves with keys like `__('admin.users.name')`.
+This loads `lang/{locale}/admin/auth.php`, shares it as `page.props.lang.admin.auth`, and resolves with keys like `__('admin.auth.name')`.
 
 ## Full flow
 
@@ -69,7 +69,7 @@ When you call `syncLangFiles('auth')` in your controller:
 3. The frontend helper reads from `page.props.lang` and resolves keys like `auth.greeting`.
 4. Placeholders like `:name` and `{name}` are replaced at runtime with the values you pass.
 
-When you call `syncLangFiles('admin.users')`, the same flow reads `lang/{locale}/admin/users.php` and frontend helpers resolve the full nested key path, such as `admin.users.name`.
+When you call `syncLangFiles('admin.auth')`, the same flow reads `lang/{locale}/admin/auth.php` and frontend helpers resolve the full nested key path, such as `admin.auth.name`.
 
 ## `__(key, replaces?)`
 

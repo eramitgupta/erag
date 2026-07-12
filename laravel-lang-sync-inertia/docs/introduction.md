@@ -50,7 +50,7 @@ Frontend -> __('auth.greeting') or trans('auth.welcome', { name: 'Amit' })
 Output -> Hello! / Welcome, Amit!
 ```
 
-Nested language directories work the same way. For example, `syncLangFiles('admin.users')` reads `lang/{locale}/admin/users.php` and lets the frontend resolve keys like `__('admin.users.name')`.
+Nested language directories work the same way. For example, `syncLangFiles('admin.auth')` reads `lang/{locale}/admin/auth.php` and lets the frontend resolve keys like `__('admin.auth.name')`.
 
 Supported use cases:
 
