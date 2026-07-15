@@ -31,6 +31,10 @@ When the command runs, it:
 
 This command updates application storage. It does not rewrite the package's built-in `Email::domains()` array.
 
+::: info
+The HTTP request timeout for pulling remote files can be configured in the `config/disposable-email.php` file using the `'sync_timeout'` key. See [Configuration](./configuration.md) for details.
+:::
+
 To update the package source array, run:
 
 ```bash

@@ -21,6 +21,8 @@ return [
        'https://raw.githubusercontent.com/eramitgupta/disposable-email/main/disposable_email.txt',
     ],
 
+    'sync_timeout' => 30,
+
     'cache_enabled' => false,
     'cache_ttl' => 60,
 
@@ -41,6 +43,10 @@ This is the directory where your custom blacklist files live. The package reads 
 ### `remote_url`
 
 This is the list of remote files the package will pull when you run the sync command.
+
+### `sync_timeout`
+
+This sets the timeout, in seconds, for HTTP requests made by the sync command (`php artisan erag:sync-disposable-email-list`).
 
 ### `cache_enabled`
 
@@ -80,6 +86,8 @@ return [
         'https://raw.githubusercontent.com/eramitgupta/disposable-email/main/disposable_email.txt',
         'https://example.com/internal-disposable-domains.txt',
     ],
+
+    'sync_timeout' => 30,
 
     'cache_enabled' => true,
     'cache_ttl' => 120,
