@@ -33,7 +33,7 @@ Disposable::domain('test@tempmail.com');
 Or import the package facade by namespace:
 
 ```php
-use EragLaravelDisposableEmail\Facades\Disposable;
+use LaravelDisposableEmail\Facades\Disposable;
 
 Disposable::email('test@tempmail.com');
 Disposable::domain('test@tempmail.com');
@@ -57,8 +57,8 @@ Disposable::domain($emailOrDomain);
 The same methods are available through the namespaced facade:
 
 ```php
-EragLaravelDisposableEmail\Facades\Disposable::email($email);
-EragLaravelDisposableEmail\Facades\Disposable::domain($emailOrDomain);
+LaravelDisposableEmail\Facades\Disposable::email($email);
+LaravelDisposableEmail\Facades\Disposable::domain($emailOrDomain);
 ```
 
 ## Migration
@@ -119,10 +119,10 @@ $request->validate([
 Class-based validation also remains available:
 
 ```php
-use EragLaravelDisposableEmail\Rules\DisposableEmailRule;
+use LaravelDisposableEmail\Rules\DisposableEmail;
 
 $request->validate([
-    'email' => ['required', 'email', new DisposableEmailRule()],
+    'email' => ['required', 'email', new DisposableEmail()],
 ]);
 ```
 
@@ -147,7 +147,7 @@ Laravel package discovery now exposes only the `Disposable` facade alias:
   "extra": {
     "laravel": {
       "aliases": {
-        "Disposable": "EragLaravelDisposableEmail\\Facades\\Disposable"
+        "Disposable": "LaravelDisposableEmail\\Facades\\Disposable"
       }
     }
   }

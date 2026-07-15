@@ -100,11 +100,11 @@ If the package is not behaving as expected in older Laravel projects:
 Laravel 11, 12, and 13 manual registration:
 
 ```php
-use EragLaravelDisposableEmail\LaravelDisposableEmailServiceProvider;
+use LaravelDisposableEmail\DisposableEmailServiceProvider;
 
 return [
     // ...
-    LaravelDisposableEmailServiceProvider::class,
+    DisposableEmailServiceProvider::class,
 ];
 ```
 
@@ -113,7 +113,7 @@ Laravel 10 manual registration:
 ```php
 'providers' => [
     // ...
-    EragLaravelDisposableEmail\LaravelDisposableEmailServiceProvider::class,
+    LaravelDisposableEmail\DisposableEmailServiceProvider::class,
 ],
 ```
 
@@ -156,7 +156,7 @@ $isDisposable = Disposable::email('test@tempmail.com');
 You can also use the namespaced facade:
 
 ```php
-use EragLaravelDisposableEmail\Facades\Disposable;
+use LaravelDisposableEmail\Facades\Disposable;
 
 $isDisposable = Disposable::email('test@tempmail.com');
 ```

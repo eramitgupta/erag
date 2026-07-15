@@ -24,11 +24,11 @@ composer require erag/laravel-disposable-email
 Laravel package discovery should normally handle registration. If you want to register it manually, add the provider to `bootstrap/providers.php`:
 
 ```php
-use EragLaravelDisposableEmail\LaravelDisposableEmailServiceProvider;
+use LaravelDisposableEmail\DisposableEmailServiceProvider;
 
 return [
     // ...
-    LaravelDisposableEmailServiceProvider::class,
+    DisposableEmailServiceProvider::class,
 ];
 ```
 
@@ -39,7 +39,7 @@ If you need manual registration on Laravel 10, add the provider to `config/app.p
 ```php
 'providers' => [
     // ...
-    EragLaravelDisposableEmail\LaravelDisposableEmailServiceProvider::class,
+    LaravelDisposableEmail\DisposableEmailServiceProvider::class,
 ],
 ```
 
