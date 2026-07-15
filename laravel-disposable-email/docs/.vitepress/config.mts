@@ -120,6 +120,10 @@ export default defineConfig({
         text: 'Usage',
         items: [
           { text: 'Validation and Runtime', link: '/validation-and-runtime.html' },
+          { text: 'Validation', link: '/validation.html' },
+          { text: 'Validation Advanced Check', link: '/email-validation-advanced-check.html' },
+          { text: 'Runtime Checks', link: '/runtime-checks.html' },
+          { text: 'API and Blade', link: '/api-and-blade.html' },
           { text: 'Sync and Blacklist', link: '/sync-and-blacklist.html' },
           { text: 'Schedule Sync', link: '/schedule-syncing-automatically.html' },
           { text: 'Caching', link: '/caching.html' },
