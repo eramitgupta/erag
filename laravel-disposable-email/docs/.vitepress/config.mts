@@ -117,15 +117,58 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Usage',
+        text: 'Validation',
         items: [
-          { text: 'Validation and Runtime', link: '/validation-and-runtime.html' },
-          { text: 'Sync and Blacklist', link: '/sync-and-blacklist.html' },
-          { text: 'Schedule Sync', link: '/schedule-syncing-automatically.html' },
-          { text: 'Caching', link: '/caching.html' },
-          { text: 'Troubleshooting', link: '/troubleshooting.html' },
-          { text: 'Contributing', link: '/contributing.html' },
-          { text: 'Deprecated 5.0.0', link: '/deprecated-5-0-0.html' }
+          { text: 'Basic', link: '/validation/basic.html' },
+          { text: 'Form Request', link: '/validation/form-request.html' },
+          { text: 'Rule Object', link: '/validation/rule-object.html' },
+          { text: 'Manual and API', link: '/validation/manual-api.html' }
+        ]
+      },
+      {
+        text: 'Runtime',
+        items: [
+          { text: 'Email and Domain Checks', link: '/runtime/checks.html' },
+          { text: 'Detailed Result', link: '/runtime/result.html' },
+          { text: 'Blade Conditional', link: '/runtime/blade.html' }
+        ]
+      },
+      {
+        text: 'Domain Lists',
+        items: [
+          { text: 'Remote Sync', link: '/domains/sync.html' },
+          { text: 'Custom Blacklist', link: '/domains/blacklist.html' },
+          { text: 'Whitelist', link: '/domains/whitelist.html' },
+          { text: 'Subdomain Blocking', link: '/domains/subdomains.html' },
+          { text: 'Package Stats', link: '/domains/stats.html' }
+        ]
+      },
+      {
+        text: 'Advanced',
+        items: [
+          { text: 'RFC / DNS Validation', link: '/advanced/rfc-dns.html' },
+          { text: 'Caching', link: '/advanced/cache.html' },
+          { text: 'Schedule Sync', link: '/advanced/schedule.html' }
+        ]
+      },
+      {
+        text: 'Maintainers',
+        items: [
+          { text: 'Contributing', link: '/maintainers/contributing.html' }
+        ]
+      },
+      {
+        text: 'Help',
+        items: [
+          { text: 'Validation', link: '/help/validation.html' },
+          { text: 'Sync and Cache', link: '/help/sync-cache.html' },
+          { text: 'Setup and Blade', link: '/help/setup-blade.html' }
+        ]
+      },
+      {
+        text: 'Upgrades',
+        items: [
+          { text: 'Version 5.x', link: '/upgrades/v5.html' }
         ]
       }
     ],
