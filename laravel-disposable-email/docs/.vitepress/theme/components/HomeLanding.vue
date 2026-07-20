@@ -11,7 +11,8 @@ import { withBase } from 'vitepress'
         <strong>EragLaravelDisposableEmail</strong> helps you detect and block temporary email
         addresses during form validation, runtime checks, and Blade conditionals. It comes with
         <strong>110,646+</strong> known disposable domains, simple installation, remote sync
-        support, custom blacklist support, and optional caching for faster lookups.
+        support, custom blacklist support, optional RFC/DNS validation, and caching for faster
+        lookups.
       </p>
       <div class="quick-links">
         <a :href="withBase('/getting-started.html')">Get started</a>
@@ -59,10 +60,10 @@ import { withBase } from 'vitepress'
       <div class="home-feature-grid">
       <div class="home-feature-card">
         <span class="home-icon">RULE</span>
-        <strong>Built for validation</strong>
+        <strong>Flexible validation</strong>
         <p>
-          Add <code>disposable_email</code> to your validation rules and block temporary inboxes at
-          the form level.
+          Block temporary inboxes with <code>disposable_email</code>, then opt into RFC, DNS, spoof,
+          or filter checks when needed.
         </p>
       </div>
       <div class="home-feature-card">
@@ -87,33 +88,36 @@ import { withBase } from 'vitepress'
     <div class="home-release-panel">
       <div class="home-release-copy">
         <span class="section-label release-label">New in this release</span>
-        <h3>Shorter checks, clearer results, and better domain control.</h3>
+        <h3>Go beyond domain matching with RFC and DNS validation.</h3>
         <p>
-          Use the new <code>Disposable</code> facade for quick checks, inspect detailed match
-          results when you need more context, and manage trusted or subdomain behavior from config.
+          Add one or more optional validation modes after the rule. The plain
+          <code>disposable_email</code> rule keeps its original domain-only behavior.
         </p>
-        <pre class="home-release-code"><span>Disposable::email('test@tempmail.com');</span><span>Disposable::domain('tempmail.com');</span><span>$result = Disposable::check($email);</span></pre>
+        <pre class="home-release-code"><span>'disposable_email:rfc'</span><span>'disposable_email:dns'</span><span>'disposable_email:rfc,dns'</span></pre>
+        <div class="quick-links">
+          <a :href="withBase('/advanced/rfc-dns.html')">Explore RFC / DNS validation</a>
+        </div>
       </div>
       <div class="home-release-list">
         <div>
-          <span>API</span>
-          <strong>Short facade methods</strong>
-          <p><code>email</code>, <code>domain</code>, and <code>check</code>.</p>
+          <span>RFC</span>
+          <strong>RFC and strict modes</strong>
+          <p>Validate supported email RFCs and optionally reject RFC warnings.</p>
         </div>
         <div>
-          <span>RESULT</span>
-          <strong>Detailed match data</strong>
-          <p>Read domain, matched domain, source, whitelist state, and array output.</p>
+          <span>DNS</span>
+          <strong>Mailbox domain checks</strong>
+          <p>Opt into DNS lookups and require the email domain to have a valid MX record.</p>
         </div>
         <div>
-          <span>CONFIG</span>
-          <strong>Whitelist and subdomains</strong>
-          <p>Allow trusted domains and block disposable parent-domain subdomains.</p>
+          <span>SPOOF</span>
+          <strong>Unicode spoof protection</strong>
+          <p>Reject deceptive Unicode addresses using the optional spoof validator.</p>
         </div>
         <div>
-          <span>CLI</span>
-          <strong>Stats command</strong>
-          <p>Run <code>php artisan disposable:stats</code> to inspect loaded lists.</p>
+          <span>FILTER</span>
+          <strong>PHP filter modes</strong>
+          <p>Choose standard or Unicode-aware <code>filter_var</code> validation.</p>
         </div>
       </div>
     </div>
@@ -123,7 +127,7 @@ import { withBase } from 'vitepress'
       <h3>Everything you need to use the package with confidence.</h3>
       <p>
         The docs cover the full package workflow, from installation and validation rules to runtime
-        checks, Blade directives, syncing, custom blacklists, and caching.
+        checks, RFC/DNS modes, Blade directives, syncing, custom blacklists, and caching.
       </p>
     </div>
 
@@ -133,6 +137,7 @@ import { withBase } from 'vitepress'
         <ul class="home-list">
           <li>A large built-in disposable domain list ready to use out of the box.</li>
           <li>Support for both string rules and custom rule objects.</li>
+          <li>Optional RFC, strict, DNS, spoof, and filter validation modes.</li>
           <li>Facade and runtime checks for service classes and business logic.</li>
           <li><code>@disposableEmail(...)</code> for simple conditional output in Blade views.</li>
           <li>Remote syncing, custom blacklist files, and optional caching.</li>
@@ -181,11 +186,13 @@ import { withBase } from 'vitepress'
       <h3>Install it, configure it, and keep your email checks up to date.</h3>
       <p>
         Start with <code>Getting Started</code>, then move through validation, configuration,
-        syncing, and caching to set up a complete disposable email blocking workflow.
+        advanced RFC/DNS checks, syncing, and caching to set up a complete email validation
+        workflow.
       </p>
       <div class="quick-links">
         <a :href="withBase('/getting-started.html')">Installation guide</a>
         <a :href="withBase('/configuration.html')">Configuration options</a>
+        <a :href="withBase('/advanced/rfc-dns.html')">RFC / DNS validation</a>
         <a :href="withBase('/sync-and-blacklist.html')">Sync and blacklist</a>
         <a :href="withBase('/caching.html')">Caching notes</a>
       </div>
@@ -315,4 +322,3 @@ import { withBase } from 'vitepress'
   }
 }
 </style>
-
