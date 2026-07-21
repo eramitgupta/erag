@@ -1,0 +1,416 @@
+/* ==========================================================================
+   Shadcn Slate / Tailwind Theme - @erag/text-editor-vue
+   ========================================================================== */
+
+:root {
+    /* Light Mode Palette - Slate Monochrome with Emerald Accents */
+    --vp-c-bg: #ffffff;
+    --vp-c-bg-alt: #f8fafc;
+    --vp-c-bg-elv: #ffffff;
+    --vp-c-bg-soft: #f8fafc;
+    --vp-c-border: #e2e8f0;
+    --vp-c-divider: #e2e8f0;
+
+    --vp-c-brand-1: #0f766e;
+    --vp-c-brand-2: #14b8a6;
+    --vp-c-brand-3: #2dd4bf;
+    --vp-c-brand-soft: rgba(15, 118, 110, 0.08);
+
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #0f766e 60%,
+        #2563eb 100%
+    );
+
+    --vp-button-brand-border: #0f172a;
+    --vp-button-brand-text: #ffffff;
+    --vp-button-brand-bg: #0f172a;
+    --vp-button-brand-hover-border: #1e293b;
+    --vp-button-brand-hover-bg: #1e293b;
+    --vp-button-brand-hover-text: #ffffff;
+}
+
+/* Dark Mode - Obsidian Slate (#09090b) */
+.dark {
+    --vp-c-bg: #09090b;
+    --vp-c-bg-alt: #121215;
+    --vp-c-bg-elv: #18181b;
+    --vp-c-bg-soft: #18181b;
+    --vp-c-border: #27272a;
+    --vp-c-divider: #27272a;
+
+    --vp-c-brand-1: #2dd4bf;
+    --vp-c-brand-2: #14b8a6;
+    --vp-c-brand-3: #0f766e;
+    --vp-c-brand-soft: rgba(45, 212, 191, 0.12);
+
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #2dd4bf 50%,
+        #38bdf8 100%
+    );
+
+    --vp-button-brand-border: #fafafa;
+    --vp-button-brand-text: #09090b;
+    --vp-button-brand-bg: #fafafa;
+    --vp-button-brand-hover-border: #f4f4f5;
+    --vp-button-brand-hover-bg: #f4f4f5;
+    --vp-button-brand-hover-text: #09090b;
+}
+
+/* Feature Cards - Shadcn Card Design */
+.VPFeature {
+    border-radius: 12px !important;
+    border: 1px solid var(--vp-c-border) !important;
+    background-color: var(--vp-c-bg-soft) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.VPFeature:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Custom Block Callouts with Emojis & Vibrant Highlights
+   ========================================================================== */
+.custom-block {
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-left-width: 4px;
+}
+
+.custom-block .custom-block-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+/* Emojis for Callouts */
+.custom-block.warning .custom-block-title::before,
+.custom-block.caution .custom-block-title::before {
+    content: '⚠️ ';
+    margin-right: 0.35rem;
+}
+
+.custom-block.tip .custom-block-title::before {
+    content: '💡 ';
+    margin-right: 0.35rem;
+}
+
+.custom-block.info .custom-block-title::before,
+.custom-block.note .custom-block-title::before {
+    content: 'ℹ️ ';
+    margin-right: 0.35rem;
+}
+
+.custom-block.important .custom-block-title::before {
+    content: '📌 ';
+    margin-right: 0.35rem;
+}
+
+.custom-block.danger .custom-block-title::before {
+    content: '🚨 ';
+    margin-right: 0.35rem;
+}
+
+/* Callout Color Themes */
+.custom-block.warning,
+.custom-block.caution {
+    border-color: #f59e0b;
+    background-color: rgba(245, 158, 11, 0.08);
+}
+.custom-block.warning .custom-block-title,
+.custom-block.caution .custom-block-title {
+    color: #d97706;
+}
+.dark .custom-block.warning .custom-block-title,
+.dark .custom-block.caution .custom-block-title {
+    color: #fbbf24;
+}
+
+.custom-block.tip {
+    border-color: #10b981;
+    background-color: rgba(16, 185, 129, 0.08);
+}
+.custom-block.tip .custom-block-title {
+    color: #059669;
+}
+.dark .custom-block.tip .custom-block-title {
+    color: #34d399;
+}
+
+.custom-block.info,
+.custom-block.note {
+    border-color: #0f766e;
+    background-color: rgba(15, 118, 110, 0.08);
+}
+.dark .custom-block.info,
+.dark .custom-block.note {
+    border-color: #2dd4bf;
+    background-color: rgba(45, 212, 191, 0.1);
+}
+
+.custom-block.important {
+    border-color: #6366f1;
+    background-color: rgba(99, 102, 241, 0.08);
+}
+.custom-block.important .custom-block-title {
+    color: #4f46e5;
+}
+.dark .custom-block.important .custom-block-title {
+    color: #818cf8;
+}
+
+.custom-block.danger {
+    border-color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.08);
+}
+.custom-block.danger .custom-block-title {
+    color: #dc2626;
+}
+.dark .custom-block.danger .custom-block-title {
+    color: #f87171;
+}
+
+/* ==========================================================================
+   Global Markdown Typography & Styling (.vp-doc)
+   ========================================================================== */
+.vp-doc h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.vp-doc h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    border-top: none;
+    padding-top: 0;
+}
+
+.vp-doc h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.vp-doc p,
+.vp-doc li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--vp-c-text-2);
+}
+
+.vp-doc li {
+    margin-top: 0.5rem;
+}
+
+/* Inline Code */
+.vp-doc p code,
+.vp-doc li code,
+.vp-doc td code {
+    color: var(--vp-c-brand-1);
+    background-color: var(--vp-c-brand-soft);
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.dark .vp-doc p code,
+.dark .vp-doc li code,
+.dark .vp-doc td code {
+    color: var(--vp-c-brand-3);
+}
+
+/* Links */
+.vp-doc a {
+    color: var(--vp-c-brand-1);
+    text-decoration-color: var(--vp-c-brand-soft);
+    text-underline-offset: 4px;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+.vp-doc a:hover {
+    text-decoration-color: var(--vp-c-brand-1);
+}
+
+/* Blockquotes */
+.vp-doc blockquote {
+    border-left: 4px solid var(--vp-c-brand-1);
+    background: var(--vp-c-bg-soft);
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    color: var(--vp-c-text-2);
+    margin: 1.5rem 0;
+}
+
+/* ==========================================================================
+   Table & Code Styles
+   ========================================================================== */
+.vp-doc table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--vp-c-divider);
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Global Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.feature-card {
+    background: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-border);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none !important;
+    color: inherit !important;
+}
+.feature-card:hover {
+    border-color: var(--vp-c-brand-1);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+.dark .feature-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.fc-icon-large {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: var(--vp-c-bg);
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    color: var(--vp-c-text-1);
+}
+.feature-card:hover .fc-icon-large {
+    background: var(--vp-c-brand-soft);
+    border-color: var(--vp-c-brand-1);
+    transform: scale(1.05);
+    color: var(--vp-c-brand-1);
+}
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+.feature-card p {
+    color: var(--vp-c-text-2);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Compact Feature Grid for Markdown Docs (.vp-doc) */
+.vp-doc .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.vp-doc .feature-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+}
+.vp-doc .fc-icon-large {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+.vp-doc .fc-icon-large svg {
+    width: 20px;
+    height: 20px;
+}
+.vp-doc .feature-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+.vp-doc .feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.vp-doc th {
+    background-color: var(--vp-c-bg-soft);
+    font-weight: 700;
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+
+.vp-doc td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--vp-c-divider);
+}
+
+/* ==========================================================================
+   FAQ Accordion Styling (Shadcn Accordion Style)
+   ========================================================================== */
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.75rem 0;
+}
+
+.faq-item {
+    border-radius: 10px;
+    border: 1px solid var(--vp-c-border);
+    background: var(--vp-c-bg-soft);
+    padding: 0.9rem 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.faq-item[open] {
+    border-color: var(--vp-c-brand-1);
+}
+
+.faq-summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: var(--vp-c-text-1);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.faq-content {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--vp-c-text-2);
+    border-top: 1px solid var(--vp-c-border);
+    padding-top: 0.75rem;
+}

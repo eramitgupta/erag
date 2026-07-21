@@ -57,6 +57,12 @@ const apps = [
     prefix: '/vue-toastification',
     cwd: join(rootDir, 'vue-toastification'),
     port: 5181
+  },
+  {
+    name: 'text-editor-vue',
+    prefix: '/text-editor-vue',
+    cwd: join(rootDir, 'text-editor-vue'),
+    port: 5182
   }
 ]
 
