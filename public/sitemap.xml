@@ -428,4 +428,162 @@
   <priority>0.70</priority>
 </url>
 
+<!-- Text Editor Vue Docs -->
+<url>
+  <loc>https://erag.in/text-editor-vue/</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/introduction.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/installation.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/configuration.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/laravel-integration.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/usage.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/editing-experience.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/menubar-customization.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/text-formatting.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/lists-and-indentation.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/links-and-anchors.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/media-and-embeds.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/table-editor.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/mentions.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/merge-tags.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/templates.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/image-upload.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/special-characters.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/code-and-preview.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/find-and-replace.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/horizontal-rules-and-datetime.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/css-customization.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/api.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/types.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/security.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/text-editor-vue/contributing.html</loc>
+  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
 </urlset>
