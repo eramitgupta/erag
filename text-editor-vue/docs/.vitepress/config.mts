@@ -132,6 +132,7 @@ export default defineConfig({
         nav: [
             { text: 'Guide', link: '/introduction.html' },
             { text: 'Features', link: '/index.html#features' },
+            { text: 'Live Demo', link: '/index.html#live-demo' },
             { text: 'API Reference', link: '/api.html' },
         ],
         sidebar: [

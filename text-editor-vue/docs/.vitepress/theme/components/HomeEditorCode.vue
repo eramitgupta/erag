@@ -2,13 +2,7 @@
 import { computed } from 'vue';
 
 type CodeTokenKind =
-    | 'comment'
-    | 'keyword'
-    | 'number'
-    | 'plain'
-    | 'string'
-    | 'tag'
-    | 'type';
+    'comment' | 'keyword' | 'number' | 'plain' | 'string' | 'tag' | 'type';
 
 interface CodeToken {
     kind: CodeTokenKind;
@@ -22,7 +16,7 @@ interface HomeEditorCodeProps {
 const props = defineProps<HomeEditorCodeProps>();
 
 const tokenPattern =
-    /(\/\/.*$|\/\*.*?\*\/|<!--[\s\S]*?-->|<\/?[A-Za-z][^>]*>|`(?:\\.|[^`])*`|'(?:\\.|[^'])*'|"(?:\\.|[^"])*"|\b(?:as|async|await|const|else|export|false|from|function|if|import|interface|let|new|null|return|true|type|undefined)\b|\b(?:AbortSignal|Array|Blob|EditorInit|EditorInstance|EditorTemplateItem|MentionItem|MergeTagItem|Readonly|Record|string|void)\b|\b\d+(?:\.\d+)?\b)/g;
+    /(\/\/.*$|\/\*.*?\*\/|<!--[\s\S]*?-->|<\/?[A-Za-z][^>]*>|`(?:\\.|[^`])*`|'(?:\\.|[^'])*'|"(?:\\.|[^"])*"|\b(?:as|async|await|const|else|export|false|from|function|if|import|interface|let|new|null|return|true|type|undefined)\b|\b(?:AbortSignal|Array|Blob|EditorInit|EditorInstance|EditorTemplateItem|ImageDeleteInfo|MentionItem|MentionRemoveEvent|MentionSelectEvent|MergeTagItem|MergeTagRemoveEvent|MergeTagSelectEvent|Readonly|Record|TemplateInsertEvent|string|void)\b|\b\d+(?:\.\d+)?\b)/g;
 
 const keywords = new Set([
     'as',
@@ -53,16 +47,26 @@ const typeNames = new Set([
     'EditorInit',
     'EditorInstance',
     'EditorTemplateItem',
+    'ImageDeleteInfo',
     'MentionItem',
+    'MentionRemoveEvent',
+    'MentionSelectEvent',
     'MergeTagItem',
+    'MergeTagRemoveEvent',
+    'MergeTagSelectEvent',
     'Readonly',
     'Record',
+    'TemplateInsertEvent',
     'string',
     'void',
 ]);
 
 function resolveTokenKind(value: string): CodeTokenKind {
-    if (value.startsWith('//') || value.startsWith('/*') || value.startsWith('<!--')) {
+    if (
+        value.startsWith('//') ||
+        value.startsWith('/*') ||
+        value.startsWith('<!--')
+    ) {
         return 'comment';
     }
 
@@ -70,7 +74,11 @@ function resolveTokenKind(value: string): CodeTokenKind {
         return 'tag';
     }
 
-    if (value.startsWith("'") || value.startsWith('"') || value.startsWith('`')) {
+    if (
+        value.startsWith("'") ||
+        value.startsWith('"') ||
+        value.startsWith('`')
+    ) {
         return 'string';
     }
 
@@ -142,7 +150,7 @@ const highlightedLines = computed(() =>
     margin: 0;
     padding: 1rem 0 1.25rem;
     color: #e5e7eb;
-    background: transparent;
+    background: #111113;
     counter-reset: code-line;
     font-family: var(--vp-font-family-mono);
     font-size: 0.82rem;
@@ -155,7 +163,12 @@ const highlightedLines = computed(() =>
     display: grid;
     grid-template-columns: 3.5rem minmax(max-content, 1fr);
     min-height: 1.65em;
+    margin: 0;
     padding-right: 1.25rem;
+    color: inherit;
+    background: #111113;
+    font-size: inherit;
+    line-height: inherit;
     counter-increment: code-line;
 }
 
@@ -175,6 +188,15 @@ const highlightedLines = computed(() =>
 .home-editor-code__token {
     font: inherit;
     white-space: pre;
+}
+
+.home-editor-code__line-content {
+    display: block;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border-radius: 0;
+    font-weight: inherit;
 }
 
 .home-editor-code__token--plain {

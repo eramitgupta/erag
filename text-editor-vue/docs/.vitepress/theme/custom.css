@@ -414,3 +414,12 @@
     border-top: 1px solid var(--vp-c-border);
     padding-top: 0.75rem;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

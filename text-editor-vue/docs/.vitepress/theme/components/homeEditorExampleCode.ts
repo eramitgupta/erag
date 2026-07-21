@@ -5,17 +5,25 @@ import {
     type EditorInit,
     type EditorInstance,
     type EditorTemplateItem,
+    type ImageDeleteInfo,
+    type MentionRemoveEvent,
+    type MentionSelectEvent,
     type MentionItem,
+    type MergeTagRemoveEvent,
+    type MergeTagSelectEvent,
     type MergeTagItem,
+    type TemplateInsertEvent,
 } from '@erag/text-editor-vue';
 import '@erag/text-editor-vue/style.css';
 
+// Editor content and interactive demo state.
 const content = shallowRef('<h1>Welcome to @erag/text-editor-vue</h1>');
 const editor = useTemplateRef<EditorInstance>('editor');
 const showMenubar = shallowRef(true);
 const isDisabled = shallowRef(false);
 const isReadonly = shallowRef(false);
 
+// Mention suggestions shown when the user types @.
 const mentionItems: MentionItem[] = Array.from(
     { length: 50 },
     (_, index) => {
@@ -31,6 +39,7 @@ const mentionItems: MentionItem[] = Array.from(
     },
 );
 
+// Generate grouped merge tags for the picker and autocomplete menu.
 const mergeTagGroups = ['Client', 'Company', 'Invoice', 'Appointment', 'Account'];
 const mergeTagFields = [
     'name',
@@ -52,6 +61,7 @@ const mergeTagItems: MergeTagItem[] = mergeTagGroups.flatMap((group) =>
     })),
 );
 
+// Create reusable templates grouped by business purpose.
 const templateGroups = [
     { group: 'Sales', labels: ['Lead introduction', 'Product demo invitation', 'Proposal follow-up', 'Quote delivery', 'Trial ending reminder', 'Deal confirmation'] },
     { group: 'Marketing', labels: ['Newsletter welcome', 'Product launch', 'Webinar invitation', 'Event reminder', 'Feature announcement', 'Re-engagement message'] },
@@ -78,6 +88,7 @@ const templateItems: EditorTemplateItem[] = templateGroups.flatMap(
         })),
 );
 
+// Configure the editor without mutating the source options.
 const editorConfig = computed<EditorInit>(() => ({
     height: 440,
     minHeight: 320,
@@ -107,12 +118,14 @@ const isEditingLocked = computed(
     () => isDisabled.value || isReadonly.value,
 );
 
+// In production, load these replacement values from your API.
 const mergeTagValues: Readonly<Record<string, string>> = {
     '{{client.name}}': 'Amit Gupta',
     '{{company.name}}': 'ERAG',
     '{{account.reference}}': 'ERAG-2026-001',
 };
 
+// Public EditorInstance methods power external controls.
 function insertSample(): void {
     if (isEditingLocked.value) return;
 
@@ -126,7 +139,35 @@ function clearContent(): void {
     editor.value?.clear();
 }
 
-function replaceInsertedMergeTags(): void {
+function handleModelValueUpdate(value: string): void {
+    console.log('update:modelValue', value);
+}
+
+// Feature events provide typed payloads for application callbacks.
+function handleMentionSelect(event: MentionSelectEvent): void {
+    console.log('mention-select', event);
+}
+
+function handleMentionRemove(event: MentionRemoveEvent): void {
+    console.log('mention-remove', event);
+}
+
+function handleMergeTagSelect(event: MergeTagSelectEvent): void {
+    console.log('merge-tag-select', event);
+}
+
+function handleMergeTagRemove(event: MergeTagRemoveEvent): void {
+    console.log('merge-tag-remove', event);
+}
+
+function handleImageRemove(event: ImageDeleteInfo): void {
+    console.log('image-remove', event);
+}
+
+// Replace inserted template tags with values supplied by your application.
+function replaceInsertedMergeTags(event: TemplateInsertEvent): void {
+    console.log('template-insert', event);
+
     const currentHtml = editor.value?.getHtml();
     if (!currentHtml) return;
 
@@ -174,7 +215,13 @@ function replaceInsertedMergeTags(): void {
             :disabled="isDisabled"
             :readonly="isReadonly"
             aria-label="Rich text editor"
+            @update:model-value="handleModelValueUpdate"
+            @mention-select="handleMentionSelect"
+            @mention-remove="handleMentionRemove"
+            @merge-tag-select="handleMergeTagSelect"
+            @merge-tag-remove="handleMergeTagRemove"
             @template-insert="replaceInsertedMergeTags"
+            @image-remove="handleImageRemove"
         />
     </div>
 </template>`;

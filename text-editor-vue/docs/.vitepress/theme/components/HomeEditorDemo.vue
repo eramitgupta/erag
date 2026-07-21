@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, shallowRef, useTemplateRef } from 'vue';
+import { computed, onBeforeUnmount, shallowRef, useTemplateRef } from 'vue';
 import {
     Editor,
     type EditorInit,
@@ -48,7 +48,13 @@ const mentionItems: MentionItem[] = Array.from({ length: 50 }, (_, index) => {
     };
 });
 
-const mergeTagGroups = ['Client', 'Company', 'Invoice', 'Appointment', 'Account'];
+const mergeTagGroups = [
+    'Client',
+    'Company',
+    'Invoice',
+    'Appointment',
+    'Account',
+];
 const mergeTagFields = [
     'name',
     'email',
@@ -73,96 +79,246 @@ const templateGroups = [
     {
         group: 'Sales',
         templates: [
-            ['Lead introduction', 'Thank you for your interest. Here is a quick introduction to how we can help your team.'],
-            ['Product demo invitation', 'Choose a convenient time for a personalized product demonstration.'],
-            ['Proposal follow-up', 'I wanted to follow up on the proposal and answer any remaining questions.'],
-            ['Quote delivery', 'Your requested quote is ready for review and approval.'],
-            ['Trial ending reminder', 'Your trial ends soon. Let us help you choose the right next step.'],
-            ['Deal confirmation', 'Your order is confirmed and our team is preparing the next steps.'],
+            [
+                'Lead introduction',
+                'Thank you for your interest. Here is a quick introduction to how we can help your team.',
+            ],
+            [
+                'Product demo invitation',
+                'Choose a convenient time for a personalized product demonstration.',
+            ],
+            [
+                'Proposal follow-up',
+                'I wanted to follow up on the proposal and answer any remaining questions.',
+            ],
+            [
+                'Quote delivery',
+                'Your requested quote is ready for review and approval.',
+            ],
+            [
+                'Trial ending reminder',
+                'Your trial ends soon. Let us help you choose the right next step.',
+            ],
+            [
+                'Deal confirmation',
+                'Your order is confirmed and our team is preparing the next steps.',
+            ],
         ],
     },
     {
         group: 'Marketing',
         templates: [
-            ['Newsletter welcome', 'Welcome to our newsletter. You will receive useful product news and practical guides.'],
-            ['Product launch', 'Our latest product is now available with new tools designed for your workflow.'],
-            ['Webinar invitation', 'Join our upcoming live webinar for product insights and a question-and-answer session.'],
-            ['Event reminder', 'This is a friendly reminder that our event is coming up soon.'],
-            ['Feature announcement', 'A new feature is available and ready to use in your account.'],
-            ['Re-engagement message', 'We have missed you and would love to help you get value from your account again.'],
+            [
+                'Newsletter welcome',
+                'Welcome to our newsletter. You will receive useful product news and practical guides.',
+            ],
+            [
+                'Product launch',
+                'Our latest product is now available with new tools designed for your workflow.',
+            ],
+            [
+                'Webinar invitation',
+                'Join our upcoming live webinar for product insights and a question-and-answer session.',
+            ],
+            [
+                'Event reminder',
+                'This is a friendly reminder that our event is coming up soon.',
+            ],
+            [
+                'Feature announcement',
+                'A new feature is available and ready to use in your account.',
+            ],
+            [
+                'Re-engagement message',
+                'We have missed you and would love to help you get value from your account again.',
+            ],
         ],
     },
     {
         group: 'Support',
         templates: [
-            ['Ticket received', 'We received your support request and a team member will review it shortly.'],
-            ['Issue update', 'Here is the latest progress update for your open support request.'],
-            ['Resolution confirmation', 'The reported issue has been resolved. Please confirm everything is working correctly.'],
-            ['Feedback request', 'Please share your experience so we can continue improving our support.'],
-            ['Maintenance notice', 'Scheduled maintenance may temporarily affect service availability.'],
-            ['Service restored', 'Service has been fully restored and systems are operating normally.'],
+            [
+                'Ticket received',
+                'We received your support request and a team member will review it shortly.',
+            ],
+            [
+                'Issue update',
+                'Here is the latest progress update for your open support request.',
+            ],
+            [
+                'Resolution confirmation',
+                'The reported issue has been resolved. Please confirm everything is working correctly.',
+            ],
+            [
+                'Feedback request',
+                'Please share your experience so we can continue improving our support.',
+            ],
+            [
+                'Maintenance notice',
+                'Scheduled maintenance may temporarily affect service availability.',
+            ],
+            [
+                'Service restored',
+                'Service has been fully restored and systems are operating normally.',
+            ],
         ],
     },
     {
         group: 'Customer Success',
         templates: [
-            ['Onboarding welcome', 'Welcome aboard. Your onboarding plan and first steps are included below.'],
-            ['Kickoff scheduling', 'Let us schedule a kickoff meeting with your team.'],
-            ['Customer check-in', 'I am checking in to see how things are progressing and where we can help.'],
-            ['Renewal reminder', 'Your subscription renewal is approaching. Let us review your current plan.'],
-            ['Training invitation', 'Your team is invited to a guided training session.'],
-            ['Success review', 'Let us review your results, goals, and priorities for the next period.'],
+            [
+                'Onboarding welcome',
+                'Welcome aboard. Your onboarding plan and first steps are included below.',
+            ],
+            [
+                'Kickoff scheduling',
+                'Let us schedule a kickoff meeting with your team.',
+            ],
+            [
+                'Customer check-in',
+                'I am checking in to see how things are progressing and where we can help.',
+            ],
+            [
+                'Renewal reminder',
+                'Your subscription renewal is approaching. Let us review your current plan.',
+            ],
+            [
+                'Training invitation',
+                'Your team is invited to a guided training session.',
+            ],
+            [
+                'Success review',
+                'Let us review your results, goals, and priorities for the next period.',
+            ],
         ],
     },
     {
         group: 'Billing',
         templates: [
-            ['Invoice issued', 'A new invoice has been generated and is ready for payment.'],
-            ['Payment receipt', 'Thank you. Your payment has been received successfully.'],
-            ['Payment reminder', 'This is a friendly reminder that payment is due soon.'],
-            ['Overdue payment notice', 'The invoice is now overdue. Please arrange payment or contact our billing team.'],
-            ['Refund confirmation', 'Your refund has been processed and will appear in your account shortly.'],
-            ['Subscription renewal', 'Your subscription has renewed successfully for the next billing period.'],
+            [
+                'Invoice issued',
+                'A new invoice has been generated and is ready for payment.',
+            ],
+            [
+                'Payment receipt',
+                'Thank you. Your payment has been received successfully.',
+            ],
+            [
+                'Payment reminder',
+                'This is a friendly reminder that payment is due soon.',
+            ],
+            [
+                'Overdue payment notice',
+                'The invoice is now overdue. Please arrange payment or contact our billing team.',
+            ],
+            [
+                'Refund confirmation',
+                'Your refund has been processed and will appear in your account shortly.',
+            ],
+            [
+                'Subscription renewal',
+                'Your subscription has renewed successfully for the next billing period.',
+            ],
         ],
     },
     {
         group: 'Human Resources',
         templates: [
-            ['Interview invitation', 'We would like to invite you to an interview with our hiring team.'],
-            ['Interview follow-up', 'Thank you for meeting with us. We will share the next update soon.'],
-            ['Offer letter', 'We are pleased to offer you a position with our team.'],
-            ['New employee welcome', 'Welcome to the team. Here are the details for your first day.'],
-            ['Policy update', 'An important company policy has been updated for all employees.'],
-            ['Leave approval', 'Your leave request has been reviewed and approved.'],
+            [
+                'Interview invitation',
+                'We would like to invite you to an interview with our hiring team.',
+            ],
+            [
+                'Interview follow-up',
+                'Thank you for meeting with us. We will share the next update soon.',
+            ],
+            [
+                'Offer letter',
+                'We are pleased to offer you a position with our team.',
+            ],
+            [
+                'New employee welcome',
+                'Welcome to the team. Here are the details for your first day.',
+            ],
+            [
+                'Policy update',
+                'An important company policy has been updated for all employees.',
+            ],
+            [
+                'Leave approval',
+                'Your leave request has been reviewed and approved.',
+            ],
         ],
     },
     {
         group: 'Appointments',
         templates: [
-            ['Booking confirmation', 'Your appointment has been booked successfully.'],
-            ['Appointment reminder', 'This is a reminder about your upcoming appointment.'],
-            ['Reschedule request', 'Please select a new time that works for your schedule.'],
-            ['Cancellation confirmation', 'Your appointment has been cancelled as requested.'],
-            ['Appointment follow-up', 'Thank you for meeting with us. Here are the agreed next steps.'],
-            ['No-show follow-up', 'We missed you at the scheduled appointment and can help you book another time.'],
+            [
+                'Booking confirmation',
+                'Your appointment has been booked successfully.',
+            ],
+            [
+                'Appointment reminder',
+                'This is a reminder about your upcoming appointment.',
+            ],
+            [
+                'Reschedule request',
+                'Please select a new time that works for your schedule.',
+            ],
+            [
+                'Cancellation confirmation',
+                'Your appointment has been cancelled as requested.',
+            ],
+            [
+                'Appointment follow-up',
+                'Thank you for meeting with us. Here are the agreed next steps.',
+            ],
+            [
+                'No-show follow-up',
+                'We missed you at the scheduled appointment and can help you book another time.',
+            ],
         ],
     },
     {
         group: 'Operations',
         templates: [
-            ['Order confirmation', 'Your order has been received and is being prepared.'],
-            ['Shipping update', 'Your order is on the way. Tracking information is included below.'],
-            ['Delivery confirmation', 'Your order has been delivered successfully.'],
-            ['Service scheduled', 'Your requested service has been scheduled with our operations team.'],
-            ['Status update', 'Here is the latest operational status for your request.'],
-            ['Completion report', 'The requested work is complete. A summary is included below.'],
+            [
+                'Order confirmation',
+                'Your order has been received and is being prepared.',
+            ],
+            [
+                'Shipping update',
+                'Your order is on the way. Tracking information is included below.',
+            ],
+            [
+                'Delivery confirmation',
+                'Your order has been delivered successfully.',
+            ],
+            [
+                'Service scheduled',
+                'Your requested service has been scheduled with our operations team.',
+            ],
+            [
+                'Status update',
+                'Here is the latest operational status for your request.',
+            ],
+            [
+                'Completion report',
+                'The requested work is complete. A summary is included below.',
+            ],
         ],
     },
     {
         group: 'General',
         templates: [
-            ['Thank-you message', 'Thank you for your time, support, and continued partnership.'],
-            ['General announcement', 'We have an important update to share with you.'],
+            [
+                'Thank-you message',
+                'Thank you for your time, support, and continued partnership.',
+            ],
+            [
+                'General announcement',
+                'We have an important update to share with you.',
+            ],
         ],
     },
 ] as const;
@@ -188,10 +344,21 @@ const showCode = shallowRef(false);
 const showMenubar = shallowRef(true);
 const isDisabled = shallowRef(false);
 const isReadonly = shallowRef(false);
+const copyStatus = shallowRef<'copied' | 'failed' | 'idle'>('idle');
+let copyResetTimer: ReturnType<typeof setTimeout> | undefined;
 
-const isEditingLocked = computed(
-    () => isDisabled.value || isReadonly.value,
-);
+const isEditingLocked = computed(() => isDisabled.value || isReadonly.value);
+const copyButtonLabel = computed(() => {
+    if (copyStatus.value === 'copied') {
+        return 'Copied';
+    }
+
+    if (copyStatus.value === 'failed') {
+        return 'Copy failed';
+    }
+
+    return 'Copy';
+});
 
 const demoMergeTagValues: Readonly<Record<string, string>> = {
     '{{client.name}}': 'Amit Gupta',
@@ -259,6 +426,30 @@ function replaceInsertedMergeTags(): void {
         editor.value?.setHtml(resolvedHtml);
     }
 }
+
+async function copyExampleCode(): Promise<void> {
+    try {
+        await navigator.clipboard.writeText(homeEditorExampleCode);
+        copyStatus.value = 'copied';
+    } catch {
+        copyStatus.value = 'failed';
+    }
+
+    if (copyResetTimer !== undefined) {
+        clearTimeout(copyResetTimer);
+    }
+
+    copyResetTimer = setTimeout(() => {
+        copyStatus.value = 'idle';
+        copyResetTimer = undefined;
+    }, 2000);
+}
+
+onBeforeUnmount(() => {
+    if (copyResetTimer !== undefined) {
+        clearTimeout(copyResetTimer);
+    }
+});
 </script>
 
 <template>
@@ -382,10 +573,34 @@ function replaceInsertedMergeTags(): void {
                 >
                     <div class="home-editor-demo__code-header">
                         <span class="home-editor-demo__code-dot"></span>
-                        App.vue
-                        <span class="home-editor-demo__code-language"
-                            >Vue + TypeScript</span
-                        >
+                        <span class="home-editor-demo__code-file">App.vue</span>
+                        <span class="home-editor-demo__code-meta">
+                            <span class="home-editor-demo__code-language">
+                                Vue + TypeScript
+                            </span>
+                            <button
+                                type="button"
+                                class="home-editor-demo__copy-button"
+                                :class="{
+                                    'home-editor-demo__copy-button--copied':
+                                        copyStatus === 'copied',
+                                }"
+                                :aria-label="`${copyButtonLabel} editor example code`"
+                                @click="copyExampleCode"
+                            >
+                                <svg
+                                    class="home-editor-demo__copy-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M8 8h11v11H8z" />
+                                    <path d="M16 8V5H5v11h3" />
+                                </svg>
+                                <span aria-live="polite">{{
+                                    copyButtonLabel
+                                }}</span>
+                            </button>
+                        </span>
                     </div>
                     <HomeEditorCode :code="homeEditorExampleCode" />
                 </div>
@@ -455,8 +670,7 @@ function replaceInsertedMergeTags(): void {
     box-shadow: 0 24px 60px -30px rgba(15, 23, 42, 0.35);
 }
 
-.home-editor-demo__shell
-    :deep(.erag-editor__content .erag-demo-profile-photo) {
+.home-editor-demo__shell :deep(.erag-editor__content .erag-demo-profile-photo) {
     width: 72px;
     height: 72px;
     border-radius: 50%;
@@ -475,7 +689,10 @@ function replaceInsertedMergeTags(): void {
     position: sticky;
     top: 0;
     z-index: 1;
-    padding: 0.7rem 1rem;
+    display: flex;
+    gap: 0.45rem;
+    align-items: center;
+    padding: 0.55rem 1rem;
     border-bottom: 1px solid #27272a;
     color: #d4d4d8;
     background: #18181b;
@@ -488,15 +705,66 @@ function replaceInsertedMergeTags(): void {
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin-right: 0.45rem;
     border-radius: 50%;
     background: #42b883;
 }
 
 .home-editor-demo__code-language {
-    float: right;
     color: #71717a;
     font-weight: 500;
+}
+
+.home-editor-demo__code-meta {
+    display: flex;
+    gap: 0.65rem;
+    align-items: center;
+    margin-inline-start: auto;
+}
+
+.home-editor-demo__copy-button {
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+    min-height: 22px;
+    padding: 0.1rem 0.4rem;
+    border: 1px solid #3f3f46;
+    border-radius: 5px;
+    color: #a1a1aa;
+    background: #27272a;
+    font: inherit;
+    font-size: 0.72rem;
+    cursor: pointer;
+    transition:
+        border-color 0.15s ease,
+        color 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.home-editor-demo__copy-button:hover {
+    border-color: #52525b;
+    color: #f4f4f5;
+    background: #3f3f46;
+}
+
+.home-editor-demo__copy-button--copied {
+    border-color: #15803d;
+    color: #86efac;
+    background: rgb(21 128 61 / 18%);
+}
+
+.home-editor-demo__copy-button:focus-visible {
+    outline: 2px solid #42b883;
+    outline-offset: 2px;
+}
+
+.home-editor-demo__copy-icon {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .home-editor-demo__controls {
