@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { shallowRef } from 'vue';
+import HomeEditorDemo from './HomeEditorDemo.vue';
 
-const activeTab = shallowRef('npm');
-const activeCodeTab = shallowRef('vue');
 const activeFaq = shallowRef<number | null>(0);
 </script>
 
@@ -276,9 +275,7 @@ const activeFaq = shallowRef<number | null>(0);
         <!-- Features Grid -->
         <section id="features" class="features-section">
             <h2 class="section-title">
-                Everything You Need. <br /><span class="text-gradient"
-                    >Nothing You Don't.</span
-                >
+                Everything You Need.
             </h2>
             <div class="features-grid">
                 <div class="feature-card">
@@ -597,45 +594,6 @@ const activeFaq = shallowRef<number | null>(0);
                             stroke-linecap="round"
                             stroke-linejoin="round"
                         >
-                            <rect
-                                x="2"
-                                y="2"
-                                width="20"
-                                height="8"
-                                rx="2"
-                                ry="2"
-                            />
-                            <rect
-                                x="2"
-                                y="14"
-                                width="20"
-                                height="8"
-                                rx="2"
-                                ry="2"
-                            />
-                            <line x1="6" x2="6" y1="6" y2="6" />
-                            <line x1="6" x2="6" y1="18" y2="18" />
-                        </svg>
-                    </div>
-                    <h3>SSR Ready</h3>
-                    <p>
-                        Safely renders on the server for Nuxt or Vite SSR.
-                        Browser-only APIs are lazily initialized.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="fc-icon-large">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
                             <circle cx="11" cy="11" r="8" />
                             <path d="m21 21-4.3-4.3" />
                             <path d="M8 11h6" />
@@ -723,6 +681,8 @@ const activeFaq = shallowRef<number | null>(0);
                 </div>
             </div>
         </section>
+
+        <HomeEditorDemo />
 
         <!-- Comparison Section -->
         <section class="comparison-section">
@@ -1120,109 +1080,6 @@ const activeFaq = shallowRef<number | null>(0);
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </section>
-
-        <!-- Code Showcase -->
-        <section id="examples" class="showcase-section">
-            <h2 class="section-title">Developer Experience First</h2>
-
-            <div class="code-showcase-grid">
-                <div class="install-block">
-                    <div class="tabs">
-                        <button
-                            :class="{ active: activeTab === 'npm' }"
-                            @click="activeTab = 'npm'"
-                        >
-                            npm
-                        </button>
-                        <button
-                            :class="{ active: activeTab === 'pnpm' }"
-                            @click="activeTab = 'pnpm'"
-                        >
-                            pnpm
-                        </button>
-                        <button
-                            :class="{ active: activeTab === 'yarn' }"
-                            @click="activeTab = 'yarn'"
-                        >
-                            yarn
-                        </button>
-                        <button
-                            :class="{ active: activeTab === 'bun' }"
-                            @click="activeTab = 'bun'"
-                        >
-                            bun
-                        </button>
-                    </div>
-                    <div class="tab-content code-bg">
-                        <pre
-                            v-if="activeTab === 'npm'"
-                        ><code>npm install @erag/text-editor-vue</code></pre>
-                        <pre
-                            v-if="activeTab === 'pnpm'"
-                        ><code>pnpm add @erag/text-editor-vue</code></pre>
-                        <pre
-                            v-if="activeTab === 'yarn'"
-                        ><code>yarn add @erag/text-editor-vue</code></pre>
-                        <pre
-                            v-if="activeTab === 'bun'"
-                        ><code>bun add @erag/text-editor-vue</code></pre>
-                    </div>
-                </div>
-
-                <div class="usage-block">
-                    <div class="tabs">
-                        <button
-                            :class="{ active: activeCodeTab === 'vue' }"
-                            @click="activeCodeTab = 'vue'"
-                        >
-                            Vue 3
-                        </button>
-                        <button
-                            :class="{ active: activeCodeTab === 'laravel' }"
-                            @click="activeCodeTab = 'laravel'"
-                        >
-                            Laravel Uploads
-                        </button>
-                    </div>
-                    <div class="tab-content code-bg usage-code">
-                        <pre
-                            v-if="activeCodeTab === 'vue'"
-                        ><code>&lt;script setup lang="ts"&gt;
-import { shallowRef } from 'vue'
-import { Editor } from '@erag/text-editor-vue'
-import '@erag/text-editor-vue/style.css'
-
-const content = shallowRef('&lt;p&gt;Hello World!&lt;/p&gt;')
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;Editor v-model="content" /&gt;
-&lt;/template&gt;</code></pre>
-
-                        <pre
-                            v-if="activeCodeTab === 'laravel'"
-                        ><code>&lt;script setup lang="ts"&gt;
-const editorConfig = {
-  imagesUploadHandler: async (blobInfo, progress) => {
-    const formData = new FormData()
-    formData.append('image', blobInfo.blob())
-    
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').content
-    
-    const res = await fetch('/upload', {
-      method: 'POST',
-      headers: { 'X-CSRF-TOKEN': csrfToken },
-      body: formData
-    })
-    const json = await res.json()
-    return json.url
-  }
-}
-&lt;/script&gt;</code></pre>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1694,7 +1551,7 @@ const editorConfig = {
 
 /* Comparison Section */
 .comparison-section {
-    padding: 6rem 2rem;
+    padding: 2.5rem 2rem 6rem;
     background: var(--vp-c-bg-alt);
     border-top: 1px solid var(--vp-c-divider);
     border-bottom: 1px solid var(--vp-c-divider);
@@ -1777,95 +1634,6 @@ const editorConfig = {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpath d='M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8'%3E%3C/path%3E%3Cline x1='12' y1='18' x2='12' y2='22'%3E%3C/line%3E%3Cline x1='12' y1='2' x2='12' y2='6'%3E%3C/line%3E%3C/svg%3E");
 }
 
-/* Showcase Section */
-.showcase-section {
-    padding: 6rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.code-showcase-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-}
-.install-block,
-.usage-block {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--vp-c-border);
-    background: #1e1e20;
-    display: flex;
-    flex-direction: column;
-}
-.dark .install-block,
-.dark .usage-block {
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    border-color: #333;
-}
-.tabs {
-    display: flex;
-    gap: 1rem;
-    background: #252529;
-    padding: 0.75rem 1.25rem 0;
-    border-bottom: 1px solid #333;
-}
-.tabs button {
-    padding: 0.5rem 0.5rem;
-    border: none;
-    background: transparent;
-    font-weight: 600;
-    color: #888;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.2s;
-}
-.tabs button:hover {
-    color: #ccc;
-}
-.tabs button.active {
-    color: var(--vp-c-brand-1);
-}
-.tabs button.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--vp-c-brand-1);
-}
-.tab-content {
-    background: #1e1e20;
-    flex-grow: 1;
-}
-.code-bg pre {
-    margin: 0;
-    padding: 1.5rem;
-    overflow-x: auto;
-}
-.code-bg code {
-    color: #e5e7eb;
-    background: transparent;
-    padding: 0;
-    font-family: var(--vp-font-family-mono);
-    font-size: 0.9em;
-    line-height: 1.6;
-}
-.kw {
-    color: #ff7b72;
-}
-.fn {
-    color: #d2a8ff;
-}
-.str {
-    color: #a5d6ff;
-}
-.comment {
-    color: #8b949e;
-    font-style: italic;
-}
-
 /* FAQ */
 .faq-section {
     padding: 6rem 2rem;
@@ -1875,8 +1643,7 @@ const editorConfig = {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .hero-container,
-    .code-showcase-grid {
+    .hero-container {
         grid-template-columns: 1fr;
     }
     .hero-title {
@@ -1884,6 +1651,9 @@ const editorConfig = {
     }
     .hero-visual {
         margin-top: 3rem;
+    }
+    .comparison-section {
+        padding: 2rem 1rem 4rem;
     }
 }
 </style>
