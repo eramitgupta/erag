@@ -17,6 +17,7 @@ on:
       - 'phone-number-react/**'
       - 'laravel-pwa/**'
       - 'vue-toastification/**'
+      - 'text-editor-vue/**'
   workflow_dispatch:
 
 permissions:
@@ -56,6 +57,7 @@ jobs:
           npm ci --prefix phone-number-react
           npm ci --prefix laravel-pwa
           npm ci --prefix vue-toastification
+          npm ci --prefix text-editor-vue
 
       - name: Build docs
         run: |
@@ -66,6 +68,7 @@ jobs:
           npm run build --prefix phone-number-react
           npm run build --prefix laravel-pwa
           npm run build --prefix vue-toastification
+          npm run build --prefix text-editor-vue
 
       - name: Prepare Pages artifact
         run: |
@@ -76,6 +79,7 @@ jobs:
           mkdir -p site/phone-number-react
           mkdir -p site/laravel-pwa
           mkdir -p site/vue-toastification
+          mkdir -p site/text-editor-vue
           cp index.html site/index.html
           cp -R public/. site/
           cp -R laravel-disposable-email/docs/.vitepress/dist/* site/laravel-disposable-email/
@@ -85,6 +89,7 @@ jobs:
           cp -R phone-number-react/docs/.vitepress/dist/* site/phone-number-react/
           cp -R laravel-pwa/docs/.vitepress/dist/* site/laravel-pwa/
           cp -R vue-toastification/docs/.vitepress/dist/* site/vue-toastification/
+          cp -R text-editor-vue/docs/.vitepress/dist/* site/text-editor-vue/
           touch site/.nojekyll
 
       - name: Upload artifact
