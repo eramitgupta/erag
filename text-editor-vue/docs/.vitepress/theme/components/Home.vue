@@ -274,9 +274,7 @@ const activeFaq = shallowRef<number | null>(0);
 
         <!-- Features Grid -->
         <section id="features" class="features-section">
-            <h2 class="section-title">
-                Everything You Need.
-            </h2>
+            <h2 class="section-title">Everything You Need.</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="fc-icon-large">
@@ -677,6 +675,33 @@ const activeFaq = shallowRef<number | null>(0);
                     <p>
                         Allowlisted tags, attributes, styles, URLs, embeds,
                         mentions, and merge tags with SSR-safe initialization.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-icon-large">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12"
+                            />
+                            <path d="M12 2v3" />
+                            <path d="M12 19v3" />
+                        </svg>
+                    </div>
+                    <h3>Accessible by Design</h3>
+                    <p>
+                        ARIA-labelled controls, keyboard-friendly menus, and
+                        clear focus states support inclusive editing workflows.
                     </p>
                 </div>
             </div>
