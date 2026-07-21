@@ -396,7 +396,7 @@ function replaceInsertedMergeTags(): void {
 
 <style scoped>
 .home-editor-demo {
-    padding: 5rem 2rem 2.5rem;
+    padding: 2.5rem 2rem;
     background: linear-gradient(
         180deg,
         var(--vp-c-bg) 0%,
@@ -586,7 +586,7 @@ function replaceInsertedMergeTags(): void {
 
 @media (max-width: 640px) {
     .home-editor-demo {
-        padding: 4rem 1rem 2rem;
+        padding: 2.5rem 1rem 2rem;
     }
 
     .home-editor-demo__title {

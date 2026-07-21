@@ -1496,7 +1496,7 @@ const activeFaq = shallowRef<number | null>(0);
 
 /* Features Grid */
 .features-section {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
