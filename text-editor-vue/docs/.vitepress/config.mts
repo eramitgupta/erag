@@ -12,7 +12,7 @@ const canonicalUrl = (page: string): string => {
         .replace(/\.md$/, '.html');
 
     if (!path || path === '/') {
-        return `${siteUrl}/`;
+        return `${siteUrl}/index.html`;
     }
     return `${siteUrl}/${path.replace(/^\//, '')}`;
 };
@@ -29,10 +29,15 @@ export default defineConfig({
     sitemap: {
         hostname: siteOrigin,
         transformItems: (items) =>
-            items.map((item) => ({
-                ...item,
-                url: `${siteBase}/${item.url}`.replace(/\/+/g, '/'),
-            })),
+            items.map((item) => {
+                const pageUrl =
+                    item.url.replace(/^\/+|\/+$/g, '') || 'index.html';
+
+                return {
+                    ...item,
+                    url: `${siteBase}/${pageUrl}`.replace(/\/+/g, '/'),
+                };
+            }),
     },
     head: [
         [
@@ -122,12 +127,12 @@ export default defineConfig({
     },
     themeConfig: {
         logo: '/logo.svg',
+        logoLink: '/index.html',
         siteTitle: 'Text Editor Vue',
         nav: [
             { text: 'Guide', link: '/introduction.html' },
-            { text: 'Features', link: '/#features' },
+            { text: 'Features', link: '/index.html#features' },
             { text: 'API Reference', link: '/api.html' },
-            { text: 'Laravel', link: '/laravel-integration.html' },
         ],
         sidebar: [
             {
