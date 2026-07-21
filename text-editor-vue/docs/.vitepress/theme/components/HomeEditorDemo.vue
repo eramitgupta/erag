@@ -611,6 +611,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .home-editor-demo {
+    scroll-margin-top: calc(var(--vp-nav-height) + 1rem);
     padding: 2.5rem 2rem;
     background: linear-gradient(
         180deg,
