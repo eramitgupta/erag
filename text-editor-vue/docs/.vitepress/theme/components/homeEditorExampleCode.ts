@@ -74,18 +74,52 @@ const templateGroups = [
     { group: 'General', labels: ['Thank-you message', 'General announcement'] },
 ];
 
+const templateRecipients = [
+    'Priya Sharma',
+    'Arjun Mehta',
+    'Sophia Wilson',
+    'Daniel Carter',
+    'Olivia Martin',
+    'Noah Thompson',
+];
+
+const templateReferencePrefixes: Readonly<Record<string, string>> = {
+    Sales: 'SAL',
+    Marketing: 'MKT',
+    Support: 'SUP',
+    'Customer Success': 'CS',
+    Billing: 'BIL',
+    'Human Resources': 'HR',
+    Appointments: 'APT',
+    Operations: 'OPS',
+    General: 'GEN',
+};
+
 const templateItems: EditorTemplateItem[] = templateGroups.flatMap(
-    ({ group, labels }) =>
-        labels.map((label, index) => ({
-            id: group.toLowerCase().replaceAll(' ', '-') + '-' + (index + 1),
-            label,
-            group,
-            description: 'Ready-to-edit ' + label.toLowerCase() + '.',
-            content:
-                '<h2>' + label + '</h2>' +
-                '<p>Hello {{client.name}},</p>' +
-                '<p>Replace this content with your message.</p>',
-        })),
+    ({ group, labels }, groupIndex) =>
+        labels.map((label, templateIndex) => {
+            const itemIndex = groupIndex * 6 + templateIndex;
+            const recipient = templateRecipients[itemIndex % templateRecipients.length];
+            const reference =
+                (templateReferencePrefixes[group] ?? 'ERAG') +
+                '-2026-' +
+                String(1001 + itemIndex).padStart(4, '0');
+
+            return {
+                id: group.toLowerCase().replaceAll(' ', '-') + '-' + (templateIndex + 1),
+                label,
+                group,
+                description: 'Ready-to-edit ' + label.toLowerCase() + '.',
+                content:
+                    '<h2>' + label + '</h2>' +
+                    '<p><strong>To:</strong> ' + recipient + '<br>' +
+                    '<strong>Reference:</strong> ' + reference + '</p>' +
+                    '<p>Hello ' + recipient.split(' ')[0] + ',</p>' +
+                    '<p>This ready-to-edit message includes realistic demo details for the ' +
+                    group.toLowerCase() + ' workflow.</p>' +
+                    '<p>Regards,<br><strong>Neha Kapoor</strong><br>ERAG ' + group + ' Team</p>',
+            };
+        }),
 );
 
 // Configure the editor without mutating the source options.
