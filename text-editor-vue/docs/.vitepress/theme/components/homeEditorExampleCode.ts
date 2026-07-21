@@ -117,7 +117,7 @@ const templateItems: EditorTemplateItem[] = templateGroups.flatMap(
                     '<p>Hello ' + recipient.split(' ')[0] + ',</p>' +
                     '<p>This ready-to-edit message includes realistic demo details for the ' +
                     group.toLowerCase() + ' workflow.</p>' +
-                    '<p>Regards,<br><strong>Neha Kapoor</strong><br>ERAG ' + group + ' Team</p>',
+                    '<p>Regards,<br><strong>Neha Kapoor</strong></p>',
             };
         }),
 );
