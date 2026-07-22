@@ -40,7 +40,7 @@ const mentionItems: MentionItem[] = Array.from(
 );
 
 // Generate grouped merge tags for the picker and autocomplete menu.
-const mergeTagGroups = ['Client', 'Company', 'Invoice', 'Appointment', 'Account'];
+const mergeTagGroups = ['Client', 'Consultant', 'Company', 'Invoice', 'Appointment', 'Account'];
 const mergeTagFields = [
     'name',
     'email',
@@ -56,6 +56,7 @@ const mergeTagFields = [
 
 const mergeTagItems: MergeTagItem[] = mergeTagGroups.flatMap((group) =>
     mergeTagFields.map((field) => ({
+        name: group + ' ' + field.replaceAll('_', ' '),
         value: '{{' + group.toLowerCase() + '.' + field + '}}',
         group,
     })),
@@ -91,6 +92,9 @@ const templateItems: EditorTemplateItem[] = templateGroups.flatMap(
                     '<h2>' + label + '</h2>' +
                     '<p>Hi {{client.name}},</p>' +
                     '<p>' + description + '</p>' +
+                    '<p>We have prepared the key information and recommended next steps for your review.</p>' +
+                    '<p>Please review this update and reply if you have questions, changes, or additional details to share.</p>' +
+                    '<p>Thank you for your time. We look forward to helping you move ahead with confidence.</p>' +
                     '<p>Best regards,<br>{{consultant.name}}</p>',
             };
         }),
@@ -128,8 +132,8 @@ const isEditingLocked = computed(
 
 // Values are resolved when a template is inserted.
 const mergeTagValues: Readonly<Record<string, string>> = {
-    '{{client.name}}': 'Amit Gupta',
-    '{{consultant.name}}': 'Er Amit Gupta',
+    '{{client.name}}': 'Olivia Bennett',
+    '{{consultant.name}}': 'Jordan Lee',
 };
 
 // Public EditorInstance methods power external controls.
