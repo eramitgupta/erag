@@ -175,6 +175,7 @@ const removeEvent: MentionRemoveEvent = { item: mention };
 ```ts
 interface MergeTagItem {
     value: string;
+    name?: string;
     group?: string;
 }
 
@@ -186,6 +187,7 @@ interface MergeTagConfig {
 
 const tag: MergeTagItem = {
     value: '{{client.name}}',
+    name: 'Client name',
     group: 'Client',
 };
 
@@ -193,7 +195,7 @@ const selected: MergeTagSelectEvent = { item: tag, query: 'client' };
 const removed: MergeTagRemoveEvent = { item: tag };
 ```
 
-There is no `label` field. The normalized wrapped `value` is both the visible token and the value emitted to the application.
+The optional `name` is a friendly label for autocomplete and sidebar lists. The normalized wrapped `value` remains the inserted token and both fields are included in select/remove events when available.
 
 ## Template types
 

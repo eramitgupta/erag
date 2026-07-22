@@ -60,11 +60,23 @@ import { computed } from 'vue';
 import type { EditorInit, MergeTagItem } from '@erag/text-editor-vue';
 
 const mergeTagItems = computed<MergeTagItem[]>(() => [
-    { value: '{{amit}}' },
-    { value: '{{client.name}}', group: 'Client' },
-    { value: '{{client.salutation}}', group: 'Client' },
-    { value: '{{submission.date}}', group: 'Proposal' },
-    { value: '{{proposal.number}}', group: 'Proposal' },
+    { value: '{{amit}}', name: 'Consultant name' },
+    { value: '{{client.name}}', name: 'Client name', group: 'Client' },
+    {
+        value: '{{client.salutation}}',
+        name: 'Client salutation',
+        group: 'Client',
+    },
+    {
+        value: '{{submission.date}}',
+        name: 'Submission date',
+        group: 'Proposal',
+    },
+    {
+        value: '{{proposal.number}}',
+        name: 'Proposal number',
+        group: 'Proposal',
+    },
 ]);
 
 const editorConfig = computed<EditorInit>(() => ({
@@ -89,6 +101,7 @@ The package does not invent merge tags. Supply at least one item for the menubar
 | Property | Type     | Required | Description                                                                                                                                                          |
 | :------- | :------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `value`  | `string` | **Yes**  | Visible and stored token value, normally supplied as <code>&#123;&#123;client.name&#125;&#125;</code>. A bare or single-braced value is normalized to double braces. |
+| `name`   | `string` | Optional | Friendly display name shown in autocomplete and the sidebar. The inserted token remains the normalized `value`.                                                      |
 | `group`  | `string` | Optional | Group name used to categorize tags in the right slide-out drawer (e.g. `Client`, `Proposal`).                                                                        |
 
 ---
@@ -113,7 +126,7 @@ The sidebar keeps ungrouped items in a common list and renders named groups as s
 
 ## Autocomplete controls
 
-After typing <code>&#123;&#123;</code>, suggestions are filtered against both normalized values and group names. Starts-with matches appear before contains matches, and `limit` controls the maximum visible results.
+After typing <code>&#123;&#123;</code>, suggestions are filtered against friendly names, normalized values, and group names. Starts-with matches appear before contains matches, and `limit` controls the maximum visible results.
 
 - `ArrowDown` / `ArrowUp` moves through results and wraps.
 - `Home` / `End` jumps to the first or last result.

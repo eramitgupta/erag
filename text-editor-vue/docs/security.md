@@ -47,7 +47,7 @@ Because callers can bypass browser code and submit HTTP requests directly, **alw
 When configuring your server sanitizer, ensure the following attributes are allowlisted for mentions and merge tags:
 
 - **Mention Tags**: `<span class="erag-mention" data-erag-mention="true" data-erag-mention-id="..." data-erag-mention-label="..." data-erag-mention-value="..." contenteditable="false">`
-- **Merge Tag Tokens**: `<span class="erag-merge-tag" data-erag-merge-tag="true" data-erag-merge-tag-value="..." contenteditable="false">`
+- **Merge Tag Tokens**: `<span class="erag-merge-tag" data-erag-merge-tag="true" data-erag-merge-tag-value="..." data-erag-merge-tag-name="..." contenteditable="false">` (`data-erag-merge-tag-name` is optional)
 
 ---
 
