@@ -1,8 +1,53 @@
 <script setup lang="ts">
 import { shallowRef } from 'vue';
+import { Editor, type EditorInit } from '@erag/text-editor-vue';
+import '@erag/text-editor-vue/style.css';
 import HomeEditorDemo from './HomeEditorDemo.vue';
 
 const activeFaq = shallowRef<number | null>(0);
+const heroContent = shallowRef(
+    '<p>Welcome to <strong>@erag/text-editor-vue</strong> 👋</p>' +
+    '<p>Hey <span class="erag-mention" data-erag-mention="true" data-erag-mention-id="developer" data-erag-mention-label="Developer" data-erag-mention-value="developer@example.com" contenteditable="false">@Developer</span>, explore the <span class="erag-merge-tag" data-erag-merge-tag="true" data-erag-merge-tag-value="{{project.name}}" data-erag-merge-tag-name="Project Name" contenteditable="false">{{project.name}}</span> workspace.</p>' +
+    '<p>Scroll down to discover mentions, merge tags, templates, media uploads, tables, and much more.</p>',
+);
+const heroEditorConfig: EditorInit = {
+    height: 250,
+    minHeight: 200,
+    menubar: ['file', 'edit', 'view', 'insert', 'format', 'table', 'help'],
+    toolbar: 'bold italic underline | link image',
+    statusbar: false,
+    resize: false,
+    mentions: {
+        items: [
+            {
+                id: 'developer',
+                label: 'Developer',
+                description: 'Frontend developer',
+                value: 'developer@example.com',
+            },
+            {
+                id: 'jane-smith',
+                label: 'Jane Smith',
+                description: 'Product designer',
+                value: 'jane.smith@example.com',
+            },
+        ],
+    },
+    mergeTags: {
+        items: [
+            {
+                name: 'Invoice total',
+                value: '{{invoice.total}}',
+                group: 'Invoice',
+            },
+            {
+                name: 'Client name',
+                value: '{{client.name}}',
+                group: 'Client',
+            },
+        ],
+    },
+};
 </script>
 
 <template>
@@ -49,104 +94,11 @@ const activeFaq = shallowRef<number | null>(0);
                                     <i></i><i></i><i></i>
                                 </div>
                             </div>
-                            <div class="editor-menubar">
-                                <span>File</span>
-                                <span>Edit</span>
-                                <span>View</span>
-                                <span>Insert</span>
-                                <span>Format</span>
-                                <span>Table</span>
-                                <span>Help</span>
-                            </div>
-                            <div class="editor-toolbar">
-                                <span
-                                    class="toolbar-btn active"
-                                    style="font-weight: bold"
-                                    >B</span
-                                >
-                                <span
-                                    class="toolbar-btn"
-                                    style="font-style: italic"
-                                    >I</span
-                                >
-                                <span
-                                    class="toolbar-btn"
-                                    style="text-decoration: underline"
-                                    >U</span
-                                >
-                                <div class="toolbar-divider"></div>
-                                <span class="toolbar-btn">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-                                        />
-                                        <path
-                                            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-                                        />
-                                    </svg>
-                                </span>
-                                <span class="toolbar-btn">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <rect
-                                            width="18"
-                                            height="18"
-                                            x="3"
-                                            y="3"
-                                            rx="2"
-                                            ry="2"
-                                        />
-                                        <circle cx="9" cy="9" r="2" />
-                                        <path
-                                            d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    class="toolbar-btn"
-                                    style="font-weight: 600"
-                                    >@</span
-                                >
-                                <span
-                                    class="toolbar-btn"
-                                    style="font-weight: 600"
-                                    >&#123;&#123; &#125;&#125;</span
-                                >
-                            </div>
-                            <div class="editor-body">
-                                <p>
-                                    Welcome to the most
-                                    <span class="highlight">modern editor</span>
-                                    for Vue 3.
-                                </p>
-                                <p>
-                                    Hey
-                                    <span class="mention-pill">@John Doe</span>,
-                                    please review the
-                                    <code
-                                        >&#123;&#123;invoice.total&#125;&#125;</code
-                                    >.
-                                </p>
-                            </div>
+                            <Editor
+                                v-model="heroContent"
+                                :init="heroEditorConfig"
+                                aria-label="Interactive text editor demo"
+                            />
                         </div>
                         <div class="floating-card fc-1">
                             <div class="fc-icon">
@@ -1318,29 +1270,59 @@ const activeFaq = shallowRef<number | null>(0);
     position: relative;
 }
 .editor-mockup {
+    --hero-editor-border-color: var(--vp-c-border);
+
     background: var(--vp-c-bg);
-    border: 1px solid var(--vp-c-border);
+    border: 1px solid var(--hero-editor-border-color);
     border-radius: 12px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     position: relative;
-    z-index: 10;
+    z-index: 100;
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+.editor-mockup::after {
+    position: absolute;
+    z-index: 6000;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    height: 13px;
+    pointer-events: none;
+    content: '';
+    border-right: 1px solid var(--hero-editor-border-color);
+    border-bottom: 1px solid var(--hero-editor-border-color);
+    border-left: 1px solid var(--hero-editor-border-color);
+    border-radius: 0 0 12px 12px;
+}
+.editor-mockup:not(:focus-within) {
     transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-    transition: transform 0.5s ease;
 }
 .editor-inner {
-    overflow: hidden;
     border-radius: 11px;
 }
 .dark .editor-mockup {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 .editor-mockup:hover {
+    --hero-editor-border-color: color-mix(
+        in srgb,
+        var(--vp-c-brand-1) 45%,
+        var(--vp-c-border)
+    );
+    border-color: var(--hero-editor-border-color);
+    box-shadow: 0 28px 55px -12px rgba(0, 0, 0, 0.2);
+}
+.editor-mockup:not(:focus-within):hover {
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 }
 .editor-header {
     background: var(--vp-c-bg-soft);
     padding: 0.75rem 1rem;
     border-bottom: 1px solid var(--vp-c-border);
+    border-radius: 11px 11px 0 0;
 }
 .editor-dots i {
     display: inline-block;
@@ -1356,73 +1338,18 @@ const activeFaq = shallowRef<number | null>(0);
 .editor-dots i:nth-child(3) {
     background: #27c93f;
 }
-.editor-menubar {
-    padding: 0.25rem 0.75rem;
-    display: flex;
-    gap: 1.25rem;
-    background: var(--vp-c-bg-soft);
-    border-bottom: 1px solid var(--vp-c-divider);
-    font-size: 0.85rem;
-    color: var(--vp-c-text-2);
+.editor-inner :deep(.erag-editor) {
+    border: 0;
+    border-radius: 0 0 11px 11px;
 }
-.editor-menubar span {
-    cursor: pointer;
-    transition: color 0.2s;
+.editor-inner :deep(.erag-editor:focus-within) {
+    box-shadow: none;
 }
-.editor-menubar span:hover {
-    color: var(--vp-c-brand-1);
-}
-.editor-toolbar {
-    padding: 0.75rem;
-    display: flex;
-    gap: 0.5rem;
-    border-bottom: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg);
-}
-.toolbar-btn {
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    color: var(--vp-c-text-2);
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.toolbar-btn.active {
-    background: var(--vp-c-brand-soft);
-    color: var(--vp-c-brand-1);
-}
-.toolbar-divider {
-    width: 1px;
-    background: var(--vp-c-divider);
-    margin: 0 0.5rem;
-}
-.editor-body {
-    padding: 2rem;
-    min-height: 250px;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-.highlight {
-    background: var(--vp-c-brand-soft);
-    color: var(--vp-c-brand-1);
-    padding: 0.1rem 0.3rem;
-    border-radius: 3px;
-}
-.mention-pill {
-    background: rgba(15, 118, 110, 0.1);
-    color: var(--vp-c-brand-1);
-    padding: 0.1rem 0.4rem;
-    border-radius: 4px;
-    font-weight: 600;
-}
-.editor-body code {
-    background: var(--vp-c-bg-soft);
-    padding: 0.1rem 0.3rem;
-    border-radius: 4px;
-    font-size: 0.9em;
-    color: var(--vp-c-text-1);
+.editor-inner :deep(.erag-menu),
+.editor-inner :deep(.erag-mention-dropdown),
+.editor-inner :deep(.erag-merge-tag-dropdown),
+.editor-inner :deep(.erag-mention-hover-card) {
+    z-index: 5000;
 }
 .floating-card {
     position: absolute;
@@ -1460,7 +1387,7 @@ const activeFaq = shallowRef<number | null>(0);
     gap: 1rem;
     margin-top: 2.5rem;
     position: relative;
-    z-index: 20;
+    z-index: 1;
 }
 .feature-pill {
     background: var(--vp-c-bg);
