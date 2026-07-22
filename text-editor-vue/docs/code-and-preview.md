@@ -30,6 +30,7 @@ Enable `code`, `preview`, and `fullscreen` plugins:
 const editorConfig: EditorInit = {
     plugins: ['code', 'preview', 'fullscreen'],
     toolbar: 'undo redo | blocks | bold italic | code preview fullscreen',
+    sourceCodeEditable: true,
 };
 ```
 
@@ -42,6 +43,16 @@ Clicking the **Source Code** (`code`) button or opening **Tools → Source code*
 - Displays raw sanitized HTML structure.
 - Allows developers or power users to inspect and directly edit HTML tags.
 - Applying changes re-sanitizes and updates the active editor canvas.
+
+Source editing is enabled by default. To keep the dialog available for HTML inspection while preventing changes, set:
+
+```ts
+const editorConfig: EditorInit = {
+    sourceCodeEditable: false,
+};
+```
+
+When disabled, the source textarea is read-only and the **Apply** button is hidden. The editor's `readonly` or `disabled` state also keeps this dialog read-only.
 
 Programmatic invocation:
 

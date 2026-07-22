@@ -41,26 +41,27 @@ const init = computed<EditorInit>(() => ({
 
 ## Layout and behavior
 
-| Option             | Type                                        | Default                  | Description                                                           |
-| ------------------ | ------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| `height`           | `number \| string`                          | `420`                    | Initial editor height. Numbers are pixels.                            |
-| `minHeight`        | `number \| string`                          | `240`                    | Minimum resize height.                                                |
-| `maxHeight`        | `number \| string`                          | —                        | Optional maximum resize height.                                       |
-| `width`            | `number \| string`                          | —                        | Optional editor width.                                                |
-| `placeholder`      | `string`                                    | `'Write something...'`   | Empty-editor hint.                                                    |
-| `menubar`          | `boolean \| EditorMenuName[]`               | `true`                   | All menus, no menu, or an exact ordered menu list.                    |
-| `toolbar`          | `boolean \| string \| EditorToolbarGroup[]` | `true`                   | Default toolbar, no toolbar, compact string, or typed groups.         |
-| `statusbar`        | `boolean`                                   | `true`                   | Shows element path, counts, help text, and resize handle.             |
-| `branding`         | `boolean`                                   | `false`                  | Reserved presentation flag.                                           |
-| `promotion`        | `boolean`                                   | `false`                  | Reserved presentation flag.                                           |
-| `resize`           | `boolean`                                   | `true`                   | Enables vertical resizing from the status bar.                        |
-| `readonly`         | `boolean`                                   | `false`                  | Configuration-level readonly mode. The prop can also enable it.       |
-| `autofocus`        | `boolean`                                   | `false`                  | Focuses the editable root after client mount when editing is allowed. |
-| `spellcheck`       | `boolean`                                   | `true`                   | Passes native spellcheck behavior to the editable area.               |
-| `direction`        | `'ltr' \| 'rtl'`                            | `'ltr'`                  | Text direction.                                                       |
-| `contentStyle`     | `string`                                    | `''`                     | Inline CSS declarations applied to the editable root.                 |
-| `contentClass`     | `string`                                    | `''`                     | Additional class names applied to the editable root.                  |
-| `helpShortcutText` | `string`                                    | `'Press Alt+0 for help'` | Status-bar help text.                                                 |
+| Option               | Type                                        | Default                  | Description                                                                                     |
+| -------------------- | ------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------- |
+| `height`             | `number \| string`                          | `420`                    | Initial editor height. Numbers are pixels.                                                      |
+| `minHeight`          | `number \| string`                          | `240`                    | Minimum resize height.                                                                          |
+| `maxHeight`          | `number \| string`                          | —                        | Optional maximum resize height.                                                                 |
+| `width`              | `number \| string`                          | —                        | Optional editor width.                                                                          |
+| `placeholder`        | `string`                                    | `'Write something...'`   | Empty-editor hint.                                                                              |
+| `menubar`            | `boolean \| EditorMenuName[]`               | `true`                   | All menus, no menu, or an exact ordered menu list.                                              |
+| `toolbar`            | `boolean \| string \| EditorToolbarGroup[]` | `true`                   | Default toolbar, no toolbar, compact string, or typed groups.                                   |
+| `statusbar`          | `boolean`                                   | `true`                   | Shows element path, counts, help text, and resize handle.                                       |
+| `branding`           | `boolean`                                   | `false`                  | Reserved presentation flag.                                                                     |
+| `promotion`          | `boolean`                                   | `false`                  | Reserved presentation flag.                                                                     |
+| `resize`             | `boolean`                                   | `true`                   | Enables vertical resizing from the status bar.                                                  |
+| `readonly`           | `boolean`                                   | `false`                  | Configuration-level readonly mode. The prop can also enable it.                                 |
+| `sourceCodeEditable` | `boolean`                                   | `true`                   | Allows editing and applying HTML in the Source code dialog. Set to `false` for inspection only. |
+| `autofocus`          | `boolean`                                   | `false`                  | Focuses the editable root after client mount when editing is allowed.                           |
+| `spellcheck`         | `boolean`                                   | `true`                   | Passes native spellcheck behavior to the editable area.                                         |
+| `direction`          | `'ltr' \| 'rtl'`                            | `'ltr'`                  | Text direction.                                                                                 |
+| `contentStyle`       | `string`                                    | `''`                     | Inline CSS declarations applied to the editable root.                                           |
+| `contentClass`       | `string`                                    | `''`                     | Additional class names applied to the editable root.                                            |
+| `helpShortcutText`   | `string`                                    | `'Press Alt+0 for help'` | Status-bar help text.                                                                           |
 
 ## Formatting choices
 
