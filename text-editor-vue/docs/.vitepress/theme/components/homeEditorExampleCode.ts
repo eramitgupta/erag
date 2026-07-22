@@ -74,50 +74,24 @@ const templateGroups = [
     { group: 'General', labels: ['Thank-you message', 'General announcement'] },
 ];
 
-const templateRecipients = [
-    'Priya Sharma',
-    'Arjun Mehta',
-    'Sophia Wilson',
-    'Daniel Carter',
-    'Olivia Martin',
-    'Noah Thompson',
-];
-
-const templateReferencePrefixes: Readonly<Record<string, string>> = {
-    Sales: 'SAL',
-    Marketing: 'MKT',
-    Support: 'SUP',
-    'Customer Success': 'CS',
-    Billing: 'BIL',
-    'Human Resources': 'HR',
-    Appointments: 'APT',
-    Operations: 'OPS',
-    General: 'GEN',
-};
-
 const templateItems: EditorTemplateItem[] = templateGroups.flatMap(
-    ({ group, labels }, groupIndex) =>
+    ({ group, labels }) =>
         labels.map((label, templateIndex) => {
-            const itemIndex = groupIndex * 6 + templateIndex;
-            const recipient = templateRecipients[itemIndex % templateRecipients.length];
-            const reference =
-                (templateReferencePrefixes[group] ?? 'ERAG') +
-                '-2026-' +
-                String(1001 + itemIndex).padStart(4, '0');
+            const description =
+                label === 'Product demo invitation'
+                    ? 'Invite a prospect to a product demonstration.'
+                    : 'Ready-to-edit ' + label.toLowerCase() + '.';
 
             return {
                 id: group.toLowerCase().replaceAll(' ', '-') + '-' + (templateIndex + 1),
                 label,
                 group,
-                description: 'Ready-to-edit ' + label.toLowerCase() + '.',
+                description,
                 content:
                     '<h2>' + label + '</h2>' +
-                    '<p><strong>To:</strong> ' + recipient + '<br>' +
-                    '<strong>Reference:</strong> ' + reference + '</p>' +
-                    '<p>Hello ' + recipient.split(' ')[0] + ',</p>' +
-                    '<p>This ready-to-edit message includes realistic demo details for the ' +
-                    group.toLowerCase() + ' workflow.</p>' +
-                    '<p>Regards,<br><strong>Neha Kapoor</strong></p>',
+                    '<p>Hi {{client.name}},</p>' +
+                    '<p>' + description + '</p>' +
+                    '<p>Best regards,<br>{{consultant.name}}</p>',
             };
         }),
 );
@@ -152,11 +126,10 @@ const isEditingLocked = computed(
     () => isDisabled.value || isReadonly.value,
 );
 
-// In production, load these replacement values from your API.
+// Values are resolved when a template is inserted.
 const mergeTagValues: Readonly<Record<string, string>> = {
     '{{client.name}}': 'Amit Gupta',
-    '{{company.name}}': 'ERAG',
-    '{{account.reference}}': 'ERAG-2026-001',
+    '{{consultant.name}}': 'Er Amit Gupta',
 };
 
 // Public EditorInstance methods power external controls.
@@ -198,7 +171,6 @@ function handleImageRemove(event: ImageDeleteInfo): void {
     console.log('image-remove', event);
 }
 
-// Replace inserted template tags with values supplied by your application.
 function replaceInsertedMergeTags(event: TemplateInsertEvent): void {
     console.log('template-insert', event);
 
@@ -214,6 +186,7 @@ function replaceInsertedMergeTags(event: TemplateInsertEvent): void {
         editor.value?.setHtml(resolvedHtml);
     }
 }
+
 </script>
 
 <template>

@@ -85,7 +85,7 @@ const templateGroups = [
             ],
             [
                 'Product demo invitation',
-                'Choose a convenient time for a personalized product demonstration.',
+                'Invite a prospect to a product demonstration.',
             ],
             [
                 'Proposal follow-up',
@@ -323,92 +323,19 @@ const templateGroups = [
     },
 ] as const;
 
-const templateRecipients = [
-    'Priya Sharma',
-    'Arjun Mehta',
-    'Sophia Wilson',
-    'Daniel Carter',
-    'Olivia Martin',
-    'Noah Thompson',
-    'Isabella Clark',
-    'Ethan Walker',
-] as const;
-
-const templateSenders = [
-    'Neha Kapoor',
-    'Rahul Verma',
-    'Emily Davis',
-    'Michael Brown',
-] as const;
-
-const templateDates = [
-    '22 July 2026',
-    '24 July 2026',
-    '28 July 2026',
-    '1 August 2026',
-    '5 August 2026',
-    '8 August 2026',
-] as const;
-
-const templateReferencePrefixes: Readonly<Record<string, string>> = {
-    Sales: 'SAL',
-    Marketing: 'MKT',
-    Support: 'SUP',
-    'Customer Success': 'CS',
-    Billing: 'BIL',
-    'Human Resources': 'HR',
-    Appointments: 'APT',
-    Operations: 'OPS',
-    General: 'GEN',
-};
-
-const templateNextSteps: Readonly<Record<string, string>> = {
-    Sales: 'Please reply with a suitable time, and we will prepare the next step for your review.',
-    Marketing:
-        'You can review the details below and choose the option that best fits your interests.',
-    Support:
-        'Your request is being tracked by our support team, and we will keep you informed of any changes.',
-    'Customer Success':
-        'Your customer success manager is available to help your team complete the next milestone.',
-    Billing:
-        'If you have any billing questions, reply to this message and include the reference number above.',
-    'Human Resources':
-        'Please review the information and contact the people team if you need any clarification.',
-    Appointments:
-        'Reply to this message if the scheduled details need to be changed.',
-    Operations:
-        'Our operations team will continue monitoring the request until every action is complete.',
-    General:
-        'Please contact us if you would like any additional information or assistance.',
-};
-
 const templateItems: EditorTemplateItem[] = templateGroups.flatMap(
-    ({ group, templates }, groupIndex) =>
-        templates.map(([label, description], templateIndex) => {
-            const itemIndex = groupIndex * 6 + templateIndex;
-            const recipient =
-                templateRecipients[itemIndex % templateRecipients.length];
-            const sender = templateSenders[itemIndex % templateSenders.length];
-            const date = templateDates[itemIndex % templateDates.length];
-            const referencePrefix = templateReferencePrefixes[group] ?? 'ERAG';
-            const reference = `${referencePrefix}-2026-${String(1001 + itemIndex).padStart(4, '0')}`;
-
-            return {
-                id: `${group.toLowerCase().replaceAll(' ', '-')}-${templateIndex + 1}`,
-                label,
-                group,
-                description,
-                content:
-                    `<h2>${label}</h2>` +
-                    `<p><strong>To:</strong> ${recipient}<br>` +
-                    `<strong>Date:</strong> ${date}<br>` +
-                    `<strong>Reference:</strong> ${reference}</p>` +
-                    `<p>Hello ${recipient.split(' ')[0]},</p>` +
-                    `<p>${description}</p>` +
-                    `<p>${templateNextSteps[group]}</p>` +
-                    `<p>Regards,<br><strong>${sender}</strong></p>`,
-            };
-        }),
+    ({ group, templates }) =>
+        templates.map(([label, description], templateIndex) => ({
+            id: `${group.toLowerCase().replaceAll(' ', '-')}-${templateIndex + 1}`,
+            label,
+            group,
+            description,
+            content:
+                `<h2>${label}</h2>` +
+                '<p>Hi {{client.name}},</p>' +
+                `<p>${description}</p>` +
+                '<p>Best regards,<br>{{consultant.name}}</p>',
+        })),
 );
 
 const editor = useTemplateRef<EditorInstance>('editor');
@@ -434,8 +361,7 @@ const copyButtonLabel = computed(() => {
 
 const demoMergeTagValues: Readonly<Record<string, string>> = {
     '{{client.name}}': 'Amit Gupta',
-    '{{company.name}}': 'ERAG',
-    '{{account.reference}}': 'ERAG-2026-001',
+    '{{consultant.name}}': 'Er Amit Gupta',
 };
 
 const editorConfig = computed<EditorInit>(() => ({
