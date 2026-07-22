@@ -373,6 +373,36 @@
     border-top: 1px solid var(--vp-c-divider);
 }
 
+/* Keep documentation table styles outside the embedded rich-text editor. */
+.vp-doc .erag-editor__content table {
+    display: table;
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.vp-doc .erag-editor__content tr,
+.vp-doc .erag-editor__content tr:nth-child(even) {
+    background: transparent;
+    border: 0;
+    transition: none;
+}
+
+.vp-doc .erag-editor__content th,
+.vp-doc .erag-editor__content td {
+    min-width: 36px;
+    height: 34px;
+    padding: 8px;
+    font-size: inherit;
+    vertical-align: top;
+    background: transparent;
+    border: 1px solid #cbd5e1;
+}
+
 /* ==========================================================================
    FAQ Accordion Styling (Shadcn Accordion Style)
    ========================================================================== */
