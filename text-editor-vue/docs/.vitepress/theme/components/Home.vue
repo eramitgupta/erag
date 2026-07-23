@@ -1187,6 +1187,111 @@ const heroEditorConfig: EditorInit = {
                                 >
                             </td>
                         </tr>
+                        <tr>
+                            <td>Bi-directional LTR & RTL Support</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Native LTR & RTL</span
+                                >
+                            </td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Extension</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Extension</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Table & Cell Properties Modals</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Full Dialog Modals</span
+                                >
+                            </td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td><span class="tbl-icon cross"></span></td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Extension</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Word, Character & Sentence Statistics</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Statusbar & Dialog</span
+                                >
+                            </td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Module</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Extension</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Searchable Emoji & Special Symbols Picker</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Built-in Dialogs</span
+                                >
+                            </td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Plugin</span
+                                >
+                            </td>
+                            <td><span class="tbl-icon cross"></span></td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Extension</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Configurable Date & Time Stamp Insertion</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Built in</span
+                                >
+                            </td>
+                            <td><span class="tbl-icon check"></span></td>
+                            <td><span class="tbl-icon cross"></span></td>
+                            <td><span class="tbl-icon cross"></span></td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Extension</span
+                                >
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

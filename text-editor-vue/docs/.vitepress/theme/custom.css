@@ -512,6 +512,13 @@ html {
     }
 }
 
+/* VitePress Search Modal Z-Index & Display Fix */
+.VPLocalSearchBox,
+.VPLocalSearchBox .backdrop {
+    z-index: 250 !important;
+}
+
+
 
 
 

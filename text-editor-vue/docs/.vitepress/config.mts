@@ -221,7 +221,12 @@ export default defineConfig({
                 ],
             },
         ],
-        search: { provider: 'local' },
+        search: {
+            provider: 'local',
+            options: {
+                detailedView: true,
+            },
+        },
         outline: { level: [2, 3], label: 'On this page' },
         docFooter: { prev: 'Previous', next: 'Next' },
         footer: {
