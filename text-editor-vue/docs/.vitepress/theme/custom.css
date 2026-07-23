@@ -513,10 +513,36 @@ html {
 }
 
 /* VitePress Search Modal Z-Index & Display Fix */
-.VPLocalSearchBox,
-.VPLocalSearchBox .backdrop {
-    z-index: 250 !important;
+.VPLocalSearchBox {
+    z-index: 300 !important;
 }
+
+.VPLocalSearchBox .backdrop {
+    background-color: rgba(15, 23, 42, 0.65) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    z-index: 300 !important;
+}
+
+.VPLocalSearchBox .shell {
+    background-color: var(--vp-c-bg) !important;
+    border: 1px solid var(--vp-c-border) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3) !important;
+    z-index: 301 !important;
+    overflow: hidden !important;
+}
+
+.dark .VPLocalSearchBox .backdrop {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.dark .VPLocalSearchBox .shell {
+    background-color: #121215 !important;
+    border-color: #27272a !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
+}
+
 
 
 
