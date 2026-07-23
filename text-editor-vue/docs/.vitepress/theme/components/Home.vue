@@ -1277,7 +1277,7 @@ const heroEditorConfig: EditorInit = {
     border-radius: 12px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     position: relative;
-    z-index: 100;
+    z-index: 2;
     transition:
         transform 0.5s ease,
         box-shadow 0.3s ease,
@@ -1285,7 +1285,7 @@ const heroEditorConfig: EditorInit = {
 }
 .editor-mockup::after {
     position: absolute;
-    z-index: 6000;
+    z-index: 3;
     right: -1px;
     bottom: -1px;
     left: -1px;
@@ -1349,7 +1349,7 @@ const heroEditorConfig: EditorInit = {
 .editor-inner :deep(.erag-mention-dropdown),
 .editor-inner :deep(.erag-merge-tag-dropdown),
 .editor-inner :deep(.erag-mention-hover-card) {
-    z-index: 5000;
+    z-index: 10;
 }
 .floating-card {
     position: absolute;
@@ -1362,7 +1362,7 @@ const heroEditorConfig: EditorInit = {
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
-    z-index: 20;
+    z-index: 4;
     animation: float 6s ease-in-out infinite;
 }
 .fc-icon {
