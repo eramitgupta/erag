@@ -1088,6 +1088,105 @@ const heroEditorConfig: EditorInit = {
                                 >
                             </td>
                         </tr>
+                        <tr>
+                            <td>Laravel & Inertia.js First-Class Guide</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Full guide & controllers</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon cross"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >No official guide</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon cross"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >No official guide</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon cross"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Manual setup</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Community tutorials</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>XSS Security & Safe HTML Sanitization</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >DOMPurify & Backend guide</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Built-in filter</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >HTML Processor</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Delta format</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Manual setup</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Interactive Live Demo & Code Tabs</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Live Preview + Code</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Standard docs</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Standard docs</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Static code</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Interactive examples</span
+                                >
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
