@@ -39,24 +39,48 @@ Apply variable overrides on `.erag-editor` or globally on `:root`:
 ```css
 .erag-editor {
     /* Core Editor Canvas */
+    --erag-editor-height: 420px;
     --erag-editor-border-color: #d9dce1;
     --erag-editor-active-color: #2563eb;
     --erag-editor-active-bg: #eaf2ff;
     --erag-editor-text-color: #1f2937;
+    --erag-editor-muted-color: #6b7280;
     --erag-editor-surface: #ffffff;
     --erag-editor-panel: #f8fafc;
     --erag-editor-radius: 9px;
+    --erag-editor-shadow: 0 10px 28px rgb(15 23 42 / 14%);
 
-    /* Mentions (@) & Merge Tags ({{ }}) */
-    --erag-mention-active-background: #0f766e;
-    --erag-mention-chip-background: #ccfbf1;
-    --erag-mention-chip-color: #0f766e;
-    --erag-merge-tag-chip-background: #e0f2fe;
-    --erag-merge-tag-chip-color: #0369a1;
+    /* Mentions (@) */
+    --erag-mention-chip-background: #eaf2ff;
+    --erag-mention-chip-color: #1659a7;
+    --erag-mention-active-background: #1677e8;
+    --erag-mention-active-color: #ffffff;
+    --erag-mention-border-color: #d6d9de;
+    --erag-mention-dropdown-max-height: 320px;
+    --erag-mention-dropdown-width: 280px;
+    --erag-mention-hover-card-min-height: 68px;
+    --erag-mention-hover-card-width: 240px;
+    --erag-mention-shadow: 0 8px 24px rgb(0 0 0 / 12%);
 
-    /* Dialog Modals */
+    /* Merge Tags ({{ }}) */
+    --erag-merge-tag-chip-background: #eef2ff;
+    --erag-merge-tag-chip-color: #3730a3;
+    --erag-merge-tag-active-background: #1677e8;
+    --erag-merge-tag-active-color: #ffffff;
+    --erag-merge-tag-dropdown-max-width: 420px;
+    --erag-merge-tag-dropdown-width: 320px;
+    --erag-merge-tag-sidebar-width: 380px;
+
+    /* Image Upload & Resize */
+    --erag-image-delete-background: #dc2626;
     --erag-image-resize-color: #2563eb;
-    --erag-image-resize-handle-size: 10px;
+    --erag-image-resize-handle-size: 12px;
+    --erag-image-upload-actions-space: 46px;
+    --erag-image-upload-background: #f8fbff;
+    --erag-image-upload-border: #8bb0f8;
+    --erag-image-upload-color: #3974e8;
+    --erag-image-upload-shadow: 0 7px 20px rgb(15 23 42 / 16%);
+    --erag-image-upload-z-index: 60;
 }
 ```
 
