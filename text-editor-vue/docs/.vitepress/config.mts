@@ -131,6 +131,7 @@ export default defineConfig({
         siteTitle: 'Text Editor Vue',
         nav: [
             { text: 'Guide', link: '/introduction.html' },
+            { text: 'Examples', link: '/examples.html' },
             { text: 'Features', link: '/index.html#features' },
             { text: 'Live Demo', link: '/index.html#live-demo' },
             { text: 'API Reference', link: '/api.html' },
@@ -143,6 +144,7 @@ export default defineConfig({
                     { text: 'Introduction', link: '/introduction.html' },
                     { text: 'Installation', link: '/installation.html' },
                     { text: 'Configuration', link: '/configuration.html' },
+                    { text: 'Examples & Demos', link: '/examples.html' },
                     {
                         text: 'Laravel & Inertia Setup',
                         link: '/laravel-integration.html',
