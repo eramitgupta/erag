@@ -9,14 +9,6 @@ keywords:
   - vue 3 toast plugin
   - react toast package
   - confirmation dialog docs
-head:
-  - - meta
-    - name: description
-      content: Official Laravel Inertia Toast documentation for dynamic toast notifications, confirmation dialogs, Laravel integration, Vue 3 usage, React usage, and API reference.
-  - - meta
-    - name: keywords
-      content: laravel inertia toast docs, laravel toast notifications, inertia toast package, vue 3 toast plugin, react toast package, confirmation dialog docs
-
 hero:
   name: "Laravel Inertia Toast"
   text: "Notifications and confirmation dialogs for Laravel + Inertia + Vue 3 + React"
@@ -28,6 +20,22 @@ hero:
     - theme: alt
       text: React Usage
       link: /react
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Official Laravel Inertia Toast documentation for dynamic toast notifications, confirmation dialogs, Laravel integration, Vue 3 usage, React usage, and API reference.'
+    - - meta
+      - name: keywords
+        content: 'laravel inertia toast docs, laravel toast notifications, inertia toast package, vue 3 toast plugin, react toast package, confirmation dialog docs'
 ---
 
 <div class="lit-grid lit-grid--compact">

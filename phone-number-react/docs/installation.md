@@ -2,9 +2,18 @@
 title: Installation
 description: Install @erag/phone-number-react using npm, yarn, or pnpm. Supports React 18 and React 19.
 head:
-  - - meta
-    - name: keywords
-      content: install phone-number-react, npm install @erag/phone-number-react, yarn phone number react, pnpm phone input react, react 19 phone hook
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'install phone-number-react, npm install @erag/phone-number-react, yarn phone number react, pnpm phone input react, react 19 phone hook'
 ---
 
 # Installation

@@ -2,9 +2,18 @@
 title: Installation
 description: Install Laravel Disposable Email, register the service provider when needed, and publish the package configuration.
 head:
-  - - meta
-    - name: keywords
-      content: laravel disposable email installation, install laravel disposable email, composer require erag laravel disposable email, laravel package setup
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'laravel disposable email installation, install laravel disposable email, composer require erag laravel disposable email, laravel package setup'
 ---
 
 # Installation

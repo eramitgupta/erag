@@ -1,3 +1,21 @@
+---
+title: Confirmation Modals
+description: 'Trigger interactive, promise-based confirmation dialog overlays using the useModal (or useConfirmation) composable hooks.'
+head:
+    - - meta
+      - name: keywords
+        content: 'vue-toastification, Confirmation Modals, Vue, documentation, API'
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+---
+
 # Confirmation Modals
 
 Trigger interactive, promise-based confirmation dialog overlays using the `useModal` (or `useConfirmation`) composable hooks.

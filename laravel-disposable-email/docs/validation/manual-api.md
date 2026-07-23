@@ -1,6 +1,16 @@
 ---
 title: Manual and API Validation
 description: Validate disposable email addresses in validators and API endpoints.
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
 
 # Manual and API Validation

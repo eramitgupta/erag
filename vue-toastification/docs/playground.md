@@ -2,6 +2,16 @@
 layout: doc
 title: Toast & Modal Playground
 description: Test erag-vue-toastification alerts and interactive dialog boxes in a sandbox.
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
 
 # Interactive Playground

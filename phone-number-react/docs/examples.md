@@ -2,9 +2,18 @@
 title: Examples
 description: Real-world React examples using usePhoneNumber — form submission, Inertia.js, custom data, and Tailwind CSS UI.
 head:
-  - - meta
-    - name: keywords
-      content: usePhoneNumber React examples, React phone form, Inertia phone input React, Tailwind phone React, phone hook example
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'usePhoneNumber React examples, React phone form, Inertia phone input React, Tailwind phone React, phone hook example'
 ---
 
 # Examples

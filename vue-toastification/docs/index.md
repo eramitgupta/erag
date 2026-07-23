@@ -2,10 +2,6 @@
 layout: home
 title: Vue Toastification Docs
 description: Lightweight, high-performance Toast Notifications and Promise-based Confirmation Modals for Vue 3 with Composition API.
-head:
-  - - meta
-    - name: keywords
-      content: vue toast, vue notification, confirmation modal, vue dialog, promise based modal, composition api toast
 hero:
   name: '@erag/vue-toastification'
   text: 'Lightweight Toast & Modal Library for Vue 3'
@@ -46,6 +42,19 @@ features:
   - icon: '⛨'
     title: 'Responsive Blur Overlays'
     details: 'Glassmorphic modal backdrops using CSS filter blurs that adapt cleanly from desktop to mobile screens.'
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'vue toast, vue notification, confirmation modal, vue dialog, promise based modal, composition api toast'
 ---
 
 <div class="home-container">

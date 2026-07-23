@@ -2,9 +2,18 @@
 title: Basic Usage
 description: How to use usePhoneNumber in a Vue 3 component with a country select and phone input.
 head:
-  - - meta
-    - name: keywords
-      content: usePhoneNumber usage, Vue phone input example, country select phone Vue, handleInput composable, localPhone Vue
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'usePhoneNumber usage, Vue phone input example, country select phone Vue, handleInput composable, localPhone Vue'
 ---
 
 # Basic Usage

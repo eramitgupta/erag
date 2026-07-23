@@ -2,7 +2,18 @@
 title: Config
 description: Configure lang_path and output_lang for Laravel Lang Sync Inertia.
 head:
-  - ['meta', { name: 'keywords', content: 'Laravel Lang Sync Inertia config, inertia-lang.php, lang_path, output_lang, Laravel translation config' }]
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'Laravel Lang Sync Inertia config, inertia-lang.php, lang_path, output_lang, Laravel translation config'
 ---
 
 # Config

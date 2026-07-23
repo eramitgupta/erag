@@ -2,13 +2,18 @@
 title: Svelte
 description: Use Laravel Lang Sync Inertia translations in Inertia Svelte 5 pages and components.
 head:
-    - [
-          'meta',
-          {
-              name: 'keywords',
-              content: 'Laravel Lang Sync Inertia Svelte, Inertia Svelte translations, Svelte lang helper, trans helper Svelte, __ helper Svelte',
-          },
-      ]
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords',
+        content: 'Laravel Lang Sync Inertia Svelte, Inertia Svelte translations, Svelte lang helper, trans helper Svelte, __ helper Svelte'','
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
 
 # Svelte

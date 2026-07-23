@@ -2,11 +2,6 @@
 layout: home
 title: Laravel PWA — Progressive Web App Setup
 description: Seamless PWA integration for Laravel. Auto-generate manifest, register service workers, customize installation prompts, and upload logos dynamically.
-head:
-  - - meta
-    - name: keywords
-      content: Laravel PWA, service worker Laravel, manifest.json generator Laravel, add to home screen, erag/laravel-pwa
-
 hero:
   name: 'Laravel PWA'
   text: 'PWA Easy Setup for Laravel'
@@ -41,6 +36,19 @@ features:
   - icon: '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feat-icon"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.62 2.48A2 2 0 0 0 4.56 21h14.88a2 2 0 0 0 1.94-1.51L22 17"></path></svg>'
     title: Facade API
     details: Update application names, icons, background themes, and display modes programmatically via the `PWA` Facade API.
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'Laravel PWA, service worker Laravel, manifest.json generator Laravel, add to home screen, erag/laravel-pwa'
 ---
 
 <div class="home-container">

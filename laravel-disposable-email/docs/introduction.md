@@ -2,9 +2,18 @@
 title: Introduction
 description: Learn what Laravel Disposable Email does, when to use it, and how it fits into real Laravel applications.
 head:
-  - - meta
-    - name: keywords
-      content: laravel disposable email introduction, disposable email package overview, laravel temporary email blocker, laravel package intro
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'laravel disposable email introduction, disposable email package overview, laravel temporary email blocker, laravel package intro'
 ---
 
 # Introduction

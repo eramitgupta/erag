@@ -2,9 +2,18 @@
 title: TypeScript Types
 description: TypeScript type definitions for @erag/phone-number-react — PhoneCountry, PhoneDialCode, PhoneNumberOptions, and PhoneInputValue.
 head:
-  - - meta
-    - name: keywords
-      content: phone-number-react TypeScript types, PhoneCountry type, PhoneNumberOptions React, PhoneInputValue React, usePhoneNumber types
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'phone-number-react TypeScript types, PhoneCountry type, PhoneNumberOptions React, PhoneInputValue React, usePhoneNumber types'
 ---
 
 # TypeScript Types

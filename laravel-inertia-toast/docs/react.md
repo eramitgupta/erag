@@ -8,12 +8,21 @@ keywords:
   - inertia react toast
   - laravel inertia toast react
 head:
-  - - meta
-    - name: description
-      content: Learn how to use the React frontend package for Laravel Inertia Toast, including provider setup, hooks, confirmation modal flows, and Inertia flash bridge behavior.
-  - - meta
-    - name: keywords
-      content: react inertia toast, react toast package, react confirmation modal, inertia react toast, laravel inertia toast react
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Learn how to use the React frontend package for Laravel Inertia Toast, including provider setup, hooks, confirmation modal flows, and Inertia flash bridge behavior.'
+    - - meta
+      - name: keywords
+        content: 'react inertia toast, react toast package, react confirmation modal, inertia react toast, laravel inertia toast react'
 ---
 
 # React Usage

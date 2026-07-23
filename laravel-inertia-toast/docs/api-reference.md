@@ -8,12 +8,21 @@ keywords:
   - vue toast api
   - react toast api
 head:
-  - - meta
-    - name: description
-      content: Full API reference for Laravel Inertia Toast, including toast types, positions, helper arguments, composables, modal options, and shared payload shape.
-  - - meta
-    - name: keywords
-      content: laravel inertia toast api, toast helper signature, toast payload reference, vue toast api, react toast api
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Full API reference for Laravel Inertia Toast, including toast types, positions, helper arguments, composables, modal options, and shared payload shape.'
+    - - meta
+      - name: keywords
+        content: 'laravel inertia toast api, toast helper signature, toast payload reference, vue toast api, react toast api'
 ---
 
 # API Reference

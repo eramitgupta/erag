@@ -2,9 +2,18 @@
 title: Installation
 description: Install @erag/phone-number-vue using npm, yarn, or pnpm. No extra dependencies required.
 head:
-  - - meta
-    - name: keywords
-      content: install phone-number-vue, npm install @erag/phone-number-vue, yarn phone number vue, pnpm phone input vue
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'install phone-number-vue, npm install @erag/phone-number-vue, yarn phone number vue, pnpm phone input vue'
 ---
 
 # Installation

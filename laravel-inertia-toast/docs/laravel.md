@@ -8,12 +8,21 @@ keywords:
   - laravel redirect toast
   - laravel shared toast props
 head:
-  - - meta
-    - name: description
-      content: Learn how to use Laravel Inertia Toast on the Laravel side with the toast helper, session flash payloads, redirect flows, and Inertia shared props.
-  - - meta
-    - name: keywords
-      content: laravel inertia toast helper, laravel toast helper, inertia flash toast, laravel redirect toast, laravel shared toast props
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Learn how to use Laravel Inertia Toast on the Laravel side with the toast helper, session flash payloads, redirect flows, and Inertia shared props.'
+    - - meta
+      - name: keywords
+        content: 'laravel inertia toast helper, laravel toast helper, inertia flash toast, laravel redirect toast, laravel shared toast props'
 ---
 
 # Laravel Usage

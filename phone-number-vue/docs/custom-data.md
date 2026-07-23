@@ -2,9 +2,18 @@
 title: Custom Data
 description: Override the bundled country and dial-code data in @erag/phone-number-vue with your own static object or a reactive Vue ref.
 head:
-  - - meta
-    - name: keywords
-      content: usePhoneNumber custom data, override country list Vue, custom dial codes, PhoneNumberSharedData, reactive ref phone data
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'usePhoneNumber custom data, override country list Vue, custom dial codes, PhoneNumberSharedData, reactive ref phone data'
 ---
 
 # Custom Data

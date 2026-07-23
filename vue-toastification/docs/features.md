@@ -1,3 +1,21 @@
+---
+title: Package Features
+description: 'Detailed walkthrough of key features included in @erag/vue-toastification.'
+head:
+    - - meta
+      - name: keywords
+        content: 'vue-toastification, Package Features, Vue, documentation, API'
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+---
+
 # Package Features
 
 Detailed walkthrough of key features included in `@erag/vue-toastification`.

@@ -2,9 +2,18 @@
 title: TypeScript Types
 description: TypeScript type definitions for @erag/phone-number-vue — PhoneCountry, PhoneDialCode, PhoneNumberOptions, PhoneNumberHelpers, and PhoneInputValue.
 head:
-  - - meta
-    - name: keywords
-      content: phone-number-vue TypeScript types, PhoneCountry type, PhoneNumberOptions, PhoneNumberHelpers, PhoneInputValue, usePhoneNumber types
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'phone-number-vue TypeScript types, PhoneCountry type, PhoneNumberOptions, PhoneNumberHelpers, PhoneInputValue, usePhoneNumber types'
 ---
 
 # TypeScript Types

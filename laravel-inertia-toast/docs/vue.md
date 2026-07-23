@@ -8,12 +8,21 @@ keywords:
   - inertia vue toast
   - laravel inertia toast vue
 head:
-  - - meta
-    - name: description
-      content: Learn how to use the Vue 3 frontend package for Laravel Inertia Toast, including plugin registration, toast composables, confirmation modal usage, and flash bridge behavior.
-  - - meta
-    - name: keywords
-      content: vue inertia toast, vue 3 toast plugin, vue confirmation modal, inertia vue toast, laravel inertia toast vue
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Learn how to use the Vue 3 frontend package for Laravel Inertia Toast, including plugin registration, toast composables, confirmation modal usage, and flash bridge behavior.'
+    - - meta
+      - name: keywords
+        content: 'vue inertia toast, vue 3 toast plugin, vue confirmation modal, inertia vue toast, laravel inertia toast vue'
 ---
 
 # Vue Usage

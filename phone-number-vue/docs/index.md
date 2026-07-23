@@ -2,11 +2,6 @@
 layout: home
 title: Phone Number Vue — Headless Vue Composable
 description: Headless Vue composable for country-aware phone input. Country selection, digit normalization, calling codes, mask patterns, and validation — no masking dependency.
-head:
-  - - meta
-    - name: keywords
-      content: Vue phone number input, usePhoneNumber, country phone composable, Vue phone mask, dial code Vue, @erag/phone-number-vue
-
 hero:
   name: 'Phone Number Vue'
   text: 'Country-aware phone input for Vue 3'
@@ -47,6 +42,19 @@ features:
   - icon: '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feat-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>'
     title: Fully Typed
     details: Complete TypeScript types for all return values, options, and custom data shapes. Works out of the box with Volar and vue-tsc.
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'Vue phone number input, usePhoneNumber, country phone composable, Vue phone mask, dial code Vue, @erag/phone-number-vue'
 ---
 
 <PhonePlayground />

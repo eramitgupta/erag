@@ -2,9 +2,18 @@
 title: Custom Data
 description: Override the bundled country and dial-code data in @erag/phone-number-react with your own static object or fetched API data.
 head:
-  - - meta
-    - name: keywords
-      content: usePhoneNumber custom data React, override country list React, custom dial codes React, PhoneNumberSharedData React
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'usePhoneNumber custom data React, override country list React, custom dial codes React, PhoneNumberSharedData React'
 ---
 
 # Custom Data

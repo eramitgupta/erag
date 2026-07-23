@@ -7,12 +7,21 @@ keywords:
   - vitepress docs contribution
   - package contribution guide
 head:
-  - - meta
-    - name: description
-      content: Learn how to contribute to Laravel Inertia Toast, including documentation workflow, pull request guidelines, local development, and contribution expectations.
-  - - meta
-    - name: keywords
-      content: laravel inertia toast contributing, docs contribution guide, vitepress docs contribution, package contribution guide
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Learn how to contribute to Laravel Inertia Toast, including documentation workflow, pull request guidelines, local development, and contribution expectations.'
+    - - meta
+      - name: keywords
+        content: 'laravel inertia toast contributing, docs contribution guide, vitepress docs contribution, package contribution guide'
 ---
 
 # Contributing

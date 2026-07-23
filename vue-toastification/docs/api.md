@@ -1,3 +1,21 @@
+---
+title: API Reference
+description: 'Detailed type contracts and function signatures for @erag/vue-toastification.'
+head:
+    - - meta
+      - name: keywords
+        content: 'vue-toastification, API Reference, Vue, documentation, API'
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+---
+
 # API Reference
 
 Detailed type contracts and function signatures for `@erag/vue-toastification`.

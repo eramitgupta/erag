@@ -2,9 +2,18 @@
 title: Configuration
 description: Configure blacklist paths, remote domain sources, and caching options for Laravel Disposable Email.
 head:
-  - - meta
-    - name: keywords
-      content: laravel disposable email configuration, disposable email config laravel, laravel blacklist config, remote domain list config
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'laravel disposable email configuration, disposable email config laravel, laravel blacklist config, remote domain list config'
 ---
 
 # Configuration

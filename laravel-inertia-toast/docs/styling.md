@@ -9,12 +9,21 @@ keywords:
   - scoped css
   - toast css prefix
 head:
-  - - meta
-    - name: description
-      content: Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes.
-  - - meta
-    - name: keywords
-      content: vue toast css, react toast css, modal css, erag toast styling, scoped css, toast css prefix
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes.'
+    - - meta
+      - name: keywords
+        content: 'vue toast css, react toast css, modal css, erag toast styling, scoped css, toast css prefix'
 ---
 
 # Styling

@@ -7,12 +7,21 @@ keywords:
   - react toast demo
   - confirmation modal demo
 head:
-  - - meta
-    - name: description
-      content: Watch the Laravel Inertia Toast demo to see server-side toasts, client-side notifications, multiple positions, and confirmation modal flows in action.
-  - - meta
-    - name: keywords
-      content: laravel inertia toast demo, vue toast demo, react toast demo, confirmation modal demo
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: description
+        content: 'Watch the Laravel Inertia Toast demo to see server-side toasts, client-side notifications, multiple positions, and confirmation modal flows in action.'
+    - - meta
+      - name: keywords
+        content: 'laravel inertia toast demo, vue toast demo, react toast demo, confirmation modal demo'
 ---
 
 # Demo

@@ -1,3 +1,21 @@
+---
+title: Laravel Inertia Toast
+description: 'This repository contains the documentation for laravel-inertia-toast.'
+head:
+    - - meta
+      - name: keywords
+        content: 'laravel-inertia-toast, Laravel Inertia Toast, Vue, documentation, API'
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+---
+
 # Laravel Inertia Toast
 
 This repository contains the documentation for `laravel-inertia-toast`.

@@ -2,9 +2,18 @@
 title: Basic Usage
 description: How to use usePhoneNumber in a React component with a country select and phone input.
 head:
-  - - meta
-    - name: keywords
-      content: usePhoneNumber React usage, React phone input example, country select phone React, handleInput hook, localPhone React
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'usePhoneNumber React usage, React phone input example, country select phone React, handleInput hook, localPhone React'
 ---
 
 # Basic Usage

@@ -2,9 +2,18 @@
 title: Examples
 description: Real-world Vue 3 examples using usePhoneNumber — form submission, Inertia.js, reactive ref, and Tailwind CSS UI.
 head:
-  - - meta
-    - name: keywords
-      content: usePhoneNumber examples, Vue phone form, Inertia phone input, Tailwind phone Vue, phone composable example
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords
+        content: 'usePhoneNumber examples, Vue phone form, Inertia phone input, Tailwind phone Vue, phone composable example'
 ---
 
 # Examples

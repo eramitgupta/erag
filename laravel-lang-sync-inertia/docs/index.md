@@ -1,14 +1,6 @@
 ---
 title: Laravel Lang Sync Inertia
 description: Use Laravel translation files directly in Inertia Vue and React apps with replacements, pluralization, and locale-aware helpers.
-head:
-    - [
-          'meta',
-          {
-              name: 'keywords',
-              content: 'Laravel Lang Sync Inertia, Inertia.js translations, Laravel i18n, Vue translations, React translations, localization package',
-          },
-      ]
 layout: home
 
 hero:
@@ -56,6 +48,19 @@ features:
     - icon: '✓'
       title: 'TypeScript ready'
       details: 'Typed Vue and React helpers give autocomplete for common translation calls.'
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: keywords',
+        content: 'Laravel Lang Sync Inertia, Inertia.js translations, Laravel i18n, Vue translations, React translations, localization package'','
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
 
 ## Quick example
