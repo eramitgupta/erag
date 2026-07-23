@@ -453,3 +453,33 @@ html {
         scroll-behavior: auto;
     }
 }
+
+/* ==========================================================================
+   Full Width Edge-to-Edge Reset for Custom Home Page
+   ========================================================================== */
+.VPHome,
+.VPHomeContent,
+.VPHomeContent .container,
+.VPHome .container,
+.VPContent.is-home,
+.VPContent.is-home .container,
+.VPContent.is-home .content-container,
+.VPContent:has(.custom-home),
+.VPDoc:has(.custom-home),
+.VPPage:has(.custom-home),
+.VPContent .custom-home,
+.custom-home {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.VPHomeContent {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+

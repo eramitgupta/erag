@@ -1593,19 +1593,193 @@ const heroEditorConfig: EditorInit = {
     margin: 0 auto;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* Responsive Design Improvements */
+.custom-home {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-container,
+.hero-content,
+.hero-visual,
+.editor-mockup {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.editor-mockup {
+    overflow: visible;
+}
+
+.editor-inner {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 11px;
+}
+
+
+.editor-inner :deep(.erag-editor) {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.editor-inner :deep(.erag-menu),
+.editor-inner :deep(.erag-menubar),
+.editor-inner :deep(.erag-toolbar) {
+    max-width: 100%;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
     .hero-container {
-        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
     .hero-title {
-        font-size: 3rem;
-    }
-    .hero-visual {
-        margin-top: 3rem;
-    }
-    .comparison-section {
-        padding: 2rem 1rem 4rem;
+        font-size: 2.75rem;
     }
 }
+
+@media (max-width: 900px) {
+    .hero-section {
+        padding: 3.5rem 1.25rem 3.5rem;
+    }
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .hero-title {
+        font-size: 2.35rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    .hero-subtitle {
+        font-size: 1.05rem;
+        word-break: break-word;
+    }
+    .hero-visual {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .fc-1 {
+        top: -15px;
+        right: 10px;
+    }
+    .comparison-section {
+        padding: 2.5rem 1rem 4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-section {
+        padding: 2.5rem 0.85rem 2.5rem;
+    }
+    .hero-badge {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .hero-title {
+        font-size: 1.85rem;
+        line-height: 1.25;
+        margin-bottom: 0.85rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+    .hero-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.65rem;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 1.25rem;
+        box-sizing: border-box;
+    }
+    .fc-1 {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0.75rem auto 0;
+        width: max-content;
+        animation: none;
+    }
+    .hero-feature-row {
+        gap: 0.4rem;
+        margin-top: 1.25rem;
+    }
+    .feature-pill {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    .trust-section {
+        padding: 1.75rem 0.5rem;
+    }
+    .trust-badge {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.65rem;
+    }
+    .features-section {
+        padding: 2rem 0.85rem 1.25rem;
+    }
+    .section-title {
+        font-size: 1.65rem;
+        margin-bottom: 1.5rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .feature-card {
+        padding: 1.25rem;
+    }
+    .fc-icon-large {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.35rem;
+        margin-bottom: 0.85rem;
+    }
+    .comparison-section {
+        padding: 1.75rem 0.5rem 2.5rem;
+    }
+    .comparison-table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .comparison-table {
+        min-width: 480px;
+    }
+    .faq-section {
+        padding: 2.5rem 0.85rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    .feature-pill {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.55rem;
+    }
+}
+
 </style>
+
