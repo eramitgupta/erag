@@ -726,6 +726,39 @@ const heroEditorConfig: EditorInit = {
                             </td>
                         </tr>
                         <tr>
+                            <td>CSS & Theme Customization</td>
+                            <td class="highlight-col">
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >36+ CSS Variables</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Skin Builder / Complex</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Custom Build required</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon warn"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Basic Snow theme</span
+                                >
+                            </td>
+                            <td>
+                                <span class="tbl-icon check"></span><br /><span
+                                    class="tbl-sm-text"
+                                    >Unstyled Tailwind/CSS</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
                             <td>First-party Vue 3 Component</td>
                             <td class="highlight-col">
                                 <span class="tbl-icon check"></span>
