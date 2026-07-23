@@ -1,5 +1,7 @@
 ---
 title: Examples & Live Demos
+sidebar: false
+aside: false
 description: 'Interactive live demos and Vue 3 code snippets ranging from basic minimal setup to advanced enterprise implementations with Mentions, Merge Tags, Templates, and Image Uploads.'
 head:
     - - meta
