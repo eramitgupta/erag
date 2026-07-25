@@ -7,8 +7,8 @@ import HomeEditorDemo from './HomeEditorDemo.vue';
 const activeFaq = shallowRef<number | null>(0);
 const heroContent = shallowRef(
     '<p>Welcome to <strong>@erag/text-editor-vue</strong> 👋</p>' +
-    '<p>Hey <span class="erag-mention" data-erag-mention="true" data-erag-mention-id="developer" data-erag-mention-label="Developer" data-erag-mention-value="developer@example.com" contenteditable="false">@Developer</span>, explore the <span class="erag-merge-tag" data-erag-merge-tag="true" data-erag-merge-tag-value="{{project.name}}" data-erag-merge-tag-name="Project Name" contenteditable="false">{{project.name}}</span> workspace.</p>' +
-    '<p>Scroll down to discover mentions, merge tags, templates, media uploads, tables, and much more.</p>',
+        '<p>Hey <span class="erag-mention" data-erag-mention="true" data-erag-mention-id="developer" data-erag-mention-label="Developer" data-erag-mention-value="developer@example.com" contenteditable="false">@Developer</span>, explore the <span class="erag-merge-tag" data-erag-merge-tag="true" data-erag-merge-tag-value="{{project.name}}" data-erag-merge-tag-name="Project Name" contenteditable="false">{{project.name}}</span> workspace.</p>' +
+        '<p>Scroll down to discover mentions, merge tags, templates, media uploads, tables, and much more.</p>',
 );
 const heroEditorConfig: EditorInit = {
     height: 250,
@@ -1868,7 +1868,6 @@ const heroEditorConfig: EditorInit = {
     border-radius: 11px;
 }
 
-
 .editor-inner :deep(.erag-editor) {
     max-width: 100%;
     box-sizing: border-box;
@@ -2029,5 +2028,4 @@ const heroEditorConfig: EditorInit = {
         padding: 0.35rem 0.55rem;
     }
 }
-
 </style>
