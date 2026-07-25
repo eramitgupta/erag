@@ -1423,12 +1423,23 @@ const heroEditorConfig: EditorInit = {
     border-bottom: 1px solid var(--vp-c-divider);
 }
 .hero-container {
-    max-width: 1200px;
+    max-width: 1240px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 3.5rem;
     align-items: center;
+    box-sizing: border-box;
+}
+.hero-content {
+    max-width: 580px;
+    width: 100%;
+}
+.hero-visual {
+    max-width: 620px;
+    width: 100%;
+    justify-self: end;
 }
 .hero-badge {
     display: inline-block;
@@ -1837,7 +1848,6 @@ const heroEditorConfig: EditorInit = {
     max-width: 100%;
 }
 
-.hero-container,
 .hero-content,
 .hero-visual,
 .editor-mockup {
