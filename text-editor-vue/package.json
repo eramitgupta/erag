@@ -10,6 +10,6 @@
         "vitepress": "^1.6.4"
     },
     "dependencies": {
-        "@erag/text-editor-vue": "^1.0.0"
+        "@erag/text-editor-vue": "^1.1.0"
     }
 }
