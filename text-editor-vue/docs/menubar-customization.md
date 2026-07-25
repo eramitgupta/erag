@@ -56,18 +56,18 @@ const noMenubarConfig: EditorInit = {
 
 ## All Available Menubar Menus (`EditorMenuName`)
 
-| Menu Name     | Configuration Keyword | Sub-menu Items & Features                                                                                                        |
-| :------------ | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| **File**      | `'file'`              | **New document**, **Print**, and **Preview**.                                                                                    |
-| **Edit**      | `'edit'`              | **Undo**, **Redo**, **Cut**, **Copy**, **Paste**, **Paste as plain text**, **Select all**, and **Find and replace**.             |
-| **View**      | `'view'`              | **Source code**, **Preview**, and **Fullscreen**.                                                                                |
-| **Insert**    | `'insert'`            | **Image**, **Link**, **Media**, **Table**, **Special character**, **Emoji**, **Horizontal line**, **Anchor**, and **Date/time**. |
-| **Merge tag** | `'merge-tags'`        | Triggers the right slide-out panel for grouped merge tags (`client.name`, `proposal.number`, etc.).                              |
-| **Templates** | `'templates'`         | Opens the searchable template picker modal with live preview.                                                                    |
-| **Format**    | `'format'`            | Inline styles, change case, nested formats, blocks, alignment, line height, and clear formatting.                                |
-| **Tools**     | `'tools'`             | **Source code** and detailed **Word count** statistics.                                                                          |
-| **Table**     | `'table'`             | Insert/properties/delete plus context-sensitive cell, row, and column operations.                                                |
-| **Help**      | `'help'`              | Keyboard shortcuts and the About dialog.                                                                                         |
+| Menu Name     | Configuration Keyword | Sub-menu Items & Features                                                                                                                       |
+| :------------ | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **File**      | `'file'`              | **New document**, **Print**, and **Preview**.                                                                                                   |
+| **Edit**      | `'edit'`              | **Undo**, **Redo**, **Cut**, **Copy**, **Paste**, **Paste as plain text**, **Select all**, and **Find and replace**.                            |
+| **View**      | `'view'`              | **Source code**, **Preview**, and **Fullscreen**.                                                                                               |
+| **Insert**    | `'insert'`            | **Image**, **Link**, **Media**, **Table**, **Checklist**, **Special character**, **Emoji**, **Horizontal line**, **Anchor**, and **Date/time**. |
+| **Merge tag** | `'merge-tags'`        | Triggers the right slide-out panel for grouped merge tags (`client.name`, `proposal.number`, etc.).                                             |
+| **Templates** | `'templates'`         | Opens the searchable template picker modal with live preview.                                                                                   |
+| **Format**    | `'format'`            | Inline styles, change case, nested formats, blocks, alignment, line height, and clear formatting.                                               |
+| **Tools**     | `'tools'`             | **Source code** and detailed **Word count** statistics.                                                                                         |
+| **Table**     | `'table'`             | Insert/properties/delete plus context-sensitive cell, row, and column operations.                                                               |
+| **Help**      | `'help'`              | Keyboard shortcuts and the About dialog.                                                                                                        |
 
 ---
 
@@ -98,6 +98,7 @@ const noMenubarConfig: EditorInit = {
 - **Image**: File picker, URL uploader, and aspect ratio resizing.
 - **Media**: Video, audio, and iframe embed code tab.
 - **Table**: 10x10 interactive table insertion grid.
+- **Checklist**: Inserts an interactive checkbox list when the `lists` plugin is enabled.
 - **Link & Anchor**: Hyperlink dialog and internal page bookmarks.
 - **Special character**: Categorized symbol picker (Math, Currency, Arrows, etc.).
 - **Horizontal line**: Section divider (`<hr>`).
@@ -130,6 +131,14 @@ const noMenubarConfig: EditorInit = {
 - **About**: Shows the package description, installed version, GitHub repository, and documentation link.
 
 The **Merge tag** and **Templates** menus appear only when their plugin, feature configuration, and item list are all available. If `menubar` is an explicit array, include `'merge-tags'` or `'templates'` to place the matching menu.
+
+---
+
+## Responsive layout and menu icons
+
+The menubar wraps according to the editor's actual container width. In compact editors (`420px` wide or less), labels are visually hidden and the icon buttons keep their `aria-label` and `title`, so the complete menubar stays usable without overflowing its border.
+
+The first dropdown level displays an icon for each action or category. Nested submenus keep their text, active check, shortcut, and direction arrow but omit repeated icons to preserve space.
 
 ---
 

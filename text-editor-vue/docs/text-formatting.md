@@ -18,7 +18,7 @@ head:
 
 # Text Formatting
 
-`@erag/text-editor-vue` includes rich text formatting tools natively powered by browser Range and Selection manipulation.
+`@erag/text-editor-vue` uses native browser editing commands for standard rich-text formatting and Range/Selection APIs for selection-aware editor interactions. Standard commands currently use `document.execCommand` for broad contenteditable behavior and native undo integration.
 
 ---
 
@@ -32,7 +32,7 @@ const editorConfig: EditorInit = {
         'undo redo | blocks fontfamily fontsize | ' +
         'bold italic underline strikethrough superscript subscript casechange | ' +
         'forecolor backcolor | ' +
-        'alignleft aligncenter alignright alignjustify | ' +
+        'lineheight alignment | ' +
         'removeformat',
 };
 ```
@@ -46,6 +46,7 @@ const editorConfig: EditorInit = {
 | **Blocks / Headings** | `blocks`        | Dropdown menu to convert paragraph into `<h1>` through `<h6>`, `<p>`, `<blockquote>`, or `<pre>` code blocks. |
 | **Font Family**       | `fontfamily`    | Select a configured family such as Arial, Georgia, Courier New, Times New Roman, or Verdana.                  |
 | **Font Size**         | `fontsize`      | Select font sizes (e.g. 8pt to 36pt).                                                                         |
+| **Line Height**       | `lineheight`    | Opens one grouped dropdown using the configured `lineHeightFormats`.                                          |
 | **Bold**              | `bold`          | Toggles `<strong>` / `<b>` bold text formatting (`Ctrl+B` / `Cmd+B`).                                         |
 | **Italic**            | `italic`        | Toggles `<em>` / `<i>` italic text formatting (`Ctrl+I` / `Cmd+I`).                                           |
 | **Underline**         | `underline`     | Toggles `<u>` underline formatting (`Ctrl+U` / `Cmd+U`).                                                      |
@@ -55,13 +56,14 @@ const editorConfig: EditorInit = {
 | **Change Case**       | `casechange`    | Dropdown menu offering **UPPERCASE**, **lowercase**, and **Title Case** conversions.                          |
 | **Text Color**        | `forecolor`     | Color picker dropdown for text foreground color.                                                              |
 | **Background Color**  | `backcolor`     | Color picker dropdown for text highlight / background fill color.                                             |
+| **Alignment Group**   | `alignment`     | One dropdown containing left, center, right, and justify with matching icons.                                 |
 | **Align Left**        | `alignleft`     | Aligns text paragraph to the left.                                                                            |
 | **Align Center**      | `aligncenter`   | Centers text paragraph.                                                                                       |
 | **Align Right**       | `alignright`    | Aligns text paragraph to the right.                                                                           |
 | **Justify**           | `alignjustify`  | Justifies text across full container width.                                                                   |
 | **Remove Formatting** | `removeformat`  | Strips inline formatting, styles, and tags from selection.                                                    |
 
-The Format menubar also provides **Inline code** and **Line height**. The current inline-code action changes the selected block to `<pre>`. Line-height choices come from `lineHeightFormats` and are applied as an inline `line-height` style.
+The Format menubar also provides **Inline code** and **Line height**. The current inline-code action changes the selected block to `<pre>`. Line-height choices come from `lineHeightFormats`, are available from both the toolbar and menubar, and are applied as an inline `line-height` style.
 
 ```ts
 const editorConfig: EditorInit = {
@@ -72,6 +74,8 @@ const editorConfig: EditorInit = {
     ],
 };
 ```
+
+The grouped `alignment` control is the default toolbar presentation. The individual `alignleft`, `aligncenter`, `alignright`, and `alignjustify` keywords remain available when separate buttons are preferred.
 
 Bold, italic, underline, and similar commands can establish the format used for subsequent typing when the caret is collapsed. **Change case** requires an active text selection. **Clear formatting** removes formatting from the selection and resets the active block to a paragraph.
 

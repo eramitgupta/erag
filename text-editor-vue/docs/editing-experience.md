@@ -66,9 +66,20 @@ Mention and merge-tag dropdowns handle `ArrowUp`, `ArrowDown`, `Home`, `End`, `E
 
 ## Responsive toolbar and menus
 
-The toolbar measures its available width with `ResizeObserver`. Controls that no longer fit move into the **More** (`…`) menu instead of overflowing the editor. It recalculates when the editor or viewport changes size.
+The toolbar measures its available width with `ResizeObserver`. Complete toolbar groups that no longer fit move behind the **More** (`…`) button instead of overflowing the editor. It recalculates when the editor or its parent changes size, so the behavior also works when a narrow editor is placed inside a wide desktop viewport.
+
+Clicking **More** adds the hidden groups as a second toolbar row directly below the primary row. It is not a floating popup. The expanded row:
+
+- Uses the same buttons, selects, group separators, active states, and disabled states as the primary toolbar.
+- Remains open while the user clicks or continues typing in the editable canvas.
+- Closes when **More** is toggled again or the user interacts outside the editor toolbar/content area.
+- Opens alignment, line-height, color, list-style, and case-change popovers from the selected control as usual.
+
+The menubar responds to the editor container width rather than only the viewport width. Menu entries wrap inside the editor, and widths at or below `420px` use compact icon-only buttons with accessible labels and native title tooltips. The editor itself can shrink below the previous `260px` minimum without forcing horizontal page overflow.
 
 Floating menus stay inside the viewport, flip when there is not enough room, close on outside interaction or `Escape`, and support arrow-key navigation. Active formatting uses selected states, while commands that cannot run are disabled.
+
+Toolbar icons use dedicated visual symbols for numbered lists, clear formatting, links, line height, checklists, and both indent directions. Dropdown groups show the currently relevant icon, including the active alignment icon.
 
 ## Status bar and word count
 

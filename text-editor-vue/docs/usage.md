@@ -94,9 +94,9 @@ const fullConfig: EditorInit = {
     placeholder: 'Type your story here...',
     menubar: true,
     toolbar:
-        'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough superscript subscript casechange | ' +
-        'forecolor backcolor | alignleft aligncenter alignright alignjustify | ' +
-        'bullist numlist outdent indent | link image media table | hr removeformat | ' +
+        'undo redo | blocks fontfamily fontsize lineheight | bold italic underline strikethrough superscript subscript casechange | ' +
+        'forecolor backcolor | alignment | ' +
+        'bullist numlist checklist outdent indent | link image media table | hr removeformat | ' +
         'code preview fullscreen',
     statusbar: true,
     resize: true,

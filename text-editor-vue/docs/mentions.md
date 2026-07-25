@@ -212,6 +212,8 @@ The caret-positioned dropdown supports loading, empty, error, and results states
 
 Hovering a result updates the active option. Clicking uses pointer handling that preserves the editor selection, so the mention is inserted once at the original query range.
 
+The default result UI is intentionally compact: each row has a `50px` minimum height, `6px 10px` padding, an `8px` content gap, and a `38px` avatar. The description uses only a `1px` top margin. Override `.erag-mention-dropdown__item`, `.erag-mention-dropdown__avatar`, and `.erag-mention-dropdown__description` after the package stylesheet when a denser or roomier application style is required.
+
 ## Hover card
 
 Hover an inserted mention to display its known avatar, label, description, and value. If the avatar is missing or cannot load, the card shows initials. The card remains inside the viewport and uses the item data cached during the current editor session.

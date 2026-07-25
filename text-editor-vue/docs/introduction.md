@@ -23,7 +23,7 @@ head:
 ## What it includes
 
 - Controlled HTML content through `v-model` or `model-value` plus `update:model-value`.
-- Responsive menubar and toolbar controls for formatting, lists, links, media, tables, code, preview, and fullscreen.
+- Container-responsive menubar and toolbar controls for grouped alignment, line height, styled lists, checklists, links, media, tables, code, preview, and fullscreen.
 - Optional mentions, merge tags, and consumer-provided templates.
 - Consumer-controlled image upload and deletion callbacks, URL uploads with Fetch, paste uploads, alignment, and four-corner resizing.
 - Source editing, sanitized preview, print, find and replace, special characters, emoji, and date/time insertion.
@@ -62,7 +62,7 @@ const commentEditor: EditorInit = {
     menubar: false,
     statusbar: false,
     plugins: ['history', 'formatting', 'lists', 'link'],
-    toolbar: 'bold italic | bullist numlist | link',
+    toolbar: 'bold italic | bullist numlist checklist | link',
 };
 ```
 
@@ -74,17 +74,17 @@ The component is SSR-safe during initialization, but browser-only utilities cann
 
 ## Feature documentation map
 
-| Package area                                                                    | Documentation                                                                                                                                               |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Controlled HTML, reactive config, disabled/readonly, methods                    | [Basic and reactive usage](/usage.html), [API reference](/api.html)                                                                                         |
-| Menubar, toolbar overflow, history, clipboard, shortcuts, status, resize, print | [Menubar customization](/menubar-customization.html), [Workflow and responsive UI](/editing-experience.html)                                                |
-| Headings, fonts, colors, line height, case, lists, indentation                  | [Text formatting](/text-formatting.html), [Lists and indentation](/lists-and-indentation.html)                                                              |
-| Links, anchors, video, audio, iframe, and tables                                | [Links and anchors](/links-and-anchors.html), [Media and embeds](/media-and-embeds.html), [Table editor](/table-editor.html)                                |
-| Mentions, merge tags, and consumer-defined templates                            | [Mentions](/mentions.html), [Merge tags](/merge-tags.html), [Templates](/templates.html)                                                                    |
-| File/URL/paste image uploads, alignment, resize, and deletion                   | [Image uploads](/image-upload.html)                                                                                                                         |
-| Emoji, symbols, horizontal rules, and date-time                                 | [Special characters and emoji](/special-characters.html), [Horizontal rules and date-time](/horizontal-rules-and-datetime.html)                             |
-| Source HTML, preview, fullscreen, find, and replace                             | [Code, preview, and fullscreen](/code-and-preview.html), [Find and replace](/find-and-replace.html)                                                         |
-| Sanitization, scoped CSS, public types, and Laravel integration                 | [Security](/security.html), [CSS customization](/css-customization.html), [TypeScript types](/types.html), [Laravel and Inertia](/laravel-integration.html) |
+| Package area                                                                     | Documentation                                                                                                                                               |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Controlled HTML, reactive config, disabled/readonly, methods                     | [Basic and reactive usage](/usage.html), [API reference](/api.html)                                                                                         |
+| Menubar, toolbar overflow, history, clipboard, shortcuts, status, resize, print  | [Menubar customization](/menubar-customization.html), [Workflow and responsive UI](/editing-experience.html)                                                |
+| Headings, fonts, colors, line height, case, list styles, checklists, indentation | [Text formatting](/text-formatting.html), [Lists, checklists, and indentation](/lists-and-indentation.html)                                                 |
+| Links, anchors, video, audio, iframe, and tables                                 | [Links and anchors](/links-and-anchors.html), [Media and embeds](/media-and-embeds.html), [Table editor](/table-editor.html)                                |
+| Mentions, merge tags, and consumer-defined templates                             | [Mentions](/mentions.html), [Merge tags](/merge-tags.html), [Templates](/templates.html)                                                                    |
+| File/URL/paste image uploads, alignment, resize, and deletion                    | [Image uploads](/image-upload.html)                                                                                                                         |
+| Emoji, symbols, horizontal rules, and date-time                                  | [Special characters and emoji](/special-characters.html), [Horizontal rules and date-time](/horizontal-rules-and-datetime.html)                             |
+| Source HTML, preview, fullscreen, find, and replace                              | [Code, preview, and fullscreen](/code-and-preview.html), [Find and replace](/find-and-replace.html)                                                         |
+| Sanitization, scoped CSS, public types, and Laravel integration                  | [Security](/security.html), [CSS customization](/css-customization.html), [TypeScript types](/types.html), [Laravel and Inertia](/laravel-integration.html) |
 
 ## Next steps
 

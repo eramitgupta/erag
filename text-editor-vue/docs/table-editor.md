@@ -58,3 +58,5 @@ When a table or table cell is focused inside the editor canvas, the Table menu u
 - **Table Properties**: Width, cell padding, borders, colors, and alignment through the properties dialog.
 
 Table-only actions remain disabled until the current selection is inside a table. Press `Tab` or `Shift+Tab` inside a cell to move forward or backward through table cells.
+
+Table alignment is applied with table margins so left, center, and right remain visually distinct across editor widths. Cell properties separately support horizontal left/center/right alignment and vertical top/middle/bottom alignment.

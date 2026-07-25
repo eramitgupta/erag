@@ -104,3 +104,36 @@ To customize any specific element or state:
 ```
 
 Load your override stylesheet after `@erag/text-editor-vue/style.css`. Avoid `!important`; the package only reserves it for fullscreen behavior where browser and application layout rules may otherwise win.
+
+---
+
+## Toolbar, menubar, and mention spacing
+
+Responsive toolbar overflow is rendered as `.erag-toolbar__overflow-row`, a full-width second toolbar row below the primary controls. Hidden groups keep the standard `.erag-toolbar__overflow-group`, `.erag-toolbar__button`, and `.erag-toolbar__select` classes.
+
+The menubar uses the editor as a named inline-size container. It wraps at any constrained width, and the package switches to accessible icon-only buttons at `420px` or less.
+
+Example compact overrides:
+
+```css
+.erag-editor .erag-toolbar__overflow-row {
+    padding-block: 2px;
+}
+
+.erag-editor .erag-menubar__button {
+    padding: 5px 7px;
+}
+
+.erag-editor .erag-mention-dropdown__item {
+    min-height: 46px;
+    gap: 7px;
+    padding: 5px 8px;
+}
+
+.erag-editor .erag-mention-dropdown__avatar,
+.erag-editor .erag-mention-dropdown__avatar-fallback {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+}
+```

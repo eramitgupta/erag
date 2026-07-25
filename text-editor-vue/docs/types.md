@@ -128,7 +128,7 @@ const toolbar: EditorToolbarGroup[] = [
 ];
 ```
 
-Valid item names are: `undo`, `redo`, `blocks`, `fontfamily`, `fontsize`, `bold`, `italic`, `underline`, `strikethrough`, `superscript`, `subscript`, `casechange`, `forecolor`, `backcolor`, `alignleft`, `aligncenter`, `alignright`, `alignjustify`, `bullist`, `numlist`, `outdent`, `indent`, `link`, `image`, `media`, `table`, `hr`, `removeformat`, `code`, `preview`, `fullscreen`, and `more`.
+Valid item names are: `undo`, `redo`, `blocks`, `fontfamily`, `fontsize`, `lineheight`, `bold`, `italic`, `underline`, `strikethrough`, `superscript`, `subscript`, `casechange`, `forecolor`, `backcolor`, `alignment`, `alignleft`, `aligncenter`, `alignright`, `alignjustify`, `bullist`, `numlist`, `checklist`, `outdent`, `indent`, `link`, `image`, `media`, `table`, `hr`, `removeformat`, `code`, `preview`, `fullscreen`, and `more`.
 
 ## Mention types
 

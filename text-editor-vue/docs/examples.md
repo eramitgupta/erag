@@ -156,10 +156,10 @@ const demo9Config: EditorInit = {
         ],
     },
     toolbar:
-        'undo redo | blocks fontfamily fontsize | ' +
+        'undo redo | blocks fontfamily fontsize lineheight | ' +
         'bold italic underline strikethrough | forecolor backcolor | ' +
-        'alignleft aligncenter alignright alignjustify | ' +
-        'bullist numlist outdent indent | link image media table | ' +
+        'alignment | ' +
+        'bullist numlist checklist outdent indent | link image media table | ' +
         'hr removeformat | code preview fullscreen',
 };
 </script>
@@ -227,7 +227,8 @@ const editorConfig = computed<EditorInit>(() => ({
     height: 240,
     menubar: false,
     statusbar: true,
-    toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright | bullist numlist | removeformat',
+    toolbar:
+        'undo redo | bold italic underline | alignleft aligncenter alignright | bullist numlist | removeformat',
 }));
 </script>
 
@@ -284,11 +285,7 @@ const isDisabled = shallowRef(false);
         <label><input v-model="isDisabled" type="checkbox" /> Disabled</label>
     </div>
 
-    <Editor
-        v-model="content"
-        :readonly="isReadonly"
-        :disabled="isDisabled"
-    />
+    <Editor v-model="content" :readonly="isReadonly" :disabled="isDisabled" />
 </template>
 ```
 
@@ -375,14 +372,30 @@ Type `@` in the editor to trigger team member autocomplete.
 ```vue
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue';
-import { Editor, type EditorInit, type MentionSelectEvent } from '@erag/text-editor-vue';
+import {
+    Editor,
+    type EditorInit,
+    type MentionSelectEvent,
+} from '@erag/text-editor-vue';
 import '@erag/text-editor-vue/style.css';
 
-const content = shallowRef('<p>Type <strong>@</strong> to mention someone.</p>');
+const content = shallowRef(
+    '<p>Type <strong>@</strong> to mention someone.</p>',
+);
 
 const teamMembers = [
-    { id: 1, label: 'Damon Cross', description: 'Senior Backend Developer', value: 'damon@example.com' },
-    { id: 2, label: 'Ava Mitchell', description: 'Product Designer', value: 'ava@example.com' },
+    {
+        id: 1,
+        label: 'Damon Cross',
+        description: 'Senior Backend Developer',
+        value: 'damon@example.com',
+    },
+    {
+        id: 2,
+        label: 'Ava Mitchell',
+        description: 'Product Designer',
+        value: 'ava@example.com',
+    },
 ];
 
 const editorConfig = computed<EditorInit>(() => ({
@@ -420,10 +433,16 @@ Type <code>&#123;&#123;</code> or open the **Merge Tags** sidebar drawer.
 ```vue
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue';
-import { Editor, type EditorInit, type MergeTagItem } from '@erag/text-editor-vue';
+import {
+    Editor,
+    type EditorInit,
+    type MergeTagItem,
+} from '@erag/text-editor-vue';
 import '@erag/text-editor-vue/style.css';
 
-const content = shallowRef('<p>Dear <code>&#123;&#123; client.name &#125;&#125;</code>...</p>');
+const content = shallowRef(
+    '<p>Dear <code>&#123;&#123; client.name &#125;&#125;</code>...</p>',
+);
 
 const tags: MergeTagItem[] = [
     { name: 'Client name', value: 'client.name', group: 'Client Details' },
@@ -479,7 +498,8 @@ const editorConfig = computed<EditorInit>(() => ({
                 id: 'welcome-email',
                 title: 'Welcome Email',
                 description: 'Client onboarding template',
-                content: '<h2>Welcome Aboard!</h2><p>Dear Customer, welcome.</p>',
+                content:
+                    '<h2>Welcome Aboard!</h2><p>Dear Customer, welcome.</p>',
             },
         ],
     },
@@ -512,7 +532,11 @@ Drag & drop or select images with simulated progress reporting.
 ```vue
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue';
-import { Editor, type EditorInit, type ImagesUploadHandler } from '@erag/text-editor-vue';
+import {
+    Editor,
+    type EditorInit,
+    type ImagesUploadHandler,
+} from '@erag/text-editor-vue';
 import '@erag/text-editor-vue/style.css';
 
 const content = shallowRef('<p>Upload or drag an image...</p>');
@@ -575,7 +599,7 @@ const editorConfig = computed<EditorInit>(() => ({
     mentions: { enabled: true, items: [...] },
     mergeTags: { enabled: true, items: [...] },
     templates: { enabled: true, items: [...] },
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist | link image media table | code preview fullscreen',
+    toolbar: 'undo redo | blocks fontfamily fontsize lineheight | bold italic underline | forecolor backcolor | alignment | bullist numlist checklist outdent indent | link image media table | code preview fullscreen',
 }));
 </script>
 
