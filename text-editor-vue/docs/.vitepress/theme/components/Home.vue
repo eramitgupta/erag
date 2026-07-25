@@ -14,7 +14,9 @@ const heroEditorConfig: EditorInit = {
     height: 250,
     minHeight: 200,
     menubar: ['file', 'edit', 'view', 'insert', 'format', 'table', 'help'],
-    toolbar: 'bold italic underline | link image',
+    toolbar:
+        'bold italic underline | lineheight alignment | ' +
+        'bullist numlist checklist outdent indent | link image',
     statusbar: false,
     resize: false,
     mentions: {
@@ -2029,4 +2031,3 @@ const heroEditorConfig: EditorInit = {
 }
 
 </style>
-

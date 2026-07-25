@@ -31,7 +31,9 @@ const demo2Config: EditorInit = {
     height: 240,
     menubar: false,
     statusbar: true,
-    toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright | bullist numlist | removeformat',
+    toolbar:
+        'undo redo | bold italic underline | lineheight alignment | ' +
+        'bullist numlist checklist outdent indent | removeformat',
 };
 
 // Demo 3
@@ -228,7 +230,8 @@ const editorConfig = computed<EditorInit>(() => ({
     menubar: false,
     statusbar: true,
     toolbar:
-        'undo redo | bold italic underline | alignleft aligncenter alignright | bullist numlist | removeformat',
+        'undo redo | bold italic underline | lineheight alignment | ' +
+        'bullist numlist checklist outdent indent | removeformat',
 }));
 </script>
 
