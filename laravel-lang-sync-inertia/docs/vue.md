@@ -29,9 +29,9 @@ The package reads translations from `page.props.lang`, then gives you these help
 ## Import the helper
 
 ```ts
-import { lang } from '@erag/lang-sync-inertia/vue';
+import { vueLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = vueLang();
 ```
 
 ## Full example
@@ -67,9 +67,9 @@ return [
 
 ```vue [js/Pages/Dashboard.vue]
 <script setup>
-import { lang } from '@erag/lang-sync-inertia/vue';
+import { vueLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = vueLang();
 </script>
 
 <template>
@@ -93,9 +93,9 @@ There are 3 apples
 
 ```vue
 <script setup lang="ts">
-import { lang } from '@erag/lang-sync-inertia/vue';
+import { vueLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = vueLang();
 </script>
 
 <template>
@@ -109,7 +109,7 @@ const { trans, __, transChoice } = lang();
 
 1. Laravel loads `lang/{locale}/auth.php` with `syncLangFiles('auth')`.
 2. Inertia shares that data under `page.props.lang`.
-3. `lang()` reads from those props inside your Vue component.
+3. `vueLang()` reads from those props inside your Vue component.
 4. Keys like `auth.greeting` and `auth.welcome` resolve automatically.
 
 ## `trans()` vs `__()`
@@ -179,7 +179,7 @@ syncLangFiles('messages');
 ```
 
 ```ts
-const { __, trans, transChoice, trans_choice } = lang();
+const { __, trans, transChoice, trans_choice } = vueLang();
 ```
 
 ### Frontend calls
@@ -244,14 +244,12 @@ import { usePage } from '@inertiajs/vue3';
 const { lang } = usePage().props;
 ```
 
-## Legacy API
+## Package-root API
 
-The older Vue helper still works:
+Import the Vue helper from the package root:
 
 ```ts
 import { vueLang } from '@erag/lang-sync-inertia';
 
 const { trans, __ } = vueLang();
 ```
-
-Use `@erag/lang-sync-inertia/vue` for new code.

@@ -107,9 +107,9 @@ return [
 
 ```vue [js/Pages/Dashboard.vue]
 <script setup>
-import { lang } from '@erag/lang-sync-inertia/vue';
+import { vueLang } from '@erag/lang-sync-inertia';
 
-const { __, trans, transChoice, trans_choice } = lang();
+const { __, trans, transChoice, trans_choice } = vueLang();
 </script>
 
 <template>
@@ -133,10 +133,10 @@ const { __, trans, transChoice, trans_choice } = lang();
 ```
 
 ```tsx [js/Pages/Dashboard.tsx]
-import { lang } from '@erag/lang-sync-inertia/react';
+import { reactLang } from '@erag/lang-sync-inertia';
 
 export default function Dashboard() {
-    const { __, trans, transChoice, trans_choice } = lang();
+    const { __, trans, transChoice, trans_choice } = reactLang();
 
     return (
         <section>

@@ -33,9 +33,9 @@ The package reads translations from `page.props.lang`, then gives you these help
 ## Import the helper
 
 ```ts
-import { lang } from '@erag/lang-sync-inertia/svelte';
+import { svelteLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = svelteLang();
 ```
 
 ## Full example
@@ -71,9 +71,9 @@ return [
 
 ```svelte [js/Pages/Dashboard.svelte]
 <script module lang="ts">
-import { lang } from '@erag/lang-sync-inertia/svelte';
+import { svelteLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = svelteLang();
 </script>
 
 <section>
@@ -95,9 +95,9 @@ There are 3 apples
 
 ```svelte
 <script module lang="ts">
-import { lang } from '@erag/lang-sync-inertia/svelte';
+import { svelteLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = svelteLang();
 </script>
 
 <h1>{__('auth.greeting')}</h1>
@@ -109,7 +109,7 @@ const { trans, __, transChoice } = lang();
 
 1. Laravel loads `lang/{locale}/auth.php` with `syncLangFiles('auth')`.
 2. Inertia shares that data under `page.props.lang`.
-3. `lang()` reads from those props via the reactive `page` state from `@inertiajs/svelte`.
+3. `svelteLang()` reads from those props via the reactive `page` state from `@inertiajs/svelte`.
 4. Keys like `auth.greeting` and `auth.welcome` resolve automatically.
 
 ## `trans()` vs `__()`
@@ -179,7 +179,7 @@ syncLangFiles('messages');
 ```
 
 ```ts
-const { __, trans, transChoice, trans_choice } = lang();
+const { __, trans, transChoice, trans_choice } = svelteLang();
 ```
 
 ### Frontend calls
@@ -236,13 +236,13 @@ The placeholder is not replaced.
 
 ## Reactive usage
 
-Because `lang()` reads from the `page` reactive state at call time, helpers work correctly inside Svelte 5 `$derived` expressions:
+Because `svelteLang()` reads from the `page` reactive state at call time, helpers work correctly inside Svelte 5 `$derived` expressions:
 
 ```svelte
 <script lang="ts">
-import { lang } from '@erag/lang-sync-inertia/svelte';
+import { svelteLang } from '@erag/lang-sync-inertia';
 
-const { __ } = lang();
+const { __ } = svelteLang();
 
 const greeting = $derived(__('auth.greeting'));
 </script>
@@ -260,14 +260,12 @@ import { page } from '@inertiajs/svelte';
 const lang = $derived(page.props.lang);
 ```
 
-## Legacy API
+## Package-root API
 
-The older Svelte helper still works:
+Import the Svelte helper from the package root:
 
 ```ts
 import { svelteLang } from '@erag/lang-sync-inertia';
 
 const { trans, __ } = svelteLang();
 ```
-
-Use `@erag/lang-sync-inertia/svelte` for new code.

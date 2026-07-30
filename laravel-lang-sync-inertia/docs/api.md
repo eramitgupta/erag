@@ -134,10 +134,12 @@ All frontend helpers support placeholder replacement, but `trans()` is the clear
 
 ## Frontend Helper Examples
 
-Use synced Laravel keys through the Vue, React, or Svelte helpers.
+Use synced Laravel keys through the Vue, React, or Svelte helpers. For example, in Vue:
 
 ```ts
-const { __, trans, transChoice, trans_choice } = lang();
+import { vueLang } from '@erag/lang-sync-inertia';
+
+const { __, trans, transChoice, trans_choice } = vueLang();
 ```
 
 Assume these synced keys are available:

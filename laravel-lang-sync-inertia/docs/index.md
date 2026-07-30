@@ -17,7 +17,7 @@ features:
       details: 'Call `syncLangFiles()` in a controller and share selected Laravel lang files with the Inertia page.'
     - icon: '◆'
       title: 'Vue, React and Svelte'
-      details: 'Use dedicated Vue, React, and Svelte entry points with the same helper names and behavior.'
+      details: 'Use dedicated Vue, React, and Svelte helpers from the package root with consistent behavior.'
     - icon: '⌘'
       title: 'Key replacement'
       details: 'Use Laravel-style replacements like `Welcome, :name` with `__()` or `trans()`.'
@@ -70,7 +70,7 @@ After that, your frontend can read translations with a very small API.
 
 - Call `syncLangFiles()` in the controller.
 - Keep translations in Laravel language files.
-- Use `lang()` in Vue, React, or Svelte.
+- Use `vueLang()`, `reactLang()`, or `svelteLang()` in Vue, React, or Svelte.
 - Render translations with `__()` or `trans()`.
 
 ::: code-group
@@ -104,9 +104,9 @@ return [
 
 ```vue [Vue]
 <script setup>
-import { lang } from '@erag/lang-sync-inertia/vue';
+import { vueLang } from '@erag/lang-sync-inertia';
 
-const { __, trans } = lang();
+const { __, trans } = vueLang();
 </script>
 
 <template>
@@ -116,10 +116,10 @@ const { __, trans } = lang();
 ```
 
 ```tsx [React]
-import { lang } from '@erag/lang-sync-inertia/react';
+import { reactLang } from '@erag/lang-sync-inertia';
 
 export default function Dashboard() {
-    const { __, trans } = lang();
+    const { __, trans } = reactLang();
 
     return (
         <section>
@@ -132,9 +132,9 @@ export default function Dashboard() {
 
 ```svelte [Svelte]
 <script module lang="ts">
-import { lang } from '@erag/lang-sync-inertia/svelte';
+import { svelteLang } from '@erag/lang-sync-inertia';
 
-const { __, trans } = lang();
+const { __, trans } = svelteLang();
 </script>
 
 <section>

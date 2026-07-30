@@ -57,4 +57,4 @@ Once installation is complete:
 
 1. Create or update your language files in `lang/{locale}`.
 2. Call `syncLangFiles()` before returning your Inertia response.
-3. Use `lang()` in Vue, React, or Svelte to read translations on the frontend.
+3. Use `vueLang()`, `reactLang()`, or `svelteLang()` to read translations on the frontend.

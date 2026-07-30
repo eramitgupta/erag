@@ -29,9 +29,9 @@ The package reads translations from `page.props.lang`, then gives you these help
 ## Import the helper
 
 ```tsx
-import { lang } from '@erag/lang-sync-inertia/react';
+import { reactLang } from '@erag/lang-sync-inertia';
 
-const { trans, __, transChoice } = lang();
+const { trans, __, transChoice } = reactLang();
 ```
 
 ## Full example
@@ -66,10 +66,10 @@ return [
 ```
 
 ```tsx [js/Pages/Dashboard.tsx]
-import { lang } from '@erag/lang-sync-inertia/react';
+import { reactLang } from '@erag/lang-sync-inertia';
 
 export default function Dashboard() {
-    const { trans, __, transChoice } = lang();
+    const { trans, __, transChoice } = reactLang();
 
     return (
         <section>
@@ -92,10 +92,10 @@ There are 3 apples
 ## Component example
 
 ```tsx
-import { lang } from '@erag/lang-sync-inertia/react';
+import { reactLang } from '@erag/lang-sync-inertia';
 
 export default function Login() {
-    const { trans, __, transChoice } = lang();
+    const { trans, __, transChoice } = reactLang();
 
     return (
         <div>
@@ -111,7 +111,7 @@ export default function Login() {
 
 1. Laravel loads `lang/{locale}/auth.php` with `syncLangFiles('auth')`.
 2. Inertia shares that data under `page.props.lang`.
-3. `lang()` reads from those props inside your React component.
+3. `reactLang()` reads from those props inside your React component.
 4. Keys like `auth.greeting` and `auth.welcome` resolve automatically.
 
 ## `trans()` vs `__()`
@@ -181,7 +181,7 @@ syncLangFiles('messages');
 ```
 
 ```tsx
-const { __, trans, transChoice, trans_choice } = lang();
+const { __, trans, transChoice, trans_choice } = reactLang();
 ```
 
 ### Frontend calls
@@ -246,14 +246,12 @@ import { usePage } from '@inertiajs/react';
 const { lang } = usePage().props;
 ```
 
-## Legacy API
+## Package-root API
 
-The older React helper still works:
+Import the React helper from the package root:
 
 ```tsx
 import { reactLang } from '@erag/lang-sync-inertia';
 
 const { trans, __ } = reactLang();
 ```
-
-Use `@erag/lang-sync-inertia/react` for new code.
