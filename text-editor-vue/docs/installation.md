@@ -63,13 +63,15 @@ Node.js is not used by the editor at browser runtime.
 
 ## Import Stylesheet
 
-The component requires its package stylesheet for toolbar layout, menus, dialogs, mentions, merge tags, and image resize handles.
+The component requires its package stylesheet for toolbar layout, menus, dialogs, mentions, merge tags, image resize handles, and the built-in light/dark theme tokens.
 
 Import the CSS stylesheet once in your main application entry point (e.g., `main.ts`, `app.ts`, or layout file):
 
 ```ts
 import '@erag/text-editor-vue/style.css';
 ```
+
+The stylesheet follows `prefers-color-scheme: dark` by default with a black editor surface. To control the theme yourself, add `class="dark"`, `data-theme="dark"`, or `data-theme="light"` to the document's `<html>` element. See [CSS customization](/css-customization.html#dark-mode) for palette overrides.
 
 Alternatively, you can import it directly inside your Vue component `<script setup>`:
 
