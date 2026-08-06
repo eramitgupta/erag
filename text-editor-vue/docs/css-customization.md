@@ -1,6 +1,6 @@
 ---
 title: CSS Customization
-description: 'Customize the editor with package-scoped erag- classes and --erag- CSS variables for surfaces, mentions, merge tags, images, dialogs, and states.'
+description: 'Customize the editor with package-scoped erag- classes and --erag- CSS variables for light and dark surfaces, mentions, merge tags, images, dialogs, and states.'
 head:
     - - meta
       - name: keywords
@@ -32,6 +32,49 @@ You can inspect any component element using browser DevTools (**Inspect Element*
 
 ---
 
+## Dark mode
+
+The package follows the user's `prefers-color-scheme` setting automatically. The default dark palette uses a black editor surface with neutral dark panels and borders. It also supports explicit application themes through `dark` or `data-theme="dark"` on the document root. This works with common Tailwind-style theme toggles that add or remove `dark` on `<html>`.
+
+```html
+<html class="dark"></html>
+```
+
+For an explicit light or dark choice, use `data-theme` on `<html>`:
+
+```ts
+document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+```
+
+Use `data-theme="light"` to keep the editor light even when the operating system prefers dark mode. Put the theme class or attribute on `<html>` because dialogs and table menus are teleported to `body`.
+
+You can customize the light and dark palettes with the same prefixed variables:
+
+```css
+:root {
+    --erag-editor-surface: #ffffff;
+    --erag-editor-text-color: #1f2937;
+}
+
+html.dark {
+    --erag-editor-surface: #000000;
+    --erag-editor-text-color: #e5e5e5;
+}
+```
+
+The default black palette is only a starting point. Override any `--erag-` variable in your application to match your brand:
+
+```css
+html.dark {
+    --erag-editor-surface: #101827;
+    --erag-editor-panel: #172033;
+    --erag-editor-text-color: #f8fafc;
+    --erag-editor-active-color: #22c55e;
+}
+```
+
+---
+
 ## Essential CSS Variable Reference
 
 Apply variable overrides on `.erag-editor` or globally on `:root`:
@@ -41,12 +84,30 @@ Apply variable overrides on `.erag-editor` or globally on `:root`:
     /* Core Editor Canvas */
     --erag-editor-height: 420px;
     --erag-editor-border-color: #d9dce1;
+    --erag-editor-border-subtle: #e7eaf0;
+    --erag-editor-border-muted: #e2e7ee;
+    --erag-editor-border-strong: #cbd5e1;
     --erag-editor-active-color: #2563eb;
+    --erag-editor-active-hover: #1d4ed8;
     --erag-editor-active-bg: #eaf2ff;
+    --erag-editor-active-bg-hover: #eff6ff;
+    --erag-editor-active-border: #bfdbfe;
+    --erag-editor-focus-color: #93b4f5;
     --erag-editor-text-color: #1f2937;
-    --erag-editor-muted-color: #6b7280;
+    --erag-editor-text-strong: #273142;
+    --erag-editor-text-secondary: #334155;
+    --erag-editor-text-muted: #64748b;
+    --erag-editor-text-subtle: #9ca3af;
+    --erag-editor-muted-color: var(--erag-editor-text-muted);
     --erag-editor-surface: #ffffff;
     --erag-editor-panel: #f8fafc;
+    --erag-editor-surface-muted: #f1f5f9;
+    --erag-editor-code-bg: #f1f5f9;
+    --erag-editor-hover-bg: #f0f3f7;
+    --erag-editor-danger-color: #dc2626;
+    --erag-editor-danger-hover: #b91c1c;
+    --erag-editor-danger-text: #b42318;
+    --erag-editor-tooltip-surface: #111827;
     --erag-editor-radius: 9px;
     --erag-editor-shadow: 0 10px 28px rgb(15 23 42 / 14%);
 

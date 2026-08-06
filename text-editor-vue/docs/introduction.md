@@ -28,6 +28,7 @@ head:
 - Consumer-controlled image upload and deletion callbacks, URL uploads with Fetch, paste uploads, alignment, and four-corner resizing.
 - Source editing, sanitized preview, print, find and replace, special characters, emoji, and date/time insertion.
 - Disabled and readonly modes, keyboard shortcuts, ARIA labels, selection preservation, and typed events.
+- Automatic light/dark themes from the operating system, with explicit `html.dark` and `data-theme` overrides.
 - ESM output, generated TypeScript declarations, and package-scoped `erag-` CSS.
 
 ## How content flows
@@ -84,7 +85,7 @@ The component is SSR-safe during initialization, but browser-only utilities cann
 | File/URL/paste image uploads, alignment, resize, and deletion                    | [Image uploads](/image-upload.html)                                                                                                                         |
 | Emoji, symbols, horizontal rules, and date-time                                  | [Special characters and emoji](/special-characters.html), [Horizontal rules and date-time](/horizontal-rules-and-datetime.html)                             |
 | Source HTML, preview, fullscreen, find, and replace                              | [Code, preview, and fullscreen](/code-and-preview.html), [Find and replace](/find-and-replace.html)                                                         |
-| Sanitization, scoped CSS, public types, and Laravel integration                  | [Security](/security.html), [CSS customization](/css-customization.html), [TypeScript types](/types.html), [Laravel and Inertia](/laravel-integration.html) |
+| Sanitization, scoped CSS, themes, public types, and Laravel integration          | [Security](/security.html), [CSS customization](/css-customization.html), [TypeScript types](/types.html), [Laravel and Inertia](/laravel-integration.html) |
 
 ## Next steps
 
