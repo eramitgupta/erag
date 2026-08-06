@@ -14,12 +14,11 @@ const heroEditorConfig: EditorInit = {
     height: 250,
     minHeight: 200,
     menubar: ['file', 'edit', 'view', 'insert', 'format', 'table', 'help'],
-    toolbar:
-        'bold italic underline | lineheight alignment | ' +
-        'bullist numlist checklist outdent indent | link image',
+    toolbar: false,
     statusbar: false,
     resize: false,
     mentions: {
+        enabled: true,
         items: [
             {
                 id: 'developer',
@@ -36,6 +35,7 @@ const heroEditorConfig: EditorInit = {
         ],
     },
     mergeTags: {
+        enabled: true,
         items: [
             {
                 name: 'Invoice total',
