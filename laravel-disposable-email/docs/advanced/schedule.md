@@ -3,6 +3,9 @@ title: Schedule Sync
 description: Schedule automatic disposable domain syncing.
 head:
     - - meta
+      - name: keywords
+        content: 'schedule disposable email sync Laravel, Laravel scheduler domain blacklist, automatic disposable domain updates'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

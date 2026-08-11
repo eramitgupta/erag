@@ -9,8 +9,8 @@ head:
       - name: googlebot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta
-      - name: keywords',
-        content: 'Laravel Lang Sync Inertia export to JSON, erag:generate-lang, Laravel lang JSON export, frontend translations'','
+      - name: keywords
+        content: 'Laravel Lang Sync Inertia export to JSON, erag:generate-lang, Laravel lang JSON export, frontend translations'
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'

@@ -3,6 +3,9 @@ title: Sync and Domain Lists
 description: Find focused remote sync and domain-list documentation.
 head:
     - - meta
+      - name: keywords
+        content: 'sync disposable email blacklist, custom blacklist Laravel, disposable email domain sources'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

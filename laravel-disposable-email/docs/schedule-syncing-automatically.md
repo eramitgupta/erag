@@ -3,6 +3,9 @@ title: Schedule Sync
 description: Compatibility link for automatic sync scheduling.
 head:
     - - meta
+      - name: keywords
+        content: 'schedule Laravel disposable email sync, Laravel scheduler disposable domains, automatic blacklist updates'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -3,6 +3,9 @@ title: Contributing
 description: Contribute code, tests, domain updates, and documentation.
 head:
     - - meta
+      - name: keywords
+        content: 'contribute Laravel package, Laravel disposable email tests, domain list pull request'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

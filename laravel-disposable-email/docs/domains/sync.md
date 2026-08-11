@@ -3,6 +3,9 @@ title: Remote Sync
 description: Sync disposable domains from configured remote sources.
 head:
     - - meta
+      - name: keywords
+        content: 'sync disposable email domains Laravel, remote disposable domain list, Laravel blacklist sync'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

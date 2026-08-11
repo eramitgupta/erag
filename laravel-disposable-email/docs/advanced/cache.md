@@ -3,6 +3,9 @@ title: Caching
 description: Cache compiled disposable domain lists for repeated lookups.
 head:
     - - meta
+      - name: keywords
+        content: 'Laravel disposable email cache, cache disposable domains, compiled domain list cache, disposable lookup performance'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

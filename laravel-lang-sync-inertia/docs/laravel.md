@@ -9,8 +9,8 @@ head:
       - name: googlebot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta
-      - name: keywords',
-        content: 'Laravel Lang Sync Inertia Laravel guide, syncLangFiles Laravel, Inertia controller translations, Laravel localization example'','
+      - name: keywords
+        content: 'Laravel Lang Sync Inertia Laravel guide, syncLangFiles Laravel, Inertia controller translations, Laravel localization example'
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'

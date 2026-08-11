@@ -3,6 +3,9 @@ title: Validation and Runtime
 description: Find focused validation and runtime documentation.
 head:
     - - meta
+      - name: keywords
+        content: 'Laravel disposable email validation, runtime disposable email check, disposable email facade Laravel'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta
