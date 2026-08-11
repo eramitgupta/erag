@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erag Documentation</title>
+  <title>Erag Documentation | Laravel, Vue &amp; React Packages</title>
   <meta name="description"
     content="Open source documentation by Er Amit Gupta — Sr. Full Stack Engineer specializing in PHP, Laravel, Vue.js, React.js, and modern web technologies.">
   <meta name="keywords"
     content="Laravel packages, PHP developer, Laravel documentation, Vue.js, React.js, Inertia.js, Livewire, Open Source, Full Stack Engineer">
   <meta name="author" content="Er Amit Gupta">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#103b45">
   <link rel="canonical" href="https://erag.in/">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64">
@@ -25,7 +27,9 @@
     content="Open source PHP, Laravel, Vue.js, React.js documentation by Er Amit Gupta, Sr. Full Stack Engineer.">
   <meta property="og:url" content="https://erag.in/">
   <meta property="og:site_name" content="Erag">
+  <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=512">
+  <meta property="og:image:alt" content="Erag open source documentation">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Erag Documentation">
@@ -33,23 +37,48 @@
     content="Laravel packages, PHP docs, and Vue.js, React.js integrations by Er Amit Gupta.">
   <meta name="twitter:creator" content="@_eramitgupta">
   <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=512">
+  <meta name="twitter:image:alt" content="Erag open source documentation">
 
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Er Amit Gupta",
-      "jobTitle": "Sr. Full Stack Engineer",
-      "url": "https://erag.in/",
-      "image": "https://avatars.githubusercontent.com/u/72160684?v=4&size=512",
-      "sameAs": [
-        "https://github.com/eramitgupta",
-        "https://www.linkedin.com/in/eramitgupta/"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Erag"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://erag.in/#website",
+          "name": "Erag Documentation",
+          "url": "https://erag.in/",
+          "inLanguage": "en-US",
+          "publisher": { "@id": "https://erag.in/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://erag.in/#person",
+          "name": "Er Amit Gupta",
+          "jobTitle": "Sr. Full Stack Engineer",
+          "url": "https://erag.in/",
+          "image": "https://avatars.githubusercontent.com/u/72160684?v=4&size=512",
+          "sameAs": [
+            "https://github.com/eramitgupta",
+            "https://www.linkedin.com/in/eramitgupta/"
+          ],
+          "worksFor": { "@type": "Organization", "name": "Erag" }
+        },
+        {
+          "@type": "ItemList",
+          "name": "Erag package documentation",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Laravel Disposable Email", "url": "https://erag.in/laravel-disposable-email/" },
+            { "@type": "ListItem", "position": 2, "name": "Laravel Inertia Toast", "url": "https://erag.in/laravel-inertia-toast/" },
+            { "@type": "ListItem", "position": 3, "name": "Laravel Lang Sync Inertia", "url": "https://erag.in/laravel-lang-sync-inertia/" },
+            { "@type": "ListItem", "position": 4, "name": "Phone Number Vue", "url": "https://erag.in/phone-number-vue/" },
+            { "@type": "ListItem", "position": 5, "name": "Phone Number React", "url": "https://erag.in/phone-number-react/" },
+            { "@type": "ListItem", "position": 6, "name": "Laravel PWA", "url": "https://erag.in/laravel-pwa/" },
+            { "@type": "ListItem", "position": 7, "name": "Vue Toastification", "url": "https://erag.in/vue-toastification/" },
+            { "@type": "ListItem", "position": 8, "name": "Text Editor Vue", "url": "https://erag.in/text-editor-vue/" }
+          ]
+        }
+      ]
     }
   </script>
 
@@ -959,8 +988,8 @@
             <div class="hero-copy">
               <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Ship Ready</div>
               <h1>
-                Knowledge base for
-                <span>packages docs.</span>
+                Open source Laravel, Vue &amp; React
+                <span>package documentation.</span>
               </h1>
               <p class="lead">
                 Browse installation guides, configuration notes, API references, frontend integration examples, and
@@ -1184,7 +1213,7 @@
               <li>Templates dialog &amp; Image Resizing</li>
             </ul>
             <div class="doc-links">
-              <a class="doc-link" href="/text-editor-vue/index.html">Open Docs</a>
+              <a class="doc-link" href="/text-editor-vue/">Open Docs</a>
               <a class="doc-link alt" href="https://github.com/eramitgupta/text-editor-vue">GitHub Link</a>
             </div>
           </article>

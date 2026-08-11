@@ -97,8 +97,8 @@ composer lint
 
 ## Useful Links
 
-- Docs home: [https://eramitgupta.github.io/laravel-inertia-toast/](https://eramitgupta.github.io/laravel-inertia-toast/)
-- Installation: [https://eramitgupta.github.io/laravel-inertia-toast/installation](https://eramitgupta.github.io/laravel-inertia-toast/installation)
-- Laravel guide: [https://eramitgupta.github.io/laravel-inertia-toast/laravel](https://eramitgupta.github.io/laravel-inertia-toast/laravel)
-- Vue guide: [https://eramitgupta.github.io/laravel-inertia-toast/vue](https://eramitgupta.github.io/laravel-inertia-toast/vue)
-- React guide: [https://eramitgupta.github.io/laravel-inertia-toast/react](https://eramitgupta.github.io/laravel-inertia-toast/react)
+- Docs home: [https://erag.in/laravel-inertia-toast/](https://erag.in/laravel-inertia-toast/)
+- Installation: [https://erag.in/laravel-inertia-toast/installation.html](https://erag.in/laravel-inertia-toast/installation.html)
+- Laravel guide: [https://erag.in/laravel-inertia-toast/laravel.html](https://erag.in/laravel-inertia-toast/laravel.html)
+- Vue guide: [https://erag.in/laravel-inertia-toast/vue.html](https://erag.in/laravel-inertia-toast/vue.html)
+- React guide: [https://erag.in/laravel-inertia-toast/react.html](https://erag.in/laravel-inertia-toast/react.html)
