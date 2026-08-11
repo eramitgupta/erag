@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /laravel-pwa/
+
+Sitemap: https://erag.in/laravel-pwa/sitemap.xml

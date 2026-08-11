@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 const siteOrigin = 'https://erag.in'
 const siteBase = '/phone-number-react'
 const siteUrl = `${siteOrigin}${siteBase}`
+const socialImage = 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512'
 
 const searchConsoleVerification = 'OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM'
 
@@ -46,53 +47,59 @@ export default defineConfig({
           'React phone number input, React hook phone, country phone input React, phone mask React, dial code React, usePhoneNumber, @erag/phone-number-react, headless phone input React',
       },
     ],
-    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Phone Number React — Erag' }],
-    ['meta', { property: 'og:title', content: 'Phone Number React — @erag/phone-number-react' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content:
-          'Headless React hook for country-aware phone input. Calling codes, masks, digit normalization, and validation.',
-      },
-    ],
-    ['meta', { property: 'og:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { property: 'og:image', content: socialImage }],
+    ['meta', { property: 'og:image:alt', content: 'Phone Number React documentation' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
-    ['meta', { name: 'twitter:title', content: 'Phone Number React — @erag/phone-number-react' }],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content:
-          'Headless React hook for country-aware phone input. Calling codes, masks, digit normalization, and validation.',
-      },
-    ],
-    ['meta', { name: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { name: 'twitter:image', content: socialImage }],
+    ['meta', { name: 'twitter:image:alt', content: 'Phone Number React documentation' }],
     ['meta', { name: 'google-site-verification', content: searchConsoleVerification }],
   ],
-  transformHead({ page }) {
+  transformHead({ page, pageData, description, title }) {
     const url = canonicalUrl(page)
+    const pageTitle = pageData.title || title || 'Phone Number React'
+    const isHomePage = page === 'index.md'
     return [
       ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
+      ['meta', { property: 'og:title', content: pageTitle }],
+      ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
+      ['meta', { name: 'twitter:title', content: pageTitle }],
+      ['meta', { name: 'twitter:description', content: description }],
       [
         'script',
         { type: 'application/ld+json' },
         JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'SoftwareSourceCode',
+          '@type': isHomePage ? ['WebSite', 'SoftwareSourceCode'] : 'TechArticle',
           name: '@erag/phone-number-react',
-          description:
-            'Headless React hook for country-aware phone input. Calling codes, masks, digit normalization, and validation.',
+          headline: pageTitle,
+          description,
           url,
+          image: socialImage,
+          inLanguage: 'en-US',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': url,
+          },
+          isPartOf: {
+            '@type': 'WebSite',
+            name: 'Phone Number React documentation',
+            url: `${siteUrl}/`,
+          },
           codeRepository: 'https://github.com/eramitgupta/phone-number-react',
           programmingLanguage: 'TypeScript',
           license: 'https://opensource.org/licenses/MIT',
           author: {
             '@type': 'Person',
             name: 'Er Amit Gupta',
+            url: 'https://erag.in/',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Erag',
             url: 'https://erag.in/',
           },
         }),

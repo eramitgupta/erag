@@ -3,6 +3,9 @@ title: Contributing
 description: How to contribute to erag/laravel-pwa — setup locally, coding standards, and PR workflows.
 head:
     - - meta
+      - name: keywords
+        content: 'Laravel PWA contribution, erag laravel pwa development, Laravel package pull request'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

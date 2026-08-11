@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /phone-number-vue/
+
+Sitemap: https://erag.in/phone-number-vue/sitemap.xml

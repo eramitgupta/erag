@@ -3,6 +3,9 @@ title: Introduction
 description: Learn how Erag Laravel PWA integrates progressive web app capabilities, manifest files, and service workers into your Laravel projects.
 head:
     - - meta
+      - name: keywords
+        content: 'Laravel PWA package, Progressive Web App Laravel, manifest service worker Laravel'
+    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

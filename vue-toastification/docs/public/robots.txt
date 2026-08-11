@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /vue-toastification/
+
+Sitemap: https://erag.in/vue-toastification/sitemap.xml

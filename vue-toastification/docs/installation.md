@@ -42,4 +42,4 @@ pnpm add @erag/vue-toastification
 
 ## Next steps
 
-Once the package is installed, proceed to the [Setup Guide](./setup.md) to register the plugin in your application.
+Once the package is installed, proceed to the [Setup Guide](./setup.html) to register the plugin in your application.

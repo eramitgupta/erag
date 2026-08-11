@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 const siteOrigin = 'https://erag.in'
 const siteBase = '/laravel-pwa'
 const siteUrl = `${siteOrigin}${siteBase}`
+const socialImage = 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512'
 
 const searchConsoleVerification = 'OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM'
 
@@ -46,47 +47,48 @@ export default defineConfig({
           'Laravel PWA setup, Progressive Web App Laravel, Laravel service worker, PWA manifest generator, add to home screen Laravel, erag/laravel-pwa, Laravel PWA package',
       },
     ],
-    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Laravel PWA — Erag' }],
-    ['meta', { property: 'og:title', content: 'Laravel PWA — Progressive Web App Setup' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content:
-          'Seamless Progressive Web App integration for Laravel. Automatically configure, generate manifest, and register service workers.',
-      },
-    ],
-    ['meta', { property: 'og:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { property: 'og:image', content: socialImage }],
+    ['meta', { property: 'og:image:alt', content: 'Laravel PWA documentation' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
-    ['meta', { name: 'twitter:title', content: 'Laravel PWA — Progressive Web App Setup' }],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content:
-          'Seamless Progressive Web App integration for Laravel. Automatically configure, generate manifest, and register service workers.',
-      },
-    ],
-    ['meta', { name: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { name: 'twitter:image', content: socialImage }],
+    ['meta', { name: 'twitter:image:alt', content: 'Laravel PWA documentation' }],
     ['meta', { name: 'google-site-verification', content: searchConsoleVerification }],
   ],
-  transformHead({ page }) {
+  transformHead({ page, pageData, description, title }) {
     const url = canonicalUrl(page)
+    const pageTitle = pageData.title || title || 'Laravel PWA'
+    const isHomePage = page === 'index.md'
     return [
       ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
+      ['meta', { property: 'og:title', content: pageTitle }],
+      ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
+      ['meta', { name: 'twitter:title', content: pageTitle }],
+      ['meta', { name: 'twitter:description', content: description }],
       [
         'script',
         { type: 'application/ld+json' },
         JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'SoftwareSourceCode',
+          '@type': isHomePage ? ['WebSite', 'SoftwareSourceCode'] : 'TechArticle',
           name: 'erag/laravel-pwa',
-          description:
-            'Seamless Progressive Web App (PWA) integration for Laravel applications.',
+          headline: pageTitle,
+          description,
           url,
+          image: socialImage,
+          inLanguage: 'en-US',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': url,
+          },
+          isPartOf: {
+            '@type': 'WebSite',
+            name: 'Laravel PWA documentation',
+            url: `${siteUrl}/`,
+          },
           codeRepository: 'https://github.com/eramitgupta/laravel-pwa',
           programmingLanguage: 'PHP',
           license: 'https://opensource.org/licenses/MIT',
@@ -95,12 +97,17 @@ export default defineConfig({
             name: 'Er Amit Gupta',
             url: 'https://erag.in/',
           },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Erag',
+            url: 'https://erag.in/',
+          },
         }),
       ],
     ]
   },
   themeConfig: {
-    logoLink: `${siteBase}/index.html`,
+    logoLink: `${siteBase}/`,
     nav: [
       { text: 'Guide', link: '/introduction.html' },
       { text: 'Configuration', link: '/configuration.html' },

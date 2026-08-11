@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /phone-number-react/
+
+Sitemap: https://erag.in/phone-number-react/sitemap.xml
