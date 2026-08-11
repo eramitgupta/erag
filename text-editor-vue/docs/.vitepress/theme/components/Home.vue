@@ -70,8 +70,8 @@ const heroEditorConfig: EditorInit = {
                         Browser APIs.
                     </p>
                     <p class="hero-description">
-                        Built from scratch for the modern web. No TinyMCE,
-                        CKEditor, or Quill.
+                        @erag/text-editor-vue is built from scratch with native
+                        browser APIs. No TinyMCE, CKEditor, or Quill.
                     </p>
                     <div class="hero-actions">
                         <a

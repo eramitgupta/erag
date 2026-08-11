@@ -2,7 +2,7 @@
 title: Examples & Live Demos
 sidebar: false
 aside: false
-description: 'Interactive live demos and Vue 3 code snippets ranging from basic minimal setup to advanced enterprise implementations with Mentions, Merge Tags, Templates, and Image Uploads.'
+description: 'Explore live Vue 3 rich text editor demos for mentions, merge tags, templates, image uploads, tables, and advanced editing.'
 head:
     - - meta
       - name: keywords

@@ -3,6 +3,8 @@ import { defineConfig } from 'vitepress';
 const siteOrigin = 'https://erag.in';
 const siteBase = '/text-editor-vue';
 const siteUrl = `${siteOrigin}${siteBase}`;
+const socialImage =
+    'https://avatars.githubusercontent.com/u/72160684?v=4&size=512';
 
 const searchConsoleVerification = 'OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM';
 
@@ -12,7 +14,7 @@ const canonicalUrl = (page: string): string => {
         .replace(/\.md$/, '.html');
 
     if (!path || path === '/') {
-        return `${siteUrl}/index.html`;
+        return `${siteUrl}/`;
     }
     return `${siteUrl}/${path.replace(/^\//, '')}`;
 };
@@ -35,7 +37,10 @@ export default defineConfig({
 
                 return {
                     ...item,
-                    url: `${siteBase}/${pageUrl}`.replace(/\/+/g, '/'),
+                    url:
+                        pageUrl === 'index.html'
+                            ? `${siteBase}/`
+                            : `${siteBase}/${pageUrl}`,
                 };
             }),
     },
@@ -50,27 +55,26 @@ export default defineConfig({
         ],
         ['meta', { name: 'theme-color', content: '#0f766e' }],
         ['meta', { name: 'author', content: 'Er Amit Gupta' }],
-        ['meta', { property: 'og:type', content: 'website' }],
         [
             'meta',
             { property: 'og:site_name', content: 'Text Editor Vue — Erag' },
         ],
+        ['meta', { property: 'og:image', content: socialImage }],
         [
             'meta',
             {
-                property: 'og:image',
-                content:
-                    'https://avatars.githubusercontent.com/u/72160684?v=4&size=512',
+                property: 'og:image:alt',
+                content: 'Text Editor Vue documentation',
             },
         ],
         ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
         ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
+        ['meta', { name: 'twitter:image', content: socialImage }],
         [
             'meta',
             {
-                name: 'twitter:image',
-                content:
-                    'https://avatars.githubusercontent.com/u/72160684?v=4&size=512',
+                name: 'twitter:image:alt',
+                content: 'Text Editor Vue documentation',
             },
         ],
         [
@@ -84,9 +88,17 @@ export default defineConfig({
     transformHead({ page, pageData, description }) {
         const url = canonicalUrl(page);
         const pageTitle = pageData.title || 'Vue 3 Rich Text Editor';
+        const isHomePage = page === 'index.md';
 
         return [
             ['link', { rel: 'canonical', href: url }],
+            [
+                'meta',
+                {
+                    property: 'og:type',
+                    content: isHomePage ? 'website' : 'article',
+                },
+            ],
             ['meta', { property: 'og:title', content: pageTitle }],
             ['meta', { property: 'og:description', content: description }],
             ['meta', { property: 'og:url', content: url }],
@@ -98,11 +110,19 @@ export default defineConfig({
                 { type: 'application/ld+json' },
                 JSON.stringify({
                     '@context': 'https://schema.org',
-                    '@type': 'TechArticle',
+                    '@type': isHomePage
+                        ? ['WebSite', 'SoftwareSourceCode']
+                        : 'TechArticle',
                     headline:
                         pageData.title || '@erag/text-editor-vue documentation',
                     description,
                     url,
+                    image: socialImage,
+                    inLanguage: 'en-US',
+                    mainEntityOfPage: {
+                        '@type': 'WebPage',
+                        '@id': url,
+                    },
                     isPartOf: {
                         '@type': 'WebSite',
                         name: '@erag/text-editor-vue documentation',
@@ -121,13 +141,18 @@ export default defineConfig({
                         name: 'Er Amit Gupta',
                         url: 'https://erag.in/',
                     },
+                    publisher: {
+                        '@type': 'Organization',
+                        name: 'Erag',
+                        url: 'https://erag.in/',
+                    },
                 }),
             ],
         ];
     },
     themeConfig: {
         logo: '/logo.svg',
-        logoLink: '/index.html',
+        logoLink: `${siteBase}/`,
         siteTitle: 'Text Editor Vue',
         nav: [
             { text: 'Guide', link: '/introduction.html' },

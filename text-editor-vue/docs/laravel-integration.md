@@ -1,6 +1,6 @@
 ---
 title: Laravel and Inertia.js v3 Integration
-description: 'Complete step-by-step guide to integrating @erag/text-editor-vue with Laravel, Inertia.js v3, useHttp, Wayfinder, image uploads & deletion, merge tags, and templates.'
+description: 'Integrate @erag/text-editor-vue with Laravel and Inertia.js v3, useHttp, Wayfinder, image uploads, merge tags, and templates.'
 head:
     - - meta
       - name: keywords

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /text-editor-vue/
+
+Sitemap: https://erag.in/text-editor-vue/sitemap.xml

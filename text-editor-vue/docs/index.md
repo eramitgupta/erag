@@ -2,7 +2,7 @@
 layout: home
 title: Modern Vue 3 Rich Text Editor
 titleTemplate: false
-description: 'Build rich text editing experiences in Vue 3 with a dependency-free, TypeScript-ready editor featuring mentions, merge tags, templates, images, tables, and HTML tools.'
+description: 'Build a dependency-free Vue 3 rich text editor with TypeScript, mentions, merge tags, templates, images, tables, and HTML tools.'
 head:
     - - meta
       - name: keywords
