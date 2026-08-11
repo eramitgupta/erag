@@ -1,10 +1,10 @@
 ---
-title: Sync and Blacklist
-description: Sync disposable email domains from remote sources and manage custom blacklist files in Laravel Disposable Email.
+title: Sync Disposable Email Domains and Manage Blacklists
+description: Sync disposable email domains from remote sources, add custom blacklist files, whitelist trusted domains, and control subdomain blocking.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email sync, laravel disposable blacklist, sync disposable domains laravel, custom blacklist domains laravel
+      content: sync disposable email domains, Laravel disposable email blacklist, custom disposable domain list, Laravel email whitelist
 ---
 
 # Sync and Blacklist
@@ -32,7 +32,7 @@ When the command runs, it:
 This command updates application storage. It does not rewrite the package's built-in `Email::domains()` array.
 
 ::: info
-The HTTP request timeout for pulling remote files can be configured in the `config/disposable-email.php` file using the `'sync_timeout'` key. See [Configuration](./configuration.md) for details.
+The HTTP request timeout for pulling remote files can be configured in the `config/disposable-email.php` file using the `'sync_timeout'` key. See [Configuration](./configuration.html) for details.
 :::
 
 To update the package source array, run:

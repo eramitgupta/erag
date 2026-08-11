@@ -1,12 +1,12 @@
 ---
-title: Export to JSON
-description: Generate frontend-ready JSON translation files from Laravel PHP lang files.
+title: Export Laravel Translations to JSON
+description: Generate frontend-ready JSON translation files from Laravel PHP language files for faster Inertia Vue, React, and Svelte loading.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia export to JSON, erag:generate-lang, Laravel lang JSON export, frontend translations',
+              content: 'export Laravel translations to JSON, erag:generate-lang, Laravel language JSON export, Inertia frontend translations, translation build command',
           },
       ]
 ---

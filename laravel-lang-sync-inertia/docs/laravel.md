@@ -1,12 +1,12 @@
 ---
-title: Laravel
-description: Laravel-side usage of syncLangFiles() with controller examples and locale-based loading.
+title: Use syncLangFiles in Laravel Inertia Controllers
+description: Load selected Laravel language files with syncLangFiles() and share locale-aware translations with Inertia pages from your controllers.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia Laravel guide, syncLangFiles Laravel, Inertia controller translations, Laravel localization example',
+              content: 'syncLangFiles Laravel controller, Laravel Inertia translations, locale language files Laravel, Laravel localization example',
           },
       ]
 ---

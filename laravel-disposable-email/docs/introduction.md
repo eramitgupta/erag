@@ -1,10 +1,10 @@
 ---
-title: Introduction
-description: Learn what Laravel Disposable Email does, when to use it, and how it fits into real Laravel applications.
+title: Block Temporary Email Addresses in Laravel
+description: Learn how Laravel Disposable Email detects throwaway inboxes and protects registrations, trials, invites, and lead forms from low-quality signups.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email introduction, disposable email package overview, laravel temporary email blocker, laravel package intro
+      content: block temporary email in Laravel, disposable email detection Laravel, Laravel signup abuse prevention, disposable email package overview
 ---
 
 # Introduction

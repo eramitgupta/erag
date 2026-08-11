@@ -1,10 +1,10 @@
 ---
-title: Validation and Runtime
-description: Choose between request validation, runtime checks, API checks, and Blade feedback in Laravel Disposable Email.
+title: Laravel Disposable Email Validation and Runtime Checks
+description: Add disposable email validation to Laravel requests, then use runtime checks, facade methods, API results, and Blade feedback in your app.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email validation, laravel runtime email check, laravel disposable email rule
+      content: Laravel disposable email validation rule, runtime disposable email check, Laravel email blacklist validation, disposable email facade
 ---
 
 # Validation and Runtime

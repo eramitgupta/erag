@@ -1,10 +1,10 @@
 ---
-title: Contributing
-description: Learn how to contribute fixes, improvements, tests, and documentation to the Laravel Disposable Email package.
+title: Contributing to Laravel Disposable Email
+description: Learn how to contribute code, tests, domain-list improvements, and documentation changes to the Laravel Disposable Email package.
 head:
   - - meta
     - name: keywords
-      content: contribute laravel disposable email, laravel package contribution, disposable email package github, improve laravel docs package
+      content: contribute to Laravel disposable email, Laravel package pull request, disposable domain list contribution, Laravel package documentation
 ---
 
 # Contributing

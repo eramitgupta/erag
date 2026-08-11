@@ -1,10 +1,10 @@
 ---
-title: Caching
-description: Enable and manage caching for Laravel Disposable Email to improve repeated domain lookup performance.
+title: Cache Disposable Email Domains in Laravel
+description: Configure Laravel Disposable Email caching to speed up repeated domain lookups, choose a TTL, and clear cached blacklist data safely.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email caching, cache disposable domains laravel, laravel email validation cache, cache ttl disposable email
+      content: laravel disposable email cache, cache disposable domains, Laravel email validation cache, disposable lookup performance
 ---
 
 # Caching

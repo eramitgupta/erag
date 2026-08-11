@@ -1,8 +1,8 @@
 ---
-title: Config
-description: Configure lang_path and output_lang for Laravel Lang Sync Inertia.
+title: Configure Laravel Lang Sync Inertia
+description: Configure Laravel Lang Sync Inertia language paths, locale file loading, and JSON output settings for Inertia frontends.
 head:
-  - ['meta', { name: 'keywords', content: 'Laravel Lang Sync Inertia config, inertia-lang.php, lang_path, output_lang, Laravel translation config' }]
+  - ['meta', { name: 'keywords', content: 'Laravel Lang Sync Inertia config, inertia-lang.php, Laravel lang_path, translation JSON output, Inertia localization settings' }]
 ---
 
 # Config

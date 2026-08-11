@@ -1,10 +1,10 @@
 ---
 layout: home
-title: Laravel Disposable Email Docs
-description: Official documentation for Laravel Disposable Email, including installation, configuration, validation, syncing, caching, and troubleshooting.
+title: Laravel Disposable Email Validation for Laravel
+description: Block disposable and temporary email addresses in Laravel with validation rules, runtime checks, Blade directives, blacklist syncing, and caching.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email docs, laravel disposable email validation, laravel temp email blocker, disposable email package laravel
+      content: Laravel disposable email validation, block temporary email Laravel, disposable email rule Laravel, Laravel email blacklist package
 ---
 <HomeLanding />

@@ -1,10 +1,10 @@
 ---
-title: Schedule Syncing Automatically
-description: Schedule automatic disposable domain syncing in Laravel using the package sync command and Laravel scheduler.
+title: Schedule Disposable Email Sync in Laravel
+description: Schedule automatic disposable-domain list updates in Laravel with the package sync command and Laravel scheduler.
 head:
   - - meta
     - name: keywords
-      content: laravel schedule disposable email sync, laravel scheduler disposable domains, auto sync disposable email list laravel, schedule sync command laravel
+      content: schedule disposable email sync Laravel, Laravel scheduler domain blacklist, automatic disposable domain updates, disposable email sync command
 ---
 
 # Schedule Syncing Automatically

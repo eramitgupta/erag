@@ -1,8 +1,8 @@
 ---
-title: Installation
-description: Install Laravel Lang Sync Inertia for Laravel backend and Vue, React, or Svelte frontend apps.
+title: Install Laravel Lang Sync Inertia for Inertia Apps
+description: Install the Laravel and frontend packages needed to sync translations with Inertia Vue, React, or Svelte applications.
 head:
-  - ['meta', { name: 'keywords', content: 'Laravel Lang Sync Inertia installation, composer require erag/laravel-lang-sync-inertia, npm install @erag/lang-sync-inertia' }]
+  - ['meta', { name: 'keywords', content: 'install Laravel Lang Sync Inertia, Composer translation package Laravel, npm Inertia translations, Vue React Svelte localization setup' }]
 ---
 
 # Installation

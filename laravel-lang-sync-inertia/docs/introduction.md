@@ -1,12 +1,12 @@
 ---
-title: Introduction
-description: Introduction to Laravel Lang Sync Inertia for sharing Laravel translations with Inertia.js Vue, React, and Svelte apps.
+title: Laravel Translations in Inertia Apps
+description: Learn how Laravel Lang Sync Inertia shares backend language files with Inertia Vue, React, and Svelte pages without manually passing translation props.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia introduction, Inertia.js translation package, Laravel localization, Vue and React translations',
+              content: 'Laravel translations in Inertia, Laravel localization package, Inertia Vue React i18n, Laravel Lang Sync Inertia overview',
           },
       ]
 ---

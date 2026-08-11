@@ -1,12 +1,12 @@
 ---
-title: Svelte
-description: Use Laravel Lang Sync Inertia translations in Inertia Svelte 5 pages and components.
+title: Laravel Translations in Inertia Svelte
+description: Use Laravel Lang Sync Inertia helpers in Inertia Svelte 5 pages and components for translations, replacements, pluralization, and locale-aware text.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia Svelte, Inertia Svelte translations, Svelte lang helper, trans helper Svelte, __ helper Svelte',
+              content: 'Laravel translations Inertia Svelte, Svelte Laravel i18n, Svelte lang helper, trans helper Svelte, Laravel localization Svelte',
           },
       ]
 ---

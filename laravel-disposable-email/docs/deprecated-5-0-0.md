@@ -1,10 +1,10 @@
 ---
-title: Deprecated in 5.0.0
-description: Deprecated and removed API notes for Laravel Disposable Email 5.0.0.
+title: Laravel Disposable Email 5.0 Migration Guide
+description: Review deprecated APIs, removed facade usage, Composer aliases, and migration steps when upgrading Laravel Disposable Email to 5.0.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email 5.0.0 deprecated, DisposableEmail removed, Disposable facade migration
+      content: Laravel Disposable Email 5 migration, Disposable facade upgrade, removed DisposableEmail API, Laravel package breaking changes
 ---
 
 # Deprecated in 5.0.0

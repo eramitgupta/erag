@@ -1,10 +1,10 @@
 ---
-title: Troubleshooting
-description: Troubleshoot validation, syncing, cache, blacklist, and service provider issues in Laravel Disposable Email.
+title: Troubleshoot Laravel Disposable Email Validation
+description: Fix Laravel Disposable Email validation, blacklist sync, cache, service provider, Blade directive, and local demo issues.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email troubleshooting, disposable email validation issue laravel, sync issue disposable domains, laravel blacklist problem
+      content: Laravel disposable email troubleshooting, disposable validation not working, Laravel blacklist sync error, disposable email cache issue
 ---
 
 # Troubleshooting

@@ -1,8 +1,8 @@
 ---
-title: Contributing
-description: Contribution workflow, repositories, and pull request guidance for Laravel Lang Sync Inertia.
+title: Contributing to Laravel Lang Sync Inertia
+description: Follow the contribution workflow for Laravel Lang Sync Inertia, including package changes, frontend helper updates, tests, and documentation pull requests.
 head:
-  - ['meta', { name: 'keywords', content: 'Laravel Lang Sync Inertia contributing, GitHub docs branch, pull requests, package contribution guide' }]
+  - ['meta', { name: 'keywords', content: 'contribute Laravel Lang Sync Inertia, Laravel localization package contribution, Inertia translation pull request, package documentation guide' }]
 ---
 
 # Contributing

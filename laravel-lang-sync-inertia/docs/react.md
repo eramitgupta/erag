@@ -1,12 +1,12 @@
 ---
-title: React
-description: Use Laravel Lang Sync Inertia translations in Inertia React pages and components.
+title: Laravel Translations in Inertia React
+description: Use Laravel Lang Sync Inertia helpers in Inertia React pages and components for keys, replacements, pluralization, and locale-aware text.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia React, Inertia React translations, React lang helper, trans helper React, __ helper React',
+              content: 'Laravel translations Inertia React, React Laravel i18n, React lang helper, trans helper React, Laravel localization React',
           },
       ]
 ---

@@ -1,12 +1,12 @@
 ---
-title: Laravel Lang Sync Inertia
-description: Use Laravel translation files directly in Inertia Vue and React apps with replacements, pluralization, and locale-aware helpers.
+title: Laravel Lang Sync Inertia Translations for Vue, React, and Svelte
+description: Sync Laravel translation files with Inertia Vue, React, and Svelte apps using typed helpers for replacements, pluralization, locales, and JSON export.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia, Inertia.js translations, Laravel i18n, Vue translations, React translations, localization package',
+              content: 'Laravel Lang Sync Inertia, Laravel translations Inertia Vue React, Laravel i18n package, Svelte translations, typed translation helpers',
           },
       ]
 layout: home

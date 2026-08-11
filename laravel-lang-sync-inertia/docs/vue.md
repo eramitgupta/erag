@@ -1,12 +1,12 @@
 ---
-title: Vue
-description: Use Laravel Lang Sync Inertia translations in Inertia Vue 3 pages and components.
+title: Laravel Translations in Inertia Vue 3
+description: Use Laravel Lang Sync Inertia helpers in Inertia Vue 3 pages and components for translation keys, replacements, pluralization, and locale-aware text.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia Vue, Inertia Vue translations, Vue lang helper, trans helper Vue, __ helper Vue',
+              content: 'Laravel translations Inertia Vue 3, Vue Laravel i18n, Vue lang helper, trans helper Vue, Laravel localization Vue',
           },
       ]
 ---

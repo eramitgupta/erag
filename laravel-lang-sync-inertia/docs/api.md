@@ -1,12 +1,12 @@
 ---
-title: API Helpers
-description: Reference for syncLangFiles(), __(), and trans() helpers in Laravel Lang Sync Inertia.
+title: Laravel Lang Sync Inertia API Helpers
+description: Reference syncLangFiles(), __(), trans(), and transChoice() for sharing Laravel translations with Inertia Vue, React, and Svelte apps.
 head:
     - [
           'meta',
           {
               name: 'keywords',
-              content: 'Laravel Lang Sync Inertia API, syncLangFiles, trans helper, __ helper, Inertia translations',
+              content: 'Laravel Lang Sync Inertia API, syncLangFiles helper, Laravel trans helper, Inertia translation API, transChoice',
           },
       ]
 ---

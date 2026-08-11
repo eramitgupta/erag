@@ -1,10 +1,10 @@
 ---
-title: Configuration
-description: Configure blacklist paths, remote domain sources, and caching options for Laravel Disposable Email.
+title: Laravel Disposable Email Configuration
+description: Configure blacklist paths, remote domain sources, whitelist rules, subdomain blocking, and caching for Laravel Disposable Email.
 head:
   - - meta
     - name: keywords
-      content: laravel disposable email configuration, disposable email config laravel, laravel blacklist config, remote domain list config
+      content: Laravel disposable email config, disposable email blacklist path, Laravel domain whitelist, remote disposable domain source
 ---
 
 # Configuration
