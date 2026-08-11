@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 const siteOrigin = 'https://erag.in'
 const siteBase = '/laravel-lang-sync-inertia'
 const siteUrl = `${siteOrigin}${siteBase}`
+const socialImage = 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512'
 
 const searchConsoleVerification = 'OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM'
 
@@ -60,24 +61,6 @@ export default defineConfig({
       },
     ],
 
-    // Open Graph
-    ['meta', { property: 'og:type', content: 'website' }],
-    [
-      'meta',
-      {
-        property: 'og:title',
-        content:
-          'Laravel Lang Sync Inertia – Laravel i18n for Vue, React & Svelte (Inertia.js)',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content:
-          'Bridge Laravel translation files to Inertia.js apps with Vue, React, and Svelte support.',
-      },
-    ],
     [
       'meta',
       { property: 'og:site_name', content: 'Laravel Lang Sync Inertia — Erag' },
@@ -86,7 +69,7 @@ export default defineConfig({
       'meta',
       {
         property: 'og:image',
-        content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512',
+        content: socialImage,
       },
     ],
     ['meta', { property: 'og:locale', content: 'en_US' }],
@@ -96,24 +79,8 @@ export default defineConfig({
     [
       'meta',
       {
-        name: 'twitter:title',
-        content:
-          'Laravel Lang Sync Inertia – Laravel i18n for Vue & React (Inertia.js)',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content:
-          'Bridge Laravel translation files to Inertia.js apps with Vue, React, and Svelte support.',
-      },
-    ],
-    [
-      'meta',
-      {
         name: 'twitter:image',
-        content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512',
+        content: socialImage,
       },
     ],
     ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
@@ -128,33 +95,51 @@ export default defineConfig({
     ],
   ],
 
-  transformHead({ page }) {
+  transformHead({ page, pageData, title, description }) {
     const url = canonicalUrl(page)
+    const isHomePage = page === 'index.md'
+    const articleTitle = pageData.title || title
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': isHomePage ? ['TechArticle', 'SoftwareSourceCode'] : 'TechArticle',
+      headline: articleTitle,
+      description,
+      url,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+      codeRepository: 'https://github.com/eramitgupta/laravel-lang-sync-inertia',
+      programmingLanguage: 'PHP',
+      license: 'https://opensource.org/licenses/MIT',
+      author: {
+        '@type': 'Person',
+        name: 'Er Amit Gupta',
+        url: 'https://erag.in/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Erag',
+        url: 'https://erag.in/',
+      },
+    }
+
+    if (pageData.lastUpdated) {
+      structuredData.dateModified = new Date(pageData.lastUpdated).toISOString()
+    }
 
     return [
       ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
+      ['meta', { property: 'og:title', content: articleTitle }],
+      ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
-      // Structured Data (JSON-LD) — per page
+      ['meta', { name: 'twitter:title', content: articleTitle }],
+      ['meta', { name: 'twitter:description', content: description }],
       [
         'script',
         { type: 'application/ld+json' },
-        JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'SoftwareSourceCode',
-          name: 'Laravel Lang Sync Inertia',
-          description:
-            'Bridge Laravel translation files to Inertia.js apps with Vue, React, and Svelte support.',
-          url,
-          codeRepository:
-            'https://github.com/eramitgupta/laravel-lang-sync-inertia',
-          programmingLanguage: 'PHP',
-          license: 'https://opensource.org/licenses/MIT',
-          author: {
-            '@type': 'Person',
-            name: 'Er Amit Gupta',
-            url: 'https://erag.in/',
-          },
-        }),
+        JSON.stringify(structuredData),
       ],
     ]
   },

@@ -11,10 +11,10 @@ head:
 
 Use the package at the right layer for your application:
 
-- [Validation](./validation.html) for request, Form Request, controller, and API input validation.
-- [Email Validation Advanced Check](./email-validation-advanced-check.html) for Laravel's RFC, DNS, spoof, and filter styles.
-- [Runtime Checks](./runtime-checks.html) for boolean checks, detailed results, facades, and service classes.
-- [API and Blade](./api-and-blade.html) for live API endpoints and Blade UI feedback.
+- [Validation](./validation-and-runtime.html) for request, Form Request, controller, and API input validation.
+- [Configuration](./configuration.html) for blacklist, whitelist, remote source, and validation settings.
+- [Runtime checks](./validation-and-runtime.html) for boolean checks, detailed results, facades, and service classes.
+- [Sync and blacklist](./sync-and-blacklist.html) for domain updates and custom blacklist files.
 
 For most forms, start with:
 
