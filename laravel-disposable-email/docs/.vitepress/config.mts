@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 const siteOrigin = 'https://erag.in'
 const siteBase = '/laravel-disposable-email'
 const siteUrl = `${siteOrigin}${siteBase}`
+const socialImage = 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512'
 
 const canonicalUrl = (page: string): string => {
   const path = page
@@ -43,27 +44,10 @@ export default defineConfig({
       }
     ],
     ['meta', { property: 'og:site_name', content: 'Laravel Disposable Email — Erag' }],
-    ['meta', { property: 'og:title', content: 'Laravel Disposable Email' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
+    ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
-    ['meta', { name: 'twitter:title', content: 'Laravel Disposable Email' }],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content: 'Block disposable email addresses with validation rules, facades, Blade directives, and remote sync support.'
-      }
-    ],
-    ['meta', { name: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: 'Block disposable email addresses with validation rules, facades, Blade directives, and remote sync support.'
-      }
-    ],
+    ['meta', { name: 'twitter:image', content: socialImage }],
     [
       'link',
       {
@@ -74,30 +58,51 @@ export default defineConfig({
   ].concat(searchConsoleVerification ? [
     ['meta', { name: 'google-site-verification', content: searchConsoleVerification }]
   ] : []),
-  transformHead({ page }) {
+  transformHead({ page, pageData, title, description }) {
     const url = canonicalUrl(page)
+    const isHomePage = page === 'index.md'
+    const articleTitle = pageData.title || title
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': isHomePage ? ['TechArticle', 'SoftwareSourceCode'] : 'TechArticle',
+      headline: articleTitle,
+      description,
+      url,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+      codeRepository: 'https://github.com/eramitgupta/laravel-disposable-email',
+      programmingLanguage: 'PHP',
+      license: 'https://opensource.org/licenses/MIT',
+      author: {
+        '@type': 'Person',
+        name: 'Er Amit Gupta',
+        url: 'https://erag.in/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Erag',
+        url: 'https://erag.in/',
+      },
+    }
+
+    if (pageData.lastUpdated) {
+      structuredData.dateModified = new Date(pageData.lastUpdated).toISOString()
+    }
 
     return [
       ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
+      ['meta', { property: 'og:title', content: articleTitle }],
+      ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
+      ['meta', { name: 'twitter:title', content: articleTitle }],
+      ['meta', { name: 'twitter:description', content: description }],
       [
         'script',
         { type: 'application/ld+json' },
-        JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'SoftwareSourceCode',
-          name: 'Laravel Disposable Email',
-          description: 'Block disposable and temporary email addresses in Laravel. Validation rules, facades, Blade directives, remote sync, and caching support.',
-          url,
-          codeRepository: 'https://github.com/eramitgupta/laravel-disposable-email',
-          programmingLanguage: 'PHP',
-          license: 'https://opensource.org/licenses/MIT',
-          author: {
-            '@type': 'Person',
-            name: 'Er Amit Gupta',
-            url: 'https://erag.in/'
-          }
-        })
+        JSON.stringify(structuredData)
       ]
     ]
   },

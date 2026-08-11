@@ -29,10 +29,10 @@ The string form works too:
 'email' => 'required|email|disposable_email',
 ```
 
-`disposable_email` checks the domain against built-in and custom lists. Keep Laravel's `email` rule when you also want normal format validation, or use the package's [RFC / DNS modes](../advanced/rfc-dns.md).
+`disposable_email` checks the domain against built-in and custom lists. Keep Laravel's `email` rule when you also want normal format validation, or use the package's [RFC / DNS modes](../advanced/rfc-dns.html).
 
 ## Related
 
-- [Form Requests](./form-request.md)
-- [Rule object](./rule-object.md)
-- [Manual and API validation](./manual-api.md)
+- [Form Requests](./form-request.html)
+- [Rule object](./rule-object.html)
+- [Manual and API validation](./manual-api.html)

@@ -15,6 +15,6 @@ head:
 
 # Troubleshooting
 
-- [Validation help](./help/validation.md)
-- [Sync and cache help](./help/sync-cache.md)
-- [Setup and Blade help](./help/setup-blade.md)
+- [Validation help](./help/validation.html)
+- [Sync and cache help](./help/sync-cache.html)
+- [Setup and Blade help](./help/setup-blade.html)

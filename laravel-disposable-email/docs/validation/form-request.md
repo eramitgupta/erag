@@ -30,4 +30,4 @@ public function rules(): array
 
 Laravel will return the normal validation response when the address belongs to a blocked domain.
 
-For stricter format or DNS checks, see [RFC / DNS Validation](../advanced/rfc-dns.md).
+For stricter format or DNS checks, see [RFC / DNS Validation](../advanced/rfc-dns.html).

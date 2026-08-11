@@ -33,4 +33,4 @@ The namespaced facade is also available:
 use EragLaravelDisposableEmail\Facades\Disposable;
 ```
 
-For match details, use the [detailed result](./result.md).
+For match details, use the [detailed result](./result.html).

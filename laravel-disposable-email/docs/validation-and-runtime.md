@@ -19,14 +19,14 @@ This compatibility index replaces the previous combined guide.
 
 ## Validation
 
-- [Basic validation](./validation/basic.md)
-- [Form Requests](./validation/form-request.md)
-- [Rule object](./validation/rule-object.md)
-- [Manual and API validation](./validation/manual-api.md)
-- [RFC / DNS validation](./advanced/rfc-dns.md)
+- [Basic validation](./validation/basic.html)
+- [Form Requests](./validation/form-request.html)
+- [Rule object](./validation/rule-object.html)
+- [Manual and API validation](./validation/manual-api.html)
+- [RFC / DNS validation](./advanced/rfc-dns.html)
 
 ## Runtime
 
-- [Boolean email and domain checks](./runtime/checks.md)
-- [Detailed result](./runtime/result.md)
-- [Blade conditional](./runtime/blade.md)
+- [Boolean email and domain checks](./runtime/checks.html)
+- [Detailed result](./runtime/result.html)
+- [Blade conditional](./runtime/blade.html)

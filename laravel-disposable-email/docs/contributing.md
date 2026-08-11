@@ -15,4 +15,4 @@ head:
 
 # Contributing
 
-Contribution guidance has moved to [Maintainers: Contributing](./maintainers/contributing.md).
+Contribution guidance has moved to [Maintainers: Contributing](./maintainers/contributing.html).

@@ -90,6 +90,126 @@
   <priority>0.40</priority>
 </url>
 <url>
+  <loc>https://erag.in/laravel-disposable-email/advanced/cache.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/advanced/rfc-dns.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/advanced/schedule.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/domains/blacklist.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/domains/stats.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/domains/subdomains.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/domains/sync.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/domains/whitelist.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/help/setup-blade.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/help/sync-cache.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/help/validation.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/maintainers/contributing.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/runtime/blade.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/runtime/checks.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/runtime/result.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/upgrades/v5.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/validation/basic.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/validation/form-request.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/validation/manual-api.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-disposable-email/validation/rule-object.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
   <loc>https://erag.in/laravel-inertia-toast/installation.html</loc>
   <lastmod>2026-07-11T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
@@ -182,6 +302,12 @@
 <url>
   <loc>https://erag.in/laravel-lang-sync-inertia/react.html</loc>
   <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://erag.in/laravel-lang-sync-inertia/svelte.html</loc>
+  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>

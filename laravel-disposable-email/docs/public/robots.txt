@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eramitgupta.github.io/laravel-disposable-email/sitemap.xml
+Sitemap: https://erag.in/sitemap.xml

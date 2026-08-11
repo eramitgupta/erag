@@ -15,4 +15,4 @@ head:
 
 # Deprecated in 5.0.0
 
-See the focused [Upgrade to 5.x](./upgrades/v5.md) guide.
+See the focused [Upgrade to 5.x](./upgrades/v5.html) guide.

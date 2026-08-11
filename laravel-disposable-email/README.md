@@ -36,7 +36,7 @@ It includes:
 
 ## Documentation
 
-Docs link: [Laravel Disposable Email Documentation](https://erag.github.io/laravel-disposable-email/)
+Docs link: [Laravel Disposable Email Documentation](https://erag.in/laravel-disposable-email/)
 
 ## Main package repository
 

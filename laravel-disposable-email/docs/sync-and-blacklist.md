@@ -15,8 +15,8 @@ head:
 
 # Sync and Domain Lists
 
-- [Remote sync](./domains/sync.md)
-- [Custom blacklist](./domains/blacklist.md)
-- [Whitelist](./domains/whitelist.md)
-- [Subdomain blocking](./domains/subdomains.md)
-- [Package stats](./domains/stats.md)
+- [Remote sync](./domains/sync.html)
+- [Custom blacklist](./domains/blacklist.html)
+- [Whitelist](./domains/whitelist.html)
+- [Subdomain blocking](./domains/subdomains.html)
+- [Package stats](./domains/stats.html)

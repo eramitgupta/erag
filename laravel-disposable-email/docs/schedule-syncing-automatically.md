@@ -15,4 +15,4 @@ head:
 
 # Schedule Sync
 
-Scheduling documentation has moved to [Schedule Sync](./advanced/schedule.md).
+Scheduling documentation has moved to [Schedule Sync](./advanced/schedule.html).

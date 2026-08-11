@@ -15,4 +15,4 @@ head:
 
 # Caching
 
-Caching documentation has moved to [Advanced: Caching](./advanced/cache.md).
+Caching documentation has moved to [Advanced: Caching](./advanced/cache.html).
