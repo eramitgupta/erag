@@ -22,10 +22,10 @@ const canonicalUrl = (page: string): string => {
 export default defineConfig({
     base: `${siteBase}/`,
     lang: 'en-US',
-    title: '@erag/text-editor-vue',
-    titleTemplate: false,
+    title: 'Text Editor Vue',
+    titleTemplate: ':title — Vue 3 Rich Text Editor | Erag',
     description:
-        'A modern dependency-free Vue 3 rich text editor (WYSIWYG) built with native browser APIs. Supports TypeScript, mentions, merge tags, templates, image uploads, tables, HTML editing, and customizable toolbars.',
+        'A modern dependency-free Vue 3 rich text editor (WYSIWYG) built with native browser APIs. Supports TypeScript, mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable toolbars.',
     cleanUrls: false,
     lastUpdated: true,
     sitemap: {
@@ -55,6 +55,16 @@ export default defineConfig({
         ],
         ['meta', { name: 'theme-color', content: '#0f766e' }],
         ['meta', { name: 'author', content: 'Er Amit Gupta' }],
+        ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+        ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+        [
+            'meta',
+            {
+                name: 'keywords',
+                content:
+                    'vue 3 text editor, vue wysiwyg editor, dependency free vue rich text editor, vue mention merge tags editor, vue tiptap alternative, @erag/text-editor-vue, vue html editor component, vue quill alternative',
+            },
+        ],
         [
             'meta',
             { property: 'og:site_name', content: 'Text Editor Vue — Erag' },

@@ -22,8 +22,9 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Phone Number React',
+  titleTemplate: ':title — Phone Number React Hook | Erag',
   description:
-    'Headless React hook for country-aware phone input. Manages country selection, local digit normalization, calling codes, mask patterns, and phone validation — no masking dependency.',
+    'Headless React hook (usePhoneNumber) for country-aware phone input. Auto formatting, country dial codes, mask patterns, digit normalization, and phone validation with zero masking dependencies.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -44,7 +45,7 @@ export default defineConfig({
       {
         name: 'keywords',
         content:
-          'React phone number input, React hook phone, country phone input React, phone mask React, dial code React, usePhoneNumber, @erag/phone-number-react, headless phone input React',
+          'react phone number input, usePhoneNumber react hook, react country phone input, react international telephone input, headless phone input react, phone validation react, @erag/phone-number-react, react phone mask',
       },
     ],
     ['meta', { property: 'og:site_name', content: 'Phone Number React — Erag' }],

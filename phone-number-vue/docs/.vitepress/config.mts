@@ -22,8 +22,9 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Phone Number Vue',
+  titleTemplate: ':title — Phone Number Vue Composable | Erag',
   description:
-    'Headless Vue composable for country-aware phone input. Manages country selection, local digit normalization, calling codes, mask patterns, and phone validation — no masking dependency.',
+    'Headless Vue 3 composable (usePhoneNumber) for country-aware phone input. Auto formatting, country dial codes, mask patterns, digit normalization, and phone validation with zero masking dependencies.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -44,7 +45,7 @@ export default defineConfig({
       {
         name: 'keywords',
         content:
-          'Vue phone number input, Vue composable phone, country phone input Vue, phone mask Vue, dial code Vue, usePhoneNumber, @erag/phone-number-vue, headless phone input',
+          'vue phone number input, usePhoneNumber vue 3, vue country phone input, vue international telephone input composable, headless phone input vue, phone validation vue 3, @erag/phone-number-vue, vue phone mask',
       },
     ],
     ['meta', { property: 'og:site_name', content: 'Phone Number Vue — Erag' }],

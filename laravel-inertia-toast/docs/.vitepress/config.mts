@@ -22,8 +22,9 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Laravel Inertia Toast',
+  titleTemplate: ':title — Laravel Inertia Toast | Erag',
   description:
-    'Toast notifications and confirmation dialogs for Laravel, Inertia.js, Vue 3, and React. Installation, demos, API reference, and framework usage guides.',
+    'Toast notifications and confirmation dialog modals for Laravel with Inertia.js (Vue 3 & React). Send flash alerts directly from Laravel controllers with zero boilerplate.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -50,7 +51,7 @@ export default defineConfig({
       {
         name: 'keywords',
         content:
-          'Laravel Inertia Toast, Laravel toast notifications, Inertia.js toast, Vue 3 toast plugin, React toast package, Laravel confirmation dialog',
+          'laravel inertia toast, inertia js toast notifications, laravel vue toast, laravel react flash messages, inertia confirmation modal, erag/laravel-inertia-toast, laravel flash toast',
       },
     ],
     ['meta', { property: 'og:site_name', content: 'Laravel Inertia Toast — Erag' }],

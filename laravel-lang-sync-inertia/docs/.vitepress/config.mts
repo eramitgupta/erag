@@ -22,10 +22,11 @@ export default defineConfig({
   base: `${siteBase}/`,
   cleanUrls: false,
   title: 'Laravel Lang Sync Inertia',
+  titleTemplate: ':title — Laravel Lang Sync Inertia | Erag',
   lang: 'en-US',
 
   description:
-    'Bridge Laravel translation files to Inertia.js apps with first-class Vue, React, and Svelte support. Powerful i18n sync for modern Laravel applications.',
+    'Seamlessly export and synchronize Laravel PHP language & translation files to Inertia.js applications with Vue, React, and Svelte i18n helpers.',
 
   lastUpdated: true,
 
@@ -45,7 +46,7 @@ export default defineConfig({
       {
         name: 'keywords',
         content:
-          'Laravel i18n, Laravel localization, Inertia translations, Vue i18n Laravel, React i18n Laravel, Svelte i18n Laravel, Laravel language sync',
+          'laravel lang sync inertia, laravel inertia translations, export laravel lang to vue, inertia i18n sync, laravel localization inertia, vue inertia translation helper, erag/laravel-lang-sync-inertia',
       },
     ],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],

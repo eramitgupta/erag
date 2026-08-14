@@ -32,8 +32,9 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Vue Toastification',
+  titleTemplate: ':title — Vue Toastification | Erag',
   description:
-    'A lightweight, high-performance Toast Notification and Confirmation Modal library for Vue 3.',
+    'Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3 with smooth Apple-style animations and Composition API support.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -54,7 +55,7 @@ export default defineConfig({
       {
         name: 'keywords',
         content:
-          'Vue toastification, Vue 3 toast, Vue notification, confirmation modal Vue, erag/vue-toastification, Vue toast plugin',
+          'vue toastification, vue 3 toast notification, vue modal dialog, vue notification library, vue confirmation popup, erag/vue-toastification, vue 3 alert toast',
       },
     ],
     ['meta', { property: 'og:site_name', content: 'Vue Toastification — Erag' }],

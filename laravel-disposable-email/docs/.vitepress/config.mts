@@ -21,7 +21,9 @@ const searchConsoleVerification = 'OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM'
 export default defineConfig({
   base: `${siteBase}/`,
   title: 'Laravel Disposable Email',
-  description: 'Block disposable and temporary email addresses in Laravel. Validation rules, facades, Blade directives, remote sync, and caching support.',
+  titleTemplate: ':title — Laravel Disposable Email Validator | Erag',
+  description:
+    'Block disposable and temporary fake email addresses in Laravel. Built-in validation rules, blacklist auto-syncing, DNS/RFC checks, and high-performance caching.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -40,7 +42,8 @@ export default defineConfig({
       'meta',
       {
         name: 'keywords',
-        content: 'laravel disposable email, temporary email validation, disposable email blocker, laravel email validation, temp mail protection, fake email detection'
+        content:
+          'laravel disposable email, disposable email validator laravel, block temp mail laravel, fake email detection laravel, laravel email validation rule, temporary email blacklist sync, erag laravel disposable email',
       }
     ],
     ['meta', { property: 'og:site_name', content: 'Laravel Disposable Email — Erag' }],
