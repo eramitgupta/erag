@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'Laravel Lang Sync Inertia installation, composer require erag/laravel-lang-sync-inertia, npm install @erag/lang-sync-inertia'
 ---
 
 # Installation

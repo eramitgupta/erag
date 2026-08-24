@@ -3,9 +3,6 @@ title: Menubar Customization
 description: 'Configure, reorder, hide, and reactively update File, Edit, View, Insert, Format, Tools, Table, Help, merge-tag, and template menus.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor menubar, EditorMenuName, custom editor menus, responsive rich text editor menu'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

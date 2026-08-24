@@ -3,9 +3,6 @@ title: Vue Editor Templates
 description: 'Provide searchable, grouped HTML templates through EditorInit, preview sanitized content, insert at the caret, and handle typed template events.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor templates, HTML template picker, EditorTemplateItem, email template editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

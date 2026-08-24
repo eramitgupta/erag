@@ -5,9 +5,6 @@ aside: false
 description: 'Explore live Vue 3 rich text editor demos for mentions, merge tags, templates, image uploads, tables, and advanced editing.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue examples, Vue 3 editor live demo, basic to advanced rich text editor, interactive Vue editor examples'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

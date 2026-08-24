@@ -3,9 +3,6 @@ title: Installation
 description: 'Install @erag/text-editor-vue, configure its Vue peer dependency, import the editor stylesheet, and review its Node.js build requirements.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, install Vue text editor, npm Vue editor, Vue editor CSS, Vue 3 rich text editor package'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

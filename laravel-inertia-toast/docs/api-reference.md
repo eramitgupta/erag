@@ -1,12 +1,6 @@
 ---
 title: API Reference
 description: Full API reference for Laravel Inertia Toast, including toast types, positions, helper arguments, composables, modal options, and shared payload shape.
-keywords:
-  - laravel inertia toast api
-  - toast helper signature
-  - toast payload reference
-  - vue toast api
-  - react toast api
 head:
     - - meta
       - name: robots
@@ -20,9 +14,6 @@ head:
     - - meta
       - name: description
         content: 'Full API reference for Laravel Inertia Toast, including toast types, positions, helper arguments, composables, modal options, and shared payload shape.'
-    - - meta
-      - name: keywords
-        content: 'laravel inertia toast api, toast helper signature, toast payload reference, vue toast api, react toast api'
 ---
 
 # API Reference

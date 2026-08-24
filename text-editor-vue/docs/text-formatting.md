@@ -3,9 +3,6 @@ title: Rich Text Formatting
 description: 'Configure headings, fonts, sizes, bold, italic, underline, colors, alignment, change case, and clear-formatting controls in the Vue editor.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, rich text formatting, Vue formatting toolbar, editor fonts, text colors, heading editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

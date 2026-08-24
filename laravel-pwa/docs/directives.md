@@ -3,9 +3,6 @@ title: Blade Directives
 description: Integrate PWA manifest metadata tags and register service workers inside Laravel layouts using Blade directives.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel PWA Blade directives, PwaHead, PwaScripts, service worker Blade'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

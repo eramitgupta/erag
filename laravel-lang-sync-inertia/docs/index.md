@@ -1,5 +1,6 @@
 ---
 title: Laravel Lang Sync Inertia
+titleTemplate: false
 description: Use Laravel translation files directly in Inertia Vue and React apps with replacements, pluralization, and locale-aware helpers.
 layout: home
 
@@ -55,9 +56,6 @@ head:
     - - meta
       - name: googlebot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'Laravel Lang Sync Inertia, Inertia.js translations, Laravel i18n, Vue translations, React translations, localization package'
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'

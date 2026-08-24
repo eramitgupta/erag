@@ -3,9 +3,6 @@ title: Troubleshooting
 description: Find focused package troubleshooting guides.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email troubleshooting, disposable validation issue, blacklist sync problem Laravel'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -22,7 +22,7 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Laravel Inertia Toast',
-  titleTemplate: ':title — Laravel Inertia Toast | Erag',
+  titleTemplate: ':title | Laravel Inertia Toast',
   description:
     'Toast notifications and confirmation dialog modals for Laravel with Inertia.js (Vue 3 & React). Send flash alerts directly from Laravel controllers with zero boilerplate.',
   cleanUrls: false,
@@ -46,14 +46,6 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    [
-      'meta',
-      {
-        name: 'keywords',
-        content:
-          'laravel inertia toast, inertia js toast notifications, laravel vue toast, laravel react flash messages, inertia confirmation modal, erag/laravel-inertia-toast, laravel flash toast',
-      },
-    ],
     ['meta', { property: 'og:site_name', content: 'Laravel Inertia Toast — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Laravel Inertia Toast documentation' }],
@@ -117,35 +109,35 @@ export default defineConfig({
   },
   themeConfig: {
     nav: [
-      { text: 'Demo', link: '/demo' },
-      { text: 'Laravel', link: '/laravel' },
-      { text: 'Vue', link: '/vue' },
-      { text: 'React', link: '/react' },
+      { text: 'Demo', link: '/demo.html' },
+      { text: 'Laravel', link: '/laravel.html' },
+      { text: 'Vue', link: '/vue.html' },
+      { text: 'React', link: '/react.html' },
     ],
     sidebar: [
       {
         text: 'Getting Started',
         items: [
-          { text: 'Overview', link: '/' },
-          { text: 'Demo', link: '/demo' },
-          { text: 'Installation', link: '/installation' },
+          { text: 'Overview', link: '/index.html' },
+          { text: 'Demo', link: '/demo.html' },
+          { text: 'Installation', link: '/installation.html' },
         ],
       },
       {
         text: 'Usage',
         items: [
-          { text: 'Laravel Usage', link: '/laravel' },
-          { text: 'Vue Usage', link: '/vue' },
-          { text: 'React Usage', link: '/react' },
-          { text: 'Modal Usage', link: '/modal-usage' },
-          { text: 'Styling', link: '/styling' },
+          { text: 'Laravel Usage', link: '/laravel.html' },
+          { text: 'Vue Usage', link: '/vue.html' },
+          { text: 'React Usage', link: '/react.html' },
+          { text: 'Modal Usage', link: '/modal-usage.html' },
+          { text: 'Styling', link: '/styling.html' },
         ],
       },
       {
         text: 'Reference',
         items: [
-          { text: 'API Reference', link: '/api-reference' },
-          { text: 'Contributing', link: '/contributing' },
+          { text: 'API Reference', link: '/api-reference.html' },
+          { text: 'Contributing', link: '/contributing.html' },
         ],
       },
     ],

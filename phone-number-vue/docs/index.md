@@ -1,7 +1,8 @@
 ---
 layout: home
 title: Phone Number Vue — Headless Vue Composable
-description: Headless Vue composable for country-aware phone input. Country selection, digit normalization, calling codes, mask patterns, and validation — no masking dependency.
+titleTemplate: false
+description: Headless Vue composable for country-aware phone input, dial codes, digit normalization, mask patterns, and validation without a masking dependency.
 hero:
   name: 'Phone Number Vue'
   text: 'Country-aware phone input for Vue 3'
@@ -52,10 +53,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'Vue phone number input, usePhoneNumber, country phone composable, Vue phone mask, dial code Vue, @erag/phone-number-vue'
 ---
 
 <PhonePlayground />
-

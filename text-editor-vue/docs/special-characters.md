@@ -3,9 +3,6 @@ title: Special Characters and Emoji
 description: 'Insert searchable special characters and emoji from categorized, keyboard-accessible dialogs in @erag/text-editor-vue.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, special character picker, Vue emoji picker, editor symbols, currency symbols, Greek characters'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

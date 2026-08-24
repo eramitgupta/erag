@@ -3,9 +3,6 @@ title: Introduction
 description: 'Learn what @erag/text-editor-vue provides, how its controlled HTML model works, and which native browser APIs and editing features it uses.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor introduction, native browser editor, Vue contenteditable, dependency-free Vue editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

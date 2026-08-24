@@ -1,13 +1,6 @@
 ---
 title: Styling · Toast & Modal CSS
 description: Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes.
-keywords:
-  - vue toast css
-  - react toast css
-  - modal css
-  - erag toast styling
-  - scoped css
-  - toast css prefix
 head:
     - - meta
       - name: robots
@@ -21,9 +14,6 @@ head:
     - - meta
       - name: description
         content: 'Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes.'
-    - - meta
-      - name: keywords
-        content: 'vue toast css, react toast css, modal css, erag toast styling, scoped css, toast css prefix'
 ---
 
 # Styling

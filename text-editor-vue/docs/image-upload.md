@@ -3,9 +3,6 @@ title: Image Upload, Resize and Removal
 description: 'Upload, paste, insert, resize, align, and remove editor images with native Fetch, custom handlers, progress, validation, and server callbacks.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue image upload editor, image resize handles, ImagesUploadHandler, image delete callback, Fetch image upload'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -3,9 +3,6 @@ title: Links and Anchors
 description: 'Insert, edit, validate, and remove safe links, configure new-window behavior, and add generated bookmark anchors in the Vue editor.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor links, rich text link dialog, HTML anchors, safe URL editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

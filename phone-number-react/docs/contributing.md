@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'phone-number-react contributing, open source React phone, report issue phone-number-react, pull request phone React'
 ---
 
 # Contributing

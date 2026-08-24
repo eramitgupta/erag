@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Vue Toastification Docs
+titleTemplate: false
 description: Lightweight, high-performance Toast Notifications and Promise-based Confirmation Modals for Vue 3 with Composition API.
 hero:
   name: '@erag/vue-toastification'
@@ -52,9 +53,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'vue toast, vue notification, confirmation modal, vue dialog, promise based modal, composition api toast'
 ---
 
 <div class="home-container">

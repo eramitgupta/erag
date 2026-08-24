@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'usePhoneNumber React usage, React phone input example, country select phone React, handleInput hook, localPhone React'
 ---
 
 # Basic Usage

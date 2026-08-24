@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'install phone-number-react, npm install @erag/phone-number-react, yarn phone number react, pnpm phone input react, react 19 phone hook'
 ---
 
 # Installation

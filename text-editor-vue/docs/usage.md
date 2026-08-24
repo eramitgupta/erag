@@ -3,9 +3,6 @@ title: Vue Editor Usage
 description: 'Use the Editor component with Vue 3 v-model, reactive configuration, custom toolbars, disabled and readonly modes, and typed instance methods.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor v-model, EditorInstance, Vue editor example, reactive EditorInit, readonly editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

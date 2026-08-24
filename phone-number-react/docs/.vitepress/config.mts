@@ -22,7 +22,7 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Phone Number React',
-  titleTemplate: ':title — Phone Number React Hook | Erag',
+  titleTemplate: ':title | Phone Number React',
   description:
     'Headless React hook (usePhoneNumber) for country-aware phone input. Auto formatting, country dial codes, mask patterns, digit normalization, and phone validation with zero masking dependencies.',
   cleanUrls: false,
@@ -40,14 +40,6 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    [
-      'meta',
-      {
-        name: 'keywords',
-        content:
-          'react phone number input, usePhoneNumber react hook, react country phone input, react international telephone input, headless phone input react, phone validation react, @erag/phone-number-react, react phone mask',
-      },
-    ],
     ['meta', { property: 'og:site_name', content: 'Phone Number React — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Phone Number React documentation' }],

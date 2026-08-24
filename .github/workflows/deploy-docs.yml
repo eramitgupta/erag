@@ -92,6 +92,9 @@ jobs:
           cp -R text-editor-vue/docs/.vitepress/dist/* site/text-editor-vue/
           touch site/.nojekyll
 
+      - name: Audit generated SEO
+        run: npm run audit:seo
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

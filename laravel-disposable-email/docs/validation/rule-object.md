@@ -3,9 +3,6 @@ title: Rule Object
 description: Use the disposable email class-based validation rule.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email rule object, custom Laravel validation rule, disposable email validator'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

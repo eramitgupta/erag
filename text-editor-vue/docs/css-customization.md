@@ -3,9 +3,6 @@ title: CSS Customization
 description: 'Customize the editor with package-scoped erag- classes and --erag- CSS variables for light and dark surfaces, mentions, merge tags, images, dialogs, and states.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor CSS, erag CSS variables, rich text editor styling, editor theme customization'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta
