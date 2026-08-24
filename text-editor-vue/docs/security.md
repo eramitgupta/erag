@@ -3,9 +3,6 @@ title: Security and Sanitization
 description: 'Understand browser-side HTML sanitization, URL and iframe rules, mention and merge-tag normalization, CSP, and required server-side defenses.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, HTML sanitizer, rich text editor security, XSS defense, safe iframe, server-side HTML sanitization'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

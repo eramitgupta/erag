@@ -3,9 +3,6 @@ title: Lists, Checklists, and Indentation
 description: 'Create styled bulleted and numbered lists, interactive checklists, and nested content with indent and outdent controls.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor lists, numbered list editor, nested lists, editor indentation, bulleted lists'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

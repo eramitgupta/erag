@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'usePhoneNumber custom data, override country list Vue, custom dial codes, PhoneNumberSharedData, reactive ref phone data'
 ---
 
 # Custom Data

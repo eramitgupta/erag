@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'usePhoneNumber API, phone composable return values, handleInput API, selectedCountry API, callingCode API, mask API'
 ---
 
 # API Reference

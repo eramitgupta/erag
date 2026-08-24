@@ -22,7 +22,7 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Laravel PWA',
-  titleTemplate: ':title — Laravel PWA Package | Erag',
+  titleTemplate: ':title | Laravel PWA',
   description:
     'Transform your Laravel application into a Progressive Web App (PWA). Auto-generate web app manifest, register service workers, configure custom install prompts, and upload dynamic logos.',
   cleanUrls: false,
@@ -40,14 +40,6 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    [
-      'meta',
-      {
-        name: 'keywords',
-        content:
-          'laravel pwa, progressive web app laravel, laravel pwa package, laravel service worker, laravel pwa manifest generator, add to home screen laravel, erag/laravel-pwa, laravel pwa offline mode',
-      },
-    ],
     ['meta', { property: 'og:site_name', content: 'Laravel PWA — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Laravel PWA documentation' }],

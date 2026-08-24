@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'phone number vue introduction, usePhoneNumber overview, country phone input Vue 3, headless phone composable'
 ---
 
 # Introduction

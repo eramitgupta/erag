@@ -3,9 +3,6 @@ title: Editor Configuration
 description: 'Explore every EditorInit option for layout, toolbar, menubar, formatting, plugins, uploads, security, mentions, merge tags, and templates.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue 3 rich text editor, EditorInit, Vue editor configuration, rich text editor options, custom toolbar'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

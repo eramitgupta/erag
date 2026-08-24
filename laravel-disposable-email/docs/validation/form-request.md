@@ -3,9 +3,6 @@ title: Form Request Validation
 description: Use disposable email validation in a Laravel Form Request.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel Form Request disposable email validation, disposable_email rule Laravel, validate temporary email'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -3,9 +3,6 @@ title: TypeScript Types
 description: 'Browse all public TypeScript types exported by @erag/text-editor-vue with practical examples for editor, mentions, merge tags, templates, and images.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor TypeScript types, MentionItem, MergeTagItem, ImageBlobInfo, EditorInstance'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

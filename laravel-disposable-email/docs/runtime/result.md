@@ -3,9 +3,6 @@ title: Detailed Result
 description: Inspect matched domains, sources, and whitelist status.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email result, matched disposable domain, Disposable check details'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

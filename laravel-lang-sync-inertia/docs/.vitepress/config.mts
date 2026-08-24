@@ -22,7 +22,7 @@ export default defineConfig({
   base: `${siteBase}/`,
   cleanUrls: false,
   title: 'Laravel Lang Sync Inertia',
-  titleTemplate: ':title — Laravel Lang Sync Inertia | Erag',
+  titleTemplate: ':title | Laravel Lang Sync',
   lang: 'en-US',
 
   description:
@@ -41,14 +41,6 @@ export default defineConfig({
   head: [
     // Basic SEO
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
-    [
-      'meta',
-      {
-        name: 'keywords',
-        content:
-          'laravel lang sync inertia, laravel inertia translations, export laravel lang to vue, inertia i18n sync, laravel localization inertia, vue inertia translation helper, erag/laravel-lang-sync-inertia',
-      },
-    ],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],

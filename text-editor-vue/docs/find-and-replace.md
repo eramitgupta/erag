@@ -3,9 +3,6 @@ title: Find and Replace
 description: 'Find and replace editor text with match-case, whole-word, previous, next, replace-current, and replace-all controls.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue find and replace, rich text editor search, replace all text, editor search dialog'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

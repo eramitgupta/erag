@@ -3,9 +3,6 @@ title: Manual and API Validation
 description: Validate disposable email addresses in validators and API endpoints.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email API validation, manual disposable email check, Disposable facade Laravel'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

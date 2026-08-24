@@ -3,9 +3,6 @@ title: Laravel Lang Sync Inertia
 description: 'Laravel Lang Sync Inertia is a lightweight package for sharing Laravel translation files with Inertia.js applications, with first-class support for...'
 head:
     - - meta
-      - name: keywords
-        content: 'laravel-lang-sync-inertia, Laravel Lang Sync Inertia, Vue, documentation, API'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

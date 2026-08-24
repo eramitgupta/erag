@@ -3,9 +3,6 @@ title: Toast Usage
 description: 'Trigger non-blocking toast notifications inside your Vue 3 components using the useToast hook.'
 head:
     - - meta
-      - name: keywords
-        content: 'vue-toastification, Toast Usage, Vue, documentation, API'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -3,9 +3,6 @@ title: Blade Conditional
 description: Branch Blade output based on disposable email status.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email Blade directive, Blade disposable email check, conditional email validation'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

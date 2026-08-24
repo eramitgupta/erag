@@ -3,9 +3,6 @@ title: Vue Editor Mentions
 description: 'Add accessible @mention autocomplete with static or async items, avatars, keyboard navigation, custom slots, caching, and typed events.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue mentions, @mention autocomplete, MentionConfig, async mentions, Vue user suggestions'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

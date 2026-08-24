@@ -3,9 +3,6 @@ title: Validation Help
 description: Troubleshoot disposable email validation results.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email validation troubleshooting, disposable email rule not working, Laravel email blacklist help'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

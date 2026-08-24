@@ -3,9 +3,6 @@ title: API Reference
 description: 'Reference Editor props, emitted events, exposed methods, named slots, runtime exports, and payload contracts for @erag/text-editor-vue.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue 3 rich text editor, Vue editor API, EditorProps, EditorEmits, Editor slots, TypeScript text editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

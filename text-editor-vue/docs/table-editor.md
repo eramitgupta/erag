@@ -3,9 +3,6 @@ title: Vue Table Editor
 description: 'Insert and edit HTML tables with a visual grid, table properties, row and column operations, cell actions, and keyboard navigation.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue table editor, rich text editor tables, HTML table grid, table row column editing'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

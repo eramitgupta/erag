@@ -3,9 +3,6 @@ title: Editor Workflow and Responsive UI
 description: 'Understand history, clipboard handling, keyboard shortcuts, responsive toolbar overflow, status information, printing, and editor resizing.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor undo redo, editor clipboard, responsive toolbar, rich text editor shortcuts, editor status bar, print editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

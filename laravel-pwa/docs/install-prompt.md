@@ -3,9 +3,6 @@ title: Install Prompt & Offline Support
 description: Customize the Add to Home Screen install prompt, iOS Safari overlays, and fallback offline page settings in erag/laravel-pwa.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel PWA install prompt, add to home screen Laravel, offline support, iOS PWA'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

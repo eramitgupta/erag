@@ -3,9 +3,6 @@ title: Laravel Disposable Email Docs
 description: 'This repository contains the documentation site for **Laravel Disposable Email**.'
 head:
     - - meta
-      - name: keywords
-        content: 'laravel-disposable-email, Laravel Disposable Email Docs, Vue, documentation, API'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

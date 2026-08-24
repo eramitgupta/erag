@@ -3,9 +3,6 @@ title: Contributing and Development
 description: 'Set up the @erag/text-editor-vue repository, run formatting, linting, TypeScript checks, Vite builds, and the package publishing workflow.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue editor contribution guide, build Vue library, publish Vue package, Vite TypeScript library'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

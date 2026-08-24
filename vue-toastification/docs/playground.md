@@ -4,9 +4,6 @@ title: Toast & Modal Playground
 description: Test erag-vue-toastification alerts and interactive dialog boxes in a sandbox.
 head:
     - - meta
-      - name: keywords
-        content: 'Vue Toastification playground, Vue 3 toast demo, confirmation modal demo, toast notification examples'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

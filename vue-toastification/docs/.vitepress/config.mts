@@ -32,7 +32,7 @@ export default defineConfig({
   base: `${siteBase}/`,
   lang: 'en-US',
   title: 'Vue Toastification',
-  titleTemplate: ':title — Vue Toastification | Erag',
+  titleTemplate: ':title | Vue Toastification',
   description:
     'Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3 with smooth Apple-style animations and Composition API support.',
   cleanUrls: false,
@@ -50,14 +50,6 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    [
-      'meta',
-      {
-        name: 'keywords',
-        content:
-          'vue toastification, vue 3 toast notification, vue modal dialog, vue notification library, vue confirmation popup, erag/vue-toastification, vue 3 alert toast',
-      },
-    ],
     ['meta', { property: 'og:site_name', content: 'Vue Toastification — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Vue Toastification documentation' }],

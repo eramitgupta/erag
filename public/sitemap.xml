@@ -60,34 +60,10 @@
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://erag.in/laravel-disposable-email/caching.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/schedule-syncing-automatically.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
   <loc>https://erag.in/laravel-disposable-email/troubleshooting.html</loc>
   <lastmod>2026-07-11T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/contributing.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/deprecated-5-0-0.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.40</priority>
 </url>
 <url>
   <loc>https://erag.in/laravel-disposable-email/advanced/cache.html</loc>

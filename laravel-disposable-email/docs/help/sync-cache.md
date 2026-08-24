@@ -3,9 +3,6 @@ title: Sync and Cache Help
 description: Troubleshoot remote source, blacklist, and cache issues.
 head:
     - - meta
-      - name: keywords
-        content: 'Laravel disposable email sync troubleshooting, disposable blacklist cache issue, Laravel domain list update'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

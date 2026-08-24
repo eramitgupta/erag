@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'install phone-number-vue, npm install @erag/phone-number-vue, yarn phone number vue, pnpm phone input vue'
 ---
 
 # Installation

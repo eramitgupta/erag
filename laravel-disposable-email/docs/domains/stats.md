@@ -3,9 +3,6 @@ title: Package Stats
 description: Inspect loaded domain sources and package settings.
 head:
     - - meta
-      - name: keywords
-        content: 'disposable email domain stats Laravel, Laravel blacklist statistics, disposable domain count'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

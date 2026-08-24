@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Phone Number React — Headless React Hook
+titleTemplate: false
 description: Headless React hook for country-aware phone input. Country selection, digit normalization, calling codes, mask patterns, and validation — no masking dependency.
 hero:
   name: 'Phone Number React'
@@ -52,10 +53,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'React phone number input, usePhoneNumber React, country phone hook, React phone mask, dial code React, @erag/phone-number-react'
 ---
 
 <PhonePlayground />
-

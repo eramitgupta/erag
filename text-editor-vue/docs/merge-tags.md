@@ -3,9 +3,6 @@ title: Vue Editor Merge Tags
 description: 'Configure dynamic merge tags with autocomplete, grouped sidebar insertion, atomic tokens, typed events, and safe backend replacement guidance.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue merge tags, document placeholders, email template variables, MergeTagItem, dynamic editor tags'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -3,9 +3,6 @@ title: Horizontal Rules and Date-Time
 description: 'Insert horizontal rules and current date or time values using configurable Intl.DateTimeFormat options generated at insertion time.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, editor date time insertion, horizontal rule editor, DateTimeFormatOption, Vue rich text editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

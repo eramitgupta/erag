@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'phone-number-vue contributing, open source Vue phone, report issue phone-number-vue, pull request phone Vue'
 ---
 
 # Contributing

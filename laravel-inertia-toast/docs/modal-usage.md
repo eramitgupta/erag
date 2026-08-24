@@ -1,13 +1,6 @@
 ---
 title: Modal Usage
-description: Learn how to use promise-based confirmation modals in Vue and React with Laravel Inertia Toast for delete flows, warning actions, and important user confirmations.
-keywords:
-  - vue confirmation modal
-  - react confirmation modal
-  - inertia modal usage
-  - promise based modal
-  - delete confirmation
-  - warning modal
+description: Build promise-based confirmation modals in Vue and React for delete flows, warning actions, and other important user decisions.
 head:
     - - meta
       - name: robots
@@ -20,10 +13,7 @@ head:
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta
       - name: description
-        content: 'Learn how to use promise-based confirmation modals in Vue and React with Laravel Inertia Toast for delete flows, warning actions, and important user confirmations.'
-    - - meta
-      - name: keywords
-        content: 'vue confirmation modal, react confirmation modal, inertia modal usage, promise based modal, delete confirmation, warning modal'
+        content: 'Build promise-based confirmation modals in Vue and React for delete flows, warning actions, and other important user decisions.'
 ---
 
 # Modal Usage

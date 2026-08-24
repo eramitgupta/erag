@@ -3,9 +3,6 @@ title: Code, Preview and Fullscreen
 description: 'Edit sanitized HTML source, preview and print editor content, and use native or fallback fullscreen editing modes in Vue 3.'
 head:
     - - meta
-      - name: keywords
-        content: '@erag/text-editor-vue, Vue 3 rich text editor, HTML source editor, Vue editor preview, print editor content, fullscreen editor'
-    - - meta
       - name: robots
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     - - meta

@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: keywords
-        content: 'laravel disposable email configuration, disposable email config laravel, laravel blacklist config, remote domain list config'
 ---
 
 # Configuration
