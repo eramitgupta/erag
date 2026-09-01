@@ -1,697 +1,565 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-<url>
-  <loc>https://erag.in/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/getting-started.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/introduction.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/validation-and-runtime.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/configuration.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/sync-and-blacklist.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/troubleshooting.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/advanced/cache.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/advanced/rfc-dns.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/advanced/schedule.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/domains/blacklist.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/domains/stats.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/domains/subdomains.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/domains/sync.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/domains/whitelist.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/help/setup-blade.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/help/sync-cache.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/help/validation.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/maintainers/contributing.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/runtime/blade.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/runtime/checks.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/runtime/result.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/upgrades/v5.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.50</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/validation/basic.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/validation/form-request.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/validation/manual-api.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-disposable-email/validation/rule-object.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/installation.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/vue.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/react.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/demo.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/laravel.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/modal-usage.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/styling.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/api-reference.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-inertia-toast/contributing.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/installation.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/introduction.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/config.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/laravel.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/exporting.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/vue.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/react.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/svelte.html</loc>
-  <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/api.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-lang-sync-inertia/contributing.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-
-<!-- Phone Number Vue Docs -->
-<url>
-  <loc>https://erag.in/phone-number-vue/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/introduction.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/installation.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/usage.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/examples.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/custom-data.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/api.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/types.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-vue/contributing.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-
-<!-- Phone Number React Docs -->
-<url>
-  <loc>https://erag.in/phone-number-react/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/introduction.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/installation.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/usage.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/examples.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/custom-data.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/api.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/types.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/phone-number-react/contributing.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-
-<!-- Laravel PWA Docs -->
-<url>
-  <loc>https://erag.in/laravel-pwa/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/introduction.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/installation.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/configuration.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/directives.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/facade.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/logo-upload.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/install-prompt.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/frameworks.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/laravel-pwa/contributing.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-
-<!-- Vue Toastification Docs -->
-<url>
-  <loc>https://erag.in/vue-toastification/</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/installation.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/setup.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/features.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/playground.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/toast-usage.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/modal-usage.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/styling.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/vue-toastification/api.html</loc>
-  <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-
-<!-- Text Editor Vue Docs -->
-<url>
-  <loc>https://erag.in/text-editor-vue/</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/introduction.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/installation.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/configuration.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/examples.html</loc>
-  <lastmod>2026-07-23T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/laravel-integration.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/usage.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/editing-experience.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/menubar-customization.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/text-formatting.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/lists-and-indentation.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/links-and-anchors.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/media-and-embeds.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/table-editor.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/mentions.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/merge-tags.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/templates.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/image-upload.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/special-characters.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/code-and-preview.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/find-and-replace.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/horizontal-rules-and-datetime.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/css-customization.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/api.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/types.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/security.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://erag.in/text-editor-vue/contributing.html</loc>
-  <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-
+  <url>
+       <loc>https://erag.in/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/introduction.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/getting-started.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/validation-and-runtime.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/advanced/rfc-dns.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/configuration.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/sync-and-blacklist.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/demo.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/laravel.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/vue.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/react.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/introduction.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/introduction.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/api.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/examples.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/installation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/introduction.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/api.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/examples.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/installation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/introduction.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/configuration.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/directives.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/playground.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/installation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/introduction.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/examples.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/api.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/validation/basic.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/validation/form-request.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/validation/rule-object.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/validation/manual-api.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/runtime/checks.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/runtime/result.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/runtime/blade.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/domains/sync.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/domains/blacklist.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/domains/whitelist.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/domains/subdomains.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/domains/stats.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/advanced/cache.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/advanced/schedule.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/maintainers/contributing.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/help/validation.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/help/sync-cache.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/help/setup-blade.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-disposable-email/upgrades/v5.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/installation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/modal-usage.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/styling.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/api-reference.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-toast/contributing.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/installation.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/config.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/laravel.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/exporting.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/vue.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/react.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/svelte.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/api.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-lang-sync-inertia/contributing.html</loc>
+       <lastmod>2026-09-01T18:58:25+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/usage.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/custom-data.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/types.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-vue/contributing.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/usage.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/custom-data.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/types.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/phone-number-react/contributing.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/installation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/install-prompt.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/facade.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/logo-upload.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/frameworks.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-pwa/contributing.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/features.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/setup.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/toast-usage.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/modal-usage.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/styling.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/vue-toastification/api.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/installation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/configuration.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/laravel-integration.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/usage.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/editing-experience.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/menubar-customization.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/text-formatting.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/lists-and-indentation.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/links-and-anchors.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/media-and-embeds.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/table-editor.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/mentions.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/merge-tags.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/templates.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/image-upload.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/special-characters.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/code-and-preview.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/find-and-replace.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/horizontal-rules-and-datetime.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/css-customization.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/types.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/security.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/text-editor-vue/contributing.html</loc>
+       <lastmod>2026-09-01T19:00:41+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
 </urlset>
