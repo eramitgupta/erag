@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: 'Get started with @erag/vue-toastification in your Vue 3 application.'
+title: "Installation & Plugin Setup"
+description: "Install @erag/vue-toastification via npm, yarn, or pnpm, import default stylesheet, and register the global toast plugin in Vue 3."
 head:
     - - meta
       - name: robots

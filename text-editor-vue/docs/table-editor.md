@@ -1,6 +1,6 @@
 ---
-title: Vue Table Editor
-description: 'Insert and edit HTML tables with a visual grid, table properties, row and column operations, cell actions, and keyboard navigation.'
+title: "Vue Table Editor"
+description: "Insert and edit HTML tables with a visual grid, table properties, row and column operations, cell actions, and keyboard navigation."
 head:
     - - meta
       - name: robots

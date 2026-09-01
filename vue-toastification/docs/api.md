@@ -1,6 +1,6 @@
 ---
-title: API Reference
-description: 'Detailed type contracts and function signatures for @erag/vue-toastification.'
+title: "useToast & useModal API Reference"
+description: "Complete API reference for @erag/vue-toastification — toast types, positions, dismiss callbacks, modal options, and TypeScript contracts."
 head:
     - - meta
       - name: robots

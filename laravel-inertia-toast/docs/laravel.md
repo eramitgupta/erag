@@ -1,6 +1,6 @@
 ---
-title: Laravel Usage
-description: Learn how to use Laravel Inertia Toast on the Laravel side with the toast helper, session flash payloads, redirect flows, and Inertia shared props.
+title: "Laravel Backend Usage"
+description: "Learn how to use Laravel Inertia Toast on the Laravel side with the toast helper, session flash payloads, redirect flows, and Inertia shared props."
 head:
     - - meta
       - name: robots

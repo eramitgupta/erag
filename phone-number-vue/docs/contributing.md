@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: How to contribute to @erag/phone-number-vue — reporting issues, submitting pull requests, and development setup.
+title: "Contributing Guide"
+description: "Development guide for @erag/phone-number-vue — clone repository, run Vitest test suites, build TypeScript bundles, and submit pull requests."
 head:
     - - meta
       - name: robots

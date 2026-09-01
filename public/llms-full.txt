@@ -1,0 +1,148 @@
+# Erag Open-Source Packages — Full Documentation Reference
+
+> Author: Er Amit Gupta
+> Website: https://erag.in/
+> GitHub: https://github.com/eramitgupta
+
+---
+
+## 1. Laravel Disposable Email
+- **URL**: https://erag.in/laravel-disposable-email/
+- **Repository**: https://github.com/eramitgupta/laravel-disposable-email
+- **Description**: Block disposable, fake, and temporary burner email addresses in Laravel. Includes built-in validation rules, automatic remote blacklist syncing, DNS MX checks, and high-performance cache drivers.
+- **Install**:
+  ```bash
+  composer require erag/laravel-disposable-email
+  php artisan disposable:sync
+  ```
+- **Usage**:
+  ```php
+  $request->validate([
+      'email' => ['required', 'email', 'disposable'],
+  ]);
+  ```
+
+---
+
+## 2. Laravel Inertia Toast
+- **URL**: https://erag.in/laravel-inertia-toast/
+- **Repository**: https://github.com/eramitgupta/laravel-inertia-toast
+- **Description**: Send flash toast alerts and confirmation dialog modals directly from Laravel controllers to Inertia.js (Vue 3 and React) with zero boilerplate.
+- **Install**:
+  ```bash
+  composer require erag/laravel-inertia-toast
+  npm install @erag/laravel-inertia-toast
+  ```
+- **Laravel Controller Usage**:
+  ```php
+  return redirect()->back()->withToast('success', 'Profile updated successfully!');
+  ```
+
+---
+
+## 3. Laravel Lang Sync Inertia
+- **URL**: https://erag.in/laravel-lang-sync-inertia/
+- **Repository**: https://github.com/eramitgupta/laravel-lang-sync-inertia
+- **Description**: Automatically export and sync Laravel PHP language translation files to Inertia.js frontends with Vue 3, React, and Svelte i18n helpers.
+- **Install**:
+  ```bash
+  composer require erag/laravel-lang-sync-inertia
+  php artisan lang:sync
+  ```
+- **Frontend Usage (Vue / React / Svelte)**:
+  ```js
+  import { __, trans } from 'laravel-lang-sync-inertia';
+  __('messages.welcome', { name: 'User' });
+  ```
+
+---
+
+## 4. Phone Number Vue
+- **URL**: https://erag.in/phone-number-vue/
+- **Repository**: https://github.com/eramitgupta/phone-number-vue
+- **Description**: Headless Vue 3 composable (`usePhoneNumber`) for country-aware phone input, dial codes, auto formatting, and validation without external heavy masking libraries.
+- **Install**:
+  ```bash
+  npm install @erag/phone-number-vue
+  ```
+- **Usage**:
+  ```vue
+  <script setup>
+  import { usePhoneNumber } from '@erag/phone-number-vue';
+  const { phone, country, formattedPhone, isValid, handleInput } = usePhoneNumber({ defaultCountry: 'IN' });
+  </script>
+  ```
+
+---
+
+## 5. Phone Number React
+- **URL**: https://erag.in/phone-number-react/
+- **Repository**: https://github.com/eramitgupta/phone-number-react
+- **Description**: Headless React hook (`usePhoneNumber`) for country-aware phone input, dial codes, auto formatting, and validation in React 18 and 19.
+- **Install**:
+  ```bash
+  npm install @erag/phone-number-react
+  ```
+- **Usage**:
+  ```jsx
+  import { usePhoneNumber } from '@erag/phone-number-react';
+  const { phone, country, formattedPhone, isValid, handleInput } = usePhoneNumber({ defaultCountry: 'US' });
+  ```
+
+---
+
+## 6. Laravel PWA
+- **URL**: https://erag.in/laravel-pwa/
+- **Repository**: https://github.com/eramitgupta/laravel-pwa
+- **Description**: Transform Laravel applications into Progressive Web Apps (PWA) with automatic web manifest generation, service worker registration, custom install prompts, and dynamic logo uploads.
+- **Install**:
+  ```bash
+  composer require erag/laravel-pwa
+  php artisan pwa:install
+  ```
+- **Blade Directive**:
+  ```blade
+  @pwa
+  ```
+
+---
+
+## 7. Vue Toastification
+- **URL**: https://erag.in/vue-toastification/
+- **Repository**: https://github.com/eramitgupta/vue-toastification
+- **Description**: Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3 with smooth Apple-style animations and Composition API support.
+- **Install**:
+  ```bash
+  npm install @erag/vue-toastification
+  ```
+- **Usage**:
+  ```vue
+  <script setup>
+  import { useToast } from '@erag/vue-toastification';
+  const toast = useToast();
+  toast.success('Operation completed successfully!');
+  </script>
+  ```
+
+---
+
+## 8. Text Editor Vue
+- **URL**: https://erag.in/text-editor-vue/
+- **Repository**: https://github.com/eramitgupta/text-editor-vue
+- **Description**: A modern, dependency-free Vue 3 rich text editor (WYSIWYG) built with native browser APIs. Features mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable menubars.
+- **Install**:
+  ```bash
+  npm install @erag/text-editor-vue
+  ```
+- **Usage**:
+  ```vue
+  <script setup>
+  import { ref } from 'vue';
+  import { Editor } from '@erag/text-editor-vue';
+  import '@erag/text-editor-vue/dist/style.css';
+  const content = ref('<p>Hello World</p>');
+  </script>
+  <template>
+    <Editor v-model="content" />
+  </template>
+  ```

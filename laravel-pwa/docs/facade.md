@@ -1,6 +1,6 @@
 ---
-title: Facade API
-description: Update manifest files dynamically at runtime in controllers or jobs using the PWA Facade.
+title: "PWA Facade API Reference"
+description: "Update webmanifest properties dynamically at runtime inside Laravel controllers, jobs, and middleware using the PWA Facade."
 head:
     - - meta
       - name: robots

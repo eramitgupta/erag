@@ -1,6 +1,6 @@
 ---
-title: API Reference
-description: Full API reference for usePhoneNumber React hook — return values, parameters, and handleInput behavior.
+title: "usePhoneNumber API Reference"
+description: "Complete API reference for the usePhoneNumber React hook — parameters, returned states, formatted strings, and handleInput handlers."
 head:
     - - meta
       - name: robots

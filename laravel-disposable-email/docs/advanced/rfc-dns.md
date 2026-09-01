@@ -1,6 +1,6 @@
 ---
-title: RFC / DNS Validation
-description: Add RFC, strict, DNS, spoof, and filter checks to disposable email validation.
+title: "RFC & DNS Email Checks"
+description: "Combine disposable email validation with strict RFC compliance, active DNS MX record verification, and domain spoofing prevention in Laravel."
 head:
     - - meta
       - name: robots

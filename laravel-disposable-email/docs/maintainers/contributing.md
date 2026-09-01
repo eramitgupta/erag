@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: Contribute code, tests, domain updates, and documentation.
+title: "Maintainer Contribution Guide"
+description: "Comprehensive development and testing guide for maintainers contributing code, domain feeds, and documentation to Laravel Disposable Email."
 head:
     - - meta
       - name: robots

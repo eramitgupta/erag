@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: What @erag/phone-number-vue does, when to use it, and how it fits into Vue 3 projects.
+title: "Introduction & Features"
+description: "Learn how @erag/phone-number-vue provides headless phone input logic, automatic country detection, formatting masks, and input validation."
 head:
     - - meta
       - name: robots

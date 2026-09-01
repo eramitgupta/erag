@@ -1,6 +1,6 @@
 ---
-title: Sync and Domain Lists
-description: Find focused remote sync and domain-list documentation.
+title: "Domain Sync & Blacklists"
+description: "Master disposable email domain management with remote feed syncing, custom blacklist files, whitelisting, and subdomain blocking."
 head:
     - - meta
       - name: robots

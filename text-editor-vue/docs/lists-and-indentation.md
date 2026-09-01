@@ -1,6 +1,6 @@
 ---
-title: Lists, Checklists, and Indentation
-description: 'Create styled bulleted and numbered lists, interactive checklists, and nested content with indent and outdent controls.'
+title: "Lists, Checklists, and Indentation"
+description: "Create styled bulleted and numbered lists, interactive checklists, and nested content with indent and outdent controls."
 head:
     - - meta
       - name: robots

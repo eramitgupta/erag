@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Install @erag/phone-number-react using npm, yarn, or pnpm. Supports React 18 and React 19.
+title: "Installation & Setup"
+description: "Install @erag/phone-number-react with npm, yarn, or pnpm. Fully compatible with React 18, React 19, Next.js, Remix, and Vite applications."
 head:
     - - meta
       - name: robots

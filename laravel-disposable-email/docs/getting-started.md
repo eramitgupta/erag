@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Install Laravel Disposable Email, register the service provider when needed, and publish the package configuration.
+title: "Installation & Setup"
+description: "Install Laravel Disposable Email with Composer, configure service providers, publish package config, and run initial domain list sync."
 head:
     - - meta
       - name: robots

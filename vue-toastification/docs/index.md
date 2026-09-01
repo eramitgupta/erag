@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Vue Toastification Docs
+title: "Vue Toastification Docs"
 titleTemplate: false
-description: Lightweight, high-performance Toast Notifications and Promise-based Confirmation Modals for Vue 3 with Composition API.
+description: "Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3 with smooth animations and Composition API."
 hero:
   name: '@erag/vue-toastification'
   text: 'Lightweight Toast & Modal Library for Vue 3'

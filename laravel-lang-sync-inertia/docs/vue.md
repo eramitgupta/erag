@@ -1,6 +1,6 @@
 ---
-title: Vue
-description: Use Laravel Lang Sync Inertia translations in Inertia Vue 3 pages and components.
+title: "Vue 3 i18n Translation Setup"
+description: "Use Laravel translations in Vue 3 Inertia apps with global template helpers, script setup composables, and reactive locale switching."
 head:
     - - meta
       - name: robots

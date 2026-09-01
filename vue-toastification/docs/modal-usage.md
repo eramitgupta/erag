@@ -1,6 +1,6 @@
 ---
-title: Confirmation Modals
-description: 'Trigger interactive, promise-based confirmation dialog overlays using the useModal (or useConfirmation) composable hooks.'
+title: "Promise Confirmation Modals"
+description: "Trigger interactive, async confirmation dialog modals in Vue 3 using the useModal composable for destructive actions and user decisions."
 head:
     - - meta
       - name: robots

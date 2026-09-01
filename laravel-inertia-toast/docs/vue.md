@@ -1,6 +1,6 @@
 ---
-title: Vue Usage
-description: Use Laravel Inertia Toast with Vue 3, including plugin registration, toast composables, confirmation modals, and the Inertia flash bridge.
+title: "Vue 3 Composable & Plugin"
+description: "Use Laravel Inertia Toast with Vue 3, including plugin registration, toast composables, confirmation modals, and the Inertia flash bridge."
 head:
     - - meta
       - name: robots

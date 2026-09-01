@@ -1,6 +1,6 @@
 ---
-title: Remote Sync
-description: Sync disposable domains from configured remote sources.
+title: "Remote Blacklist Sync"
+description: "Synchronize disposable domain blacklists from trusted remote GitHub repositories and URLs using Laravel artisan disposable:sync commands."
 head:
     - - meta
       - name: robots

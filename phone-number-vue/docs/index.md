@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Phone Number Vue — Headless Vue Composable
+title: "Phone Number Vue Composable"
 titleTemplate: false
-description: Headless Vue composable for country-aware phone input, dial codes, digit normalization, mask patterns, and validation without a masking dependency.
+description: "Headless Vue 3 composable for country-aware phone input, dial codes, digit normalization, mask patterns, and validation without external libraries."
 hero:
   name: 'Phone Number Vue'
   text: 'Country-aware phone input for Vue 3'

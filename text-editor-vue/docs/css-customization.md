@@ -1,6 +1,6 @@
 ---
-title: CSS Customization
-description: 'Customize the editor with package-scoped erag- classes and --erag- CSS variables for light and dark surfaces, mentions, merge tags, images, dialogs, and states.'
+title: "CSS Customization"
+description: "Customize the editor with package-scoped erag- classes and --erag- CSS variables for light and dark surfaces, mentions, merge tags, images, dialogs, and states."
 head:
     - - meta
       - name: robots

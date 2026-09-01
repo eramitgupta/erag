@@ -1,6 +1,6 @@
 ---
-title: Schedule Sync
-description: Schedule automatic disposable domain syncing.
+title: "Schedule Blacklist Syncing"
+description: "Automate daily disposable email domain list syncing using Laravel Task Scheduler and artisan commands to keep spam defenses always updated."
 head:
     - - meta
       - name: robots

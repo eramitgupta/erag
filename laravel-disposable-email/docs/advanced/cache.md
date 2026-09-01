@@ -1,6 +1,6 @@
 ---
-title: Caching
-description: Cache compiled disposable domain lists for repeated lookups.
+title: "Cache Configuration"
+description: "Configure high-performance cache drivers to cache compiled disposable domain blacklists and speed up repeated validation lookups in Laravel."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: Learn what Laravel Disposable Email does, when to use it, and how it fits into real Laravel applications.
+title: "Package Overview"
+description: "Learn how Laravel Disposable Email stops fake account registrations, blocks burner domains, and protects your email deliverability rates."
 head:
     - - meta
       - name: robots

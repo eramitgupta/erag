@@ -1,6 +1,6 @@
 ---
-title: Config
-description: Configure lang_path and output_lang for Laravel Lang Sync Inertia.
+title: "Configuration Guide"
+description: "Configure lang_path, output_lang directory, ignored translation groups, and locale export settings for Laravel Lang Sync Inertia."
 head:
     - - meta
       - name: robots

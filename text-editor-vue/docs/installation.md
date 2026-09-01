@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: 'Install @erag/text-editor-vue, configure its Vue peer dependency, import the editor stylesheet, and review its Node.js build requirements.'
+title: "Installation & Setup Guide"
+description: "Install @erag/text-editor-vue, configure its Vue peer dependency, import the editor stylesheet, and review its Node.js build requirements."
 head:
     - - meta
       - name: robots

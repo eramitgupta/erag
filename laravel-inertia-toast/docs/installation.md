@@ -1,6 +1,6 @@
 ---
-title: Installation Guide
-description: Install Laravel Inertia Toast in a Laravel and Inertia app with Vue 3 or React, including backend package setup and frontend package registration.
+title: "Installation & Setup Guide"
+description: "Install Laravel Inertia Toast in a Laravel and Inertia app with Vue 3 or React, including backend package setup and frontend package registration."
 head:
     - - meta
       - name: robots

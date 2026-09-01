@@ -1,6 +1,6 @@
 ---
-title: Subdomain Blocking
-description: Control whether blocked parent domains also block subdomains.
+title: "Subdomain Blocking"
+description: "Configure recursive subdomain matching in Laravel Disposable Email to automatically block disposable subdomains from flagged parent domains."
 head:
     - - meta
       - name: robots

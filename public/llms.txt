@@ -1,0 +1,18 @@
+# Erag Documentation
+
+> Official documentation for Erag open-source packages for Laravel, Vue 3, and React. Built and maintained by Er Amit Gupta.
+
+## Packages
+
+- [Laravel Disposable Email](https://erag.in/laravel-disposable-email/): High-performance disposable and temporary email address validator for Laravel with DNS/MX verification, auto-syncing blacklists, and caching.
+- [Laravel Inertia Toast](https://erag.in/laravel-inertia-toast/): Lightweight toast notifications and promise-based confirmation dialog modals for Laravel and Inertia.js (Vue 3 and React).
+- [Laravel Lang Sync Inertia](https://erag.in/laravel-lang-sync-inertia/): Export and sync Laravel language translation files to Inertia.js applications with Vue, React, and Svelte i18n helpers.
+- [Phone Number Vue](https://erag.in/phone-number-vue/): Headless Vue 3 composable (usePhoneNumber) for country-aware phone input, dial codes, auto formatting, and validation.
+- [Phone Number React](https://erag.in/phone-number-react/): Headless React hook (usePhoneNumber) for country-aware phone input, dial codes, auto formatting, and validation in React 18 & 19.
+- [Laravel PWA](https://erag.in/laravel-pwa/): Turn Laravel apps into Progressive Web Apps (PWA) with manifest generation, service workers, custom install prompts, and logo uploads.
+- [Vue Toastification](https://erag.in/vue-toastification/): Smooth Apple-style toast notifications and promise-based confirmation modals for Vue 3 using the Composition API.
+- [Text Editor Vue](https://erag.in/text-editor-vue/): Dependency-free Vue 3 rich text editor (WYSIWYG) with mentions (@), merge tags ({{), templates, image uploads, tables, and HTML controls.
+
+## Details
+
+For full API references, installation guides, and code examples, see [Full LLM Documentation](https://erag.in/llms-full.txt).

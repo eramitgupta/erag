@@ -1,6 +1,6 @@
 ---
-title: Blade Conditional
-description: Branch Blade output based on disposable email status.
+title: "Blade Directives & Helpers"
+description: "Use conditional Blade directives like @disposable and @notdisposable to customize UI rendering based on email domain authenticity."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: How to contribute to @erag/phone-number-react — reporting issues, submitting pull requests, and development setup.
+title: "Contributing Guide"
+description: "Development and testing guide for @erag/phone-number-react — setup environment, run Vitest tests, compile TypeScript, and open pull requests."
 head:
     - - meta
       - name: robots

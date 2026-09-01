@@ -1,6 +1,6 @@
 ---
-title: Examples
-description: Real-world React examples using usePhoneNumber — form submission, Inertia.js, custom data, and Tailwind CSS UI.
+title: "React Form Input Examples"
+description: "Explore interactive React phone input component examples using Tailwind CSS, React Hook Form, Inertia.js, and country select dropdowns."
 head:
     - - meta
       - name: robots

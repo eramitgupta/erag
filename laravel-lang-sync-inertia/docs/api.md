@@ -1,6 +1,6 @@
 ---
-title: API Helpers
-description: Reference for syncLangFiles(), __(), and trans() helpers in Laravel Lang Sync Inertia.
+title: "API Reference & Helpers"
+description: "Complete API reference for syncLangFiles(), __(), and trans() translation helpers in Laravel Lang Sync Inertia for Vue, React, and Svelte."
 head:
     - - meta
       - name: robots

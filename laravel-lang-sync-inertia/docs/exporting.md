@@ -1,6 +1,6 @@
 ---
-title: Export to JSON
-description: Generate frontend-ready JSON translation files from Laravel PHP lang files.
+title: "Export PHP Lang to JSON"
+description: "Generate frontend-ready JSON translation files from Laravel PHP language arrays with automated artisan sync commands and file watchers."
 head:
     - - meta
       - name: robots

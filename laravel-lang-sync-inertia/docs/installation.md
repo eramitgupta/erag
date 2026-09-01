@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Install Laravel Lang Sync Inertia for Laravel backend and Vue, React, or Svelte frontend apps.
+title: "Installation & Setup"
+description: "Install Laravel Lang Sync Inertia via Composer and npm to sync backend language files with Inertia.js Vue, React, and Svelte frontends."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Deprecated in 5.0.0
-description: Compatibility link for the version 5 migration guide.
+title: "Version 5.0 Migration"
+description: "Upgrade guide for migrating to Laravel Disposable Email v5.x with updated namespaces, facade changes, and enhanced performance optimizations."
 head:
     - - meta
       - name: robots

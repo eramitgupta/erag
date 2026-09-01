@@ -1,6 +1,6 @@
 ---
-title: Basic Usage
-description: How to use usePhoneNumber in a Vue 3 component with a country select and phone input.
+title: "Basic & Reactive Usage"
+description: "Learn how to bind usePhoneNumber with custom country select dropdowns, input elements, validation indicators, and v-model forms in Vue 3."
 head:
     - - meta
       - name: robots

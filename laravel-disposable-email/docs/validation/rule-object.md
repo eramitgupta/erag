@@ -1,6 +1,6 @@
 ---
-title: Rule Object
-description: Use the disposable email class-based validation rule.
+title: "Class Validation Rule"
+description: "Use the new Disposable validation rule object in Laravel validator arrays for type safety, autocomplete, and strict domain checking."
 head:
     - - meta
       - name: robots

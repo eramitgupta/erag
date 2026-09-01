@@ -1,6 +1,6 @@
 ---
-title: Find and Replace
-description: 'Find and replace editor text with match-case, whole-word, previous, next, replace-current, and replace-all controls.'
+title: "Find and Replace"
+description: "Find and replace editor text with match-case, whole-word, previous, next, replace-current, and replace-all controls."
 head:
     - - meta
       - name: robots

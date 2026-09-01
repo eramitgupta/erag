@@ -1,6 +1,6 @@
 ---
-title: TypeScript Types
-description: TypeScript type definitions for @erag/phone-number-react — PhoneCountry, PhoneDialCode, PhoneNumberOptions, and PhoneInputValue.
+title: "TypeScript Type Definitions"
+description: "Explore all public TypeScript definitions exported by @erag/phone-number-react for custom country data, hook options, and input handlers."
 head:
     - - meta
       - name: robots

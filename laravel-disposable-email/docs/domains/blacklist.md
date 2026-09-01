@@ -1,6 +1,6 @@
 ---
-title: Custom Blacklist
-description: Add application-specific disposable domains from text files.
+title: "Custom Domain Blacklist"
+description: "Block custom spam domains, wildcard patterns, and temporary burner email services in Laravel using local blacklist configuration files."
 head:
     - - meta
       - name: robots

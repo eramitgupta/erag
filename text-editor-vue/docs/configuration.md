@@ -1,6 +1,6 @@
 ---
-title: Editor Configuration
-description: 'Explore every EditorInit option for layout, toolbar, menubar, formatting, plugins, uploads, security, mentions, merge tags, and templates.'
+title: "Editor Configuration"
+description: "Explore every EditorInit option for layout, toolbar, menubar, formatting, plugins, uploads, security, mentions, merge tags, and templates."
 head:
     - - meta
       - name: robots

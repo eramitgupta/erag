@@ -1,6 +1,6 @@
 ---
-title: Menubar Customization
-description: 'Configure, reorder, hide, and reactively update File, Edit, View, Insert, Format, Tools, Table, Help, merge-tag, and template menus.'
+title: "Menubar Customization"
+description: "Configure, reorder, hide, and reactively update File, Edit, View, Insert, Format, Tools, Table, Help, merge-tag, and template menus."
 head:
     - - meta
       - name: robots

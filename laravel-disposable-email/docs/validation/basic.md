@@ -1,6 +1,6 @@
 ---
-title: Basic Validation
-description: Reject disposable email addresses with Laravel validation.
+title: "Basic Form Validation"
+description: "Add disposable email validation rules to Laravel forms, controllers, and Livewire components with customizable error messages."
 head:
     - - meta
       - name: robots

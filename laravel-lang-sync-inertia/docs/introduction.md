@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: Introduction to Laravel Lang Sync Inertia for sharing Laravel translations with Inertia.js Vue, React, and Svelte apps.
+title: "Introduction & Concepts"
+description: "Learn how Laravel Lang Sync Inertia bridges PHP localization files to frontend Inertia components without duplicated translation keys."
 head:
     - - meta
       - name: robots

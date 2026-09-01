@@ -1,6 +1,6 @@
 ---
-title: Image Upload, Resize and Removal
-description: 'Upload, paste, insert, resize, align, and remove editor images with native Fetch, custom handlers, progress, validation, and server callbacks.'
+title: "Image Upload, Resize and Removal"
+description: "Upload, paste, insert, resize, align, and remove editor images with native Fetch, custom handlers, progress, validation, and server callbacks."
 head:
     - - meta
       - name: robots

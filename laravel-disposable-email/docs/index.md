@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Laravel Disposable Email Docs
+title: "Laravel Disposable Email Docs"
 titleTemplate: false
-description: Official Laravel Disposable Email documentation for domain blocking, RFC and DNS validation, configuration, syncing, caching, and troubleshooting.
+description: "Official Laravel Disposable Email documentation for domain blocking, RFC and DNS validation, configuration, syncing, caching, and troubleshooting."
 head:
     - - meta
       - name: robots

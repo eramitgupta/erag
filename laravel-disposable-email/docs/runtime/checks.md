@@ -1,6 +1,6 @@
 ---
-title: Runtime Checks
-description: Check email addresses and domains at runtime.
+title: "Runtime Email Checks"
+description: "Perform real-time disposable email checks in Laravel controllers, jobs, and API endpoints using the Disposable facade or helper methods."
 head:
     - - meta
       - name: robots

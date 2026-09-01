@@ -1,6 +1,6 @@
 ---
-title: Examples
-description: Real-world Vue 3 examples using usePhoneNumber — form submission, Inertia.js, reactive ref, and Tailwind CSS UI.
+title: "Vue 3 Form Input Examples"
+description: "Explore practical Vue 3 phone input examples with Tailwind CSS, Inertia.js forms, reactive validation messages, and country dropdown flags."
 head:
     - - meta
       - name: robots

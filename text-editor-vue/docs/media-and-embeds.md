@@ -1,6 +1,6 @@
 ---
-title: Media and Secure Embeds
-description: 'Insert HTML5 video, audio, poster images, and sanitized HTTPS iframe embeds using the dependency-free Vue rich text editor.'
+title: "Media and Secure Embeds"
+description: "Insert HTML5 video, audio, poster images, and sanitized HTTPS iframe embeds using the dependency-free Vue rich text editor."
 head:
     - - meta
       - name: robots

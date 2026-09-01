@@ -1,6 +1,6 @@
 ---
-title: Configuration
-description: Configure manifest names, colors, display rules, and logo paths using the config/pwa.php file.
+title: "Configuration Settings"
+description: "Configure web application manifest name, theme colors, display modes, orientation, scope, and icon asset paths in config/pwa.php."
 head:
     - - meta
       - name: robots

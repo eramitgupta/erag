@@ -1,6 +1,6 @@
 ---
-title: Application Setup
-description: 'Register the @erag/vue-toastification plugin in your application entry file.'
+title: "Application Setup & Config"
+description: "Configure default toast durations, container positions, transition animations, and global theme settings in your Vue 3 main.ts entry file."
 head:
     - - meta
       - name: robots

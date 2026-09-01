@@ -1,6 +1,6 @@
 ---
-title: Custom Data
-description: Override the bundled country and dial-code data in @erag/phone-number-vue with your own static object or a reactive Vue ref.
+title: "Custom Countries & Dial Codes"
+description: "Override bundled country dial codes and formatting masks in @erag/phone-number-vue with your own custom lists or reactive API data sources."
 head:
     - - meta
       - name: robots

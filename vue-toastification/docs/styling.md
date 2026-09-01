@@ -1,6 +1,6 @@
 ---
-title: CSS & Styling
-description: 'Learn how @erag/vue-toastification scopes styles and how to customize component layouts.'
+title: "CSS Variables & Styling Guide"
+description: "Customize toast notification badges, colors, fonts, border-radius, and glassmorphism styling using scoped CSS classes and CSS variables."
 head:
     - - meta
       - name: robots

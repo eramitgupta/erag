@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: What @erag/phone-number-react does, when to use it, and how it fits into React projects.
+title: "Introduction & Features"
+description: "Discover @erag/phone-number-react — a zero-dependency headless React hook for international phone input formatting and country validation."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Custom Data
-description: Override the bundled country and dial-code data in @erag/phone-number-react with your own static object or fetched API data.
+title: "Custom Countries & Dial Codes"
+description: "Customize country lists, calling codes, and formatting masks in @erag/phone-number-react using static JSON datasets or remote API fetches."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Caching
-description: Compatibility link for the focused caching guide.
+title: "Caching Guide"
+description: "Learn how to configure Redis, Memcached, or file cache stores to optimize disposable email lookup performance in high-traffic Laravel apps."
 head:
     - - meta
       - name: robots

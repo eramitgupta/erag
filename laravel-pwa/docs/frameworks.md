@@ -1,6 +1,6 @@
 ---
-title: Framework Integrations
-description: Integration details for Laravel PWA with Livewire, Inertia.js, Vue 3, and React.
+title: "Livewire & Inertia Integrations"
+description: "Integrate Laravel PWA with Livewire, Inertia.js (Vue 3 & React), and traditional Blade views for smooth offline support and install prompts."
 head:
     - - meta
       - name: robots

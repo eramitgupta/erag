@@ -1,6 +1,6 @@
 ---
-title: Setup and Blade Help
-description: Troubleshoot package registration and Blade checks.
+title: "Setup & Blade Help"
+description: "Troubleshoot package installation, service provider discovery, and @disposable Blade conditional directives in your Laravel templates."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Links and Anchors
-description: 'Insert, edit, validate, and remove safe links, configure new-window behavior, and add generated bookmark anchors in the Vue editor.'
+title: "Links and Anchors"
+description: "Insert, edit, validate, and remove safe links, configure new-window behavior, and add generated bookmark anchors in the Vue editor."
 head:
     - - meta
       - name: robots

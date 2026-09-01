@@ -1,6 +1,6 @@
 ---
-title: Toast Usage
-description: 'Trigger non-blocking toast notifications inside your Vue 3 components using the useToast hook.'
+title: "useToast Composable Usage"
+description: "Trigger success, error, warning, and info toasts inside Vue 3 script setup components with the lightweight useToast Composition API hook."
 head:
     - - meta
       - name: robots

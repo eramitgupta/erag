@@ -1,6 +1,6 @@
 ---
-title: API Reference
-description: Full API reference for usePhoneNumber — return values, parameters, and handleInput behavior.
+title: "usePhoneNumber API Reference"
+description: "Complete API reference for the usePhoneNumber Vue 3 composable — parameter options, reactive refs, formatted values, and event handlers."
 head:
     - - meta
       - name: robots

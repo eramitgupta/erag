@@ -1,6 +1,6 @@
 ---
-title: Modal Usage
-description: Build promise-based confirmation modals in Vue and React for delete flows, warning actions, and other important user decisions.
+title: "Confirmation Modal Dialogs"
+description: "Build promise-based confirmation modals in Vue and React for delete flows, warning actions, and other important user decisions."
 head:
     - - meta
       - name: robots

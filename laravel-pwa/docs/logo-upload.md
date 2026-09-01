@@ -1,6 +1,6 @@
 ---
-title: Dynamic Logo Uploads
-description: Handle dynamic PWA logo uploads, validation requirements, and resizing steps inside controllers.
+title: "Dynamic Logo & Icon Uploads"
+description: "Handle dynamic PWA icon uploads in Laravel controllers, auto-generate standard icon sizes, and update manifest icons programmatically."
 head:
     - - meta
       - name: robots

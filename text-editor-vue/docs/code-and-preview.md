@@ -1,6 +1,6 @@
 ---
-title: Code, Preview and Fullscreen
-description: 'Edit sanitized HTML source, preview and print editor content, and use native or fallback fullscreen editing modes in Vue 3.'
+title: "Code, Preview and Fullscreen"
+description: "Edit sanitized HTML source, preview and print editor content, and use native or fallback fullscreen editing modes in Vue 3."
 head:
     - - meta
       - name: robots

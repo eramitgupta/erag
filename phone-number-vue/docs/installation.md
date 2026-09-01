@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Install @erag/phone-number-vue using npm, yarn, or pnpm. No extra dependencies required.
+title: "Installation & Setup"
+description: "Install @erag/phone-number-vue using npm, yarn, or pnpm. Lightweight, zero dependencies, and built specifically for Vue 3 Composition API."
 head:
     - - meta
       - name: robots

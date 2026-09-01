@@ -1,6 +1,6 @@
 ---
-title: Demo
-description: Watch the Laravel Inertia Toast demo to see server-side toasts, client-side notifications, multiple positions, and confirmation modal flows in action.
+title: "Live Demos & Examples"
+description: "Watch the Laravel Inertia Toast demo to see server-side toasts, client-side notifications, multiple positions, and confirmation modal flows in action."
 head:
     - - meta
       - name: robots

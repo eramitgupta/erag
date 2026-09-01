@@ -1,6 +1,6 @@
 ---
-title: Sync and Cache Help
-description: Troubleshoot remote source, blacklist, and cache issues.
+title: "Sync & Cache Troubleshooting"
+description: "Resolve common issues with remote blacklist downloads, scheduled sync timeouts, file permissions, and cache invalidation in Laravel."
 head:
     - - meta
       - name: robots

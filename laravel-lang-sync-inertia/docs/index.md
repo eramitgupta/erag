@@ -1,7 +1,7 @@
 ---
-title: Laravel Lang Sync Inertia
+title: "Laravel Lang Sync Inertia"
 titleTemplate: false
-description: Use Laravel translation files directly in Inertia Vue and React apps with replacements, pluralization, and locale-aware helpers.
+description: "Use Laravel translation files directly in Inertia Vue, React, and Svelte apps with replacements, pluralization, and locale-aware helpers."
 layout: home
 
 hero:

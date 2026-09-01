@@ -1,6 +1,6 @@
 ---
-title: Detailed Result
-description: Inspect matched domains, sources, and whitelist status.
+title: "Inspection & Result Object"
+description: "Inspect detailed verification result objects containing matched domain names, source list metadata, DNS status, and whitelist flags."
 head:
     - - meta
       - name: robots

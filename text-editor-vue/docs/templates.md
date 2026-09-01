@@ -1,6 +1,6 @@
 ---
-title: Vue Editor Templates
-description: 'Provide searchable, grouped HTML templates through EditorInit, preview sanitized content, insert at the caret, and handle typed template events.'
+title: "Vue Editor Templates"
+description: "Provide searchable, grouped HTML templates through EditorInit, preview sanitized content, insert at the caret, and handle typed template events."
 head:
     - - meta
       - name: robots

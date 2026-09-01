@@ -1,6 +1,6 @@
 ---
-title: Package Features
-description: 'Detailed walkthrough of key features included in @erag/vue-toastification.'
+title: "Core Features & Animations"
+description: "Explore features of @erag/vue-toastification: Apple-style spring animations, stacked notifications, promise modals, and light/dark themes."
 head:
     - - meta
       - name: robots

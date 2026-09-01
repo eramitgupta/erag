@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: How to contribute to erag/laravel-pwa — setup locally, coding standards, and PR workflows.
+title: "Contributing Guide"
+description: "Learn how to contribute to erag/laravel-pwa — setup local Laravel workbench, run test suites, adhere to PSR-12, and submit pull requests."
 head:
     - - meta
       - name: robots

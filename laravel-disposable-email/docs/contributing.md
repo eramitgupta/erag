@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: Compatibility link for package contribution guidance.
+title: "Contributing Guide"
+description: "Guidelines for contributing to Laravel Disposable Email, submitting pull requests, running Pest tests, and proposing new domain blacklist sources."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: React Usage
-description: Use Laravel Inertia Toast with React, including provider setup, toast hooks, confirmation modals, and the Inertia flash bridge.
+title: "React Hook & Provider Setup"
+description: "Use Laravel Inertia Toast with React, including provider setup, toast hooks, confirmation modals, and the Inertia flash bridge."
 head:
     - - meta
       - name: robots

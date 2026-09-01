@@ -1,6 +1,6 @@
 ---
-title: Manual and API Validation
-description: Validate disposable email addresses in validators and API endpoints.
+title: "Manual & API Validation"
+description: "Validate disposable email addresses programmatically in REST API controllers, manual Validator instances, and middleware pipelines."
 head:
     - - meta
       - name: robots

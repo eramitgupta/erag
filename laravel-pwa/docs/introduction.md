@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: Learn how Erag Laravel PWA integrates progressive web app capabilities, manifest files, and service workers into your Laravel projects.
+title: "Introduction & Capabilities"
+description: "Learn how erag/laravel-pwa transforms your Laravel application into a fast, installable, and offline-capable Progressive Web App."
 head:
     - - meta
       - name: robots

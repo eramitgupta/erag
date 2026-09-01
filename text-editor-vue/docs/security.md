@@ -1,6 +1,6 @@
 ---
-title: Security and Sanitization
-description: 'Understand browser-side HTML sanitization, URL and iframe rules, mention and merge-tag normalization, CSP, and required server-side defenses.'
+title: "Security and Sanitization"
+description: "Understand browser-side HTML sanitization, URL and iframe rules, mention and merge-tag normalization, CSP, and required server-side defenses."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: Package Stats
-description: Inspect loaded domain sources and package settings.
+title: "Domain List Statistics"
+description: "Inspect loaded disposable email domains, active remote blacklist sources, cache status, and package metrics using built-in Laravel tools."
 head:
     - - meta
       - name: robots

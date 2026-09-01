@@ -1,6 +1,6 @@
 ---
-title: Vue Editor Usage
-description: 'Use the Editor component with Vue 3 v-model, reactive configuration, custom toolbars, disabled and readonly modes, and typed instance methods.'
+title: "Vue Editor Usage"
+description: "Use the Editor component with Vue 3 v-model, reactive configuration, custom toolbars, disabled and readonly modes, and typed instance methods."
 head:
     - - meta
       - name: robots

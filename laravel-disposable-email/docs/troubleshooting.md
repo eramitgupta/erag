@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting
-description: Find focused package troubleshooting guides.
+title: "Troubleshooting & FAQ"
+description: "Find quick solutions for validation errors, DNS lookup failures, cache synchronization issues, and package setup in Laravel."
 head:
     - - meta
       - name: robots

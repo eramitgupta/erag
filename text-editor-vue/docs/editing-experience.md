@@ -1,6 +1,6 @@
 ---
-title: Editor Workflow and Responsive UI
-description: 'Understand history, clipboard handling, keyboard shortcuts, responsive toolbar overflow, status information, printing, and editor resizing.'
+title: "Editor Workflow and Responsive UI"
+description: "Understand history, clipboard handling, keyboard shortcuts, responsive toolbar overflow, status information, printing, and editor resizing."
 head:
     - - meta
       - name: robots

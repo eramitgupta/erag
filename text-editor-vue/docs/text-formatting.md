@@ -1,6 +1,6 @@
 ---
-title: Rich Text Formatting
-description: 'Configure headings, fonts, sizes, bold, italic, underline, colors, alignment, change case, and clear-formatting controls in the Vue editor.'
+title: "Rich Text Formatting"
+description: "Configure headings, fonts, sizes, bold, italic, underline, colors, alignment, change case, and clear-formatting controls in the Vue editor."
 head:
     - - meta
       - name: robots

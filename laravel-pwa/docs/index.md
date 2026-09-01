@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Laravel PWA — Progressive Web App Setup
+title: "Laravel PWA Docs"
 titleTemplate: false
-description: Seamless PWA integration for Laravel. Auto-generate manifest, register service workers, customize installation prompts, and upload logos dynamically.
+description: "Transform Laravel apps into Progressive Web Apps (PWA) with automatic web manifest generation, service worker registration, and install prompts."
 hero:
   name: 'Laravel PWA'
   text: 'PWA Easy Setup for Laravel'

@@ -1,6 +1,6 @@
 ---
-title: Styling · Toast & Modal CSS
-description: Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes.
+title: "Styling & Custom CSS"
+description: "Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes."
 head:
     - - meta
       - name: robots

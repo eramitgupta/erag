@@ -1,6 +1,6 @@
 ---
-title: Validation Help
-description: Troubleshoot disposable email validation results.
+title: "Validation Troubleshooting"
+description: "Diagnose and fix false positive rejections, DNS MX lookup timeouts, and custom validation rule errors in Laravel Disposable Email."
 head:
     - - meta
       - name: robots

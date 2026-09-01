@@ -1,6 +1,6 @@
 ---
-title: Schedule Sync
-description: Compatibility link for automatic sync scheduling.
+title: "Automated Sync Scheduling"
+description: "Schedule automatic background updates for disposable email blacklist domains in Laravel using task scheduling and cron jobs."
 head:
     - - meta
       - name: robots

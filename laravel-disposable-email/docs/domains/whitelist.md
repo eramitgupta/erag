@@ -1,6 +1,6 @@
 ---
-title: Whitelist
-description: Allow trusted domains even when they appear in a disposable list.
+title: "Domain Whitelisting"
+description: "Safelist trusted domains like Gmail, Outlook, and corporate emails so they are never falsely rejected by disposable validation filters."
 head:
     - - meta
       - name: robots

@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Toast & Modal Playground
-description: Test erag-vue-toastification alerts and interactive dialog boxes in a sandbox.
+title: "Interactive Toast Playground"
+description: "Test customizable toast notification alerts, positions, auto-close timers, and confirmation dialog boxes interactively in this sandbox."
 head:
     - - meta
       - name: robots

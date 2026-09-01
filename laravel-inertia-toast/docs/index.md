@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Laravel Inertia Toast Docs
+title: "Laravel Inertia Toast Docs"
 titleTemplate: false
-description: Laravel Inertia Toast documentation for notifications, confirmation dialogs, Laravel integration, Vue 3, React, and the complete API.
+description: "Laravel Inertia Toast documentation for notifications, confirmation dialogs, Laravel integration, Vue 3, React, and the complete API."
 hero:
   name: "Laravel Inertia Toast"
   text: "Notifications and confirmation dialogs for Laravel + Inertia + Vue 3 + React"

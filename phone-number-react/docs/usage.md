@@ -1,6 +1,6 @@
 ---
-title: Basic Usage
-description: How to use usePhoneNumber in a React component with a country select and phone input.
+title: "Basic & Controlled Usage"
+description: "Implement international phone inputs in React components with country select dropdowns, live formatting, and real-time validation states."
 head:
     - - meta
       - name: robots

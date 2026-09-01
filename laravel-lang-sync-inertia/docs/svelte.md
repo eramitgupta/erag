@@ -1,6 +1,6 @@
 ---
-title: Svelte
-description: Use Laravel Lang Sync Inertia translations in Inertia Svelte 5 pages and components.
+title: "Svelte 5 i18n Translations"
+description: "Integrate Laravel translations in Svelte 5 and Inertia.js applications with reactive translation helpers and multi-locale support."
 head:
     - - meta
       - name: robots

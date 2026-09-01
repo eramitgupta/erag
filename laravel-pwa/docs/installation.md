@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Install erag/laravel-pwa using composer and set up service providers and package configurations.
+title: "Installation & Setup Guide"
+description: "Install erag/laravel-pwa using Composer, publish assets, generate default manifest files, and register service workers in your Laravel app."
 head:
     - - meta
       - name: robots

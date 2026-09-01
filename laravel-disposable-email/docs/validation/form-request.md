@@ -1,6 +1,6 @@
 ---
-title: Form Request Validation
-description: Use disposable email validation in a Laravel Form Request.
+title: "Form Request Validation"
+description: "Implement disposable email verification inside Laravel Form Request classes with custom validation messages and authorization rules."
 head:
     - - meta
       - name: robots

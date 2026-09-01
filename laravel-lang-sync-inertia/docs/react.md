@@ -1,6 +1,6 @@
 ---
-title: React
-description: Use Laravel Lang Sync Inertia translations in Inertia React pages and components.
+title: "React i18n Translation Setup"
+description: "Use Laravel translation helpers (__ and trans) in React Inertia components with dynamic parameters, pluralization, and TypeScript types."
 head:
     - - meta
       - name: robots

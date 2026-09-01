@@ -1,6 +1,6 @@
 ---
-title: Contributing
-description: Contribution workflow, repositories, and pull request guidance for Laravel Lang Sync Inertia.
+title: "Contributing Guide"
+description: "Contribution guidelines for Laravel Lang Sync Inertia, including local development setup, test execution, and pull request workflows."
 head:
     - - meta
       - name: robots

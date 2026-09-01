@@ -1,6 +1,6 @@
 ---
-title: Configuration
-description: Configure blacklist paths, remote domain sources, and caching options for Laravel Disposable Email.
+title: "Configuration Reference"
+description: "Comprehensive config/disposable-email.php guide for blacklist paths, remote domain feeds, cache drivers, and RFC validation settings."
 head:
     - - meta
       - name: robots

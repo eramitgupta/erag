@@ -1,6 +1,6 @@
 ---
-title: Validation and Runtime
-description: Find focused validation and runtime documentation.
+title: "Validation & Runtime Guide"
+description: "Complete guide to validating disposable emails in Laravel controllers, Form Requests, rule objects, Blade templates, and APIs."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: TypeScript Types
-description: 'Browse all public TypeScript types exported by @erag/text-editor-vue with practical examples for editor, mentions, merge tags, templates, and images.'
+title: "TypeScript Types"
+description: "Browse all public TypeScript types exported by @erag/text-editor-vue with practical examples for editor, mentions, merge tags, templates, and images."
 head:
     - - meta
       - name: robots

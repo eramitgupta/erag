@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: 'Learn what @erag/text-editor-vue provides, how its controlled HTML model works, and which native browser APIs and editing features it uses.'
+title: "Introduction & Architecture"
+description: "Learn what @erag/text-editor-vue provides, how its controlled HTML model works, and which native browser APIs and editing features it uses."
 head:
     - - meta
       - name: robots

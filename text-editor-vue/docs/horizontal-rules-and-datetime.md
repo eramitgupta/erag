@@ -1,6 +1,6 @@
 ---
-title: Horizontal Rules and Date-Time
-description: 'Insert horizontal rules and current date or time values using configurable Intl.DateTimeFormat options generated at insertion time.'
+title: "Horizontal Rules and Date-Time"
+description: "Insert horizontal rules and current date or time values using configurable Intl.DateTimeFormat options generated at insertion time."
 head:
     - - meta
       - name: robots

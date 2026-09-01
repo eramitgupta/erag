@@ -1,8 +1,8 @@
 ---
-title: Examples & Live Demos
+title: "Examples & Live Demos"
 sidebar: false
 aside: false
-description: 'Explore live Vue 3 rich text editor demos for mentions, merge tags, templates, image uploads, tables, and advanced editing.'
+description: "Explore live Vue 3 rich text editor demos for mentions, merge tags, templates, image uploads, tables, and advanced editing."
 head:
     - - meta
       - name: robots

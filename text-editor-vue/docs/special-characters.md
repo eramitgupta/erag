@@ -1,6 +1,6 @@
 ---
-title: Special Characters and Emoji
-description: 'Insert searchable special characters and emoji from categorized, keyboard-accessible dialogs in @erag/text-editor-vue.'
+title: "Special Characters and Emoji"
+description: "Insert searchable special characters and emoji from categorized, keyboard-accessible dialogs in @erag/text-editor-vue."
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: API Reference
-description: 'Reference Editor props, emitted events, exposed methods, named slots, runtime exports, and payload contracts for @erag/text-editor-vue.'
+title: "API Reference & Props"
+description: "Reference Editor props, emitted events, exposed methods, named slots, runtime exports, and payload contracts for @erag/text-editor-vue."
 head:
     - - meta
       - name: robots
