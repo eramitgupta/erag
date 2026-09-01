@@ -4,23 +4,7 @@ const siteOrigin = 'https://erag.in'
 const siteBase = '/laravel-disposable-email'
 const siteUrl = `${siteOrigin}${siteBase}`
 const socialImage = 'https://avatars.githubusercontent.com/u/72160684?v=4&size=512'
-const legacyCanonicalPaths: Record<string, string> = {
-  'caching.md': 'advanced/cache.html',
-  'contributing.md': 'maintainers/contributing.html',
-  'deprecated-5-0-0.md': 'upgrades/v5.html',
-  'schedule-syncing-automatically.md': 'advanced/schedule.html',
-}
-const legacySitemapPaths = new Set(
-  Object.keys(legacyCanonicalPaths).map((page) => page.replace(/\.md$/, '.html')),
-)
-
 const canonicalUrl = (page: string): string => {
-  const legacyCanonicalPath = legacyCanonicalPaths[page]
-
-  if (legacyCanonicalPath) {
-    return `${siteUrl}/${legacyCanonicalPath}`
-  }
-
   const path = page
     .replace(/(^|\/)index\.md$/, '$1')
     .replace(/\.md$/, '.html')
@@ -43,12 +27,10 @@ export default defineConfig({
   lastUpdated: true,
   sitemap: {
     hostname: siteOrigin,
-    transformItems: (items) => items
-      .filter((item) => !legacySitemapPaths.has(item.url.replace(/^\/+/, '')))
-      .map((item) => ({
-        ...item,
-        url: `${siteBase}/${item.url}`.replace(/\/+/g, '/'),
-      })),
+    transformItems: (items) => items.map((item) => ({
+      ...item,
+      url: `${siteBase}/${item.url}`.replace(/\/+/g, '/'),
+    })),
   },
   head: [
     ['meta', { name: 'theme-color', content: '#f53003' }],
