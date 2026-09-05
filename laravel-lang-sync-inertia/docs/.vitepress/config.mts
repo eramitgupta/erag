@@ -43,7 +43,7 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    ['meta', { name: 'theme-color', content: '#3c82f6' }],
+    ['meta', { name: 'theme-color', content: '#09090b' }],
 
     // Google Verification
     [

@@ -9,46 +9,8 @@ hero:
     text: 'Laravel translations for your Inertia frontend'
     tagline: 'Sync Laravel lang files once, then use clean Vue, React, and Svelte helpers for keys, replacements, pluralization, and direct string fallback.'
     image:
-        src: /hero-orb.svg
+        src: /server-sync.svg
         alt: Laravel Lang Sync Inertia
-
-features:
-    - icon: '↔'
-      title: 'Laravel sync'
-      details: 'Call `syncLangFiles()` in a controller and share selected Laravel lang files with the Inertia page.'
-    - icon: '◆'
-      title: 'Vue, React and Svelte'
-      details: 'Use dedicated Vue, React, and Svelte helpers from the package root with consistent behavior.'
-    - icon: '⌘'
-      title: 'Key replacement'
-      details: 'Use Laravel-style replacements like `Welcome, :name` with `__()` or `trans()`.'
-    - icon: '♢'
-      title: 'Legacy placeholders'
-      details: 'Existing strings like `Welcome, {name}` keep working while you move to Laravel-style placeholders.'
-    - icon: '∑'
-      title: 'Pluralization'
-      details: 'Use `transChoice()` or `trans_choice()` with Laravel intervals like `{0}`, `{1}`, and `[2,*]`.'
-    - icon: '↵'
-      title: 'Direct strings'
-      details: 'Calls like `__("I love programming.")` return the original text when no key is found.'
-    - icon: '◐'
-      title: 'Locale aware'
-      details: 'Translations are loaded from `lang/{locale}` using Laravel’s current application locale.'
-    - icon: '▣'
-      title: 'Nested directories'
-      details: 'Load files like `lang/en/admin/auth.php` with `syncLangFiles("admin.auth")` and resolve `__("admin.auth.name")`.'
-    - icon: '⊕'
-      title: 'Multiple files'
-      details: 'Sync route-level groups like `syncLangFiles(["admin.auth", "auth"])` before rendering the Inertia page.'
-    - icon: '◫'
-      title: 'Shared lang prop'
-      details: 'Translations are exposed through `page.props.lang`, so components can read them without manual props.'
-    - icon: '⇪'
-      title: 'JSON export'
-      details: 'Generate frontend-ready JSON files from PHP lang files, then load the exported JSON automatically.'
-    - icon: '✓'
-      title: 'TypeScript ready'
-      details: 'Typed Vue and React helpers give autocomplete for common translation calls.'
 head:
     - - meta
       - name: robots
@@ -61,99 +23,119 @@ head:
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
 
-## Quick example
+<section class="inertia-features" aria-labelledby="features-heading">
+<div class="inertia-features-intro">
+<span>Features</span>
+<h2 id="features-heading">Elevate Laravel translations with Inertia</h2>
+<p>Use server-side language files in Vue, React, and Svelte pages without custom JSON endpoints or repeated prop wiring.</p>
+</div>
 
-The backend decides which language files should be available for the page.
-After that, your frontend can read translations with a very small API.
+<div class="inertia-feature-stats" aria-label="Package capabilities">
+<div><strong>12</strong><span>core features</span></div>
+<div><strong>3</strong><span>frontend helpers</span></div>
+<div><strong>1</strong><span>Laravel source</span></div>
+</div>
 
-- Call `syncLangFiles()` in the controller.
-- Keep translations in Laravel language files.
-- Use `vueLang()`, `reactLang()`, or `svelteLang()` in Vue, React, or Svelte.
-- Render translations with `__()` or `trans()`.
-
-::: code-group
-
-```php [Controller]
-<?php
-namespace App\Http\Controllers;
-
-use Inertia\Inertia;
-use Inertia\Response;
-
-class DashboardController extends Controller
-{
-    public function index(): Response
-    {
-        syncLangFiles('auth');
-
-        return Inertia::render('Dashboard');
-    }
-}
-```
-
-```php [lang/en/auth.php]
-<?php
-
-return [
-    'greeting' => 'Welcome back',
-    'welcome' => 'Welcome, :name',
-];
-```
-
-```vue [Vue]
-<script setup>
-import { vueLang } from '@erag/lang-sync-inertia';
-
-const { __, trans } = vueLang();
-</script>
-
-<template>
-    <h1>{{ __('auth.greeting') }}</h1>
-    <p>{{ trans('auth.welcome', { name: 'Amit' }) }}</p>
-</template>
-```
-
-```tsx [React]
-import { reactLang } from '@erag/lang-sync-inertia';
-
-export default function Dashboard() {
-    const { __, trans } = reactLang();
-
-    return (
-        <section>
-            <h1>{__('auth.greeting')}</h1>
-            <p>{trans('auth.welcome', { name: 'Amit' })}</p>
-        </section>
-    );
-}
-```
-
-```svelte [Svelte]
-<script module lang="ts">
-import { svelteLang } from '@erag/lang-sync-inertia';
-
-const { __, trans } = svelteLang();
-</script>
-
-<section>
-    <h1>{__('auth.greeting')}</h1>
-    <p>{trans('auth.welcome', { name: 'Amit' })}</p>
+<div class="inertia-feature-grid">
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h13"/><path d="m14 4 3 3-3 3"/><path d="M20 17H7"/><path d="m10 14-3 3 3 3"/></svg></div>
+<span class="inertia-feature-badge">CORE SYNC</span>
+<h3>Laravel sync</h3>
+<p>Load selected Laravel language files for a page and make them available to the frontend through Inertia.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 8 3 12l4 4"/><path d="m17 8 4 4-4 4"/><path d="m14 4-4 16"/></svg></div>
+<span class="inertia-feature-badge">VUE REACT SVELTE</span>
+<h3>Vue, React and Svelte</h3>
+<p>Use dedicated Vue, React, and Svelte helpers from the package root with consistent behavior.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M7 12h10"/><path d="M10 17h4"/><path d="M17 7v10"/></svg></div>
+<span class="inertia-feature-badge">:NAME VALUES</span>
+<h3>Key replacement</h3>
+<p>Replace dynamic values in translated strings using the same placeholder style your Laravel app already uses.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7 4 12l4 5"/><path d="M16 7l4 5-4 5"/><path d="M12 5v14"/></svg></div>
+<span class="inertia-feature-badge">OLD SYNTAX</span>
+<h3>Legacy placeholders</h3>
+<p>Keep older placeholder formats working while gradually moving translation lines to the Laravel convention.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M7 7l5 5-5 5h12"/></svg></div>
+<span class="inertia-feature-badge">COUNT RULES</span>
+<h3>Pluralization</h3>
+<p>Render the right translation for zero, singular, and plural counts using Laravel-style interval rules.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10v6H9"/><path d="m11 10-3 3 3 3"/><path d="M5 19h14"/></svg></div>
+<span class="inertia-feature-badge">SAFE FALLBACK</span>
+<h3>Missing key fallback</h3>
+<p>Show the original text when a translation key is unavailable, so pages fail gracefully during development.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16"/><path d="M12 4c2 2.2 3 4.8 3 8s-1 5.8-3 8"/><path d="M12 4c-2 2.2-3 4.8-3 8s1 5.8 3 8"/></svg></div>
+<span class="inertia-feature-badge">APP LOCALE</span>
+<h3>Locale aware</h3>
+<p>Read translations from the active Laravel locale so frontend pages follow the same language as the backend.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h7l2 3h7v9H4z"/><path d="M8 13h8"/><path d="M8 16h5"/></svg></div>
+<span class="inertia-feature-badge">DOT PATHS</span>
+<h3>Nested directories</h3>
+<p>Organize large translation sets in nested Laravel language directories and resolve them from frontend helpers.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14"/><path d="M5 12h14"/><path d="M5 18h14"/><path d="M8 4v4"/><path d="M16 10v4"/><path d="M12 16v4"/></svg></div>
+<span class="inertia-feature-badge">FILE GROUPS</span>
+<h3>Multiple files</h3>
+<p>Share several language files together when a page needs copy from multiple translation groups.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M8 9h8"/><path d="M8 13h5"/><path d="M16 16l3 3"/></svg></div>
+<span class="inertia-feature-badge">PAGE PROPS</span>
+<h3>Shared lang prop</h3>
+<p>Expose translations on the shared Inertia page data so nested components can read them without prop drilling.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h7l3 3v13H7z"/><path d="M14 4v4h4"/><path d="M9 14h6"/><path d="M9 17h4"/></svg></div>
+<span class="inertia-feature-badge">BUILD READY</span>
+<h3>JSON export</h3>
+<p>Generate frontend-ready JSON files from PHP lang files, then load the exported JSON automatically.</p>
+</article>
+<article class="inertia-feature-item">
+<div class="inertia-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M8 7v10"/><path d="M16 7v10"/><path d="M6 17h12"/><path d="M10 12h4"/></svg></div>
+<span class="inertia-feature-badge">TYPED HELPERS</span>
+<h3>TypeScript ready</h3>
+<p>Typed Vue and React helpers give autocomplete for common translation calls.</p>
+</article>
+</div>
 </section>
-```
 
-:::
-
-Nested Laravel language directories are also supported:
-
-```php
-syncLangFiles('admin.auth');
-```
-
-This reads `lang/{locale}/admin/auth.php`, then your frontend can call:
-
-```ts
-__('admin.auth.name');
-```
+<section class="home-flow" aria-labelledby="home-flow-heading">
+<div class="home-flow-copy">
+<span>Workflow</span>
+<h2 id="home-flow-heading">From Laravel lang files to Inertia pages</h2>
+<p>The backend chooses the translation files for the current route, Inertia shares them with the page, and the frontend helpers resolve text for Vue, React, or Svelte components.</p>
+</div>
+<div class="home-flow-steps">
+<div>
+<strong>1</strong>
+<h3>Pick language files</h3>
+<p>Keep translations in Laravel and select only the groups a page needs.</p>
+</div>
+<div>
+<strong>2</strong>
+<h3>Share through Inertia</h3>
+<p>The package places translated data into the page payload using Laravel's active locale.</p>
+</div>
+<div>
+<strong>3</strong>
+<h3>Render in components</h3>
+<p>Frontend helpers read the shared data and handle replacements, pluralization, and fallbacks.</p>
+</div>
+</div>
+</section>
 
 <div class="home-container">
 <section class="home-desc">
