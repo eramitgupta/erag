@@ -6,3 +6,4 @@ docs/.vitepress/dist/
 site/
 .agent/
 .DS_Store
+.idea
