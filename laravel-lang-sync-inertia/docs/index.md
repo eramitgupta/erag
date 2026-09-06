@@ -34,16 +34,16 @@ head:
 
 ::: code-group
 
-```php [lang/en/auth.php]
+```php [lang/en/app.php]
 <?php
 
 return [
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'greeting' => 'Hello!',
-    'welcome' => 'Welcome, :name!',
-    'apples' => 'There is one apple|There are :count apples',
+    'name' => 'Laravel Lang Sync Inertia',
+    'description' => 'Effortlessly synchronize server-side Laravel language files with Inertia frontend components.',
+    'features' => 'Zero API endpoints, dynamic locale switching, and full SSR hydration.',
+
+    'welcome' => 'Welcome to :app, :name!',
+    'languages' => 'Supporting 1 language|Supporting :count languages',
 ];
 ```
 
@@ -58,7 +58,8 @@ class DashboardController extends Controller
 {
     public function index(): Response
     {
-        syncLangFiles('auth');
+        // Sync package translations for the active locale
+        syncLangFiles('app');
 
         return Inertia::render('Dashboard');
     }
@@ -73,10 +74,11 @@ const { trans, __, transChoice } = vueLang();
 </script>
 
 <template>
-    <section>
-        <h1>{{ __('auth.greeting') }}</h1>
-        <p>{{ trans('auth.welcome', { name: 'John' }) }}</p>
-        <p>{{ transChoice('auth.apples', 3) }}</p>
+    <section class="package-preview">
+        <h1>{{ __('app.name') }}</h1>
+        <p>{{ __('app.description') }}</p>
+        <p>{{ trans('app.welcome', { app: 'Laravel', name: 'Developer' }) }}</p>
+        <p>{{ transChoice('app.languages', 12) }}</p>
     </section>
 </template>
 ```
@@ -88,10 +90,11 @@ export default function Dashboard() {
     const { trans, __, transChoice } = reactLang();
 
     return (
-        <section>
-            <h1>{__('auth.greeting')}</h1>
-            <p>{trans('auth.welcome', { name: 'John' })}</p>
-            <p>{transChoice('auth.apples', 3)}</p>
+        <section className="package-preview">
+            <h1>{__('app.name')}</h1>
+            <p>{__('app.description')}</p>
+            <p>{trans('app.welcome', { app: 'Laravel', name: 'Developer' })}</p>
+            <p>{transChoice('app.languages', 12)}</p>
         </section>
     );
 }
@@ -104,17 +107,19 @@ import { svelteLang } from '@erag/lang-sync-inertia';
 const { trans, __, transChoice } = svelteLang();
 </script>
 
-<section>
-    <h1>{__('auth.greeting')}</h1>
-    <p>{trans('auth.welcome', { name: 'John' })}</p>
-    <p>{transChoice('auth.apples', 3)}</p>
+<section class="package-preview">
+    <h1>{__('app.name')}</h1>
+    <p>{__('app.description')}</p>
+    <p>{trans('app.welcome', { app: 'Laravel', name: 'Developer' })}</p>
+    <p>{transChoice('app.languages', 12)}</p>
 </section>
 ```
 
 ```text [Output]
-Hello!
-Welcome, John!
-There are 3 apples
+Laravel Lang Sync Inertia
+Effortlessly synchronize server-side Laravel language files with Inertia frontend components.
+Welcome to Laravel, Developer!
+Supporting 12 languages
 ```
 
 :::
