@@ -185,7 +185,7 @@ body {
   background-size: 1037px auto, cover;
   background-repeat: repeat, no-repeat;
   margin-top: calc(var(--vp-nav-height, 64px) * -1);
-  padding-top: calc(var(--vp-nav-height, 64px) + 3.5rem) !important;
+  padding-top: calc(var(--vp-nav-height, 64px) + 1.5rem) !important;
   padding-bottom: 9rem !important;
   padding-left: 24px !important;
   padding-right: 24px !important;
@@ -204,7 +204,7 @@ body {
 @media (min-width: 960px) {
   .VPHome .VPHero {
     min-height: 50rem;
-    padding-top: calc(var(--vp-nav-height, 64px) + 3.5rem) !important;
+    padding-top: calc(var(--vp-nav-height, 64px) + 1.5rem) !important;
     padding-bottom: 13.5rem !important;
     padding-left: 64px !important;
     padding-right: 64px !important;
@@ -517,6 +517,78 @@ body:has(.VPHome) .VPSocialLink,
 body:has(.VPHome) .VPSocialLink:hover,
 .on-home-page .VPSocialLink:hover {
   color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Navbar Support the Project Pill Button with SVG Star
+   ========================================================================== */
+.VPNavBarMenuLink:has(.nav-support-btn) {
+  padding: 0 4px !important;
+}
+
+.nav-support-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 5px 13px !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.2 !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #1e293b !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.VPNavBarMenuLink:hover .nav-support-btn {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.08);
+}
+
+/* Home Page (Inertia Blue Hero) */
+.Layout:has(.is-home) .nav-support-btn,
+body:has(.VPHome) .nav-support-btn,
+.on-home-page .nav-support-btn {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.Layout:has(.is-home) .VPNavBarMenuLink:hover .nav-support-btn,
+body:has(.VPHome) .VPNavBarMenuLink:hover .nav-support-btn,
+.on-home-page .VPNavBarMenuLink:hover .nav-support-btn {
+  background: rgba(255, 255, 255, 0.24) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+/* Golden Radiant Star Icon */
+.nav-star-icon {
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0 !important;
+  fill: #fbbf24 !important;
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.75)) !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease !important;
+  vertical-align: middle !important;
+}
+
+.VPNavBarMenuLink:hover .nav-star-icon {
+  transform: scale(1.22) rotate(15deg) !important;
+  filter: drop-shadow(0 0 7px rgba(251, 191, 36, 0.95)) !important;
 }
 
 /* ==========================================================================
