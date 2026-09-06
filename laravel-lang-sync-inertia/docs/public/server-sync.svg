@@ -73,19 +73,19 @@
 
     @keyframes float-bubble-a {
       0%, 100% {
-        transform: translateY(0px);
+        transform: scale(1.14) translateY(0px);
       }
       50% {
-        transform: translateY(-6px);
+        transform: scale(1.14) translateY(-6px);
       }
     }
 
     @keyframes float-bubble-q {
       0%, 100% {
-        transform: translateY(0px);
+        transform: scale(1.14) translateY(0px);
       }
       50% {
-        transform: translateY(6px);
+        transform: scale(1.14) translateY(6px);
       }
     }
 
@@ -163,28 +163,28 @@
     <!-- Sync Data Streams connecting Translation Bubbles with Inertia Engine -->
     <g class="sync-streams-layer">
       <path d="M 100 97 C 122 104, 142 96, 165 85" fill="none" stroke="url(#streamGradA)" stroke-width="1.8" stroke-dasharray="4 5" stroke-linecap="round" class="sync-stream-left"/>
-      <circle cx="132" cy="94" r="2.4" fill="#FFB52E" class="sync-pulse-dot"/>
+      <circle cx="132" cy="94" r="2.4" fill="#60a5fa" class="sync-pulse-dot"/>
 
       <path d="M 248 80 C 272 84, 298 94, 324 97" fill="none" stroke="url(#streamGradQ)" stroke-width="1.8" stroke-dasharray="4 5" stroke-linecap="round" class="sync-stream-right"/>
-      <circle cx="286" cy="88" r="2.4" fill="#FF4B0A" class="sync-pulse-dot-2"/>
+      <circle cx="286" cy="88" r="2.4" fill="#60a5fa" class="sync-pulse-dot-2"/>
     </g>
 
     <!-- Translation locale bubble: EN -->
     <g class="bubble-float-a" filter="url(#bubbleDropShadow)">
       <path d="M 56 40 H 100 A 12 12 0 0 1 112 52 V 72 A 12 12 0 0 1 100 84 H 92 L 100 97 L 82 84 H 56 A 12 12 0 0 1 44 72 V 52 A 12 12 0 0 1 56 40 Z"
-            fill="url(#bubbleGradA)" stroke="#334155" stroke-width="1"/>
-      <text x="78" y="67" text-anchor="middle"
+            fill="#ffffff" stroke="#334155" stroke-width="1.1"/>
+      <text x="78" y="68" text-anchor="middle"
             font-family="Inter, ui-sans-serif, system-ui, sans-serif"
-            font-size="18" font-weight="800" fill="#1e42df">EN</text>
+            font-size="19" font-weight="800" fill="#1e42df">EN</text>
     </g>
 
     <!-- Translation locale bubble: HI -->
     <g class="bubble-float-q" filter="url(#bubbleDropShadow)">
       <path d="M 324 40 H 368 A 12 12 0 0 1 380 52 V 72 A 12 12 0 0 1 368 84 H 346 L 324 97 L 332 84 H 324 A 12 12 0 0 1 312 72 V 52 A 12 12 0 0 1 324 40 Z"
-            fill="url(#bubbleGradQ)" stroke="#334155" stroke-width="1"/>
-      <text x="346" y="67" text-anchor="middle"
+            fill="#ffffff" stroke="#334155" stroke-width="1.1"/>
+      <text x="346" y="68" text-anchor="middle"
             font-family="Inter, ui-sans-serif, system-ui, sans-serif"
-            font-size="18" font-weight="800" fill="#1e42df">HI</text>
+            font-size="19" font-weight="800" fill="#1e42df">HI</text>
     </g>
     </g>
     <!-- Inertia translation context -->
@@ -267,13 +267,13 @@
     </linearGradient>
 
     <linearGradient id="streamGradA" x1="100" y1="97" x2="165" y2="85" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFB52E" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#1e42df" stop-opacity="0.25"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1e42df" stop-opacity="0.35"/>
     </linearGradient>
 
     <linearGradient id="streamGradQ" x1="248" y1="80" x2="324" y2="97" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1e42df" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#FF4B0A" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#1e42df" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95"/>
     </linearGradient>
 
     <filter id="bubbleDropShadow" x="0" y="0" width="424" height="200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

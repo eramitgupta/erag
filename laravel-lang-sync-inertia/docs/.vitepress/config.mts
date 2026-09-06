@@ -19,6 +19,7 @@ const canonicalUrl = (page: string): string => {
 }
 
 export default defineConfig({
+  appearance: false,
   base: `${siteBase}/`,
   cleanUrls: false,
   title: 'Laravel Lang Sync Inertia',
@@ -39,11 +40,19 @@ export default defineConfig({
   },
 
   head: [
+    // Force light mode
+    ['meta', { name: 'color-scheme', content: 'light' }],
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
+    [
+      'script',
+      {},
+      "document.documentElement.classList.remove('dark');try{localStorage.removeItem('vitepress-theme-appearance');}catch(e){}",
+    ],
+
     // Basic SEO
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    ['meta', { name: 'theme-color', content: '#09090b' }],
 
     // Google Verification
     [
