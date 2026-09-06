@@ -1,7 +1,7 @@
 ---
-title: "Laravel Lang Sync Inertia"
+title: 'Laravel Lang Sync Inertia'
 titleTemplate: false
-description: "Effortlessly synchronize server-side Laravel translations directly to Vue, React, and Svelte — with zero custom API endpoints, dynamic locale switching, and native SSR support."
+description: 'Synchronize server-side Laravel translations directly to Inertia Vue, React, and Svelte apps with zero API endpoints and native SSR hydration.'
 layout: home
 
 hero:
@@ -9,12 +9,12 @@ hero:
     text: 'Laravel translations for your Inertia frontend'
     tagline: 'Effortlessly synchronize server-side Laravel translations directly to Vue, React, and Svelte — with zero custom API endpoints, dynamic locale switching, and native SSR support.'
     actions:
-      - theme: brand
-        text: Read Docs
-        link: /introduction.html
-      - theme: alt
-        text: GitHub
-        link: https://github.com/eramitgupta/laravel-lang-sync-inertia
+        - theme: brand
+          text: Read Docs
+          link: /introduction.html
+        - theme: alt
+          text: GitHub
+          link: https://github.com/eramitgupta/laravel-lang-sync-inertia
     image:
         src: /server-sync.svg
         alt: Laravel Lang Sync Inertia

@@ -1,6 +1,6 @@
 ---
-title: "Installation & Setup"
-description: "Install Laravel Lang Sync Inertia via Composer and npm to sync backend language files with Inertia.js Vue, React, and Svelte frontends."
+title: 'Installation & Setup'
+description: 'Install Laravel Lang Sync Inertia via Composer and npm to sync backend language files with Inertia.js Vue, React, and Svelte frontends.'
 head:
     - - meta
       - name: robots

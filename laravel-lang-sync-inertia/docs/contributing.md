@@ -1,6 +1,6 @@
 ---
-title: "Contributing Guide"
-description: "Contribution guidelines for Laravel Lang Sync Inertia, including local development setup, test execution, and pull request workflows."
+title: 'Contributing Guide'
+description: 'Contribution guidelines for Laravel Lang Sync Inertia, including local development setup, test execution, and pull request workflows.'
 head:
     - - meta
       - name: robots

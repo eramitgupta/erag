@@ -1,6 +1,6 @@
 ---
-title: "Introduction & Concepts"
-description: "Learn how Laravel Lang Sync Inertia bridges PHP localization files to frontend Inertia components without duplicated translation keys."
+title: 'Introduction & Concepts'
+description: 'Learn how Laravel Lang Sync Inertia bridges PHP localization files to frontend Inertia components without duplicated translation keys.'
 head:
     - - meta
       - name: robots
@@ -94,14 +94,14 @@ The architecture follows a simple 4-step pipeline from your backend language fil
 
 **Laravel Lang Sync Inertia** follows semantic versioning and actively supports modern Laravel and Inertia stacks:
 
-| Ecosystem / Framework | Supported Versions | Status |
-| :--- | :--- | :--- |
-| **Laravel** | 10.x, 11.x, 12.x, 13.x | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
-| **Inertia.js** | 1.x, 2.x | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
-| **Vue** | 3.x (Composition & Options API) | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
-| **React** | 18.x, 19.x | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
-| **Svelte** | 4.x, 5.x | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
-| **PHP** | 8.1, 8.2, 8.3, 8.4+ | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
+| Ecosystem / Framework | Supported Versions              | Status                                                                           |
+| :-------------------- | :------------------------------ | :------------------------------------------------------------------------------- |
+| **Laravel**           | 10.x, 11.x, 12.x, 13.x          | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
+| **Inertia.js**        | 1.x, 2.x                        | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
+| **Vue**               | 3.x (Composition & Options API) | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
+| **React**             | 18.x, 19.x                      | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
+| **Svelte**            | 4.x, 5.x                        | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
+| **PHP**               | 8.1, 8.2, 8.3, 8.4+             | <span class="status-pill"><span class="status-dot"></span> Active Support</span> |
 
 ## Next Steps
 

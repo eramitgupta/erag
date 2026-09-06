@@ -1,6 +1,6 @@
 ---
-title: "Vue 3 i18n Translation Setup"
-description: "Use Laravel translations in Vue 3 Inertia apps with global template helpers, script setup composables, and reactive locale switching."
+title: 'Vue 3 i18n Translation Setup'
+description: 'Use Laravel translations in Vue 3 Inertia apps with global template helpers, script setup composables, and reactive locale switching.'
 head:
     - - meta
       - name: robots

@@ -1,6 +1,6 @@
 ---
-title: "Laravel Backend Setup"
-description: "Export and share Laravel translation strings to Inertia props using middleware, controller helpers, and multi-locale caching strategies."
+title: 'Laravel Backend Setup'
+description: 'Export and share Laravel translation strings to Inertia props using middleware, controller helpers, and multi-locale caching strategies.'
 head:
     - - meta
       - name: robots
