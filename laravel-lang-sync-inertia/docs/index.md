@@ -250,7 +250,7 @@ Supporting 12 languages
       </svg>
       <span>Workflow</span>
     </div>
-    <h2 id="home-flow-heading">From Laravel lang files to Inertia pages</h2>
+    <h2 id="home-flow-heading">From Laravel lang files to<br>Inertia pages</h2>
     <p>The backend chooses the translation files for the current route, Inertia shares them with the page, and the frontend helpers resolve text for Vue, React, or Svelte components.</p>
   </div>
   <div class="home-flow-steps">

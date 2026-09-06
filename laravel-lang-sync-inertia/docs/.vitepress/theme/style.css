@@ -1989,9 +1989,9 @@ body:has(.VPHome) .VPNavBar .container,
   color: #09090b;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.03em;
-  text-wrap: balance;
+  text-wrap: normal;
 }
 
 .home-flow-copy p {
