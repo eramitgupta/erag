@@ -1,13 +1,13 @@
 ---
 title: "Laravel Lang Sync Inertia"
 titleTemplate: false
-description: "Use Laravel translation files directly in Inertia Vue, React, and Svelte apps with replacements, pluralization, and locale-aware helpers."
+description: "Effortlessly synchronize server-side Laravel translations directly to Vue, React, and Svelte — with zero custom API endpoints, dynamic locale switching, and native SSR support."
 layout: home
 
 hero:
     name: 'Laravel Lang Sync Inertia'
     text: 'Laravel translations for your Inertia frontend'
-    tagline: 'Sync Laravel lang files once, then use clean Vue, React, and Svelte helpers for keys, replacements, pluralization, and direct string fallback.'
+    tagline: 'Effortlessly synchronize server-side Laravel translations directly to Vue, React, and Svelte — with zero custom API endpoints, dynamic locale switching, and native SSR support.'
     actions:
       - theme: brand
         text: Read Docs
