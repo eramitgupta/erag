@@ -35,6 +35,16 @@ const { trans, __, transChoice } = vueLang();
 
 ::: code-group
 
+```php [lang/en/auth.php]
+<?php
+
+return [
+    'greeting' => 'Hello!',
+    'welcome' => 'Welcome, :name!',
+    'apples' => 'There is one apple|There are :count apples',
+];
+```
+
 ```php [DashboardController.php]
 <?php
 
@@ -52,14 +62,6 @@ class DashboardController extends Controller
         return Inertia::render('Dashboard');
     }
 }
-```
-
-```php [lang/en/auth.php]
-return [
-    'greeting' => 'Hello!',
-    'welcome' => 'Welcome, :name!',
-    'apples' => 'There is one apple|There are :count apples',
-];
 ```
 
 ```vue [js/Pages/Dashboard.vue]

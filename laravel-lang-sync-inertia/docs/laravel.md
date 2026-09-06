@@ -62,26 +62,6 @@ return Inertia::render('Dashboard');
 
 ::: code-group
 
-```php
-<?php
-
-// app/Http/Controllers/DashboardController.php
-namespace App\Http\Controllers;
-
-use Inertia\Inertia;
-use Inertia\Response;
-
-class DashboardController extends Controller
-{
-    public function index(): Response
-    {
-        syncLangFiles('messages');
-
-        return Inertia::render('Dashboard');
-    }
-}
-```
-
 ```php [lang/en/messages.php]
 <?php
 
@@ -100,6 +80,26 @@ return [
         'minutes_ago' => '{1} :value minute ago|[2,*] :value minutes ago',
     ],
 ];
+```
+
+```php [Controllers]
+<?php
+
+// app/Http/Controllers/DashboardController.php
+namespace App\Http\Controllers;
+
+use Inertia\Inertia;
+use Inertia\Response;
+
+class DashboardController extends Controller
+{
+    public function index(): Response
+    {
+        syncLangFiles('messages');
+
+        return Inertia::render('Dashboard');
+    }
+}
 ```
 
 ```vue [js/Pages/Dashboard.vue]
