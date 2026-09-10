@@ -22,7 +22,7 @@ export default defineConfig({
   title: 'Laravel Disposable Email',
   titleTemplate: ':title | Laravel Disposable Email',
   description:
-    'Block disposable and temporary fake email addresses in Laravel. Built-in validation rules, blacklist auto-syncing, DNS/RFC checks, and high-performance caching.',
+    'Block disposable and temporary emails in Laravel with offline validation, custom blocklists, automatic domain updates, and optional RFC and DNS checks.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -85,7 +85,96 @@ export default defineConfig({
       structuredData.dateModified = new Date(pageData.lastUpdated).toISOString()
     }
 
-    return [
+    const faqStructuredData = isHomePage
+      ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'How do I validate and block disposable emails in Laravel forms and requests?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Add the disposable_email validation rule directly inside your Form Request or controller validator: [\'email\' => [\'required\', \'email\', \'disposable_email\']]. It automatically blocks known temporary domains with sub-millisecond offline speed.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does this Laravel disposable email validator work 100% offline without third-party API keys?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Disposable-domain lookups are completely offline. The package ships with a pre-downloaded database of 124,220+ known disposable domains stored locally, executing lookups in under 0.02ms directly on your application server without any third-party API keys or recurring fees. Optional live DNS MX checks and remote list updates require network access.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How can I enable strict RFC 5322 syntax and live MX record DNS verification?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can append parameters to the validation rule: \'email\' => [\'required\', \'disposable_email:rfc,dns,spoof\']. The :dns modifier checks real-time DNS MX records, :rfc enforces RFC 5322 compliance, and :spoof blocks deceptive Unicode homoglyph attacks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I check disposable emails in services, background jobs, or controllers via Facade?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use the Disposable facade anywhere in your PHP application: if (Disposable::email($user->email)) { ... }. It returns a boolean immediately, making it ideal for webhooks, queues, and command-line imports.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I use disposable email validation in Laravel Blade views?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use the @disposableEmail($email) directive directly in Blade templates: @disposableEmail($user->email) ... warning banner ... @else ... verified ... @enddisposableEmail.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I keep the disposable email domains blocklist updated automatically?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Run php artisan disposable:sync anytime, or schedule it weekly in your routes/console.php: Schedule::command(\'disposable:sync\')->weekly(); to automatically fetch new domain updates.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I whitelist custom test domains or configure a private blacklist file?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. In config/disposable-email.php you can define a \'whitelist\' array of corporate or QA domains that always pass, and specify a \'blacklist_file\' to append custom blocked domains.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I cache disposable email domain checks in Redis for maximum throughput?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Enable caching in config/disposable-email.php by setting \'cache.enabled\' => true and \'cache.store\' => \'redis\'. In-memory checks take less than 0.02ms and eliminate disk reads.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Which PHP and Laravel versions are supported?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The package supports PHP 8.1, 8.2, 8.3, and 8.4+, as well as Laravel 10.x, 11.x, and upcoming 12.x, with strict typing and PSR-12 standards.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does this package stop free trial abuse and fake bot signups in SaaS apps?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'By rejecting 124,220+ disposable domain providers at signup, bad actors cannot create infinite free accounts or harvest welcome credits with burner inboxes, eliminating automated trial farming and protecting email sender reputation.',
+            },
+          },
+        ],
+      }
+      : null
+
+    const headElements: any[] = [
       ['link', { rel: 'canonical', href: url }],
       ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
       ['meta', { property: 'og:title', content: articleTitle }],
@@ -99,6 +188,16 @@ export default defineConfig({
         JSON.stringify(structuredData)
       ]
     ]
+
+    if (faqStructuredData) {
+      headElements.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(faqStructuredData)
+      ])
+    }
+
+    return headElements
   },
   themeConfig: {
     logoLink: `${siteBase}/index.html`,
@@ -183,7 +282,7 @@ export default defineConfig({
       next: 'Next'
     },
     footer: {
-        message: 'MIT License. Copyright Er Amit Gupta',
+      message: 'MIT License. Copyright Er Amit Gupta',
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/eramitgupta/laravel-disposable-email' }
