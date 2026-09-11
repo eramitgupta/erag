@@ -1,0 +1,84 @@
+# Vue Toastification (@erag/vue-toastification)
+
+> Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3 with Apple-style smooth animations and Composition API.
+
+## Core Information
+- **Package**: `@erag/vue-toastification`
+- **Documentation**: https://erag.in/vue-toastification/
+- **Repository**: https://github.com/eramitgupta/vue-toastification
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Keywords**: vue, vue3, toast, notification, modal, dialog, alert, composition-api
+
+## Quick Installation
+```bash
+npm install @erag/vue-toastification
+# or
+pnpm add @erag/vue-toastification
+# or
+yarn add @erag/vue-toastification
+```
+
+## Quick Start
+
+### 1. Global Plugin Registration (main.ts)
+```typescript
+import { createApp } from 'vue'
+import App from './App.vue'
+import ToastPlugin from '@erag/vue-toastification'
+import '@erag/vue-toastification/dist/style.css'
+
+const app = createApp(App)
+app.use(ToastPlugin, {
+  position: 'bottom-right',
+  duration: 4500
+})
+app.mount('#app')
+```
+
+### 2. Triggering Toasts (useToast)
+```vue
+<script setup lang="ts">
+import { useToast } from '@erag/vue-toastification'
+
+const { success, error, warning, info } = useToast()
+
+function notify() {
+  success('Project successfully saved!', 'Saved')
+  error('Failed to connect to database.', 'Connection Error')
+}
+</script>
+```
+
+### 3. Awaiting Confirmation Modals (useModal)
+```vue
+<script setup lang="ts">
+import { useModal } from '@erag/vue-toastification'
+
+const { confirm } = useModal()
+
+async function handleDelete() {
+  const confirmed = await confirm({
+    title: 'Delete Item?',
+    message: 'This action cannot be undone. Are you sure?',
+    confirmText: 'Delete',
+    cancelText: 'Keep Item'
+  })
+
+  if (confirmed) {
+    // execute deletion logic
+  }
+}
+</script>
+```
+
+## Documentation Sitemap
+- [Overview](https://erag.in/vue-toastification/): Library introduction and core feature summary
+- [Installation](https://erag.in/vue-toastification/installation.html): Peer dependencies and package manager setup
+- [Features](https://erag.in/vue-toastification/features.html): Apple-style animations, stacking, and scoped classes
+- [Setup](https://erag.in/vue-toastification/setup.html): Configuration options for global plugin setup
+- [Playground](https://erag.in/vue-toastification/playground.html): Interactive live sandbox demo
+- [Toast Usage](https://erag.in/vue-toastification/toast-usage.html): Using useToast() composable hook
+- [Modal Usage](https://erag.in/vue-toastification/modal-usage.html): Using useModal() promise-based dialogs
+- [Styling](https://erag.in/vue-toastification/styling.html): CSS variables and custom theming
+- [API Reference](https://erag.in/vue-toastification/api.html): Complete TypeScript signatures and types

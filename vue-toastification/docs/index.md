@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Vue Toastification Docs"
+title: "Vue Toastification - Toast & Modal Library for Vue 3"
 titleTemplate: false
 description: "Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3 with smooth animations and Composition API."
 hero:

@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /vue-toastification/
 
+User-agent: GPTBot
+Allow: /vue-toastification/
+
+User-agent: ClaudeBot
+Allow: /vue-toastification/
+
+User-agent: PerplexityBot
+Allow: /vue-toastification/
+
+User-agent: Google-Extended
+Allow: /vue-toastification/
+
+User-agent: Applebot-Extended
+Allow: /vue-toastification/
+
 Sitemap: https://erag.in/vue-toastification/sitemap.xml
