@@ -1,6 +1,6 @@
 ---
-title: "Package Overview"
-description: "Learn how Laravel Disposable Email stops fake account registrations, blocks burner domains, and protects your email deliverability rates."
+title: "Introduction"
+description: "Block disposable and temporary emails in Laravel. Detect 124,220+ burner domains, stop fake signups offline, and protect email sender reputation."
 head:
     - - meta
       - name: robots
@@ -15,40 +15,23 @@ head:
 
 # Introduction
 
-Laravel Disposable Email is a package for one specific job: helping you reject disposable or temporary email addresses before they affect your application.
+**Laravel Disposable Email** is a fast, offline email validator designed to detect and block disposable, temporary, and fake email addresses before they enter your Laravel application.
 
-If your app depends on real users, real inboxes, or cleaner lead data, disposable email addresses quickly become a problem. They can reduce signup quality, weaken trial restrictions, create noisy CRM records, and make follow-up communication less reliable.
+When users register with throwaway inboxes like Mailinator, 10MinuteMail, or Temp-Mail, applications suffer from drained free trial credits, polluted databases, and hard bounces that damage your SMTP domain reputation.
 
-This package gives you a Laravel-friendly way to deal with that problem without adding complexity to your codebase.
+This package eliminates fraudulent registrations using an open-source dataset of **124,220+ verified disposable domains**. It runs natively inside your application across **Laravel 10, 11, 12, and 13**, delivering instant protection with zero third-party API dependencies and zero recurring subscription costs.
 
-## What the package includes
+## What Makes It Unique
 
-- A built-in list of more than 110,646 disposable domains
-- A validation rule you can use directly in forms and Form Requests
-- Runtime checking through the rule class and facade
-- A Blade directive for simple conditional output
-- Remote syncing for domain updates
-- Support for your own blacklist files
-- Optional caching for better performance
+- **Zero-Latency Offline Validation**: Operates entirely within your application. No outbound HTTP calls, no third-party API downtime, and no added latency to signup forms.
+- **124,220+ Preloaded Threat Domains**: Ships with comprehensive domain coverage to identify and halt burner email services on contact.
+- **Multi-Layered Verification**: Combines local domain blocklists with optional RFC 5322 syntax compliance and live DNS MX record lookups.
+- **Custom Blacklist & Whitelist Control**: Safely whitelist corporate or testing domains while mounting your own custom blacklist files directly from storage.
+- **Automated List Updates**: Keep threat data up to date using native background synchronization with the Laravel console scheduler.
 
-## Typical use cases
+## Quick Links
 
-- Registration and onboarding forms
-- Free trial protection
-- Invite and referral flows
-- Admin review tools
-- Any workflow where a permanent email address matters
-
-## How it fits into a Laravel app
-
-In most apps, you start by adding the validation rule to your request layer:
-
-```php
-$request->validate([
-    'email' => ['required', 'email', 'disposable_email'],
-]);
-```
-
-If you also need checks deeper in your business logic, you can use the same package in services, actions, jobs, and controllers.
-
-That makes the package easy to adopt. You can start small at the form layer and expand only if your workflow needs more control.
+- [**Installation & Setup**](./getting-started.html) — Add the package with Composer in under a minute.
+- [**Configuration**](./configuration.html) — Customize whitelist exceptions, blacklist files, and Redis cache.
+- [**Form Validation**](./validation/basic.html) — Apply the validation rule to controllers and Form Requests.
+- [**Runtime Checks**](./runtime/checks.html) — Check emails programmatically inside services, jobs, and APIs.
