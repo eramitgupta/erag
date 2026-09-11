@@ -1,5 +1,5 @@
 ---
-title: 'Laravel Lang Sync Inertia'
+title: "Laravel Lang Sync - Translation Sync for Inertia Vue & React"
 titleTemplate: false
 description: 'Synchronize server-side Laravel translations directly to Inertia Vue, React, and Svelte apps with zero API endpoints and native SSR hydration.'
 layout: home

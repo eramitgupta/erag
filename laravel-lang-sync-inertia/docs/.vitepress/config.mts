@@ -69,6 +69,14 @@ export default defineConfig({
                     'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
             },
         ],
+        [
+            'meta',
+            {
+                name: 'bingbot',
+                content:
+                    'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            },
+        ],
 
         // Google Verification
         [
@@ -120,14 +128,16 @@ export default defineConfig({
         const url = canonicalUrl(page);
         const isHomePage = page === 'index.md';
         const articleTitle = pageData.title || title;
-        const structuredData = {
+        const structuredData: any = {
             '@context': 'https://schema.org',
             '@type': isHomePage
-                ? ['TechArticle', 'SoftwareSourceCode']
+                ? ['WebSite', 'SoftwareApplication']
                 : 'TechArticle',
             headline: articleTitle,
             description,
             url,
+            image: socialImage,
+            inLanguage: 'en-US',
             mainEntityOfPage: {
                 '@type': 'WebPage',
                 '@id': url,
@@ -147,6 +157,20 @@ export default defineConfig({
                 url: 'https://erag.in/',
             },
         };
+
+        if (isHomePage) {
+            structuredData.name = 'Laravel Lang Sync Inertia';
+            structuredData.applicationCategory = 'DeveloperApplication';
+            structuredData.operatingSystem = 'Any';
+            structuredData.offers = {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD',
+            };
+            structuredData.downloadUrl =
+                'https://packagist.org/packages/erag/laravel-lang-sync-inertia';
+            structuredData.softwareVersion = '1.0.0';
+        }
 
         if (pageData.lastUpdated) {
             structuredData.dateModified = new Date(

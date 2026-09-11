@@ -1,4 +1,19 @@
 User-agent: *
-Allow: /
+Allow: /laravel-lang-sync-inertia/
+
+User-agent: GPTBot
+Allow: /laravel-lang-sync-inertia/
+
+User-agent: ClaudeBot
+Allow: /laravel-lang-sync-inertia/
+
+User-agent: PerplexityBot
+Allow: /laravel-lang-sync-inertia/
+
+User-agent: Google-Extended
+Allow: /laravel-lang-sync-inertia/
+
+User-agent: Applebot-Extended
+Allow: /laravel-lang-sync-inertia/
 
 Sitemap: https://erag.in/laravel-lang-sync-inertia/sitemap.xml

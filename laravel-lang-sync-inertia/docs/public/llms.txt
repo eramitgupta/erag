@@ -1,0 +1,136 @@
+# Laravel Lang Sync Inertia (erag/laravel-lang-sync-inertia)
+
+> Seamlessly export and synchronize Laravel PHP language & translation files directly to Inertia.js frontend applications with Vue, React, and Svelte i18n helpers. Zero custom API endpoints and native SSR hydration.
+
+## Installation
+
+### 1. Laravel Backend Package
+```bash
+composer require erag/laravel-lang-sync-inertia
+```
+
+### 2. Frontend NPM Package
+```bash
+npm install @erag/lang-sync-inertia
+```
+
+### 3. Publish Configuration & Assets
+```bash
+php artisan erag:install-lang
+```
+
+- **Documentation**: https://erag.in/laravel-lang-sync-inertia/
+- **Repository**: https://github.com/eramitgupta/laravel-lang-sync-inertia
+- **Packagist**: https://packagist.org/packages/erag/laravel-lang-sync-inertia
+- **NPM Package**: https://www.npmjs.com/package/@erag/lang-sync-inertia
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Keywords**: laravel, inertiajs, i18n, translations, localization, vue, react, svelte
+
+---
+
+## Quick Start
+
+### 1. Backend Controller Usage
+Call `syncLangFiles()` before returning your Inertia response:
+```php
+use Inertia\Inertia;
+use Inertia\Response;
+
+class DashboardController extends Controller
+{
+    public function index(): Response
+    {
+        syncLangFiles();
+
+        return Inertia::render('Dashboard', [
+            'stats' => $this->getStats(),
+        ]);
+    }
+}
+```
+
+Or share globally in `HandleInertiaRequests` middleware:
+```php
+public function share(Request $request): array
+{
+    syncLangFiles();
+
+    return array_merge(parent::share($request), [
+        // other shared props
+    ]);
+}
+```
+
+### 2. Vue 3 Integration
+```typescript
+// resources/js/app.ts
+import { createApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/vue3'
+import { vueLang } from '@erag/lang-sync-inertia/vue'
+
+createInertiaApp({
+  resolve: (name) => {
+    const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
+    return pages[`./Pages/${name}.vue`]
+  },
+  setup({ el, App, props, plugin }) {
+    createApp({ render: () => h(App, props) })
+      .use(plugin)
+      .use(vueLang)
+      .mount(el)
+  },
+})
+```
+
+Inside Vue template:
+```vue
+<template>
+  <h1>{{ __('messages.welcome', { name: user.name }) }}</h1>
+  <p>{{ trans('auth.failed') }}</p>
+</template>
+```
+
+### 3. React Integration
+```tsx
+// resources/js/Pages/Dashboard.tsx
+import React from 'react'
+import { reactLang } from '@erag/lang-sync-inertia/react'
+
+export default function Dashboard({ user }) {
+  const { __, trans } = reactLang()
+
+  return (
+    <div>
+      <h1>{__('messages.welcome', { name: user.name })}</h1>
+      <p>{trans('auth.failed')}</p>
+    </div>
+  )
+}
+```
+
+### 4. Svelte 5 Integration
+```svelte
+<script>
+  import { svelteLang } from '@erag/lang-sync-inertia/svelte'
+
+  const { __, trans } = svelteLang()
+</script>
+
+<h1>{__('messages.welcome', { name: 'Amit' })}</h1>
+```
+
+---
+
+## Documentation Sitemap
+- [Overview](https://erag.in/laravel-lang-sync-inertia/): Package architecture and high-level concepts
+- [Introduction](https://erag.in/laravel-lang-sync-inertia/introduction.html): Philosophy and core i18n features
+- [Installation](https://erag.in/laravel-lang-sync-inertia/installation.html): Composer, npm, and artisan setup
+- [Configuration](https://erag.in/laravel-lang-sync-inertia/config.html): Custom output directories and ignore groups
+- [Exporting](https://erag.in/laravel-lang-sync-inertia/exporting.html): Exporting PHP translations to static JSON files
+- [Laravel Usage](https://erag.in/laravel-lang-sync-inertia/laravel.html): Controller helper and middleware setup
+- [Vue Usage](https://erag.in/laravel-lang-sync-inertia/vue.html): Vue 3 plugin and template translation helpers
+- [React Usage](https://erag.in/laravel-lang-sync-inertia/react.html): React hooks and dynamic parameter interpolation
+- [Svelte Usage](https://erag.in/laravel-lang-sync-inertia/svelte.html): Svelte 5 reactivity and translation helpers
+- [API Reference](https://erag.in/laravel-lang-sync-inertia/api.html): Complete signatures for syncLangFiles(), __(), and trans()
+- [Contributing](https://erag.in/laravel-lang-sync-inertia/contributing.html): Development setup and pull request guidelines
