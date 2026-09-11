@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: description
-        content: 'Learn how toast and modal styling works in the Vue and React packages, including stylesheet imports, scoped classes, and customization notes.'
 ---
 
 # Styling

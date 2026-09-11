@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: description
-        content: 'Use Laravel Inertia Toast with Vue 3, including plugin registration, toast composables, confirmation modals, and the Inertia flash bridge.'
 ---
 
 # Vue Usage

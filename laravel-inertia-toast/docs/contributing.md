@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: description
-        content: 'Learn how to contribute to Laravel Inertia Toast, including documentation workflow, pull request guidelines, local development, and contribution expectations.'
 ---
 
 # Contributing

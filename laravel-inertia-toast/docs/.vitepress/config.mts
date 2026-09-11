@@ -24,7 +24,7 @@ export default defineConfig({
   title: 'Laravel Inertia Toast',
   titleTemplate: ':title | Laravel Inertia Toast',
   description:
-    'Toast notifications and confirmation dialog modals for Laravel with Inertia.js (Vue 3 & React). Send flash alerts directly from Laravel controllers with zero boilerplate.',
+    'Toast notifications and confirmation dialog modals for Laravel with Inertia.js (Vue 3 & React). Send flash alerts from controllers with zero boilerplate.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -46,6 +46,8 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { property: 'og:site_name', content: 'Laravel Inertia Toast — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Laravel Inertia Toast documentation' }],
@@ -74,13 +76,22 @@ export default defineConfig({
         { type: 'application/ld+json' },
         JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': isHomePage ? ['WebSite', 'SoftwareSourceCode'] : 'TechArticle',
+          '@type': isHomePage ? ['WebSite', 'SoftwareApplication'] : 'TechArticle',
           name: 'Laravel Inertia Toast',
           headline: pageTitle,
           description,
           url,
           image: socialImage,
           inLanguage: 'en-US',
+          applicationCategory: 'DeveloperApplication',
+          operatingSystem: 'Any',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'USD',
+          },
+          downloadUrl: 'https://packagist.org/packages/erag/laravel-inertia-toast',
+          softwareVersion: '1.0.0',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': url,

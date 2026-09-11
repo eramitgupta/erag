@@ -1,0 +1,146 @@
+# Laravel Inertia Toast (erag/laravel-inertia-toast)
+
+> Seamless toast notifications and confirmation dialog modals for Laravel with Inertia.js (Vue 3 & React). Trigger flash alerts directly from Laravel controllers with zero boilerplate.
+
+## Core Installation
+
+### 1. Backend Laravel Package
+```bash
+composer require erag/laravel-inertia-toast
+```
+*Laravel package discovery automatically registers the service provider. No manual middleware registration needed.*
+
+### 2. Frontend Package Installation
+The frontend packages are bundled directly within the Composer vendor directory:
+
+```bash
+# For Vue 3 applications:
+npm install ./vendor/erag/laravel-inertia-toast/vue
+
+# For React applications:
+npm install ./vendor/erag/laravel-inertia-toast/react
+```
+
+- **Documentation**: https://erag.in/laravel-inertia-toast/
+- **Repository**: https://github.com/eramitgupta/laravel-inertia-toast
+- **Packagist**: https://packagist.org/packages/erag/laravel-inertia-toast
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Frontend Package Names**: `@erag/inertia-toast-vue`, `@erag/inertia-toast-react`
+
+---
+
+## Quick Start
+
+### 1. Laravel Controller (Flashing Toasts)
+```php
+use Illuminate\Http\RedirectResponse;
+
+public function update(Request $request): RedirectResponse
+{
+    // ... business logic
+    toast('Profile updated successfully!', 'Saved')->success();
+
+    return redirect()->back();
+}
+```
+
+Other helper methods:
+```php
+toast('Record deleted permanently!')->danger();
+toast('Please review your account details.')->warning();
+toast('Export is processing in the background.')->info();
+```
+
+### 2. Vue 3 Setup & Bridge
+```typescript
+// resources/js/app.ts
+import { createApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/vue3'
+import ToastPlugin from '@erag/inertia-toast-vue'
+import '@erag/inertia-toast-vue/style.css'
+
+createInertiaApp({
+  resolve: (name) => {
+    const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
+    return pages[`./Pages/${name}.vue`]
+  },
+  setup({ el, App, props, plugin }) {
+    createApp({ render: () => h(App, props) })
+      .use(plugin)
+      .use(ToastPlugin, { position: 'bottom-right' })
+      .mount(el)
+  },
+})
+```
+
+Client-side composable in Vue:
+```vue
+<script setup lang="ts">
+import { useToast, useModal } from '@erag/inertia-toast-vue'
+
+const { success, error } = useToast()
+const { confirm } = useModal()
+
+async function deleteItem() {
+  const confirmed = await confirm({
+    title: 'Delete Item?',
+    message: 'Are you sure you want to permanently delete this item?',
+    confirmText: 'Delete',
+    cancelText: 'Cancel'
+  })
+  if (confirmed) {
+    // perform delete logic
+  }
+}
+</script>
+```
+
+### 3. React Setup & Bridge
+```tsx
+// resources/js/app.tsx
+import { createInertiaApp } from '@inertiajs/react'
+import { InertiaToastProvider } from '@erag/inertia-toast-react'
+import '@erag/inertia-toast-react/style.css'
+
+createInertiaApp({
+  withApp(app) {
+    return (
+      <InertiaToastProvider position="bottom-right">
+        {app}
+      </InertiaToastProvider>
+    )
+  },
+})
+```
+
+Client-side hooks in React:
+```tsx
+import { useToast, useModal } from '@erag/inertia-toast-react'
+
+export function ActionButton() {
+  const { success } = useToast()
+  const { confirm } = useModal()
+
+  const handleClick = async () => {
+    const ok = await confirm({ title: 'Proceed?', message: 'Confirm action' })
+    if (ok) success('Action executed!')
+  }
+
+  return <button onClick={handleClick}>Trigger</button>
+}
+```
+
+---
+
+## Documentation Sitemap
+- [Overview](https://erag.in/laravel-inertia-toast/): Architecture and flash bridge overview
+- [Live Demo](https://erag.in/laravel-inertia-toast/demo.html): Interactive video and interface demo
+- [Installation](https://erag.in/laravel-inertia-toast/installation.html): Composer setup & npm vendor install
+- [Laravel Usage](https://erag.in/laravel-inertia-toast/laravel.html): Controller helpers, flash data, and redirects
+- [Vue Usage](https://erag.in/laravel-inertia-toast/vue.html): Vue 3 composables, plugin setup, and flash bridge
+- [React Usage](https://erag.in/laravel-inertia-toast/react.html): React hooks, provider setup, and flash bridge
+- [Modal Usage](https://erag.in/laravel-inertia-toast/modal-usage.html): Promise-based async confirmation dialogs
+- [Styling](https://erag.in/laravel-inertia-toast/styling.html): CSS styles, scoped classes, and custom themes
+- [API Reference](https://erag.in/laravel-inertia-toast/api-reference.html): Complete PHP and TypeScript signatures
+- [Contributing](https://erag.in/laravel-inertia-toast/contributing.html): Development guide and testing instructions

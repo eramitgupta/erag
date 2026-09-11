@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: description
-        content: 'Install Laravel Inertia Toast in a Laravel and Inertia app with Vue 3 or React, including backend package setup and frontend package registration.'
 ---
 
 # Installation

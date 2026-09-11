@@ -11,9 +11,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: description
-        content: 'Full API reference for Laravel Inertia Toast, including toast types, positions, helper arguments, composables, modal options, and shared payload shape.'
 ---
 
 # API Reference

@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /laravel-inertia-toast/
 
+User-agent: GPTBot
+Allow: /laravel-inertia-toast/
+
+User-agent: ClaudeBot
+Allow: /laravel-inertia-toast/
+
+User-agent: PerplexityBot
+Allow: /laravel-inertia-toast/
+
+User-agent: Google-Extended
+Allow: /laravel-inertia-toast/
+
+User-agent: Applebot-Extended
+Allow: /laravel-inertia-toast/
+
 Sitemap: https://erag.in/laravel-inertia-toast/sitemap.xml

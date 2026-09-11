@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Laravel Inertia Toast Docs"
+title: "Laravel Inertia Toast - Flash Alerts & Modals for Vue 3 & React"
 titleTemplate: false
 description: "Laravel Inertia Toast documentation for notifications, confirmation dialogs, Laravel integration, Vue 3, React, and the complete API."
 hero:
@@ -24,9 +24,6 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-    - - meta
-      - name: description
-        content: 'Laravel Inertia Toast documentation for notifications, confirmation dialogs, Laravel integration, Vue 3, React, and the complete API.'
 ---
 
 <div class="lit-grid lit-grid--compact">
