@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Laravel Disposable Email Validation Package"
+title: "Laravel Disposable Email Validator & Blocker | ERAG"
 titleTemplate: false
 description: "Detect and block disposable, temporary and fake email addresses in Laravel. Includes 124,000+ domains, DNS MX checks, custom lists and daily updates."
 head:

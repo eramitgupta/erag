@@ -52,10 +52,13 @@ export default defineConfig({
   ].concat(searchConsoleVerification ? [
     ['meta', { name: 'google-site-verification', content: searchConsoleVerification }]
   ] : []),
-  transformHead({ page, pageData, title, description }) {
+  transformHead({ page, pageData, title, description, head }) {
     const url = canonicalUrl(page)
     const isHomePage = page === 'index.md'
     const articleTitle = pageData.title || title
+    const hasCanonical = (head || []).some(
+      (entry: any) => entry[0] === 'link' && entry[1]?.rel === 'canonical'
+    )
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': isHomePage ? ['TechArticle', 'SoftwareSourceCode'] : 'TechArticle',
@@ -175,7 +178,7 @@ export default defineConfig({
       : null
 
     const headElements: any[] = [
-      ['link', { rel: 'canonical', href: url }],
+      ...(hasCanonical ? [] : [['link', { rel: 'canonical', href: url }]]),
       ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
       ['meta', { property: 'og:title', content: articleTitle }],
       ['meta', { property: 'og:description', content: description }],

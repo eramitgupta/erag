@@ -155,7 +155,15 @@ const tickerDomains = [
               </span>
               <span class="hero-badge-text">Open-Source Laravel Package</span>
             </div>
-            <span class="hero-version-tag">Laravel 10 – 13</span>
+            <div class="hero-version-tag" title="Compatible with Laravel 10, 11, 12, and 13">
+              <span class="laravel-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 50 52" class="laravel-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z" fill="#FF2D20" fill-rule="evenodd"/>
+                </svg>
+              </span>
+              <span class="version-label">Laravel</span>
+              <span class="version-pill">10x - 13x</span>
+            </div>
           </div>
 
           <h1 class="hero-headline">
@@ -428,10 +436,10 @@ const tickerDomains = [
           <span class="badge-text">PRACTICAL USAGE</span>
         </div>
         <h2 class="practical-title">
-          Protect Registrations, Free Trials and Lead Forms
+          Stop Fake Accounts & Trial Abuse Across Every Entry Point
         </h2>
         <p class="practical-subtitle">
-          Use disposable email validation across account creation, trial registration, customer onboarding, and contact forms.
+          Deploy zero-latency email validation across user registrations, SaaS trials, lead capture, and API endpoints.
         </p>
       </div>
 
@@ -891,8 +899,8 @@ const tickerDomains = [
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 22px;
 }
 
 .hero-badge {
@@ -902,11 +910,19 @@ const tickerDomains = [
   padding: 6px 14px;
   border-radius: 999px;
   background: rgba(245, 48, 3, 0.08);
-  border: 1px solid rgba(245, 48, 3, 0.24);
-  color: var(--vp-c-brand-1);
+  border: 1px solid rgba(245, 48, 3, 0.28);
+  color: var(--vp-c-brand-1, #f53003);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-badge:hover {
+  transform: translateY(-1px);
+  border-color: rgba(245, 48, 3, 0.45);
+  box-shadow: 0 4px 12px rgba(245, 48, 3, 0.14);
 }
 
 .pulse-indicator {
@@ -923,6 +939,7 @@ const tickerDomains = [
   height: 8px;
   border-radius: 50%;
   background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
 }
 
 .pulse-ring {
@@ -940,16 +957,70 @@ const tickerDomains = [
   100% { transform: scale(1.8); opacity: 0; }
 }
 
+/* Redesigned Premium Laravel Version Badge */
 .hero-version-tag {
   display: inline-flex;
   align-items: center;
-  padding: 5px 12px;
+  gap: 8px;
+  padding: 4px 11px 4px 6px;
   border-radius: 999px;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2);
-  font-size: 0.78rem;
-  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  cursor: default;
+}
+
+.hero-version-tag:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 45, 32, 0.45);
+  box-shadow: 0 4px 14px rgba(255, 45, 32, 0.16);
+}
+
+.laravel-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 45, 32, 0.1);
+  border: 1px solid rgba(255, 45, 32, 0.24);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.hero-version-tag:hover .laravel-icon-wrap {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.laravel-icon {
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
+.version-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.01em;
+}
+
+.version-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(255, 45, 32, 0.12);
+  border: 1px solid rgba(255, 45, 32, 0.24);
+  color: #f53003;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
 }
 
 /* Headline & Typography */
@@ -2432,6 +2503,35 @@ const tickerDomains = [
 .dark .faq-code {
   background: rgba(13, 17, 23, 0.85);
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .hero-version-tag {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(255, 45, 32, 0.28);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dark .hero-version-tag:hover {
+  border-color: rgba(255, 45, 32, 0.55);
+  box-shadow: 0 4px 16px rgba(255, 45, 32, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .laravel-icon-wrap {
+  background: rgba(255, 45, 32, 0.15);
+  border-color: rgba(255, 45, 32, 0.35);
+  box-shadow: 0 0 10px rgba(255, 45, 32, 0.2);
+}
+
+.dark .version-pill {
+  background: rgba(255, 45, 32, 0.18);
+  border-color: rgba(255, 45, 32, 0.35);
+  color: #ff5748;
+}
+
+.dark .hero-badge {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(245, 48, 3, 0.32);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 @media (max-width: 768px) {
