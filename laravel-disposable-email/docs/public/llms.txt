@@ -1,0 +1,118 @@
+# Laravel Disposable Email (erag/laravel-disposable-email)
+
+> High-performance Laravel package to block disposable, temporary, and fake burner email addresses with offline validation, 124,000+ local domains, custom blocklists, automated domain syncing, and optional RFC/DNS checks.
+
+## Core Information
+- **Package**: `erag/laravel-disposable-email`
+- **Documentation**: https://erag.in/laravel-disposable-email/
+- **Repository**: https://github.com/eramitgupta/laravel-disposable-email
+- **Packagist**: https://packagist.org/packages/erag/laravel-disposable-email
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Requirements**: PHP 8.1+, Laravel 10.x, 11.x, 12.x+
+- **Keywords**: laravel, email-validation, disposable-email, fake-email, spam-protection, rfc5322, mx-check
+
+## Installation
+```bash
+composer require erag/laravel-disposable-email
+```
+
+Publish configuration (optional):
+```bash
+php artisan vendor:publish --tag=disposable-email-config
+```
+
+Sync latest domain list:
+```bash
+php artisan disposable:sync
+```
+
+---
+
+## Quick Start
+
+### 1. Form Request / Controller Validation Rule
+Use the built-in `disposable_email` validator:
+```php
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class RegisterRequest extends FormRequest
+{
+    public function rules(): array
+    {
+        return [
+            'name'  => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'disposable_email'],
+        ];
+    }
+}
+```
+
+Optional modifiers for strict RFC, live DNS MX lookup, and homoglyph spoofing:
+```php
+'email' => ['required', 'disposable_email:rfc,dns,spoof']
+```
+
+### 2. Validation Rule Object
+```php
+use EragLaravelDisposableEmail\Rules\DisposableEmail;
+
+$request->validate([
+    'email' => ['required', 'email', new DisposableEmail()],
+]);
+```
+
+### 3. Facade Verification
+Check emails programmatically in jobs, webhooks, or services:
+```php
+use EragLaravelDisposableEmail\Facades\Disposable;
+
+// Returns boolean (true if disposable)
+if (Disposable::email($user->email)) {
+    logger()->warning("Disposable email attempt: {$user->email}");
+}
+
+// Inspect comprehensive result object
+$result = Disposable::check($user->email);
+$isDisposable = $result->isDisposable();
+$matchedDomain = $result->domain();
+$dnsValid = $result->hasValidMx();
+```
+
+### 4. Blade Directives
+```blade
+@disposableEmail($user->email)
+    <div class="alert alert-warning">
+        Please update your email address. Disposable addresses are not permitted.
+    </div>
+@else
+    <div class="badge badge-success">Verified Email</div>
+@enddisposableEmail
+```
+
+---
+
+## Documentation Sitemap
+- [Overview](https://erag.in/laravel-disposable-email/): Package architecture and high-throughput offline design
+- [Introduction](https://erag.in/laravel-disposable-email/introduction.html): Philosophy and spam prevention overview
+- [Installation](https://erag.in/laravel-disposable-email/getting-started.html): Composer setup and provider registration
+- [Configuration](https://erag.in/laravel-disposable-email/configuration.html): config/disposable-email.php options
+- [Basic Validation](https://erag.in/laravel-disposable-email/validation/basic.html): Basic controller & form rules
+- [Form Request](https://erag.in/laravel-disposable-email/validation/form-request.html): Form Request classes and error messages
+- [Rule Object](https://erag.in/laravel-disposable-email/validation/rule-object.html): New DisposableEmail rule class
+- [Manual API](https://erag.in/laravel-disposable-email/validation/manual-api.html): Programmatic validator pipelines
+- [Runtime Checks](https://erag.in/laravel-disposable-email/runtime/checks.html): Facade and helper methods
+- [Result Object](https://erag.in/laravel-disposable-email/runtime/result.html): Inspecting verification details
+- [Blade Directives](https://erag.in/laravel-disposable-email/runtime/blade.html): @disposableEmail and conditional views
+- [Remote Sync](https://erag.in/laravel-disposable-email/domains/sync.html): Syncing domain lists from remote feeds
+- [Custom Blacklist](https://erag.in/laravel-disposable-email/domains/blacklist.html): Adding private blocked domains
+- [Whitelist](https://erag.in/laravel-disposable-email/domains/whitelist.html): Safelisting corporate & test domains
+- [Subdomains](https://erag.in/laravel-disposable-email/domains/subdomains.html): Subdomain recursive matching
+- [Domain Stats](https://erag.in/laravel-disposable-email/domains/stats.html): Domain statistics and package health
+- [RFC & DNS Checks](https://erag.in/laravel-disposable-email/advanced/rfc-dns.html): Strict RFC 5322 and live MX checks
+- [Caching](https://erag.in/laravel-disposable-email/advanced/cache.html): Redis & in-memory cache configuration
+- [Scheduling](https://erag.in/laravel-disposable-email/advanced/schedule.html): Automated artisan sync cron jobs
+- [Contributing](https://erag.in/laravel-disposable-email/maintainers/contributing.html): Maintainer & contributor guide
+- [Troubleshooting](https://erag.in/laravel-disposable-email/troubleshooting.html): Common fixes and FAQ

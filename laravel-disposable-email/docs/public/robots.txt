@@ -1,4 +1,19 @@
 User-agent: *
-Allow: /
+Allow: /laravel-disposable-email/
 
-Sitemap: https://erag.in/sitemap.xml
+User-agent: GPTBot
+Allow: /laravel-disposable-email/
+
+User-agent: ClaudeBot
+Allow: /laravel-disposable-email/
+
+User-agent: PerplexityBot
+Allow: /laravel-disposable-email/
+
+User-agent: Google-Extended
+Allow: /laravel-disposable-email/
+
+User-agent: Applebot-Extended
+Allow: /laravel-disposable-email/
+
+Sitemap: https://erag.in/laravel-disposable-email/sitemap.xml

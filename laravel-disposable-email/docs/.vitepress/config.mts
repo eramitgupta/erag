@@ -37,6 +37,8 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { property: 'og:site_name', content: 'Laravel Disposable Email — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -59,12 +61,14 @@ export default defineConfig({
     const hasCanonical = (head || []).some(
       (entry: any) => entry[0] === 'link' && entry[1]?.rel === 'canonical'
     )
-    const structuredData = {
+    const structuredData: any = {
       '@context': 'https://schema.org',
-      '@type': isHomePage ? ['TechArticle', 'SoftwareSourceCode'] : 'TechArticle',
+      '@type': isHomePage ? ['WebSite', 'SoftwareApplication'] : 'TechArticle',
       headline: articleTitle,
       description,
       url,
+      image: socialImage,
+      inLanguage: 'en-US',
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': url,
@@ -82,6 +86,19 @@ export default defineConfig({
         name: 'Erag',
         url: 'https://erag.in/',
       },
+    }
+
+    if (isHomePage) {
+      structuredData.name = 'Laravel Disposable Email';
+      structuredData.applicationCategory = 'DeveloperApplication';
+      structuredData.operatingSystem = 'Any';
+      structuredData.offers = {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      };
+      structuredData.downloadUrl = 'https://packagist.org/packages/erag/laravel-disposable-email';
+      structuredData.softwareVersion = '5.0.0';
     }
 
     if (pageData.lastUpdated) {
