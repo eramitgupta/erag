@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Phone Number Vue Composable"
+title: "Phone Number Vue - Headless Phone Input Composable"
 titleTemplate: false
 description: "Headless Vue 3 composable for country-aware phone input, dial codes, digit normalization, mask patterns, and validation without external libraries."
 hero:

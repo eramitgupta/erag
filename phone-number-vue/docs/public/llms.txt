@@ -1,0 +1,77 @@
+# Phone Number Vue (@erag/phone-number-vue)
+
+> Headless Vue 3 composable (`usePhoneNumber`) for country-aware phone inputs. Handles country selection, digit normalization, calling codes, mask patterns, and validation with zero dependencies.
+
+## Core Information
+- **Package**: `@erag/phone-number-vue`
+- **Documentation**: https://erag.in/phone-number-vue/
+- **Repository**: https://github.com/eramitgupta/phone-number-vue
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Peer Dependencies**: `vue` (^3.3.0)
+- **Keywords**: vue, vue3, composition-api, composable, phone-input, phone-number, international-phone, headless, validation
+
+## Quick Installation
+```bash
+npm install @erag/phone-number-vue
+# or
+pnpm add @erag/phone-number-vue
+# or
+yarn add @erag/phone-number-vue
+```
+
+## Quick Start (usePhoneNumber Composable)
+```vue
+<script setup lang="ts">
+import { usePhoneNumber } from '@erag/phone-number-vue'
+
+const {
+  countries,
+  selectedCountry,
+  callingCode,
+  phone,
+  handleInput,
+  isValid,
+  maskPattern,
+  formatExample
+} = usePhoneNumber({ initialCountry: 'IN' })
+</script>
+
+<template>
+  <div class="phone-input-group">
+    <select v-model="selectedCountry">
+      <option
+        v-for="c in countries"
+        :key="c.code"
+        :value="c"
+      >
+        {{ c.name }} ({{ c.dial_code }})
+      </option>
+    </select>
+
+    <span class="calling-code">{{ callingCode }}</span>
+
+    <input
+      type="tel"
+      :value="phone"
+      :placeholder="maskPattern || formatExample"
+      @input="handleInput"
+    />
+
+    <span v-if="phone && !isValid" class="error">
+      Please enter a valid phone number
+    </span>
+  </div>
+</template>
+```
+
+## Documentation Sitemap
+- [Overview](https://erag.in/phone-number-vue/): Introduction and core capabilities
+- [Introduction](https://erag.in/phone-number-vue/introduction.html): Philosophy, headless design, and features
+- [Installation](https://erag.in/phone-number-vue/installation.html): Vue 3 installation and Vite / Nuxt setup
+- [Usage](https://erag.in/phone-number-vue/usage.html): Reactive usage, forms, and validation states
+- [Examples](https://erag.in/phone-number-vue/examples.html): Tailwind CSS, Inertia.js, and custom dropdowns
+- [Custom Data](https://erag.in/phone-number-vue/custom-data.html): Custom country datasets and API loading
+- [API Reference](https://erag.in/phone-number-vue/api.html): Complete composable options, returns, and helpers
+- [TypeScript Types](https://erag.in/phone-number-vue/types.html): TypeScript interfaces and type definitions
+- [Contributing](https://erag.in/phone-number-vue/contributing.html): Development setup, testing, and pull requests

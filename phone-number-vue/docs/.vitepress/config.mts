@@ -24,7 +24,7 @@ export default defineConfig({
   title: 'Phone Number Vue',
   titleTemplate: ':title | Phone Number Vue',
   description:
-    'Headless Vue 3 composable (usePhoneNumber) for country-aware phone input. Auto formatting, country dial codes, mask patterns, digit normalization, and phone validation with zero masking dependencies.',
+    'Headless Vue 3 composable (usePhoneNumber) for country phone inputs. Auto formatting, dial codes, mask patterns, digit normalization, and validation with zero dependencies.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -40,6 +40,8 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { property: 'og:site_name', content: 'Phone Number Vue — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Phone Number Vue documentation' }],
@@ -66,13 +68,22 @@ export default defineConfig({
         { type: 'application/ld+json' },
         JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': isHomePage ? ['WebSite', 'SoftwareSourceCode'] : 'TechArticle',
+          '@type': isHomePage ? ['WebSite', 'SoftwareApplication'] : 'TechArticle',
           name: '@erag/phone-number-vue',
           headline: pageTitle,
           description,
           url,
           image: socialImage,
           inLanguage: 'en-US',
+          applicationCategory: 'DeveloperApplication',
+          operatingSystem: 'Any',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'USD',
+          },
+          downloadUrl: 'https://www.npmjs.com/package/@erag/phone-number-vue',
+          softwareVersion: '1.0.0',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': url,

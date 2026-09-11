@@ -1,0 +1,80 @@
+# Phone Number React (@erag/phone-number-react)
+
+> Headless React hook (`usePhoneNumber`) for country-aware phone inputs. Handles country selection, digit normalization, calling codes, mask patterns, and validation with zero dependencies.
+
+## Core Information
+- **Package**: `@erag/phone-number-react`
+- **Documentation**: https://erag.in/phone-number-react/
+- **Repository**: https://github.com/eramitgupta/phone-number-react
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Peer Dependencies**: `react` (^18.0.0 || ^19.0.0)
+- **Keywords**: react, react-hook, phone-input, phone-number, international-phone, headless, country-code, validation
+
+## Quick Installation
+```bash
+npm install @erag/phone-number-react
+# or
+pnpm add @erag/phone-number-react
+# or
+yarn add @erag/phone-number-react
+```
+
+## Quick Start (usePhoneNumber Hook)
+```tsx
+import React from 'react'
+import { usePhoneNumber } from '@erag/phone-number-react'
+
+export function PhoneNumberField() {
+  const {
+    countries,
+    selectedCountry,
+    setSelectedCountry,
+    callingCode,
+    phone,
+    handleInput,
+    isValid,
+    maskPattern,
+    formatExample
+  } = usePhoneNumber({ initialCountry: 'IN' })
+
+  return (
+    <div className="phone-input-group">
+      <select
+        value={selectedCountry.code}
+        onChange={(e) => setSelectedCountry(e.target.value)}
+      >
+        {countries.map((c) => (
+          <option key={c.code} value={c.code}>
+            {c.name} ({c.dial_code})
+          </option>
+        ))}
+      </select>
+
+      <span className="calling-code">{callingCode}</span>
+
+      <input
+        type="tel"
+        value={phone}
+        onChange={handleInput}
+        placeholder={maskPattern || formatExample}
+      />
+
+      {phone && !isValid && (
+        <span className="error">Please enter a valid phone number</span>
+      )}
+    </div>
+  )
+}
+```
+
+## Documentation Sitemap
+- [Overview](https://erag.in/phone-number-react/): Introduction and core capabilities
+- [Introduction](https://erag.in/phone-number-react/introduction.html): Philosophy, headless design, and features
+- [Installation](https://erag.in/phone-number-react/installation.html): React 18/19 installation and Next.js / Vite setup
+- [Usage](https://erag.in/phone-number-react/usage.html): Basic usage, controlled inputs, and state management
+- [Examples](https://erag.in/phone-number-react/examples.html): Tailwind CSS, React Hook Form, and Inertia.js examples
+- [Custom Data](https://erag.in/phone-number-react/custom-data.html): Custom country datasets and API loading
+- [API Reference](https://erag.in/phone-number-react/api.html): Complete hook options, returns, and handler signatures
+- [TypeScript Types](https://erag.in/phone-number-react/types.html): TypeScript interfaces and type definitions
+- [Contributing](https://erag.in/phone-number-react/contributing.html): Development setup, testing, and pull requests

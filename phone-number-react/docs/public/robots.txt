@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /phone-number-react/
 
+User-agent: GPTBot
+Allow: /phone-number-react/
+
+User-agent: ClaudeBot
+Allow: /phone-number-react/
+
+User-agent: PerplexityBot
+Allow: /phone-number-react/
+
+User-agent: Google-Extended
+Allow: /phone-number-react/
+
+User-agent: Applebot-Extended
+Allow: /phone-number-react/
+
 Sitemap: https://erag.in/phone-number-react/sitemap.xml

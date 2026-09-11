@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /phone-number-vue/
 
+User-agent: GPTBot
+Allow: /phone-number-vue/
+
+User-agent: ClaudeBot
+Allow: /phone-number-vue/
+
+User-agent: PerplexityBot
+Allow: /phone-number-vue/
+
+User-agent: Google-Extended
+Allow: /phone-number-vue/
+
+User-agent: Applebot-Extended
+Allow: /phone-number-vue/
+
 Sitemap: https://erag.in/phone-number-vue/sitemap.xml

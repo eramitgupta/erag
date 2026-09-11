@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Phone Number React Hook"
+title: "Phone Number React - Headless Phone Input Hook"
 titleTemplate: false
 description: "Headless React hook for country-aware phone input. Country selection, digit normalization, calling codes, mask patterns, and validation."
 hero:
