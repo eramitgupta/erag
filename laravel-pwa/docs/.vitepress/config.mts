@@ -24,7 +24,7 @@ export default defineConfig({
   title: 'Laravel PWA',
   titleTemplate: ':title | Laravel PWA',
   description:
-    'Transform your Laravel application into a Progressive Web App (PWA). Auto-generate web app manifest, register service workers, configure custom install prompts, and upload dynamic logos.',
+    'Transform your Laravel application into an installable Progressive Web App with auto-generated manifests, service workers, install prompts, and offline cache.',
   cleanUrls: false,
   lastUpdated: true,
   sitemap: {
@@ -36,13 +36,15 @@ export default defineConfig({
   },
   head: [
     ['link', { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=64' }],
-    ['meta', { name: 'theme-color', content: '#000000' }],
+    ['meta', { name: 'theme-color', content: '#f53003' }],
     ['meta', { name: 'author', content: 'Er Amit Gupta' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { property: 'og:site_name', content: 'Laravel PWA — Erag' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Laravel PWA documentation' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
     ['meta', { name: 'twitter:image', content: socialImage }],
@@ -53,6 +55,52 @@ export default defineConfig({
     const url = canonicalUrl(page)
     const pageTitle = pageData.title || title || 'Laravel PWA'
     const isHomePage = page === 'index.md'
+
+    const structuredData: any = {
+      '@context': 'https://schema.org',
+      '@type': isHomePage ? ['WebSite', 'SoftwareApplication', 'SoftwareSourceCode'] : 'TechArticle',
+      name: 'erag/laravel-pwa',
+      headline: pageTitle,
+      description,
+      url,
+      image: socialImage,
+      inLanguage: 'en-US',
+      operatingSystem: 'All',
+      applicationCategory: 'DeveloperApplication',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      downloadUrl: 'https://packagist.org/packages/erag/laravel-pwa',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Laravel PWA documentation',
+        url: `${siteUrl}/`,
+      },
+      codeRepository: 'https://github.com/eramitgupta/laravel-pwa',
+      programmingLanguage: 'PHP',
+      license: 'https://opensource.org/licenses/MIT',
+      author: {
+        '@type': 'Person',
+        name: 'Er Amit Gupta',
+        url: 'https://erag.in/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Erag',
+        url: 'https://erag.in/',
+      },
+    }
+
+    if (pageData.lastUpdated) {
+      structuredData.dateModified = new Date(pageData.lastUpdated).toISOString()
+    }
+
     return [
       ['link', { rel: 'canonical', href: url }],
       ['meta', { property: 'og:type', content: isHomePage ? 'website' : 'article' }],
@@ -64,38 +112,7 @@ export default defineConfig({
       [
         'script',
         { type: 'application/ld+json' },
-        JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': isHomePage ? ['WebSite', 'SoftwareSourceCode'] : 'TechArticle',
-          name: 'erag/laravel-pwa',
-          headline: pageTitle,
-          description,
-          url,
-          image: socialImage,
-          inLanguage: 'en-US',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': url,
-          },
-          isPartOf: {
-            '@type': 'WebSite',
-            name: 'Laravel PWA documentation',
-            url: `${siteUrl}/`,
-          },
-          codeRepository: 'https://github.com/eramitgupta/laravel-pwa',
-          programmingLanguage: 'PHP',
-          license: 'https://opensource.org/licenses/MIT',
-          author: {
-            '@type': 'Person',
-            name: 'Er Amit Gupta',
-            url: 'https://erag.in/',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Erag',
-            url: 'https://erag.in/',
-          },
-        }),
+        JSON.stringify(structuredData),
       ],
     ]
   },

@@ -1,8 +1,8 @@
 ---
 layout: home
-title: "Laravel PWA Docs"
+title: "Laravel PWA - Progressive Web App for Laravel"
 titleTemplate: false
-description: "Transform Laravel apps into Progressive Web Apps (PWA) with automatic web manifest generation, service worker registration, and install prompts."
+description: "Transform your Laravel app into an installable Progressive Web App with auto-generated web manifests, service workers, install prompts, and offline caching."
 hero:
   name: 'Laravel PWA'
   text: 'PWA Easy Setup for Laravel'

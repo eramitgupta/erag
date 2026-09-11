@@ -1,0 +1,54 @@
+# Laravel PWA (`erag/laravel-pwa`)
+
+> Seamless Progressive Web App (PWA) integration for Laravel applications with automated manifest generation, background service workers, install prompts, and dynamic facade controls.
+
+## Key Links & Documentation
+- [Official Documentation](https://erag.in/laravel-pwa/)
+- [GitHub Repository](https://github.com/eramitgupta/laravel-pwa)
+- [Packagist Package](https://packagist.org/packages/erag/laravel-pwa)
+- [Installation Guide](https://erag.in/laravel-pwa/installation.html)
+- [Configuration Reference](https://erag.in/laravel-pwa/configuration.html)
+- [Blade Directives](https://erag.in/laravel-pwa/directives.html)
+- [PWA Facade API](https://erag.in/laravel-pwa/facade.html)
+- [Livewire & Inertia Integrations](https://erag.in/laravel-pwa/frameworks.html)
+
+## Quick Installation
+```bash
+composer require erag/laravel-pwa
+php artisan erag:install-pwa
+```
+
+## Blade Directives
+In your main HTML layout:
+```blade
+<head>
+    <!-- Injects manifest, apple-touch-icon, and theme-color meta tags -->
+    @PwaHead
+</head>
+<body>
+    @yield('content')
+
+    <!-- Registers background service worker & install prompt handler -->
+    @RegisterServiceWorkerScript
+</body>
+```
+
+## Runtime Updates via Facade
+```php
+use EragLaravelPwa\Facades\PWA;
+
+// Dynamically update manifest properties
+PWA::update([
+    'name' => 'My App',
+    'short_name' => 'App',
+    'theme_color' => '#f53003',
+    'background_color' => '#ffffff',
+]);
+```
+
+## Key Capabilities
+- Auto-generates `public/manifest.json` from `config/pwa.php`
+- In-built offline fallback page served when network disconnects
+- Livewire 3 compatibility via `data-navigate-once`
+- Full iOS Safari Add to Home Screen support with tooltip guidance
+- Dynamic logo resizing and manifest sync via `PWA::processLogo($request)`
