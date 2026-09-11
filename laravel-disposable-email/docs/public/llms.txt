@@ -17,14 +17,14 @@
 composer require erag/laravel-disposable-email
 ```
 
-Publish configuration (optional):
+Publish configuration & install:
 ```bash
-php artisan vendor:publish --tag=disposable-email-config
+php artisan erag:install-disposable-email
 ```
 
 Sync latest domain list:
 ```bash
-php artisan disposable:sync
+php artisan erag:sync-disposable-email-list
 ```
 
 ---
@@ -57,10 +57,17 @@ Optional modifiers for strict RFC, live DNS MX lookup, and homoglyph spoofing:
 
 ### 2. Validation Rule Object
 ```php
-use EragLaravelDisposableEmail\Rules\DisposableEmail;
+use EragLaravelDisposableEmail\Rules\DisposableEmailRule;
+use Disposable;
 
+// Using rule instance
 $request->validate([
-    'email' => ['required', 'email', new DisposableEmail()],
+    'email' => ['required', 'email', new DisposableEmailRule()],
+]);
+
+// Or using facade helper
+$request->validate([
+    'email' => ['required', 'email', Disposable::rule()],
 ]);
 ```
 

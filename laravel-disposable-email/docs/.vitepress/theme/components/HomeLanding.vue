@@ -771,7 +771,7 @@ const tickerDomains = [
             </span>
           </summary>
           <div class="faq-content">
-            <p>Run the Artisan command <code>php artisan disposable:sync</code> to pull the latest verified threat list from upstream sources. To automate this in production, schedule the command weekly in your Laravel scheduler (<code>routes/console.php</code> or <code>Kernel.php</code>) using <code>Schedule::command('disposable:sync')->weekly()</code>. Updates are written atomically to ensure zero downtime.</p>
+            <p>Run the Artisan command <code>php artisan erag:sync-disposable-email-list</code> to pull the latest verified threat list from upstream sources. To automate this in production, schedule the command weekly in your Laravel scheduler (<code>routes/console.php</code> or <code>Kernel.php</code>) using <code>Schedule::command('erag:sync-disposable-email-list')->weekly()</code>. Updates are written atomically to ensure zero downtime.</p>
           </div>
         </details>
 

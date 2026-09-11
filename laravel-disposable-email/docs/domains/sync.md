@@ -1,6 +1,6 @@
 ---
 title: "Remote Blacklist Sync"
-description: "Synchronize disposable domain blacklists from trusted remote GitHub repositories and URLs using Laravel artisan disposable:sync commands."
+description: "Synchronize disposable domain blacklists from trusted remote GitHub repositories and URLs using Laravel artisan sync commands."
 head:
     - - meta
       - name: robots

@@ -155,7 +155,7 @@ export default defineConfig({
             name: 'How do I keep the disposable email domains blocklist updated automatically?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Run php artisan disposable:sync anytime, or schedule it weekly in your routes/console.php: Schedule::command(\'disposable:sync\')->weekly(); to automatically fetch new domain updates.',
+              text: 'Run php artisan erag:sync-disposable-email-list anytime, or schedule it weekly in your routes/console.php: Schedule::command(\'erag:sync-disposable-email-list\')->weekly(); to automatically fetch new domain updates.',
             },
           },
           {
