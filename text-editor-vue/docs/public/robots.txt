@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /text-editor-vue/
 
+User-agent: GPTBot
+Allow: /text-editor-vue/
+
+User-agent: ClaudeBot
+Allow: /text-editor-vue/
+
+User-agent: PerplexityBot
+Allow: /text-editor-vue/
+
+User-agent: Google-Extended
+Allow: /text-editor-vue/
+
+User-agent: Applebot-Extended
+Allow: /text-editor-vue/
+
 Sitemap: https://erag.in/text-editor-vue/sitemap.xml

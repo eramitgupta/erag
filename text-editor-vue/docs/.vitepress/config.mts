@@ -25,7 +25,7 @@ export default defineConfig({
     title: 'Text Editor Vue',
     titleTemplate: ':title | Text Editor Vue',
     description:
-        'A modern dependency-free Vue 3 rich text editor (WYSIWYG) built with native browser APIs. Supports TypeScript, mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable toolbars.',
+        'A modern dependency-free Vue 3 rich text editor (WYSIWYG). Supports TypeScript, mentions, merge tags, templates, image uploads, tables, and customizable toolbars.',
     cleanUrls: false,
     lastUpdated: true,
     sitemap: {
@@ -57,6 +57,7 @@ export default defineConfig({
         ['meta', { name: 'author', content: 'Er Amit Gupta' }],
         ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
         ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+        ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
         [
             'meta',
             { property: 'og:site_name', content: 'Text Editor Vue — Erag' },
@@ -113,14 +114,25 @@ export default defineConfig({
                 JSON.stringify({
                     '@context': 'https://schema.org',
                     '@type': isHomePage
-                        ? ['WebSite', 'SoftwareSourceCode']
+                        ? ['WebSite', 'SoftwareApplication']
                         : 'TechArticle',
+                    name: '@erag/text-editor-vue',
                     headline:
                         pageData.title || '@erag/text-editor-vue documentation',
                     description,
                     url,
                     image: socialImage,
                     inLanguage: 'en-US',
+                    applicationCategory: 'DeveloperApplication',
+                    operatingSystem: 'Any',
+                    offers: {
+                        '@type': 'Offer',
+                        price: '0',
+                        priceCurrency: 'USD',
+                    },
+                    downloadUrl:
+                        'https://www.npmjs.com/package/@erag/text-editor-vue',
+                    softwareVersion: '1.0.0',
                     mainEntityOfPage: {
                         '@type': 'WebPage',
                         '@id': url,
@@ -130,14 +142,10 @@ export default defineConfig({
                         name: '@erag/text-editor-vue documentation',
                         url: `${siteUrl}/`,
                     },
-                    about: {
-                        '@type': 'SoftwareSourceCode',
-                        name: '@erag/text-editor-vue',
-                        codeRepository:
-                            'https://github.com/eramitgupta/text-editor-vue',
-                        programmingLanguage: 'TypeScript',
-                        license: 'https://opensource.org/licenses/MIT',
-                    },
+                    codeRepository:
+                        'https://github.com/eramitgupta/text-editor-vue',
+                    programmingLanguage: 'TypeScript',
+                    license: 'https://opensource.org/licenses/MIT',
                     author: {
                         '@type': 'Person',
                         name: 'Er Amit Gupta',

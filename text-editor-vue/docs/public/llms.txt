@@ -1,0 +1,107 @@
+# Text Editor Vue (@erag/text-editor-vue)
+
+> A modern dependency-free Vue 3 rich text editor (WYSIWYG) built with native browser APIs. Supports TypeScript, mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable toolbars.
+
+## Core Information
+- **Package**: `@erag/text-editor-vue`
+- **Documentation**: https://erag.in/text-editor-vue/
+- **Repository**: https://github.com/eramitgupta/text-editor-vue
+- **NPM Package**: https://www.npmjs.com/package/@erag/text-editor-vue
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Peer Dependencies**: `vue` (^3.3.0)
+- **Keywords**: vue, vue3, wysiwyg, rich-text-editor, editor, contenteditable, mentions, merge-tags, html-editor
+
+## Quick Installation
+```bash
+npm install @erag/text-editor-vue
+# or
+pnpm add @erag/text-editor-vue
+# or
+yarn add @erag/text-editor-vue
+```
+
+---
+
+## Quick Start (Vue 3 Component)
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+import { Editor } from '@erag/text-editor-vue'
+import '@erag/text-editor-vue/dist/style.css'
+
+const content = ref('<p>Hello from <strong>Text Editor Vue</strong>!</p>')
+
+const editorConfig = {
+  height: 400,
+  menubar: true,
+  toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image table | code',
+  placeholder: 'Start typing your document...',
+}
+</script>
+
+<template>
+  <div class="editor-wrapper">
+    <Editor
+      v-model="content"
+      :init="editorConfig"
+    />
+  </div>
+</template>
+```
+
+### Mentions (@) & Merge Tags ({{) Configuration
+```typescript
+const editorConfig = {
+  mentions: {
+    trigger: '@',
+    items: [
+      { id: 1, name: 'Amit Gupta', email: 'amit@erag.in' },
+      { id: 2, name: 'Developer Team', email: 'dev@erag.in' },
+    ],
+  },
+  mergeTags: [
+    { tag: '{{user.name}}', label: 'User Full Name' },
+    { tag: '{{user.email}}', label: 'User Email Address' },
+    { tag: '{{company.name}}', label: 'Company Name' },
+  ],
+  templates: [
+    {
+      title: 'Welcome Email',
+      description: 'Standard onboarding greeting',
+      content: '<h2>Welcome {{user.name}}!</h2><p>Thanks for joining us.</p>',
+    },
+  ],
+}
+```
+
+---
+
+## Documentation Sitemap
+- [Overview](https://erag.in/text-editor-vue/): Package architecture and live demo
+- [Introduction](https://erag.in/text-editor-vue/introduction.html): Philosophy and dependency-free engine
+- [Installation](https://erag.in/text-editor-vue/installation.html): NPM package setup and stylesheet import
+- [Configuration](https://erag.in/text-editor-vue/configuration.html): Complete EditorInit options reference
+- [Examples & Demos](https://erag.in/text-editor-vue/examples.html): Interactive live examples and setups
+- [Usage](https://erag.in/text-editor-vue/usage.html): v-model binding, events, and component props
+- [Laravel & Inertia](https://erag.in/text-editor-vue/laravel-integration.html): Laravel and Inertia.js v3 integration
+- [Text Formatting](https://erag.in/text-editor-vue/text-formatting.html): Headings, fonts, bold, italic, colors, alignment
+- [Lists & Indentation](https://erag.in/text-editor-vue/lists-and-indentation.html): Bulleted, numbered, and checklist controls
+- [Links & Anchors](https://erag.in/text-editor-vue/links-and-anchors.html): Hyperlinks and anchor bookmarks
+- [Image Upload](https://erag.in/text-editor-vue/image-upload.html): File upload, paste handling, and resizing
+- [Table Editor](https://erag.in/text-editor-vue/table-editor.html): Visual table creation and cell editing
+- [Media & Embeds](https://erag.in/text-editor-vue/media-and-embeds.html): Video, audio, and secure iframe embedding
+- [Code & Preview](https://erag.in/text-editor-vue/code-and-preview.html): HTML source editing and fullscreen preview
+- [Special Characters](https://erag.in/text-editor-vue/special-characters.html): Symbol and emoji picker dialogs
+- [Horizontal Rules](https://erag.in/text-editor-vue/horizontal-rules-and-datetime.html): Dividers and datetime insertion
+- [Find & Replace](https://erag.in/text-editor-vue/find-and-replace.html): Search and replace in editor text
+- [Mentions](https://erag.in/text-editor-vue/mentions.html): Dynamic @mentions with avatar and autocomplete
+- [Merge Tags](https://erag.in/text-editor-vue/merge-tags.html): Template placeholders and variable substitution
+- [Templates](https://erag.in/text-editor-vue/templates.html): Reusable content templates and snippets
+- [Menubar](https://erag.in/text-editor-vue/menubar-customization.html): Menubar items and custom menus
+- [CSS Customization](https://erag.in/text-editor-vue/css-customization.html): Scoped classes and CSS custom properties
+- [Security](https://erag.in/text-editor-vue/security.html): HTML sanitization and XSS prevention
+- [API Reference](https://erag.in/text-editor-vue/api.html): Complete component props, events, and methods
+- [TypeScript Types](https://erag.in/text-editor-vue/types.html): Public TypeScript interface exports
+- [Contributing](https://erag.in/text-editor-vue/contributing.html): Development environment and pull requests
