@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Refund Policy</title>
+        <meta
+            name="description"
+            content="Refund policy for ERAG Technologies digital products, source code, software packages, and developer tools."
+        />
+        <meta name="author" content="Er Amit Gupta" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#103b45" />
+        <link rel="canonical" href="https://erag.in/refund-policy.html" />
+        <link
+            rel="icon"
+            href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                color-scheme: light;
+                --ink: #102022;
+                --muted: #52666b;
+                --line: rgba(16, 32, 34, 0.11);
+                --teal: #0f766e;
+                --teal-deep: #103b45;
+                --shadow: 0 22px 54px rgba(16, 59, 69, 0.11);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--ink);
+                font-family:
+                    Inter,
+                    ui-sans-serif,
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    'Segoe UI',
+                    sans-serif;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(16, 59, 69, 0.055) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        180deg,
+                        rgba(16, 59, 69, 0.055) 1px,
+                        transparent 1px
+                    ),
+                    radial-gradient(
+                        circle at top left,
+                        rgba(98, 210, 162, 0.24),
+                        transparent 30%
+                    ),
+                    radial-gradient(
+                        circle at top right,
+                        rgba(243, 178, 63, 0.2),
+                        transparent 28%
+                    ),
+                    linear-gradient(
+                        180deg,
+                        #f7fcfa 0%,
+                        #eef8f5 48%,
+                        #ffffff 100%
+                    );
+                background-size:
+                    28px 28px,
+                    28px 28px,
+                    auto,
+                    auto,
+                    auto;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            .shell {
+                width: min(1200px, calc(100% - 32px));
+                margin: 0 auto;
+            }
+
+            .topbar {
+                border-bottom: 1px solid var(--line);
+                background: rgba(247, 252, 250, 0.88);
+                backdrop-filter: saturate(180%) blur(18px);
+            }
+
+            .topbar-inner {
+                display: flex;
+                align-items: center;
+                min-height: 72px;
+            }
+
+            .brand {
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                font-weight: 800;
+            }
+
+            .brand-mark {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid rgba(255, 255, 255, 0.92);
+                box-shadow: 0 16px 28px rgba(16, 59, 69, 0.16);
+            }
+
+            .brand-text {
+                display: grid;
+                gap: 2px;
+            }
+
+            .brand-text strong {
+                line-height: 1;
+            }
+
+            .brand-text span {
+                color: var(--muted);
+                font-size: 0.84rem;
+                font-weight: 600;
+            }
+
+            .page {
+                padding: 48px 0 32px;
+            }
+
+            .policy-card,
+            .footer-card {
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.88);
+                box-shadow: var(--shadow);
+            }
+
+            .policy-card {
+                padding: 32px;
+            }
+
+            h1 {
+                margin: 0 0 10px;
+                color: var(--teal-deep);
+                font-size: clamp(2rem, 5vw, 3.2rem);
+                line-height: 1.05;
+                letter-spacing: 0;
+            }
+
+            .updated {
+                margin: 0 0 28px;
+                color: var(--muted);
+                font-weight: 600;
+            }
+
+            h2 {
+                margin: 28px 0 10px;
+                color: var(--teal-deep);
+                font-size: 1.25rem;
+                line-height: 1.25;
+            }
+
+            p,
+            li {
+                color: var(--muted);
+                line-height: 1.8;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            .text-link {
+                color: var(--teal);
+                font-weight: 700;
+                overflow-wrap: anywhere;
+            }
+
+            footer {
+                padding: 24px 0 44px;
+            }
+
+            .footer-card {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(280px, auto);
+                align-items: start;
+                justify-content: space-between;
+                gap: 16px 28px;
+                padding: 20px 24px;
+                color: var(--muted);
+            }
+
+            .footer-stack {
+                display: grid;
+                gap: 8px;
+                min-width: 0;
+            }
+
+            .footer-copy {
+                color: var(--teal-deep);
+                font-weight: 700;
+            }
+
+            .footer-links,
+            .footer-tech {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px 12px;
+                line-height: 1.7;
+            }
+
+            .footer-links a {
+                color: var(--muted);
+                font-weight: 600;
+                text-underline-offset: 4px;
+            }
+
+            .footer-links a:hover {
+                color: var(--teal-deep);
+                text-decoration: underline;
+            }
+
+            .footer-tech {
+                justify-content: flex-end;
+            }
+
+            @media (max-width: 720px) {
+                .shell {
+                    width: min(100% - 24px, 1180px);
+                }
+
+                .topbar-inner {
+                    min-height: auto;
+                    padding: 12px 0;
+                }
+
+                .brand-text {
+                    display: none;
+                }
+
+                .page {
+                    padding-top: 24px;
+                }
+
+                .policy-card {
+                    padding: 20px;
+                }
+
+                .footer-card {
+                    grid-template-columns: 1fr;
+                    padding: 18px;
+                }
+
+                .footer-tech {
+                    justify-content: flex-start;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="topbar">
+            <div class="shell topbar-inner">
+                <a class="brand" href="/">
+                    <img
+                        class="brand-mark"
+                        src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=84"
+                        alt="Er Amit Gupta"
+                        width="42"
+                        height="42"
+                    />
+                    <span class="brand-text">
+                        <strong>Erag</strong>
+                        <span>Open Source Documentation</span>
+                    </span>
+                </a>
+            </div>
+        </header>
+
+        <main class="page">
+            <div class="shell">
+                <article class="policy-card">
+                    <h1>Refund Policy</h1>
+                    <p class="updated">Last Updated: September 15, 2026</p>
+
+                    <h2>Overview</h2>
+                    <p>
+                        This Refund Policy applies to ERAG Technologies digital
+                        software products and services, including Laravel/PHP
+                        packages, Vue/React/TypeScript packages, developer
+                        tools, SaaS starter kits, premium source code,
+                        downloadable software, license keys, private repository
+                        access, support, consulting, and custom SaaS or software
+                        projects.
+                    </p>
+                    <p>
+                        We want customers to make informed purchases and receive
+                        the products they paid for. At the same time, digital
+                        products and source code are different from physical
+                        goods because they can be copied, downloaded, inspected,
+                        and retained after delivery.
+                    </p>
+
+                    <h2>Digital Products</h2>
+                    <p>
+                        Purchases of digital products are generally final and
+                        non-refundable after access has been provided to the
+                        source code, download, private repository, license key,
+                        package files, account access, or other digital
+                        delivery, except where otherwise required by applicable
+                        law.
+                    </p>
+                    <p>
+                        This policy applies to digital products such as Laravel
+                        packages, PHP packages, developer tools, SaaS starter
+                        kits, source code, downloadable software, private
+                        repository access, license keys, premium templates,
+                        project boilerplates, and customer-only technical
+                        materials.
+                    </p>
+
+                    <h2>
+                        Why Delivered Source Code Is Generally Non-Refundable
+                    </h2>
+                    <p>
+                        Source-code products contain digital intellectual
+                        property that cannot practically be returned once access
+                        has been provided. After delivery, a customer may have
+                        downloaded, copied, inspected, cloned, installed, or
+                        integrated the code. For this reason, refunds are
+                        generally not available after digital delivery, except
+                        where otherwise required by applicable law or expressly
+                        approved by ERAG Technologies.
+                    </p>
+
+                    <h2>Before Purchasing</h2>
+                    <p>
+                        Please review the product page, documentation, feature
+                        list, screenshots, compatibility requirements, license
+                        terms, support scope, and technical prerequisites before
+                        purchasing. Check whether the product supports your PHP,
+                        Laravel, Node.js, Vue, React, TypeScript, browser,
+                        database, package manager, server, or hosting
+                        environment.
+                    </p>
+                    <p>
+                        If you are unsure whether a product fits your project,
+                        contact us before purchasing at
+                        <a class="text-link" href="mailto:erag.office@gmail.com"
+                            >erag.office@gmail.com</a
+                        >. Pre-purchase questions help avoid compatibility
+                        issues and mistaken purchases.
+                    </p>
+
+                    <h2>Delivery and Access</h2>
+                    <p>
+                        Digital delivery may occur through download links,
+                        private repository invitations, license keys, package
+                        registry access, email delivery, account access,
+                        documentation portals, or other electronic methods.
+                        Delivery is considered provided when access to the
+                        purchased digital product or source code has been made
+                        available using the delivery method for that product.
+                    </p>
+
+                    <h2>Duplicate Payments</h2>
+                    <p>
+                        If you were charged more than once for the same product
+                        or order, contact us with the relevant payment and order
+                        details. After verification, duplicate payments may be
+                        refunded, adjusted, or credited as appropriate.
+                    </p>
+
+                    <h2>Product Not Delivered</h2>
+                    <p>
+                        If payment was completed but you did not receive the
+                        download, private repository invitation, license key,
+                        package access, or delivery email, contact us so we can
+                        verify the order. If the order is valid, we will work to
+                        provide access, resend delivery information, fix the
+                        access issue, or provide another reasonable resolution.
+                    </p>
+
+                    <h2>Incorrect Product Delivered</h2>
+                    <p>
+                        If you received the wrong product due to an order,
+                        checkout, or delivery error, contact us with your order
+                        information. We may provide the correct product, update
+                        your access, replace the delivered files, or review a
+                        refund or adjustment where appropriate.
+                    </p>
+
+                    <h2>Technical Issues</h2>
+                    <p>
+                        If a product does not work as described, we may first
+                        attempt to resolve the issue through support,
+                        troubleshooting, documentation updates, patches,
+                        replacement files, compatibility guidance, or another
+                        technical fix. Refund eligibility may depend on the
+                        nature of the issue, whether the product was used in a
+                        supported environment, whether the issue can be
+                        reproduced, and whether the problem is caused by the
+                        product itself or by unrelated third-party code,
+                        unsupported modifications, hosting configuration, or
+                        incompatible dependencies.
+                    </p>
+                    <p>
+                        Please provide enough information for review, such as
+                        product version, framework versions, package manager
+                        output, error messages, logs, screenshots, reproduction
+                        steps, and relevant environment details. Do not send
+                        passwords, private API keys, production secrets, or
+                        unrelated confidential information.
+                    </p>
+
+                    <h2>Change of Mind</h2>
+                    <p>
+                        Refunds are generally not provided for change-of-mind
+                        requests after digital delivery or source-code access
+                        has been provided. This includes situations where you no
+                        longer need the product, bought the product by mistake
+                        after delivery, changed project direction, found an
+                        alternative product, did not review compatibility
+                        requirements, or expected functionality not described in
+                        the product materials.
+                    </p>
+
+                    <h2>License Keys, Downloads, and Repository Access</h2>
+                    <p>
+                        License keys, download links, private repository access,
+                        and customer-only files are provided only to authorized
+                        purchasers or approved users. They must not be shared,
+                        resold, transferred, leaked, posted publicly, uploaded
+                        to public repositories, or used to provide unauthorized
+                        access to paid source code.
+                    </p>
+                    <p>
+                        A refund, if approved, may require termination of
+                        access, removal from private repositories, deactivation
+                        of license keys, cancellation of download access,
+                        deletion of customer-only files, or written confirmation
+                        that the product will no longer be used, subject to
+                        applicable law and technical feasibility.
+                    </p>
+
+                    <h2>Copyright and Intellectual Property</h2>
+                    <p>
+                        Source code remains copyrighted by ERAG Technologies or
+                        the respective owner. Buying a product gives you a
+                        license to use it under the applicable terms; it does
+                        not transfer ownership of the copyright or intellectual
+                        property.
+                    </p>
+                    <p>
+                        Paid source code cannot be publicly redistributed.
+                        Customers cannot resell substantially unchanged source
+                        code as their own product. Private GitHub or repository
+                        access, license keys, download links, and customer-only
+                        materials cannot be shared with unauthorized users.
+                        Open-source packages remain governed by their respective
+                        open-source licenses.
+                    </p>
+
+                    <h2>Custom SaaS and Software Projects</h2>
+                    <p>
+                        Refunds for custom SaaS, software development,
+                        consulting, implementation, or project-based work may
+                        depend on the proposal, invoice, milestone agreement,
+                        statement of work, or written contract for that project.
+                        Fees for completed work, delivered milestones,
+                        discovery, consultation, planning, design, development,
+                        review, deployment, or support time are generally not
+                        refundable unless separately agreed or required by
+                        applicable law.
+                    </p>
+
+                    <h2>Exceptional Circumstances</h2>
+                    <p>
+                        We may review exceptional circumstances case by case.
+                        Examples may include verified duplicate payments,
+                        failure to deliver access after a valid purchase,
+                        incorrect product delivery, material product defects
+                        that cannot reasonably be resolved, unauthorized payment
+                        activity, or situations where a refund is required by
+                        applicable law.
+                    </p>
+                    <p>
+                        Approval of a refund in one situation does not guarantee
+                        approval in another situation. Each request is reviewed
+                        based on the product, delivery status, access history,
+                        issue details, license terms, and applicable legal
+                        requirements.
+                    </p>
+
+                    <h2>Refund Method and Timing</h2>
+                    <p>
+                        If a refund is approved, it will generally be processed
+                        through the original payment method or payment provider
+                        when practical. Processing time may depend on banks,
+                        payment processors, card networks, checkout platforms,
+                        and account verification requirements.
+                    </p>
+
+                    <h2>Refund Requests</h2>
+                    <p>
+                        Send refund requests to
+                        <a class="text-link" href="mailto:erag.office@gmail.com"
+                            >erag.office@gmail.com</a
+                        >. To help us review your request, include:
+                    </p>
+                    <ul>
+                        <li>Name</li>
+                        <li>Purchase email</li>
+                        <li>Product name</li>
+                        <li>Order or transaction reference</li>
+                        <li>Purchase date</li>
+                        <li>Delivery or access method used</li>
+                        <li>Reason for request</li>
+                        <li>Relevant technical details if applicable</li>
+                    </ul>
+
+                    <h2>Contact</h2>
+                    <p>
+                        For refund questions, contact
+                        <a class="text-link" href="mailto:erag.office@gmail.com"
+                            >erag.office@gmail.com</a
+                        >. For secondary contact, you may also email
+                        <a
+                            class="text-link"
+                            href="mailto:eramitgupta.info@gmail.com"
+                            >eramitgupta.info@gmail.com</a
+                        >.
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <div class="shell">
+                <div class="footer-card">
+                    <div class="footer-stack">
+                        <span class="footer-copy"
+                            >© <span data-current-year></span> ERAG
+                            Technologies. All rights reserved.</span
+                        >
+                    </div>
+                    <div class="footer-stack">
+                        <nav class="footer-links" aria-label="Footer">
+                            <a href="/privacy-policy.html">Privacy Policy</a>
+                            <a href="/terms-and-conditions.html"
+                                >Terms &amp; Conditions</a
+                            >
+                            <a href="/refund-policy.html">Refund Policy</a>
+                            <a href="/contact.html">Contact</a>
+                        </nav>
+                        <span class="footer-tech"
+                            >PHP · Laravel · Vue.js · Inertia.js · React ·
+                            TypeScript</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document
+                .querySelectorAll('[data-current-year]')
+                .forEach((element) => {
+                    element.textContent = new Date().getFullYear();
+                });
+        </script>
+    </body>
+</html>
