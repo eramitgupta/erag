@@ -9,6 +9,10 @@ on:
     paths:
       - '.github/workflows/deploy-docs.yml'
       - 'index.html'
+      - 'privacy-policy.html'
+      - 'terms-and-conditions.html'
+      - 'refund-policy.html'
+      - 'contact.html'
       - 'public/**'
       - 'laravel-disposable-email/**'
       - 'laravel-inertia-toast/**'
@@ -81,6 +85,10 @@ jobs:
           mkdir -p site/vue-toastification
           mkdir -p site/text-editor-vue
           cp index.html site/index.html
+          cp privacy-policy.html site/privacy-policy.html
+          cp terms-and-conditions.html site/terms-and-conditions.html
+          cp refund-policy.html site/refund-policy.html
+          cp contact.html site/contact.html
           cp -R public/. site/
           cp -R laravel-disposable-email/docs/.vitepress/dist/* site/laravel-disposable-email/
           cp -R laravel-inertia-toast/docs/.vitepress/dist/* site/laravel-inertia-toast/
