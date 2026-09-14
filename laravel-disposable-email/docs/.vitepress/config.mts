@@ -223,6 +223,11 @@ export default defineConfig({
     logoLink: `${siteBase}/index.html`,
     nav: [
       { text: 'Get started', link: '/introduction.html' },
+      {
+        text: 'Support the Project <span class="nav-star">⭐</span>',
+        link: 'https://github.com/eramitgupta/laravel-disposable-email',
+        noIcon: true
+      },
     ],
     sidebar: [
       {
@@ -303,9 +308,6 @@ export default defineConfig({
     },
     footer: {
       message: 'MIT License. Copyright Er Amit Gupta',
-    },
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/eramitgupta/laravel-disposable-email' }
-    ]
+    }
   }
 })
