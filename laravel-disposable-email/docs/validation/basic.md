@@ -12,6 +12,10 @@ head:
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/laravel-disposable-email/docs/validation/basic.md
+</div>
+
 
 # Basic Validation
 
@@ -30,4 +34,3 @@ The string form works too:
 ```
 
 `disposable_email` checks the domain against built-in and custom lists. Keep Laravel's `email` rule when you also want normal format validation, or use the package's [RFC / DNS modes](../advanced/rfc-dns.html).
-

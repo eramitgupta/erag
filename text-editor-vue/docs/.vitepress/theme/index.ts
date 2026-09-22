@@ -11,4 +11,3 @@ export default {
         app.component('DemoTab', DemoTab);
     },
 };
-

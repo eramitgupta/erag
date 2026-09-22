@@ -29,6 +29,10 @@ head:
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/laravel-lang-sync-inertia/docs/index.md
+</div>
+
 
 <div class="home-code-section" aria-label="Code Example Preview">
 

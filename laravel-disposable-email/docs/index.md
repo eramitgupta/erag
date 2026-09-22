@@ -48,5 +48,9 @@ head:
     - name: twitter:description
       content: "Protect Laravel registrations from disposable and temporary email addresses."
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/laravel-disposable-email/docs/index.md
+</div>
+
 
 <HomeLanding />
