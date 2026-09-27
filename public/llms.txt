@@ -12,6 +12,7 @@
 - [Laravel PWA](https://erag.in/laravel-pwa/): Turn Laravel apps into Progressive Web Apps (PWA) with manifest generation, service workers, custom install prompts, and logo uploads.
 - [Vue Toastification](https://erag.in/vue-toastification/): Smooth Apple-style toast notifications and promise-based confirmation modals for Vue 3 using the Composition API.
 - [Text Editor Vue](https://erag.in/text-editor-vue/): Dependency-free Vue 3 rich text editor (WYSIWYG) with mentions (@), merge tags ({{), templates, image uploads, tables, and HTML controls.
+- [Text Editor React](https://erag.in/text-editor-react/): Dependency-free React rich text editor (WYSIWYG) for React 18 & 19 with mentions (@), merge tags ({{), templates, image uploads, tables, and HTML controls.
 
 ## Details
 

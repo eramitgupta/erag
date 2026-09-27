@@ -63,6 +63,12 @@ const apps = [
     prefix: '/text-editor-vue',
     cwd: join(rootDir, 'text-editor-vue'),
     port: 5182
+  },
+  {
+    name: 'text-editor-react',
+    prefix: '/text-editor-react',
+    cwd: join(rootDir, 'text-editor-react'),
+    port: 5183
   }
 ]
 

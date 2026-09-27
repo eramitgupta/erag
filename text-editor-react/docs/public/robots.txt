@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /text-editor-react/
+
+User-agent: GPTBot
+Allow: /text-editor-react/
+
+User-agent: ClaudeBot
+Allow: /text-editor-react/
+
+User-agent: PerplexityBot
+Allow: /text-editor-react/
+
+User-agent: Google-Extended
+Allow: /text-editor-react/
+
+User-agent: Applebot-Extended
+Allow: /text-editor-react/
+
+Sitemap: https://erag.in/text-editor-react/sitemap.xml

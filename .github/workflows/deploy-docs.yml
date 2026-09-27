@@ -22,6 +22,7 @@ on:
       - 'laravel-pwa/**'
       - 'vue-toastification/**'
       - 'text-editor-vue/**'
+      - 'text-editor-react/**'
   workflow_dispatch:
 
 permissions:
@@ -47,6 +48,12 @@ jobs:
           repository: eramitgupta/vue-toastification
           path: vue-toastification-library
 
+      - name: Checkout text-editor-react library
+        uses: actions/checkout@v4
+        with:
+          repository: erag-technologies/text-editor-react
+          path: text-editor-react-library
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -62,6 +69,7 @@ jobs:
           npm ci --prefix laravel-pwa
           npm ci --prefix vue-toastification
           npm ci --prefix text-editor-vue
+          npm ci --prefix text-editor-react
 
       - name: Build docs
         run: |
@@ -73,6 +81,7 @@ jobs:
           npm run build --prefix laravel-pwa
           npm run build --prefix vue-toastification
           npm run build --prefix text-editor-vue
+          npm run build --prefix text-editor-react
 
       - name: Prepare Pages artifact
         run: |
@@ -84,6 +93,7 @@ jobs:
           mkdir -p site/laravel-pwa
           mkdir -p site/vue-toastification
           mkdir -p site/text-editor-vue
+          mkdir -p site/text-editor-react
           cp index.html site/index.html
           cp privacy-policy.html site/privacy-policy.html
           cp terms-and-conditions.html site/terms-and-conditions.html
@@ -98,6 +108,7 @@ jobs:
           cp -R laravel-pwa/docs/.vitepress/dist/* site/laravel-pwa/
           cp -R vue-toastification/docs/.vitepress/dist/* site/vue-toastification/
           cp -R text-editor-vue/docs/.vitepress/dist/* site/text-editor-vue/
+          cp -R text-editor-react/docs/.vitepress/dist/* site/text-editor-react/
           touch site/.nojekyll
 
       - name: Audit generated SEO
