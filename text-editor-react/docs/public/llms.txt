@@ -1,0 +1,179 @@
+# Text Editor React (@erag/text-editor-react)
+
+> A modern dependency-free React rich text editor (WYSIWYG) built with native browser APIs. Supports React 18 and 19, TypeScript, mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable toolbars.
+
+## Core Information
+- **Package**: `@erag/text-editor-react`
+- **Documentation**: https://erag.in/text-editor-react/
+- **Repository**: https://github.com/erag-technologies/text-editor-react
+- **Issues**: https://github.com/erag-technologies/text-editor-react/issues
+- **NPM Package**: https://www.npmjs.com/package/@erag/text-editor-react
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+- **Peer Dependencies**: `react` (>=18.0.0 <20), `react-dom` (>=18.0.0 <20)
+- **Runtime Dependencies**: none
+- **Keywords**: react, react-editor, wysiwyg, rich-text-editor, editor, contenteditable, mentions, merge-tags, html-editor, nextjs, vite
+
+## Quick Installation
+```bash
+npm install @erag/text-editor-react
+# or
+pnpm add @erag/text-editor-react
+# or
+yarn add @erag/text-editor-react
+```
+
+Import the stylesheet once (entry file, root layout, or the component that renders the editor):
+
+```ts
+import '@erag/text-editor-react/style.css';
+```
+
+---
+
+## Quick Start (React Component)
+
+```tsx
+import { useRef, useState } from 'react';
+import { Editor, type EditorInit, type EditorInstance } from '@erag/text-editor-react';
+import '@erag/text-editor-react/style.css';
+
+const editorConfig: EditorInit = {
+    height: 400,
+    menubar: true,
+    toolbar:
+        'undo redo | blocks | bold italic underline | alignment | bullist numlist | link image table | code',
+    placeholder: 'Start typing your document...',
+};
+
+export default function App() {
+    const [content, setContent] = useState('<p>Hello from <strong>Text Editor React</strong>!</p>');
+    const editor = useRef<EditorInstance>(null);
+
+    return (
+        <div className="editor-wrapper">
+            <Editor ref={editor} value={content} onChange={setContent} init={editorConfig} />
+            <button type="button" onClick={() => editor.current?.insertHtml('<p>Inserted</p>')}>
+                Insert paragraph
+            </button>
+        </div>
+    );
+}
+```
+
+- Next.js App Router: add `'use client'` at the top of the component file that renders `<Editor />`. The editor is SSR-safe during initialization.
+- Inertia.js (React): use `useForm` from `@inertiajs/react` and bind `value={data.content}` / `onChange={(value) => setData('content', value)}`.
+
+### Mentions (@), Merge Tags ({{) & Templates Configuration
+```ts
+import type { EditorInit } from '@erag/text-editor-react';
+
+const editorConfig: EditorInit = {
+    mentions: {
+        minimumCharacters: 1,
+        debounce: 200,
+        limit: 8,
+        items: [
+            { id: 1, label: 'Amit Gupta', description: 'amit@erag.in' },
+            { id: 2, label: 'Developer Team', description: 'dev@erag.in' },
+        ],
+        // or async: items: async (query, signal) => fetchUsers(query, signal),
+    },
+    mergeTags: {
+        items: [
+            { value: '{{user.name}}', name: 'User Full Name', group: 'User' },
+            { value: '{{user.email}}', name: 'User Email Address', group: 'User' },
+            { value: '{{company.name}}', name: 'Company Name', group: 'Company' },
+        ],
+    },
+    templates: {
+        items: [
+            {
+                id: 'welcome',
+                label: 'Welcome Email',
+                description: 'Standard onboarding greeting',
+                content: '<h2>Welcome!</h2><p>Thanks for joining us.</p>',
+            },
+        ],
+    },
+};
+```
+
+---
+
+## Component API
+
+```tsx
+import { Editor, defaultEditorConfig, sanitizeHtml } from '@erag/text-editor-react';
+import type { EditorInit, EditorInstance, EditorProps, EditorEvents, EditorSlots } from '@erag/text-editor-react';
+```
+
+### Props (`EditorProps`)
+- `value?: string` + `onChange?: (value: string) => void`: controlled HTML content.
+- `defaultValue?: string`: uncontrolled initial HTML.
+- `init?: EditorInit`: configuration (height, menubar, toolbar, plugins, uploads, mentions, mergeTags, templates, sanitize, ...). Omitted keys keep defaults. Inline objects are fine; changes are detected structurally.
+- `disabled?: boolean`, `readOnly?: boolean`.
+- `id?: string`, `name?: string` (renders a hidden `<input>` with the HTML for native form posts), `ariaLabel?: string`, `className?: string`.
+
+### Callback props (`EditorEvents`)
+- `onChange(value: string)`: every content change.
+- `onCommit(value: string)`: on blur when content changed.
+- `onClick(MouseEvent)`, `onFocus(FocusEvent)`, `onBlur(FocusEvent)`, `onInput(InputEvent)`, `onKeyDown(KeyboardEvent)`, `onPaste(ClipboardEvent)`.
+- `onReady(root: HTMLElement)`, `onSelectionChange(Selection)`, `onResize({ height })`.
+- `onMentionSearch(MentionSearchEvent)`, `onMentionSelect(MentionSelectEvent)`, `onMentionRemove(MentionRemoveEvent)`.
+- `onMergeTagSelect(MergeTagSelectEvent)`, `onMergeTagRemove(MergeTagRemoveEvent)`.
+- `onTemplateInsert(TemplateInsertEvent)`, `onImageRemove(ImageDeleteInfo)`.
+
+### Render props (`EditorSlots`)
+- `toolbarStart`, `toolbarEnd`, `menubarEnd`, `statusbarStart`, `statusbarEnd`, `emptyState`: `ReactNode`.
+- `renderMentionItem({ item, active })`, `renderMentionLoading({ query })`, `renderMentionEmpty({ query })`, `renderMentionError({ query, retry })`: return `ReactNode`.
+
+### Instance methods (`EditorInstance`, via `useRef<EditorInstance>(null)` + `ref`)
+`focus()`, `blur()`, `getHtml()`, `setHtml(value)`, `getText()`, `clear()`, `insertHtml(value)`, `insertText(value)`, `selectAll()`, `undo()`, `redo()`, `openSourceCode()`, `openPreview()`, `getRootElement()`.
+
+### Image upload
+```ts
+import type { EditorInit, ImagesUploadHandler } from '@erag/text-editor-react';
+
+const upload: ImagesUploadHandler = async (blobInfo, progress) => {
+    const body = new FormData();
+    body.append('file', blobInfo.blob(), blobInfo.filename());
+    const response = await fetch('/uploads', { method: 'POST', body });
+    progress(100);
+    return (await response.json()).url;
+};
+
+const editorConfig: EditorInit = { imagesUploadHandler: upload, pasteImages: true };
+```
+
+Security: the built-in browser sanitizer is defense-in-depth only. Always sanitize untrusted HTML again on the server.
+
+---
+
+## Documentation Sitemap
+- [Overview](https://erag.in/text-editor-react/): Package architecture and live demo
+- [Introduction](https://erag.in/text-editor-react/introduction.html): Philosophy and dependency-free engine
+- [Installation](https://erag.in/text-editor-react/installation.html): NPM package setup, peer dependencies, and stylesheet import
+- [Configuration](https://erag.in/text-editor-react/configuration.html): Complete EditorInit options reference
+- [Examples & Demos](https://erag.in/text-editor-react/examples.html): Interactive live examples and setups
+- [Usage](https://erag.in/text-editor-react/usage.html): Controlled `value`/`onChange`, callbacks, and component props
+- [Laravel & Inertia](https://erag.in/text-editor-react/laravel-integration.html): Laravel and Inertia.js v3 (React) integration
+- [Text Formatting](https://erag.in/text-editor-react/text-formatting.html): Headings, fonts, bold, italic, colors, alignment
+- [Lists & Indentation](https://erag.in/text-editor-react/lists-and-indentation.html): Bulleted, numbered, and checklist controls
+- [Links & Anchors](https://erag.in/text-editor-react/links-and-anchors.html): Hyperlinks and anchor bookmarks
+- [Image Upload](https://erag.in/text-editor-react/image-upload.html): File upload, paste handling, and resizing
+- [Table Editor](https://erag.in/text-editor-react/table-editor.html): Visual table creation and cell editing
+- [Media & Embeds](https://erag.in/text-editor-react/media-and-embeds.html): Video, audio, and secure iframe embedding
+- [Code & Preview](https://erag.in/text-editor-react/code-and-preview.html): HTML source editing and fullscreen preview
+- [Special Characters](https://erag.in/text-editor-react/special-characters.html): Symbol and emoji picker dialogs
+- [Horizontal Rules](https://erag.in/text-editor-react/horizontal-rules-and-datetime.html): Dividers and datetime insertion
+- [Find & Replace](https://erag.in/text-editor-react/find-and-replace.html): Search and replace in editor text
+- [Mentions](https://erag.in/text-editor-react/mentions.html): Dynamic @mentions with avatar and autocomplete
+- [Merge Tags](https://erag.in/text-editor-react/merge-tags.html): Template placeholders and variable substitution
+- [Templates](https://erag.in/text-editor-react/templates.html): Reusable content templates and snippets
+- [Menubar](https://erag.in/text-editor-react/menubar-customization.html): Menubar items and custom menus
+- [CSS Customization](https://erag.in/text-editor-react/css-customization.html): Scoped classes and CSS custom properties
+- [Security](https://erag.in/text-editor-react/security.html): HTML sanitization and XSS prevention
+- [API Reference](https://erag.in/text-editor-react/api.html): Complete component props, callbacks, render props, and methods
+- [TypeScript Types](https://erag.in/text-editor-react/types.html): Public TypeScript interface exports
+- [Contributing](https://erag.in/text-editor-react/contributing.html): Development environment and pull requests

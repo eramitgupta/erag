@@ -1,0 +1,90 @@
+---
+title: "Code, Preview and Fullscreen"
+description: "Edit sanitized HTML source, preview and print editor content, and use native or fallback fullscreen editing modes in React."
+head:
+    - - meta
+      - name: robots
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: googlebot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - meta
+      - name: bingbot
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/text-editor-react/docs/code-and-preview.md
+</div>
+
+
+# Code, Preview & Fullscreen
+
+`@erag/text-editor-react` includes tools for HTML source code editing, live sanitized previewing, and distraction-free fullscreen writing.
+
+---
+
+## Configuration
+
+Enable `code`, `preview`, and `fullscreen` plugins:
+
+```ts
+const editorConfig: EditorInit = {
+    plugins: ['code', 'preview', 'fullscreen'],
+    toolbar: 'undo redo | blocks | bold italic | code preview fullscreen',
+    sourceCodeEditable: true,
+};
+```
+
+---
+
+## 1. Source Code View (`code`)
+
+Clicking the **Source Code** (`code`) button or opening **Tools → Source code** launches an interactive HTML code modal.
+
+- Displays raw sanitized HTML structure.
+- Allows developers or power users to inspect and directly edit HTML tags.
+- Applying changes re-sanitizes and updates the active editor canvas.
+
+Source editing is enabled by default. To keep the dialog available for HTML inspection while preventing changes, set:
+
+```ts
+const editorConfig: EditorInit = {
+    sourceCodeEditable: false,
+};
+```
+
+When disabled, the source textarea is read-only and the **Apply** button is hidden. The editor's `readOnly` or `disabled` prop (or `init.readonly`) also keeps this dialog read-only.
+
+Programmatic invocation through an editor ref (`const editor = useRef<EditorInstance>(null)` passed as `<Editor ref={editor} />`):
+
+```ts
+editor.current?.openSourceCode();
+```
+
+---
+
+## 2. Live Preview (`preview`)
+
+Clicking **Preview** (`preview`) or opening **File → Preview** launches a modal dialog rendering the sanitized document inside a clean view-only frame.
+
+- Prevents accidental edits while reviewing.
+- Shows exact layout rendering without editor toolbars or chrome.
+- Includes a **Print** button that prints only the preview content.
+
+Programmatic invocation:
+
+```ts
+editor.current?.openPreview();
+```
+
+You can also choose **File → Print** without opening Preview. The editor creates a temporary print-only portal, calls the browser print dialog, and cleans the portal afterward so the surrounding application page is not part of the printed document.
+
+---
+
+## 3. Fullscreen Editing Mode (`fullscreen`)
+
+Clicking **Fullscreen** (`fullscreen`) expands the editor canvas across the full browser viewport.
+
+- Hides surrounding page elements and navigation sidebars.
+- Uses native browser Fullscreen API with automatic fallback for restricted environments.
+- The browser's Escape behavior or clicking the Fullscreen button again exits native fullscreen. The CSS fallback can be toggled with the same editor button.

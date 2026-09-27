@@ -146,3 +146,25 @@
     <Editor v-model="content" />
   </template>
   ```
+
+---
+
+## 9. Text Editor React
+- **URL**: https://erag.in/text-editor-react/
+- **Repository**: https://github.com/erag-technologies/text-editor-react
+- **Description**: A modern, dependency-free React rich text editor (WYSIWYG) for React 18 & 19 built with native browser APIs. Features mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable menubars.
+- **Install**:
+  ```bash
+  npm install @erag/text-editor-react
+  ```
+- **Usage**:
+  ```tsx
+  import { useState } from 'react';
+  import { Editor } from '@erag/text-editor-react';
+  import '@erag/text-editor-react/style.css';
+
+  export default function App() {
+    const [content, setContent] = useState('<p>Hello World</p>');
+    return <Editor value={content} onChange={setContent} />;
+  }
+  ```

@@ -1,0 +1,16 @@
+{
+    "name": "text-editor-react-docs",
+    "private": true,
+    "scripts": {
+        "dev": "vitepress dev docs",
+        "build": "vitepress build docs",
+        "preview": "vitepress preview docs"
+    },
+    "devDependencies": {
+        "vitepress": "^1.6.4"
+    },
+    "dependencies": {
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0"
+    }
+}

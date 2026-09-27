@@ -12,6 +12,8 @@ Main documentation workspace for Erag open source packages.
 - `phone-number-react/` - VitePress docs for Phone Number React.
 - `laravel-pwa/` - VitePress docs for Laravel PWA.
 - `vue-toastification/` - VitePress docs for Vue Toastification.
+- `text-editor-vue/` - VitePress docs for Text Editor Vue.
+- `text-editor-react/` - VitePress docs for Text Editor React.
 
 ## Local Setup
 
@@ -31,6 +33,8 @@ cd ../phone-number-vue && npm install
 cd ../phone-number-react && npm install
 cd ../laravel-pwa && npm install
 cd ../vue-toastification && npm install
+cd ../text-editor-vue && npm install
+cd ../text-editor-react && npm install
 cd ..
 ```
 
