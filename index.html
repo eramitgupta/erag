@@ -11,14 +11,16 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#103b45">
+  <meta name="theme-color" content="#09090f">
   <meta name="google-site-verification" content="OZHlBl5qnZRHEArDBmPQeDqrhUr0K32DjQDZ8YxrtuM">
   <link rel="canonical" href="https://erag.in/">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64">
   <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=180">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Open Source Laravel, Vue &amp; React Package Docs | Erag">
@@ -60,9 +62,27 @@
           "image": "https://avatars.githubusercontent.com/u/72160684?v=4&size=512",
           "sameAs": [
             "https://github.com/eramitgupta",
-            "https://www.linkedin.com/in/eramitgupta/"
+            "https://www.linkedin.com/in/eramitgupta/",
+            "https://saas-laravel.com/"
           ],
           "worksFor": { "@type": "Organization", "name": "Erag" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://saas-laravel.com/#software",
+          "name": "SaaS Laravel",
+          "url": "https://saas-laravel.com/",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web",
+          "description": "Production-ready Laravel 13 SaaS starter kits for Vue, React, and Svelte with multi-tenancy, authentication, roles & permissions, and localization.",
+          "author": { "@id": "https://erag.in/#person" },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "29",
+            "highPrice": "79",
+            "offerCount": "4"
+          }
         },
         {
           "@type": "ItemList",
@@ -132,22 +152,30 @@
 
   <style>
     :root {
-      color-scheme: light;
-      --page: #f5fbf8;
-      --ink: #102022;
-      --muted: #52666b;
-      --faint: #7b8e92;
-      --surface: #ffffff;
-      --surface-soft: #eef8f5;
-      --line: rgba(16, 32, 34, 0.11);
-      --line-strong: rgba(16, 32, 34, 0.18);
-      --teal: #0f766e;
-      --teal-deep: #103b45;
-      --mint: #62d2a2;
-      --amber: #f3b23f;
-      --coral: #e85d75;
-      --blue: #3178c6;
-      --shadow: 0 22px 54px rgba(16, 59, 69, 0.11);
+      color-scheme: dark;
+      --bg: #09090f;
+      --bg-raised: #0e0e16;
+      --card: #111119;
+      --card-hover: #15151f;
+      --inset: #0b0b12;
+      --text: #ededf4;
+      --muted: #a2a2b6;
+      --faint: #6d6d82;
+      --line: rgba(255, 255, 255, 0.07);
+      --line-strong: rgba(255, 255, 255, 0.13);
+      --accent: #7c5cff;
+      --accent-strong: #6a47ff;
+      --accent-soft: #a996ff;
+      --accent-tint: rgba(124, 92, 255, 0.12);
+      --accent-glow: rgba(124, 92, 255, 0.35);
+      --green: #4ade80;
+      --laravel: #ff4a3d;
+      --vue: #42b883;
+      --react: #61dafb;
+      --svelte: #ff3e00;
+      --radius: 14px;
+      --radius-sm: 10px;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
     }
 
     * {
@@ -156,19 +184,16 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 84px;
     }
 
     body {
       margin: 0;
-      color: var(--ink);
+      color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        linear-gradient(90deg, rgba(16, 59, 69, 0.055) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(16, 59, 69, 0.055) 1px, transparent 1px),
-        radial-gradient(circle at top left, rgba(98, 210, 162, 0.24), transparent 30%),
-        radial-gradient(circle at top right, rgba(243, 178, 63, 0.2), transparent 28%),
-        linear-gradient(180deg, #f7fcfa 0%, #eef8f5 48%, #ffffff 100%);
-      background-size: 28px 28px, 28px 28px, auto, auto, auto;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -176,18 +201,30 @@
       text-decoration: none;
     }
 
+    img,
+    svg {
+      display: block;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent-soft);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
     .shell {
       width: min(1200px, calc(100% - 32px));
       margin: 0 auto;
     }
 
+    /* ---------- Top bar ---------- */
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 10;
-      overflow-x: clip;
-      backdrop-filter: saturate(180%) blur(18px);
-      background: rgba(247, 252, 250, 0.88);
+      z-index: 20;
+      backdrop-filter: saturate(160%) blur(16px);
+      -webkit-backdrop-filter: saturate(160%) blur(16px);
+      background: rgba(9, 9, 15, 0.72);
       border-bottom: 1px solid var(--line);
     }
 
@@ -196,1135 +233,1807 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      min-height: 72px;
+      min-height: 68px;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      min-width: 0;
-      font-weight: 800;
-      font-size: 1.05rem;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
+    .brand img {
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid rgba(255, 255, 255, 0.92);
-      box-shadow: 0 16px 28px rgba(16, 59, 69, 0.16);
+      border: 1px solid var(--line-strong);
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: 0;
-    }
-
-    .brand-text strong {
-      line-height: 1;
-      white-space: nowrap;
-    }
-
-    .brand-text span {
-      color: var(--muted);
-      font-size: 0.84rem;
-      font-weight: 600;
-      white-space: nowrap;
+    .brand small {
+      color: var(--faint);
+      font-weight: 500;
+      font-size: 0.85rem;
+      margin-left: 2px;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 4px;
     }
 
     .nav a {
-      min-height: 40px;
-      padding: 0 14px;
-      border-radius: 8px;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 8px;
       color: var(--muted);
-      font-weight: 600;
-    }
-
-    .nav-icon {
-      display: none;
-      width: 18px;
-      height: 18px;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-      flex: 0 0 auto;
-    }
-
-    .nav-icon-filled {
-      fill: currentColor;
-      stroke: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.15s ease, background 0.15s ease;
     }
 
     .nav a:hover {
-      background: rgba(15, 118, 110, 0.08);
-      color: var(--teal-deep);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav .nav-icon-link {
+      width: 38px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .nav svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
 
     .nav .nav-cta {
+      margin-left: 8px;
       color: #fff;
-      background: var(--teal-deep);
-      box-shadow: 0 14px 28px rgba(16, 59, 69, 0.16);
+      background: var(--accent);
+      font-weight: 600;
+      box-shadow: 0 8px 24px -8px var(--accent-glow);
     }
 
-    .hero {
-      padding: 48px 0 24px;
+    .nav .nav-cta:hover {
+      color: #fff;
+      background: var(--accent-strong);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 24px;
-      align-items: start;
-    }
-
-    .hero-panel,
-    .doc-card,
-    .reference-panel,
-    .profile-card,
-    .footer-card {
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-panel {
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .hero-banner {
-      padding: 34px;
-      color: #f8fffc;
-      background:
-        linear-gradient(135deg, rgba(16, 59, 69, 0.94), rgba(15, 118, 110, 0.92)),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-      background-size: auto, 22px 22px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 30px;
-      padding: 0 10px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 6px;
-      color: #cbfff0;
-      background: rgba(255, 255, 255, 0.08);
-      font-size: 0.78rem;
-      font-weight: 800;
+    .new-pill {
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: var(--accent-tint);
+      color: var(--accent-soft);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
-    .live-dot {
-      position: relative;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #62d2a2;
-      box-shadow: 0 0 0 0 rgba(98, 210, 162, 0.58);
-      animation: livePulse 1.6s ease-out infinite;
-    }
-
-    @keyframes livePulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(98, 210, 162, 0.58);
-      }
-
-      100% {
-        box-shadow: 0 0 0 9px rgba(98, 210, 162, 0);
-      }
-    }
-
-    h1 {
-      max-width: 100%;
-      margin: 18px 0 14px;
-      font-size: clamp(2.35rem, 5vw, 4.3rem);
-      line-height: 0.98;
-      letter-spacing: 0;
-    }
-
-    .hero h1 span {
-      display: block;
-      background: linear-gradient(135deg, #bfffe9 0%, #f6c95c 56%, #ff9bb0 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-copy {
-      min-width: 0;
-    }
-
-    .lead {
-      max-width: 100%;
-      margin: 0;
-      color: rgba(248, 255, 252, 0.82);
-      font-size: 1.08rem;
-      line-height: 1.8;
-    }
-
-    .doc-search {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 12px;
-      margin-top: 28px;
-      min-height: 56px;
-      padding: 0 16px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      color: rgba(248, 255, 252, 0.72);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .doc-search>* {
-      min-width: 0;
-    }
-
-    .doc-search strong {
-      color: #ffffff;
-      font-size: 0.92rem;
-    }
-
-    .tech-cloud {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .tech-chip {
-      position: relative;
-      display: grid;
-      place-items: center;
-      gap: 8px;
-      min-height: 112px;
-      padding: 18px 10px 16px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      color: var(--teal-deep);
-      background: rgba(255, 255, 255, 0.94);
-      box-shadow: 0 20px 38px rgba(16, 59, 69, 0.12);
-      overflow: hidden;
-      transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
-    }
-
-    .tech-chip::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: color-mix(in srgb, var(--icon-color) 12%, transparent);
-      opacity: 0;
-      transform: scale(0.94);
-      transition: opacity 0.22s ease, transform 0.22s ease;
-      pointer-events: none;
-    }
-
-    .tech-chip:hover,
-    .tech-chip:focus-within {
-      border-color: color-mix(in srgb, var(--icon-color) 62%, var(--line));
-      box-shadow:
-        0 22px 44px rgba(16, 59, 69, 0.14),
-        0 0 0 4px color-mix(in srgb, var(--icon-color) 18%, transparent);
-      transform: translateY(-4px);
-    }
-
-    .tech-chip:hover::before,
-    .tech-chip:focus-within::before {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .tech-icon {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      place-items: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
-      color: var(--icon-color);
-      background: var(--surface-soft);
-      font-weight: 900;
-      font-size: 0.95rem;
-      line-height: 1;
-      transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-    }
-
-    .tech-chip:hover .tech-icon,
-    .tech-chip:focus-within .tech-icon {
-      background: #ffffff;
-      box-shadow: 0 10px 22px color-mix(in srgb, var(--icon-color) 22%, transparent);
-      transform: scale(1.08);
-    }
-
-    .tech-icon svg {
-      display: block;
-      width: 36px;
-      height: 36px;
-    }
-
-    .tech-label {
-      position: relative;
-      z-index: 1;
-      color: var(--teal-deep);
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-align: center;
-      transition: color 0.22s ease;
-    }
-
-    .tech-chip:hover .tech-label,
-    .tech-chip:focus-within .tech-label {
-      color: var(--icon-color);
-    }
-
+    /* ---------- Shared bits ---------- */
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 8px;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 10px;
       border: 1px solid transparent;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      font-size: 0.95rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
     .button:hover {
       transform: translateY(-1px);
     }
 
-    .button-primary {
-      color: #fff;
-      background: var(--teal-deep);
-      box-shadow: 0 18px 30px rgba(16, 59, 69, 0.18);
+    .button svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .button-secondary {
+    .button-primary {
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 10px 30px -10px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .button-primary:hover {
+      background: var(--accent-strong);
+    }
+
+    .button-ghost {
+      color: var(--text);
       border-color: var(--line-strong);
-      background: rgba(255, 255, 255, 0.82);
-      color: var(--teal-deep);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .button-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      color: var(--accent-soft);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .section {
-      padding: 32px 0;
+      position: relative;
+      padding: 96px 0;
     }
 
     .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 18px;
+      max-width: 680px;
+      margin-bottom: 44px;
+    }
+
+    .section-head.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
 
     .section-head h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.65rem, 3vw, 2.3rem);
-      line-height: 1.08;
+      margin: 0 0 14px;
+      font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      font-weight: 800;
     }
 
     .section-head p {
       margin: 0;
-      max-width: 48rem;
       color: var(--muted);
-      line-height: 1.75;
-    }
-
-    .section-kicker {
-      display: inline-flex;
-      margin-bottom: 8px;
-      color: var(--teal);
-      font-size: 0.76rem;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    .docs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 20px;
-    }
-
-    .doc-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 330px;
-      padding: 22px;
-      border-radius: 8px;
-    }
-
-    .doc-card .tag {
-      display: inline-flex;
-      min-height: 32px;
-      align-items: center;
-      padding: 0 10px;
-      border-radius: 6px;
-      background: var(--surface-soft);
-      color: var(--teal-deep);
-      font-size: 0.8rem;
-      font-weight: 700;
-      width: fit-content;
-    }
-
-    .doc-card h3 {
-      margin: 16px 0 10px;
-      font-size: 1.28rem;
-      line-height: 1.25;
-    }
-
-    .doc-card p {
-      margin: 0 0 16px;
-      color: var(--muted);
+      font-size: 1.05rem;
       line-height: 1.7;
     }
 
-    .topic-list {
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      padding: 88px 0 72px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 75%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -260px;
+      left: 50%;
+      width: 1000px;
+      height: 620px;
+      transform: translateX(-50%);
+      background: radial-gradient(closest-side, rgba(124, 92, 255, 0.32), transparent);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
       display: grid;
-      gap: 8px;
-      margin: 0 0 20px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .announce {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      padding: 5px 14px 5px 5px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.86rem;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .announce:hover {
+      border-color: rgba(124, 92, 255, 0.5);
+      background: var(--accent-tint);
+      color: var(--text);
+    }
+
+    .announce b {
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .announce span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    h1 {
+      margin: 26px 0 20px;
+      font-size: clamp(2.4rem, 5.2vw, 4.1rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, #c4b5fd 0%, #8b6cff 45%, #6a8bff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      max-width: 36rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin: 40px 0 0;
       padding: 0;
       list-style: none;
     }
 
-    .topic-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 0.92rem;
+    .hero-stats li {
+      display: grid;
+      gap: 2px;
     }
 
-    .topic-list li::before {
-      content: "";
-      width: 7px;
-      height: 7px;
+    .hero-stats strong {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-stats span {
+      color: var(--faint);
+      font-size: 0.85rem;
+    }
+
+    /* Terminal */
+    .terminal {
+      position: relative;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(22, 22, 32, 0.92), rgba(12, 12, 18, 0.96));
+      box-shadow: 0 40px 80px -24px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(124, 92, 255, 0.06), 0 0 80px -30px var(--accent-glow);
+      overflow: hidden;
+    }
+
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .terminal-bar i {
+      width: 11px;
+      height: 11px;
       border-radius: 50%;
-      background: var(--amber);
+      background: #2a2a38;
+    }
+
+    .terminal-bar i:nth-child(1) {
+      background: #ff5f57;
+    }
+
+    .terminal-bar i:nth-child(2) {
+      background: #febc2e;
+    }
+
+    .terminal-bar i:nth-child(3) {
+      background: #28c840;
+    }
+
+    .terminal-bar span {
+      margin-left: auto;
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+    }
+
+    .terminal pre {
+      margin: 0;
+      padding: 20px 20px 24px;
+      overflow-x: auto;
+      color: #d6d6e4;
+      font-family: var(--mono);
+      font-size: 0.84rem;
+      line-height: 1.95;
+    }
+
+    .t-dim {
+      color: var(--faint);
+    }
+
+    .t-prompt {
+      color: var(--accent-soft);
+    }
+
+    .t-ok {
+      color: var(--green);
+    }
+
+    .t-str {
+      color: #f9c97c;
+    }
+
+    .caret {
+      display: inline-block;
+      width: 8px;
+      height: 1.05em;
+      margin-left: 2px;
+      vertical-align: -2px;
+      background: var(--accent-soft);
+      animation: blink 1.1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    /* ---------- Stack strip ---------- */
+    .stack {
+      padding: 8px 0 24px;
+    }
+
+    .stack-label {
+      margin: 0 0 18px;
+      color: var(--faint);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    .stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .stack-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 16px 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--bg-raised);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .stack-chip:hover {
+      border-color: color-mix(in srgb, var(--c) 55%, transparent);
+      color: var(--text);
+    }
+
+    .stack-chip svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ---------- SaaS Laravel feature ---------- */
+    .saas {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(124, 92, 255, 0.28);
+      border-radius: 22px;
+      background:
+        radial-gradient(ellipse 60% 80% at 100% 0%, rgba(124, 92, 255, 0.22), transparent 60%),
+        radial-gradient(ellipse 50% 60% at 0% 100%, rgba(106, 139, 255, 0.1), transparent 60%),
+        var(--bg-raised);
+    }
+
+    .saas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(120deg, transparent 30%, #000 100%);
+      -webkit-mask-image: linear-gradient(120deg, transparent 30%, #000 100%);
+      pointer-events: none;
+    }
+
+    .saas-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 48px;
+      align-items: center;
+      padding: 56px;
+    }
+
+    .saas h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+
+    .saas-copy>p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.7;
+    }
+
+    .check-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 20px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #cfcfdd;
+      font-size: 0.93rem;
+      line-height: 1.45;
+    }
+
+    .check-list svg {
       flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      margin-top: 1px;
+      padding: 3px;
+      border-radius: 50%;
+      background: var(--accent-tint);
+      stroke: var(--accent-soft);
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .saas-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
+    }
+
+    .price-note {
+      color: var(--faint);
+      font-size: 0.88rem;
+    }
+
+    .price-note strong {
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    /* SaaS mock UI */
+    .mock {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: rgba(10, 10, 16, 0.9);
+      box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+    }
+
+    .mock-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mock-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .mock-logo {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
+    .mock-tabs {
+      display: flex;
+      gap: 4px;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--inset);
+    }
+
+    .mock-tabs span {
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: var(--faint);
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    .mock-tabs .on {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+
+    .mock-body {
+      display: grid;
+      gap: 8px;
+      padding: 16px;
+    }
+
+    .tenant {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--card);
+    }
+
+    .tenant-avatar {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: color-mix(in srgb, var(--c) 18%, transparent);
+      color: var(--c);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .tenant-meta {
+      min-width: 0;
+    }
+
+    .tenant-meta strong {
+      display: block;
+      overflow: hidden;
+      font-size: 0.88rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .tenant-meta span {
+      color: var(--faint);
+      font-family: var(--mono);
+      font-size: 0.74rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(74, 222, 128, 0.1);
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .status.paused {
+      background: rgba(250, 204, 21, 0.1);
+      color: #facc15;
+    }
+
+    .mock-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 16px 16px;
+    }
+
+    .fw {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .fw i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--c);
+    }
+
+    /* ---------- Docs ---------- */
+    .docs-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-raised);
+    }
+
+    .filter {
+      min-height: 34px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .filter:hover {
+      color: var(--text);
+    }
+
+    .filter[aria-pressed="true"] {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+
+    .search {
+      position: relative;
+      flex: 0 1 300px;
+      min-width: 0;
+    }
+
+    .search svg {
+      position: absolute;
+      top: 50%;
+      left: 13px;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      fill: none;
+      stroke: var(--faint);
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .search input {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 14px 0 38px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-raised);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .search input::placeholder {
+      color: var(--faint);
+    }
+
+    .search input:focus {
+      border-color: rgba(124, 92, 255, 0.55);
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .doc-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .doc-card:hover {
+      border-color: color-mix(in srgb, var(--c) 45%, transparent);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+    }
+
+    .doc-card[hidden] {
+      display: none;
+    }
+
+    .doc-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .doc-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid color-mix(in srgb, var(--c) 30%, transparent);
+      border-radius: 11px;
+      background: color-mix(in srgb, var(--c) 10%, transparent);
+    }
+
+    .doc-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .doc-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.14rem;
+      letter-spacing: -0.01em;
+    }
+
+    .doc-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .doc-card code {
+      display: block;
+      margin: 0 0 20px;
+      padding: 9px 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--inset);
+      color: #c9c9d8;
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .doc-card code::before {
+      content: "$ ";
+      color: var(--accent-soft);
     }
 
     .doc-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      align-items: center;
+      gap: 16px;
       margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
     }
 
-    .doc-link {
-      min-height: 40px;
-      padding: 0 14px;
-      border-radius: 8px;
+    .doc-links a {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #fff;
-      background: var(--teal);
-    }
-
-    .doc-link.alt {
-      border: 1px solid var(--line);
-      background: #ffffff;
-      color: var(--teal-deep);
-    }
-
-    .reference-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .reference-panel {
-      min-height: 130px;
-      padding: 18px;
-      border-radius: 8px;
-    }
-
-    .reference-panel strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--teal-deep);
-    }
-
-    .reference-panel span {
+      gap: 6px;
       color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.94rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
     }
 
-    .about-band {
+    .doc-links a:hover {
+      color: var(--text);
+    }
+
+    .doc-links .primary {
+      color: var(--accent-soft);
+    }
+
+    .doc-links .primary:hover {
+      color: #c9bcff;
+    }
+
+    .doc-links svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.15s ease;
+    }
+
+    .doc-links a:hover svg {
+      transform: translateX(2px);
+    }
+
+    .doc-links .github {
+      margin-left: auto;
+    }
+
+    .doc-links .github svg {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .empty-state {
+      padding: 48px 20px;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ---------- About ---------- */
+    .about-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
       gap: 16px;
-      align-items: stretch;
     }
 
-    .about-card,
-    .profile-card {
-      padding: 24px;
+    .panel {
+      padding: 28px;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      background: var(--card);
     }
 
-    .about-card p,
-    .profile-card p {
+    .panel>p {
       margin: 0;
       color: var(--muted);
       line-height: 1.8;
     }
 
-    .about-points {
+    .points {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
     .point {
-      padding: 16px;
-      border-radius: 8px;
+      padding: 18px;
       border: 1px solid var(--line);
-      background: var(--surface-soft);
+      border-radius: var(--radius-sm);
+      background: var(--inset);
     }
 
     .point strong {
       display: block;
       margin-bottom: 6px;
-      color: var(--teal-deep);
-      font-size: 0.98rem;
+      font-size: 0.95rem;
     }
 
     .point span {
       color: var(--muted);
+      font-size: 0.88rem;
       line-height: 1.6;
-      font-size: 0.94rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
     }
 
     .profile-head {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
-    .profile-avatar {
-      width: 64px;
-      height: 64px;
+    .profile-head img {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(255, 255, 255, 0.94);
-      box-shadow: 0 16px 30px rgba(16, 59, 69, 0.13);
-      flex: 0 0 auto;
+      border: 2px solid rgba(124, 92, 255, 0.5);
+      box-shadow: 0 0 0 4px var(--accent-tint);
     }
 
-    .profile-title {
-      margin: 0 0 6px;
-      font-size: 1.35rem;
+    .profile-head h3 {
+      margin: 0 0 4px;
+      font-size: 1.2rem;
     }
 
-    .profile-meta {
+    .profile-head p {
       margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
+      color: var(--faint);
+      font-size: 0.88rem;
+      line-height: 1.5;
     }
 
     .profile-actions {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: auto;
+      padding-top: 24px;
     }
 
-    footer {
-      padding: 24px 0 44px;
+    /* ---------- CTA ---------- */
+    .cta {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 32px;
+      border-radius: 22px;
+      background:
+        radial-gradient(ellipse 70% 120% at 50% 0%, rgba(255, 255, 255, 0.18), transparent 60%),
+        linear-gradient(135deg, #5b3df5 0%, #7c5cff 50%, #5a6cff 100%);
+      text-align: center;
     }
 
-    .footer-card {
-      padding: 20px 24px;
-      border-radius: 8px;
-      color: var(--muted);
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, auto);
-      align-items: start;
-      justify-content: space-between;
-      gap: 16px 28px;
+    .cta h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      letter-spacing: -0.03em;
+      font-weight: 800;
     }
 
-    .footer-stack {
-      display: grid;
-      gap: 8px;
-      min-width: 0;
-    }
-
-    .footer-copy {
-      color: var(--teal-deep);
-      font-weight: 700;
-    }
-
-    .footer-links,
-    .footer-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 12px;
+    .cta p {
+      max-width: 560px;
+      margin: 0 auto 28px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
       line-height: 1.7;
     }
 
-    .footer-links a {
-      color: var(--muted);
-      font-weight: 600;
-      text-underline-offset: 4px;
+    .cta .hero-actions {
+      justify-content: center;
+      margin: 0;
     }
 
-    .footer-links a:hover {
-      color: var(--teal-deep);
-      text-decoration: underline;
+    .button-white {
+      color: #2b1a8f;
+      background: #fff;
     }
 
-    .footer-tech {
-      justify-content: flex-end;
+    .button-white:hover {
+      background: #f1eeff;
     }
 
-    @media (max-width: 980px) {
+    .button-outline-white {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-      .hero-grid,
-      .docs-grid,
-      .reference-grid,
-      .about-band {
-        grid-template-columns: 1fr;
+    .button-outline-white:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 96px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+      gap: 32px;
+      padding: 56px 0 40px;
+    }
+
+    .footer-about p {
+      max-width: 320px;
+      margin: 14px 0 0;
+      color: var(--faint);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .footer-col ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-col a {
+      color: var(--faint);
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 22px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: 0.85rem;
+    }
+
+    .footer-wordmark {
+      margin: 0;
+      padding-bottom: 8px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(169, 150, 255, 0.35), rgba(169, 150, 255, 0));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: clamp(4rem, 17vw, 13rem);
+      font-weight: 800;
+      letter-spacing: -0.06em;
+      line-height: 0.85;
+      text-align: center;
+      user-select: none;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1024px) {
+      .docs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .hero-grid,
+      .saas-grid,
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-grid {
+        gap: 44px;
+      }
+
+      .saas-grid {
+        padding: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
     }
 
     @media (max-width: 720px) {
       .shell {
-        width: min(100% - 24px, 1180px);
+        width: calc(100% - 32px);
       }
 
-      .topbar-inner {
-        min-height: auto;
-        padding: 12px 0 10px;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-      }
-
-      .brand-text {
+      .nav .nav-text {
         display: none;
       }
 
-      .nav {
-        width: 100%;
-        margin-left: 0;
-        padding: 2px 12px 6px;
-        gap: 12px;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        overflow-x: visible;
-      }
-
-      .nav a {
-        width: min(46px, calc((100vw - 72px) / 5));
-        min-width: 40px;
-        min-height: 42px;
-        padding: 0;
-        flex: 0 1 46px;
-        font-size: 0.9rem;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.78);
-      }
-
       .nav .nav-cta {
-        color: #ffffff;
-        background: var(--teal-deep);
-        border-color: var(--teal-deep);
-      }
-
-      .nav-icon {
-        display: block;
-      }
-
-      .nav-label {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        white-space: nowrap;
+        margin-left: 4px;
+        padding: 0 12px;
       }
 
       .hero {
-        padding: 24px 0 18px;
-      }
-
-      .hero-panel {
-        border-radius: 8px;
-      }
-
-      .hero-banner {
-        padding: 22px;
-      }
-
-      h1 {
-        margin-top: 14px;
-        font-size: clamp(2rem, 12vw, 2.85rem);
-        line-height: 1.02;
+        padding: 56px 0 48px;
       }
 
       .lead {
-        font-size: 1rem;
-        line-height: 1.65;
+        font-size: 1.02rem;
       }
 
-      .doc-search {
-        grid-template-columns: 1fr;
-        align-items: start;
-        gap: 6px;
-        margin-top: 20px;
-        padding: 14px;
+      .hero-actions .button {
+        flex: 1 1 100%;
       }
 
-      .tech-cloud {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px 8px;
+      .hero-stats {
+        gap: 20px 28px;
       }
 
-      .tech-chip {
-        min-height: 78px;
-        padding: 14px 6px 10px;
-      }
-
-      .tech-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 8px;
-      }
-
-      .tech-icon svg {
-        width: 30px;
-        height: 30px;
-      }
-
-      .tech-label {
-        font-size: 0.72rem;
+      .terminal pre {
+        font-size: 0.76rem;
       }
 
       .section {
-        padding: 24px 0;
+        padding: 72px 0;
       }
 
-      .section-head {
-        display: block;
-        margin-bottom: 14px;
+      .saas-grid {
+        padding: 28px 20px;
+        gap: 36px;
       }
 
-      .section-head h2 {
-        font-size: clamp(1.55rem, 8vw, 2rem);
+      .check-list {
+        grid-template-columns: minmax(0, 1fr);
       }
 
-      .about-points {
+      .saas-actions .button {
+        flex: 1 1 100%;
+      }
+
+      .docs-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .docs-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+      }
+
+      .search {
+        flex-basis: auto;
+      }
+
+      .points {
         grid-template-columns: 1fr;
       }
 
-      .about-card,
-      .profile-card,
-      .doc-card,
-      .reference-panel {
-        padding: 20px;
+      .panel {
+        padding: 22px;
       }
 
-      .doc-card {
-        min-height: auto;
+      .cta {
+        padding: 48px 20px;
       }
 
-      .doc-links,
-      .profile-actions {
-        display: grid;
-        grid-template-columns: 1fr;
+      .cta .button {
+        flex: 1 1 100%;
       }
 
-      .doc-link,
-      .button {
-        width: 100%;
+      footer {
+        margin-top: 72px;
       }
 
-      .profile-head {
-        align-items: flex-start;
-      }
-
-      .footer-card {
-        align-items: flex-start;
-        grid-template-columns: 1fr;
-        padding: 18px;
-      }
-
-      .footer-tech {
-        justify-content: flex-start;
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 420px) {
-      .shell {
-        width: min(100% - 20px, 1180px);
+      .brand small {
+        display: none;
       }
 
-      .hero-banner {
-        padding: 18px;
+      .profile-actions {
+        grid-template-columns: 1fr;
       }
 
-      .eyebrow {
-        font-size: 0.72rem;
+      .mock-tabs {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
       }
 
-      .profile-head {
-        display: grid;
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
 </head>
 
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="M5 12.5l4.5 4.5L19 7.5"></path>
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path
+          d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.11-.75.41-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.72 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.18 1.19a10.94 10.94 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.11 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.07.79 2.16v3.03c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z">
+        </path>
+      </symbol>
+      <symbol id="i-laravel" viewBox="0 0 24 24">
+        <path fill="#ff4a3d"
+          d="M23.64 5.47a.4.4 0 0 1 .01.1v5.13a.37.37 0 0 1-.18.32l-4.3 2.48v4.9a.37.37 0 0 1-.19.33l-8.98 5.17a.4.4 0 0 1-.06.03h-.02a.38.38 0 0 1-.19 0h-.03l-.06-.03L.66 18.73a.37.37 0 0 1-.18-.33V3a.4.4 0 0 1 .01-.1v-.03l.03-.06.02-.04.03-.04.04-.03.03-.03L5.14.07a.37.37 0 0 1 .37 0L10 2.66l.04.03.04.03.03.04.03.04.02.04.02.06v.03a.4.4 0 0 1 .02.1v9.61l3.74-2.15V5.57a.4.4 0 0 1 .01-.1v-.03l.03-.06.02-.04.03-.04.03-.03.04-.03 4.49-2.59a.37.37 0 0 1 .37 0l4.49 2.59.04.03.03.03.03.04.03.04.02.04.02.06ZM22.9 10.47V6.2l-1.57.9-2.17 1.25v4.27Zm-4.49 7.71v-4.27l-2.13 1.22-6.1 3.48v4.31ZM1.23 3.64v14.54l8.23 4.74v-4.31l-4.3-2.43-.01-.01h-.02l-.03-.04-.03-.03-.03-.04-.02-.04-.02-.04v-.05l-.02-.05V5.8L2.8 4.54Zm4.1-2.8L1.6 3 5.33 5.15 9.07 3ZM7.28 14.34l2.17-1.25V3.64L7.88 4.54 5.7 5.8v9.45Zm11.5-10.8-3.74 2.15 3.74 2.15 3.73-2.15Zm-.38 4.95-2.17-1.25-1.57-.9v4.27l2.17 1.25 1.57.9Zm-8.6 9.6 5.48-3.13 2.74-1.56-3.73-2.15-4.3 2.47-3.91 2.25Z" />
+      </symbol>
+      <symbol id="i-vue" viewBox="0 0 24 24">
+        <path fill="#42b883" d="M19.2 1.5H24L12 22.2 0 1.5h9.18L12 6.3l2.76-4.8Z" />
+        <path fill="#35495e" d="M4.8 1.5h4.38L12 6.3l2.76-4.8h4.44L12 13.98Z" />
+      </symbol>
+      <symbol id="i-react" viewBox="-11.5 -10.23 23 20.46">
+        <circle r="2.05" fill="#61dafb" />
+        <g fill="none" stroke="#61dafb" stroke-width="1">
+          <ellipse rx="11" ry="4.2" />
+          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+        </g>
+      </symbol>
+      <symbol id="i-inertia" viewBox="0 0 128 128">
+        <path fill="#9b87f5"
+          d="M92.433 28.433H55.625L91.192 64 55.625 99.567h36.808L128 64zm-55.625 0H0L35.567 64 0 99.567h36.808L72.375 64z" />
+      </symbol>
+      <symbol id="i-php" viewBox="0 0 128 128">
+        <ellipse cx="64" cy="64" rx="62" ry="36" fill="#777bb3" />
+        <text x="64" y="77" fill="#fff" font-size="38" font-family="Arial, sans-serif" font-weight="700"
+          text-anchor="middle">php</text>
+      </symbol>
+      <symbol id="i-ts" viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#3178c6" />
+        <text x="64" y="84" fill="#fff" font-size="52" font-family="Arial, sans-serif" font-weight="800"
+          text-anchor="middle">TS</text>
+      </symbol>
+      <symbol id="i-tailwind" viewBox="0 0 24 24">
+        <path fill="#38bdf8"
+          d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35C13.39 10.85 14.53 12 17 12c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.31-.74-1.91-1.35C15.61 7.15 14.47 6 12 6Zm-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35C8.39 16.85 9.53 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.31-.74-1.91-1.35C10.61 13.15 9.47 12 7 12Z" />
+      </symbol>
+    </defs>
+  </svg>
+
   <header class="topbar">
     <div class="shell topbar-inner">
-      <a class="brand" href="/">
-        <img class="brand-mark" src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=84"
-          alt="Er Amit Gupta" width="42" height="42">
-        <span class="brand-text">
-          <strong>Erag</strong>
-          <span>Open Source Documentation</span>
-        </span>
+      <a class="brand" href="/" aria-label="Erag home">
+        <img src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64" alt="" width="32" height="32">
+        <span>Erag <small>Docs</small></span>
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#home" aria-label="Home" title="Home">
-          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 11.5 12 4l9 7.5"></path>
-            <path d="M5 10.5V20h14v-9.5"></path>
-            <path d="M9 20v-6h6v6"></path>
+        <a class="nav-text" href="#docs">Packages</a>
+        <a class="nav-text" href="#saas-laravel">SaaS Laravel <span class="new-pill">New</span></a>
+        <a class="nav-text" href="#about">About</a>
+        <a class="nav-icon-link" href="https://github.com/eramitgupta" aria-label="GitHub" title="GitHub"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-github"></use>
           </svg>
-          <span class="nav-label">Home</span>
         </a>
-        <a href="#docs" aria-label="Docs" title="Docs">
-          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 4h10l4 4v12H5z"></path>
-            <path d="M15 4v5h4"></path>
-            <path d="M8 13h8"></path>
-            <path d="M8 17h6"></path>
-          </svg>
-          <span class="nav-label">Docs</span>
-        </a>
-        <a href="#about" aria-label="About" title="About">
-          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M4 20c1.7-4 4.4-6 8-6s6.3 2 8 6"></path>
-          </svg>
-          <span class="nav-label">About</span>
-        </a>
-        <a class="nav-cta" href="https://github.com/eramitgupta" aria-label="GitHub" title="GitHub">
-          <svg class="nav-icon nav-icon-filled" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.11-.75.41-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.72 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.18 1.19a10.94 10.94 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.11 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.07.79 2.16v3.03c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z">
-            </path>
-          </svg>
-          <span class="nav-label">GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/eramitgupta/" aria-label="LinkedIn" title="LinkedIn">
-          <svg class="nav-icon nav-icon-filled" viewBox="0 0 24 24" aria-hidden="true">
+        <a class="nav-icon-link" href="https://www.linkedin.com/in/eramitgupta/" aria-label="LinkedIn"
+          title="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.25 0h3.83v1.5h.05c.53-.95 1.84-1.95 3.78-1.95 4.04 0 4.79 2.66 4.79 6.12V20.75h-4v-4.72c0-1.13-.02-2.58-1.57-2.58-1.58 0-1.82 1.23-1.82 2.5v4.8h-4v-11Z">
             </path>
           </svg>
-          <span class="nav-label">LinkedIn</span>
         </a>
+        <a class="nav-cta" href="https://saas-laravel.com/" target="_blank" rel="noopener">Get Starter Kit</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero" id="home">
       <div class="shell hero-grid">
-        <div class="hero-panel">
-          <div class="hero-banner">
-            <div class="hero-copy">
-              <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>The Ship Ready</div>
-              <h1>
-                Open source Laravel, Vue &amp; React
-                <span>Packages Documentation.</span>
-              </h1>
-              <p class="lead">
-                Browse installation guides, configuration notes, API references, frontend integration examples, and
-                production usage patterns for Erag open source software (OSS) packages, developer tools, and SaaS solutions.
+        <div>
+          <a class="announce" href="https://saas-laravel.com/" target="_blank" rel="noopener">
+            <b>NEW</b>
+            <span>SaaS Laravel starter kits for Vue, React &amp; Svelte →</span>
+          </a>
+
+          <h1>
+            Open source packages for
+            <span class="gradient-text">Laravel, Vue &amp; React.</span>
+          </h1>
+
+          <p class="lead">
+            Installation guides, configuration notes, API references, and production-ready examples for every Erag
+            package — everything you need to install, configure, and ship.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#docs">
+              Browse documentation
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+            <a class="button button-ghost" href="https://github.com/eramitgupta" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="fill:currentColor;stroke:none">
+                <use href="#i-github"></use>
+              </svg>
+              Star on GitHub
+            </a>
+          </div>
+
+          <ul class="hero-stats" aria-label="Highlights">
+            <li><strong>8</strong><span>Open source packages</span></li>
+            <li><strong>3</strong><span>Frameworks supported</span></li>
+            <li><strong>MIT</strong><span>Free to use</span></li>
+          </ul>
+        </div>
+
+        <div class="terminal" aria-hidden="true">
+          <div class="terminal-bar">
+            <i></i><i></i><i></i>
+            <span>~/my-laravel-app</span>
+          </div>
+          <pre><span class="t-dim"># Laravel packages</span>
+<span class="t-prompt">$</span> composer require <span class="t-str">erag/laravel-pwa</span>
+<span class="t-prompt">$</span> composer require <span class="t-str">erag/laravel-inertia-toast</span>
+<span class="t-ok">✓</span> <span class="t-dim">Package discovered successfully</span>
+
+<span class="t-dim"># Frontend packages</span>
+<span class="t-prompt">$</span> npm install <span class="t-str">@erag/vue-toastification</span>
+<span class="t-prompt">$</span> npm install <span class="t-str">@erag/phone-number-react</span>
+<span class="t-ok">✓</span> <span class="t-dim">added 2 packages in 1.4s</span>
+
+<span class="t-prompt">$</span> <span class="caret"></span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="stack" aria-label="Technology stack">
+      <div class="shell">
+        <p class="stack-label">Built for the modern Laravel stack</p>
+        <div class="stack-row">
+          <span class="stack-chip" style="--c:#777bb3"><svg aria-hidden="true">
+              <use href="#i-php"></use>
+            </svg>PHP</span>
+          <span class="stack-chip" style="--c:#ff4a3d"><svg aria-hidden="true">
+              <use href="#i-laravel"></use>
+            </svg>Laravel</span>
+          <span class="stack-chip" style="--c:#9b87f5"><svg aria-hidden="true">
+              <use href="#i-inertia"></use>
+            </svg>Inertia.js</span>
+          <span class="stack-chip" style="--c:#42b883"><svg aria-hidden="true">
+              <use href="#i-vue"></use>
+            </svg>Vue</span>
+          <span class="stack-chip" style="--c:#61dafb"><svg aria-hidden="true">
+              <use href="#i-react"></use>
+            </svg>React</span>
+          <span class="stack-chip" style="--c:#3178c6"><svg aria-hidden="true">
+              <use href="#i-ts"></use>
+            </svg>TypeScript</span>
+          <span class="stack-chip" style="--c:#38bdf8"><svg aria-hidden="true">
+              <use href="#i-tailwind"></use>
+            </svg>Tailwind CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SaaS Laravel -->
+    <section class="section" id="saas-laravel">
+      <div class="shell">
+        <div class="saas">
+          <div class="saas-grid">
+            <div class="saas-copy">
+              <span class="kicker">Premium starter kit</span>
+              <h2>Build Laravel SaaS products <span class="gradient-text">faster.</span></h2>
+              <p>
+                <strong>SaaS Laravel</strong> is a production-ready Laravel 13 starter kit with multi-tenancy,
+                authentication, roles &amp; permissions, and localization — built on one shared backend for Vue, React,
+                and Svelte.
               </p>
 
-              <a class="doc-search" href="#docs" aria-label="Browse documentation packages">
-                <span>Search</span>
-                <strong>Find docs by package, framework, or workflow</strong>
-                <span>Browse all</span>
-              </a>
+              <ul class="check-list">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-check"></use>
+                  </svg>Database-per-tenant multi-tenancy</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-check"></use>
+                  </svg>Passkeys &amp; two-factor auth</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-check"></use>
+                  </svg>Roles &amp; permissions (RBAC)</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-check"></use>
+                  </svg>17 languages out of the box</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-check"></use>
+                  </svg>Database-driven menus</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-check"></use>
+                  </svg>TypeScript &amp; typed routes</li>
+              </ul>
+
+              <div class="saas-actions">
+                <a class="button button-primary" href="https://saas-laravel.com/" target="_blank" rel="noopener">
+                  Visit saas-laravel.com
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-arrow"></use>
+                  </svg>
+                </a>
+                <span class="price-note">From <strong>$29</strong> · one-time payment</span>
+              </div>
             </div>
 
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Technology stack">
-      <div class="shell">
-        <div class="tech-cloud">
-          <div class="tech-chip" style="--icon-color: #4f5b93;">
-            <strong class="tech-icon">
-              <svg viewBox="0 0 128 128" aria-hidden="true">
-                <ellipse cx="64" cy="64" rx="60" ry="32" fill="#777bb3"></ellipse>
-                <text x="64" y="75" fill="#ffffff" font-size="34" font-family="Arial, sans-serif" font-weight="700"
-                  text-anchor="middle">php</text>
-              </svg>
-            </strong>
-            <span class="tech-label">PHP</span>
-          </div>
-          <div class="tech-chip" style="--icon-color: #ff2d20;">
-            <strong class="tech-icon">
-              <svg viewBox="0 0 128 128" aria-hidden="true">
-                <path fill="#f05340"
-                  d="M26.027.137C25.824.215 20.086 3.484 13.281 7.395 5.035 12.137.801 14.633.574 14.867c-.18.203-.383.555-.445.777-.172.575-.184 84.704-.012 85.31.063.234.266.577.449.769.445.468 49.672 28.773 50.27 28.91.277.066.59.054.898-.032.672-.168 49.77-28.41 50.207-28.87.18-.2.383-.544.45-.778.085-.277.116-4.676.116-13.938V73.48l11.969-6.875c11.285-6.488 11.977-6.894 12.266-7.34l.297-.48V44.207c0-15.871.031-14.976-.598-15.55-.168-.15-5.918-3.505-12.789-7.462l-12.48-7.18h-1.387L87.574 21.027c-6.722 3.868-12.437 7.172-12.715 7.352-.277.183-.609.523-.746.77l-.246.425-.054 13.734-.051 13.738-10.082 5.809c-5.547 3.187-10.164 5.828-10.262 5.852-.18.05-.191-1.258-.191-26.504V15.633l-.266-.457c-.332-.555 1.16.332-13.824-8.281C26.57-.332 26.871-.18 26.027.137Zm11.551 10.52c5.258 3.015 9.559 5.511 9.559 5.542 0 .031-4.61 2.696-10.242 5.934l-10.25 5.883-10.23-5.883C10.793 18.895 6.188 16.23 6.188 16.2c0-.032 4.598-2.696 10.219-5.926l10.207-5.871.703.383c.394.215 5.015 2.855 10.261 5.871Zm73.153 13.535c5.535 3.188 10.113 5.82 10.156 5.864.117.105-20.184 11.773-20.461 11.761-.278-.007-20.329-11.57-20.321-11.71.012-.16 20.184-11.766 20.387-11.735.094.023 4.703 2.644 10.239 5.82ZM14.828 25.875l9.758 5.617.055 27.813.05 27.816.239.375c.125.2.36.469.531.594.16.117 5.59 3.21 12.063 6.863l11.758 6.64v11.766c0 6.457-.043 11.754-.098 11.754-.043 0-10.207-5.816-22.582-12.937L4.105 99.238l-.03-39.773-.02-39.762.5.277c.289.153 4.906 2.805 10.273 5.895Zm34.453 19.578v25.629l-.394.258c-.536.34-20.075 11.57-20.14 11.57-.032 0-.055-11.57-.055-25.715l.011-25.703 10.207-5.871c5.613-3.23 10.242-5.852 10.297-5.832.039.023.074 11.574.074 25.664Zm38.942-5.894 10.23 5.882v11.66c0 11.063-.012 11.657-.18 11.594-.109-.043-4.738-2.695-10.293-5.894l-10.113-5.809V45.336c0-6.418.031-11.66.062-11.66.043 0 4.672 2.644 10.293 5.883Zm34.87 5.703c0 6.383-.042 11.648-.085 11.699-.074.117-20.309 11.777-20.438 11.777-.03 0-.062-5.242-.062-11.66V45.422l10.207-5.875c5.62-3.226 10.25-5.871 10.293-5.871.054 0 .086 5.21.086 11.586ZM86.23 66.47c8.606 4.953 10.09 5.84 9.942 5.957-.098.062-3.36 1.937-7.242 4.156-3.883 2.215-13.942 7.95-22.36 12.746l-15.297 8.727-.488-.266c-2.922-1.598-19.875-11.242-19.875-11.316-.008-.16 44.855-25.942 45.035-25.875.086.031 4.715 2.672 10.285 5.871Zm12.204 21.09-.035 11.68-22.485 12.937c-12.371 7.121-22.539 12.938-22.59 12.938-.054 0-.097-4.754-.097-11.754v-11.766l22.539-12.851C88.148 81.676 98.324 75.89 98.38 75.88c.043 0 .062 5.254.054 11.68Z">
-                </path>
-              </svg>
-            </strong>
-            <span class="tech-label">Laravel</span>
-          </div>
-          <div class="tech-chip" style="--icon-color: #9553e9;">
-            <strong class="tech-icon">
-              <svg viewBox="0 0 128 128" aria-hidden="true">
-                <path fill="#8163eb"
-                  d="M92.433 28.433H55.625L91.192 64 55.625 99.567h36.808L128 64zm-55.625 0H0L35.567 64 0 99.567h36.808L72.375 64z">
-                </path>
-              </svg>
-            </strong>
-            <span class="tech-label">Inertia.js</span>
-          </div>
-          <div class="tech-chip" style="--icon-color: #42b883;">
-            <strong class="tech-icon">
-              <svg viewBox="0 0 128 128" aria-hidden="true">
-                <path fill="#41b883" d="M10 18h28l26 45 26-45h28L64 112z"></path>
-                <path fill="#35495e" d="M38 18h18l8 14 8-14h18L64 64z"></path>
-              </svg>
-            </strong>
-            <span class="tech-label">Vue</span>
-          </div>
-          <div class="tech-chip" style="--icon-color: #61dafb;">
-            <strong class="tech-icon">
-              <svg viewBox="0 0 128 128" aria-hidden="true">
-                <g fill="#61dafb">
-                  <circle cx="64" cy="64" r="11.4"></circle>
-                  <ellipse cx="64" cy="64" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="8"></ellipse>
-                  <ellipse cx="64" cy="64" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="8"
-                    transform="rotate(60 64 64)"></ellipse>
-                  <ellipse cx="64" cy="64" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="8"
-                    transform="rotate(120 64 64)"></ellipse>
-                </g>
-              </svg>
-            </strong>
-            <span class="tech-label">React</span>
-          </div>
-          <div class="tech-chip" style="--icon-color: #3178c6;">
-            <strong class="tech-icon">
-              <svg viewBox="0 0 128 128" aria-hidden="true">
-                <rect width="128" height="128" rx="12" fill="#3178c6"></rect>
-                <text x="64" y="78" fill="#ffffff" font-size="44" font-family="Arial, sans-serif" font-weight="800"
-                  text-anchor="middle">TS</text>
-              </svg>
-            </strong>
-            <span class="tech-label">TypeScript</span>
+            <div class="mock" aria-hidden="true">
+              <div class="mock-head">
+                <div class="mock-title"><span class="mock-logo">S</span>Workspaces</div>
+                <div class="mock-tabs"><span class="on">Tenants</span><span>Roles</span><span>Menus</span></div>
+              </div>
+              <div class="mock-body">
+                <div class="tenant">
+                  <span class="tenant-avatar" style="--c:#a996ff">AC</span>
+                  <div class="tenant-meta"><strong>Acme Corporation</strong><span>tenant_acme</span></div>
+                  <span class="status">Active</span>
+                </div>
+                <div class="tenant">
+                  <span class="tenant-avatar" style="--c:#42b883">GL</span>
+                  <div class="tenant-meta"><strong>Globex Labs</strong><span>tenant_globex</span></div>
+                  <span class="status">Active</span>
+                </div>
+                <div class="tenant">
+                  <span class="tenant-avatar" style="--c:#61dafb">IN</span>
+                  <div class="tenant-meta"><strong>Initech Studio</strong><span>tenant_initech</span></div>
+                  <span class="status paused">Suspended</span>
+                </div>
+              </div>
+              <div class="mock-foot">
+                <span class="fw" style="--c:#42b883"><i></i>Vue 3.5</span>
+                <span class="fw" style="--c:#61dafb"><i></i>React 19</span>
+                <span class="fw" style="--c:#ff3e00"><i></i>Svelte 5</span>
+                <span class="fw" style="--c:#ff4a3d"><i></i>Laravel 13</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="docs">
+    <!-- Docs -->
+    <section class="section" id="docs" style="padding-top: 24px;">
       <div class="shell">
         <div class="section-head">
-          <div>
-            <span class="section-kicker">Packages</span>
-            <h2>Documentation Links</h2>
-            <p>
-              Open package-specific guides, installation steps, configuration notes, framework examples, and API
-              references from one place.
-            </p>
-          </div>
+          <span class="kicker">Packages</span>
+          <h2>Documentation</h2>
+          <p>
+            Package guides, installation steps, configuration notes, framework examples, and API references — all in
+            one place.
+          </p>
         </div>
 
-        <div class="docs-grid">
-          <article class="doc-card">
-            <span class="tag">Laravel package</span>
+        <div class="docs-toolbar">
+          <div class="filters" role="group" aria-label="Filter packages">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" type="button" data-filter="laravel" aria-pressed="false">Laravel</button>
+            <button class="filter" type="button" data-filter="vue" aria-pressed="false">Vue</button>
+            <button class="filter" type="button" data-filter="react" aria-pressed="false">React</button>
+          </div>
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-3.5-3.5"></path>
+            </svg>
+            <input type="search" id="doc-search" placeholder="Search packages…" aria-label="Search packages"
+              autocomplete="off">
+          </label>
+        </div>
+
+        <div class="docs-grid" id="docs-grid">
+          <article class="doc-card" style="--c:var(--laravel)" data-tags="laravel">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-laravel"></use>
+                </svg></span>
+              <span class="tag">Laravel package</span>
+            </div>
             <h3>Laravel Disposable Email</h3>
-            <p>Disposable email validation, blacklist syncing, caching, and runtime usage for Laravel applications.</p>
-            <ul class="topic-list">
-              <li>Installation and config publishing</li>
-              <li>Validation rule usage</li>
-              <li>Blacklist sync scheduling</li>
-            </ul>
+            <p>Block disposable and temporary emails with validation rules, blacklist syncing, caching, and DNS/RFC
+              checks.</p>
+            <code>composer require erag/laravel-disposable-email</code>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-disposable-email/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-disposable-email">GitHub Link</a>
+              <a class="primary" href="/laravel-disposable-email/">Read docs <svg viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/laravel-disposable-email"
+                aria-label="Laravel Disposable Email on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
             </div>
           </article>
 
-          <article class="doc-card">
-            <span class="tag">Inertia integration</span>
+          <article class="doc-card" style="--c:var(--accent-soft)" data-tags="laravel vue react">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-inertia"></use>
+                </svg></span>
+              <span class="tag">Inertia · Vue · React</span>
+            </div>
             <h3>Laravel Inertia Toast</h3>
-            <p>Toast notifications and confirmation dialogs for Laravel, Inertia.js, Vue 3, and React workflows.</p>
-            <ul class="topic-list">
-              <li>Laravel middleware setup</li>
-              <li>Vue and React adapters</li>
-              <li>Modal and styling examples</li>
-            </ul>
+            <p>Toast notifications and confirmation dialogs for Laravel + Inertia.js with Vue 3 and React adapters.</p>
+            <code>composer require erag/laravel-inertia-toast</code>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-inertia-toast/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-inertia-toast">GitHub Link</a>
+              <a class="primary" href="/laravel-inertia-toast/">Read docs <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/laravel-inertia-toast"
+                aria-label="Laravel Inertia Toast on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
             </div>
           </article>
 
-          <article class="doc-card">
-            <span class="tag">Localization tooling</span>
+          <article class="doc-card" style="--c:var(--accent-soft)" data-tags="laravel vue react">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-inertia"></use>
+                </svg></span>
+              <span class="tag">Localization</span>
+            </div>
             <h3>Laravel Lang Sync Inertia</h3>
-            <p>Focused documentation for syncing Laravel translation files with Inertia.js applications using Vue and
-              React.</p>
-            <ul class="topic-list">
-              <li>Export command workflow</li>
-              <li>Vue and React helpers</li>
-              <li>API and config reference</li>
-            </ul>
+            <p>Export and sync Laravel translation files to Inertia.js apps with Vue, React, and Svelte helpers.</p>
+            <code>composer require erag/laravel-lang-sync-inertia</code>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-lang-sync-inertia/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-lang-sync-inertia">GitHub Link</a>
+              <a class="primary" href="/laravel-lang-sync-inertia/">Read docs <svg viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/laravel-lang-sync-inertia"
+                aria-label="Laravel Lang Sync Inertia on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
             </div>
           </article>
 
-          <article class="doc-card">
-            <span class="tag">Vue Composable</span>
-            <h3>Phone Number Vue</h3>
-            <p>Minimal headless Vue composable for country-aware phone inputs, local normalization, masks, and
-              validation.</p>
-            <ul class="topic-list">
-              <li>Headless usePhoneNumber composable</li>
-              <li>Bundled country &amp; dial-code metadata</li>
-              <li>No masking library dependencies</li>
-            </ul>
-            <div class="doc-links">
-              <a class="doc-link" href="/phone-number-vue/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/phone-number-vue">GitHub Link</a>
+          <article class="doc-card" style="--c:var(--laravel)" data-tags="laravel">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-laravel"></use>
+                </svg></span>
+              <span class="tag">Laravel package</span>
             </div>
-          </article>
-
-          <article class="doc-card">
-            <span class="tag">React Hook</span>
-            <h3>Phone Number React</h3>
-            <p>Minimal headless React hook for country-aware phone inputs, local normalization, masks, and validation.
-            </p>
-            <ul class="topic-list">
-              <li>Headless usePhoneNumber hook</li>
-              <li>Bundled country &amp; dial-code metadata</li>
-              <li>No masking library dependencies</li>
-            </ul>
-            <div class="doc-links">
-              <a class="doc-link" href="/phone-number-react/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/phone-number-react">GitHub Link</a>
-            </div>
-          </article>
-
-          <article class="doc-card">
-            <span class="tag">Laravel package</span>
             <h3>Laravel PWA</h3>
-            <p>Progressive Web App setup for Laravel applications. Auto-generate manifest, configure install triggers,
-              and upload logos.</p>
-            <ul class="topic-list">
-              <li>Artisan installation &amp; updates</li>
-              <li>Blade directives integration</li>
-              <li>Dynamic Logo &amp; Facade updates</li>
-            </ul>
+            <p>Turn any Laravel app into a Progressive Web App — manifest generation, service workers, install prompts,
+              and logo uploads.</p>
+            <code>composer require erag/laravel-pwa</code>
             <div class="doc-links">
-              <a class="doc-link" href="/laravel-pwa/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/laravel-pwa">GitHub Link</a>
+              <a class="primary" href="/laravel-pwa/">Read docs <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/laravel-pwa" aria-label="Laravel PWA on GitHub"><svg
+                  viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
             </div>
           </article>
 
-          <article class="doc-card">
-            <span class="tag">Vue package</span>
+          <article class="doc-card" style="--c:var(--vue)" data-tags="vue">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-vue"></use>
+                </svg></span>
+              <span class="tag">Vue 3</span>
+            </div>
             <h3>Vue Toastification</h3>
             <p>Lightweight, high-performance toast notifications and promise-based confirmation modals for Vue 3.</p>
-            <ul class="topic-list">
-              <li>Vue 3 Composition API hooks</li>
-              <li>Promise-based modal awaits</li>
-              <li>Apple-style smooth animations</li>
-            </ul>
+            <code>npm install @erag/vue-toastification</code>
             <div class="doc-links">
-              <a class="doc-link" href="/vue-toastification/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/vue-toastification">GitHub Link</a>
+              <a class="primary" href="/vue-toastification/">Read docs <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/vue-toastification"
+                aria-label="Vue Toastification on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
             </div>
           </article>
 
-          <article class="doc-card">
-            <span class="tag">Vue package</span>
+          <article class="doc-card" style="--c:var(--vue)" data-tags="vue">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-vue"></use>
+                </svg></span>
+              <span class="tag">Vue 3</span>
+            </div>
             <h3>Text Editor Vue</h3>
-            <p>Dependency-free, highly customizable Vue 3 rich text editor with mentions, merge tags, templates, image
-              upload, and tables.</p>
-            <ul class="topic-list">
-              <li>Native browser APIs &amp; TypeScript</li>
-              <li>Mentions (@) &amp; Merge Tags ({{)</li>
-              <li>Templates dialog &amp; Image Resizing</li>
-            </ul>
+            <p>Dependency-free Vue 3 rich text editor with mentions, merge tags, templates, image upload, and tables.
+            </p>
+            <code>npm install @erag/text-editor-vue</code>
             <div class="doc-links">
-              <a class="doc-link" href="/text-editor-vue/">Open Docs</a>
-              <a class="doc-link alt" href="https://github.com/eramitgupta/text-editor-vue">GitHub Link</a>
+              <a class="primary" href="/text-editor-vue/">Read docs <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/text-editor-vue"
+                aria-label="Text Editor Vue on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
             </div>
           </article>
+
+          <article class="doc-card" style="--c:var(--vue)" data-tags="vue">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-vue"></use>
+                </svg></span>
+              <span class="tag">Vue composable</span>
+            </div>
+            <h3>Phone Number Vue</h3>
+            <p>Headless Vue composable for country-aware phone inputs, dial codes, normalization, masks, and validation.
+            </p>
+            <code>npm install @erag/phone-number-vue</code>
+            <div class="doc-links">
+              <a class="primary" href="/phone-number-vue/">Read docs <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/phone-number-vue"
+                aria-label="Phone Number Vue on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
+            </div>
+          </article>
+
+          <article class="doc-card" style="--c:var(--react)" data-tags="react">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-react"></use>
+                </svg></span>
+              <span class="tag">React hook</span>
+            </div>
+            <h3>Phone Number React</h3>
+            <p>Headless React hook for country-aware phone inputs, dial codes, normalization, masks, and validation.</p>
+            <code>npm install @erag/phone-number-react</code>
+            <div class="doc-links">
+              <a class="primary" href="/phone-number-react/">Read docs <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></a>
+              <a class="github" href="https://github.com/eramitgupta/phone-number-react"
+                aria-label="Phone Number React on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-github"></use>
+                </svg>GitHub</a>
+            </div>
+          </article>
+
+          <a class="doc-card" style="--c:var(--accent)" data-tags="laravel vue react" href="https://saas-laravel.com/"
+            target="_blank" rel="noopener">
+            <div class="doc-top">
+              <span class="doc-icon"><svg aria-hidden="true">
+                  <use href="#i-laravel"></use>
+                </svg></span>
+              <span class="tag" style="color:var(--accent-soft);border-color:rgba(124,92,255,.35)">Starter kit</span>
+            </div>
+            <h3>SaaS Laravel</h3>
+            <p>Multi-tenant Laravel 13 SaaS starter kits for Vue, React &amp; Svelte — auth, RBAC, localization and
+              more.</p>
+            <code>saas-laravel.com</code>
+            <div class="doc-links">
+              <span class="primary" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent-soft);font-size:.88rem;font-weight:600">Explore kits <svg viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <use href="#i-arrow"></use>
+                </svg></span>
+              <span class="github" style="color:var(--faint);font-size:.88rem;font-weight:600">From $29</span>
+            </div>
+          </a>
         </div>
+
+        <p class="empty-state" id="docs-empty" hidden>No packages match your search.</p>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <!-- About -->
+    <section class="section" id="about" style="padding-top: 24px;">
       <div class="shell">
         <div class="section-head">
-          <div>
-            <span class="section-kicker">Maintainer</span>
-            <h2>About Erag</h2>
-            <p>
-              I developed erag.in to help Laravel &amp; full-stack developers solve real-world problems with practical
-              packages,
-              clear documentation, and implementation-focused architecture.
-            </p>
-          </div>
+          <span class="kicker">Maintainer</span>
+          <h2>About Erag</h2>
+          <p>
+            I built erag.in to help Laravel &amp; full-stack developers solve real-world problems with practical
+            packages, clear documentation, and implementation-focused architecture.
+          </p>
         </div>
 
-        <div class="about-band">
-          <div class="about-card">
+        <div class="about-grid">
+          <div class="panel">
             <p>
               My focus is on building scalable web applications, SaaS platforms, and developer tooling that eliminate
               repetitive work and improve developer productivity. Erag brings together my open-source packages,
@@ -1332,53 +2041,71 @@
               features without friction.
             </p>
 
-            <div class="about-points">
+            <div class="points">
               <div class="point">
                 <strong>Full stack &amp; modern UI</strong>
-                <span>PHP, Laravel, Vue.js, React.js, Inertia.js, TypeScript, JavaScript, Tailwind CSS, Alpine.js, and
-                  MySQL.</span>
+                <span>PHP, Laravel, Vue.js, React.js, Inertia.js, TypeScript, Tailwind CSS, Alpine.js, and MySQL.</span>
               </div>
               <div class="point">
                 <strong>Backend &amp; SaaS architecture</strong>
-                <span>SaaS, SSO, Multi-Tenancy, REST APIs, Authentication &amp; Authorization, Queues, Webhooks, and
-                  Server Deployments.</span>
+                <span>SaaS, SSO, multi-tenancy, REST APIs, auth &amp; authorization, queues, webhooks, and
+                  deployments.</span>
               </div>
               <div class="point">
                 <strong>Open source packages</strong>
-                <span>Reusable Laravel &amp; frontend packages with installation steps, configuration guides, live
-                  examples, and API references.</span>
+                <span>Reusable Laravel &amp; frontend packages with install steps, config guides, examples, and API
+                  references.</span>
               </div>
               <div class="point">
                 <strong>Scalable engineering</strong>
-                <span>Clean architecture, maintainable workflows, performance optimization, edge-case handling, and
-                  delivery-focused engineering.</span>
+                <span>Clean architecture, maintainable workflows, performance optimization, and edge-case
+                  handling.</span>
               </div>
             </div>
           </div>
 
-          <aside class="profile-card">
+          <aside class="panel profile">
             <div class="profile-head">
-              <img class="profile-avatar" src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=128"
-                alt="Er Amit Gupta" width="64" height="64">
+              <img src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=128" alt="Er Amit Gupta"
+                width="60" height="60">
               <div>
-                <h3 class="profile-title">Er Amit Gupta</h3>
-                <p class="profile-meta">
-                  Sr. Full Stack Engineer • Laravel, Vue.js, React, Inertia.js &amp; SaaS Developer.
-                </p>
+                <h3>Er Amit Gupta</h3>
+                <p>Sr. Full Stack Engineer · Laravel, Vue.js, React, Inertia.js &amp; SaaS</p>
               </div>
             </div>
             <p>
               Active open-source contributor and Laravel package maintainer dedicated to solving complex engineering
-              challenges, building robust architecture, and creating tools that empower developers across the ecosystem.
+              challenges, building robust architecture, and creating tools that empower developers across the
+              ecosystem.
             </p>
 
             <div class="profile-actions">
               <a class="button button-primary" href="https://github.com/eramitgupta" target="_blank"
-                rel="noopener noreferrer">GitHub Profile</a>
-              <a class="button button-secondary" href="https://www.linkedin.com/in/eramitgupta/" target="_blank"
-                rel="noopener noreferrer">LinkedIn Profile</a>
+                rel="noopener noreferrer">GitHub</a>
+              <a class="button button-ghost" href="https://www.linkedin.com/in/eramitgupta/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
             </div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section aria-label="Get started">
+      <div class="shell">
+        <div class="cta">
+          <h2>Start building your SaaS today</h2>
+          <p>Skip months of boilerplate. Get multi-tenancy, auth, roles, and localization ready on day one with SaaS
+            Laravel.</p>
+          <div class="hero-actions">
+            <a class="button button-white" href="https://saas-laravel.com/" target="_blank" rel="noopener">
+              Get SaaS Laravel
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-arrow"></use>
+              </svg>
+            </a>
+            <a class="button button-outline-white" href="#docs">Browse free packages</a>
+          </div>
         </div>
       </div>
     </section>
@@ -1386,26 +2113,92 @@
 
   <footer>
     <div class="shell">
-      <div class="footer-card">
-        <div class="footer-stack">
-          <span class="footer-copy">© <span data-current-year></span> Er Amit Gupta. All rights reserved.</span>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="/">
+            <img src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64" alt="" width="32" height="32">
+            <span>Erag <small>Docs</small></span>
+          </a>
+          <p>Open source Laravel, Vue &amp; React packages with production-ready documentation.</p>
         </div>
-        <div class="footer-stack">
-          <nav class="footer-links" aria-label="Footer">
-            <a href="/privacy-policy.html">Privacy Policy</a>
-            <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
-            <a href="/refund-policy.html">Refund Policy</a>
-            <a href="/contact.html">Contact</a>
-          </nav>
-          <span class="footer-tech">PHP · Laravel · Vue.js · Inertia.js · React · TypeScript</span>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="/laravel-pwa/">Laravel PWA</a></li>
+            <li><a href="/laravel-inertia-toast/">Inertia Toast</a></li>
+            <li><a href="/vue-toastification/">Vue Toastification</a></li>
+            <li><a href="/text-editor-vue/">Text Editor Vue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://saas-laravel.com/" target="_blank" rel="noopener">SaaS Laravel</a></li>
+            <li><a href="https://github.com/eramitgupta" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/eramitgupta/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/refund-policy.html">Refund Policy</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
         </div>
       </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> Er Amit Gupta. All rights reserved.</span>
+        <span>PHP · Laravel · Vue.js · Inertia.js · React · TypeScript</span>
+      </div>
     </div>
+    <p class="footer-wordmark" aria-hidden="true">erag.in</p>
   </footer>
+
   <script>
     document.querySelectorAll("[data-current-year]").forEach((element) => {
       element.textContent = new Date().getFullYear();
     });
+
+    (() => {
+      const cards = Array.from(document.querySelectorAll("#docs-grid .doc-card"));
+      const buttons = Array.from(document.querySelectorAll(".filter"));
+      const searchInput = document.getElementById("doc-search");
+      const emptyState = document.getElementById("docs-empty");
+      let activeFilter = "all";
+
+      const applyFilters = () => {
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const matchesFilter = activeFilter === "all" || card.dataset.tags.split(" ").includes(activeFilter);
+          const matchesQuery = !query || card.textContent.toLowerCase().includes(query);
+          const isVisible = matchesFilter && matchesQuery;
+
+          card.hidden = !isVisible;
+          visibleCount += isVisible ? 1 : 0;
+        });
+
+        emptyState.hidden = visibleCount > 0;
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeFilter = button.dataset.filter;
+          buttons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+          applyFilters();
+        });
+      });
+
+      searchInput.addEventListener("input", applyFilters);
+    })();
   </script>
 </body>
 

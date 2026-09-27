@@ -1,640 +1,1105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Privacy Policy</title>
-        <meta
-            name="description"
-            content="Privacy Policy for ERAG Technologies software, developer tools, packages, and digital products."
-        />
-        <meta name="author" content="Er Amit Gupta" />
-        <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#103b45" />
-        <link rel="canonical" href="https://erag.in/privacy-policy.html" />
-        <link
-            rel="icon"
-            href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-            rel="stylesheet"
-        />
-        <style>
-            :root {
-                color-scheme: light;
-                --page: #f5fbf8;
-                --ink: #102022;
-                --muted: #52666b;
-                --surface: #ffffff;
-                --surface-soft: #eef8f5;
-                --line: rgba(16, 32, 34, 0.11);
-                --teal: #0f766e;
-                --teal-deep: #103b45;
-                --shadow: 0 22px 54px rgba(16, 59, 69, 0.11);
-            }
 
-            * {
-                box-sizing: border-box;
-            }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Erag</title>
+  <meta name="description" content="How ERAG Technologies collects, uses, and protects your information when you use erag.in, our open source packages, paid products such as SaaS Laravel, and our services.">
+  <meta name="author" content="Er Amit Gupta">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090f">
+  <link rel="canonical" href="https://erag.in/privacy-policy.html">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64">
+  <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=180">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
-            body {
-                margin: 0;
-                color: var(--ink);
-                font-family:
-                    Inter,
-                    ui-sans-serif,
-                    system-ui,
-                    -apple-system,
-                    BlinkMacSystemFont,
-                    'Segoe UI',
-                    sans-serif;
-                background:
-                    linear-gradient(
-                        90deg,
-                        rgba(16, 59, 69, 0.055) 1px,
-                        transparent 1px
-                    ),
-                    linear-gradient(
-                        180deg,
-                        rgba(16, 59, 69, 0.055) 1px,
-                        transparent 1px
-                    ),
-                    radial-gradient(
-                        circle at top left,
-                        rgba(98, 210, 162, 0.24),
-                        transparent 30%
-                    ),
-                    radial-gradient(
-                        circle at top right,
-                        rgba(243, 178, 63, 0.2),
-                        transparent 28%
-                    ),
-                    linear-gradient(
-                        180deg,
-                        #f7fcfa 0%,
-                        #eef8f5 48%,
-                        #ffffff 100%
-                    );
-                background-size:
-                    28px 28px,
-                    28px 28px,
-                    auto,
-                    auto,
-                    auto;
-            }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy | Erag">
+  <meta property="og:description" content="How ERAG Technologies collects, uses, and protects your information when you use erag.in, our open source packages, paid products such as SaaS Laravel, and our services.">
+  <meta property="og:url" content="https://erag.in/privacy-policy.html">
+  <meta property="og:site_name" content="Erag Documentation">
 
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #09090f;
+      --bg-raised: #0e0e16;
+      --card: #111119;
+      --card-hover: #15151f;
+      --text: #ededf4;
+      --muted: #a2a2b6;
+      --faint: #6d6d82;
+      --line: rgba(255, 255, 255, 0.07);
+      --line-strong: rgba(255, 255, 255, 0.13);
+      --accent: #7c5cff;
+      --accent-strong: #6a47ff;
+      --accent-soft: #a996ff;
+      --accent-tint: rgba(124, 92, 255, 0.12);
+      --accent-glow: rgba(124, 92, 255, 0.35);
+      --radius: 14px;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
 
-            .shell {
-                width: min(1200px, calc(100% - 32px));
-                margin: 0 auto;
-            }
+    * {
+      box-sizing: border-box;
+    }
 
-            .topbar {
-                border-bottom: 1px solid var(--line);
-                background: rgba(247, 252, 250, 0.88);
-                backdrop-filter: saturate(180%) blur(18px);
-            }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
 
-            .topbar-inner {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 16px;
-                min-height: 72px;
-            }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-            .brand {
-                display: inline-flex;
-                align-items: center;
-                gap: 12px;
-                font-weight: 800;
-            }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-            .brand-mark {
-                width: 42px;
-                height: 42px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 2px solid rgba(255, 255, 255, 0.92);
-                box-shadow: 0 16px 28px rgba(16, 59, 69, 0.16);
-            }
+    img,
+    svg {
+      display: block;
+    }
 
-            .brand-text {
-                display: grid;
-                gap: 2px;
-            }
+    :focus-visible {
+      outline: 2px solid var(--accent-soft);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
 
-            .brand-text strong {
-                line-height: 1;
-            }
+    .shell {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-            .brand-text span {
-                color: var(--muted);
-                font-size: 0.84rem;
-                font-weight: 600;
-            }
+    /* ---------- Top bar ---------- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: saturate(160%) blur(16px);
+      -webkit-backdrop-filter: saturate(160%) blur(16px);
+      background: rgba(9, 9, 15, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
 
-            .page {
-                padding: 48px 0 32px;
-            }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 68px;
+    }
 
-            .policy-card,
-            .footer-card {
-                border: 1px solid var(--line);
-                border-radius: 8px;
-                background: rgba(255, 255, 255, 0.88);
-                box-shadow: var(--shadow);
-            }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
 
-            .policy-card {
-                padding: 32px;
-            }
+    .brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--line-strong);
+    }
 
-            h1 {
-                margin: 0 0 10px;
-                color: var(--teal-deep);
-                font-size: clamp(2rem, 5vw, 3.2rem);
-                line-height: 1.05;
-                letter-spacing: 0;
-            }
+    .brand small {
+      color: var(--faint);
+      font-weight: 500;
+      font-size: 0.85rem;
+      margin-left: 2px;
+    }
 
-            .updated {
-                margin: 0 0 28px;
-                color: var(--muted);
-                font-weight: 600;
-            }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-            h2 {
-                margin: 28px 0 10px;
-                color: var(--teal-deep);
-                font-size: 1.25rem;
-                line-height: 1.25;
-            }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
 
-            p,
-            li {
-                color: var(--muted);
-                line-height: 1.8;
-            }
+    .nav a:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
 
-            ul {
-                padding-left: 20px;
-            }
+    .nav .nav-icon-link {
+      width: 38px;
+      padding: 0;
+      justify-content: center;
+    }
 
-            .text-link {
-                color: var(--teal);
-                font-weight: 700;
-                overflow-wrap: anywhere;
-            }
+    .nav svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
 
-            footer {
-                padding: 24px 0 44px;
-            }
+    .nav .nav-cta {
+      margin-left: 8px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 600;
+      box-shadow: 0 8px 24px -8px var(--accent-glow);
+    }
 
-            .footer-card {
-                display: grid;
-                grid-template-columns: minmax(0, 1fr) minmax(280px, auto);
-                align-items: start;
-                justify-content: space-between;
-                gap: 16px 28px;
-                padding: 20px 24px;
-                color: var(--muted);
-            }
+    .nav .nav-cta:hover {
+      color: #fff;
+      background: var(--accent-strong);
+    }
 
-            .footer-stack {
-                display: grid;
-                gap: 8px;
-                min-width: 0;
-            }
+    /* ---------- Buttons ---------- */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-size: 0.93rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
 
-            .footer-copy {
-                color: var(--teal-deep);
-                font-weight: 700;
-            }
+    .button:hover {
+      transform: translateY(-1px);
+    }
 
-            .footer-links,
-            .footer-tech {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px 12px;
-                line-height: 1.7;
-            }
+    .button-primary {
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 10px 30px -10px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
 
-            .footer-links a {
-                color: var(--muted);
-                font-weight: 600;
-                text-underline-offset: 4px;
-            }
+    .button-primary:hover {
+      background: var(--accent-strong);
+    }
 
-            .footer-links a:hover {
-                color: var(--teal-deep);
-                text-decoration: underline;
-            }
+    .button-ghost {
+      color: var(--text);
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.03);
+    }
 
-            .footer-tech {
-                justify-content: flex-end;
-            }
+    .button-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.06);
+    }
 
-            @media (max-width: 720px) {
-                .shell {
-                    width: min(100% - 24px, 1180px);
-                }
+    /* ---------- Page header ---------- */
+    .legal-hero {
+      position: relative;
+      padding: 64px 0 48px;
+      overflow: hidden;
+      isolation: isolate;
+    }
 
-                .topbar-inner {
-                    align-items: flex-start;
-                    flex-direction: column;
-                    min-height: auto;
-                    padding: 12px 0;
-                }
+    .legal-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 70% 90% at 30% 0%, #000 25%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 90% at 30% 0%, #000 25%, transparent 75%);
+    }
 
-                .brand-text {
-                    display: none;
-                }
+    .legal-hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -300px;
+      left: 10%;
+      width: 800px;
+      height: 560px;
+      background: radial-gradient(closest-side, rgba(124, 92, 255, 0.24), transparent);
+      filter: blur(20px);
+      pointer-events: none;
+    }
 
-                .page {
-                    padding-top: 24px;
-                }
+    .crumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--faint);
+      font-size: 0.85rem;
+    }
 
-                .policy-card {
-                    padding: 20px;
-                }
+    .crumbs a:hover {
+      color: var(--text);
+    }
 
-                .footer-card {
-                    grid-template-columns: 1fr;
-                    padding: 18px;
-                }
+    .crumbs li+li::before {
+      content: "/";
+      margin-right: 8px;
+      color: var(--line-strong);
+    }
 
-                .footer-tech {
-                    justify-content: flex-start;
-                }
-            }
-        </style>
-    </head>
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+    }
 
-    <body>
-        <header class="topbar">
-            <div class="shell topbar-inner">
-                <a class="brand" href="/">
-                    <img
-                        class="brand-mark"
-                        src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=84"
-                        alt="Er Amit Gupta"
-                        width="42"
-                        height="42"
-                    />
-                    <span class="brand-text">
-                        <strong>Erag</strong>
-                        <span>Open Source Documentation</span>
-                    </span>
-                </a>
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      color: var(--faint);
+      font-size: 0.88rem;
+    }
+
+    .updated::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+    }
+
+    .intro {
+      max-width: 46rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.75;
+    }
+
+    .intro a {
+      color: var(--accent-soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(169, 150, 255, 0.4);
+      text-underline-offset: 3px;
+    }
+
+    .policy-tabs {
+      display: inline-flex;
+      gap: 4px;
+      max-width: 100%;
+      margin-top: 30px;
+      padding: 4px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-raised);
+      scrollbar-width: none;
+    }
+
+    .policy-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .policy-tabs a {
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+
+    .policy-tabs a:hover {
+      color: var(--text);
+    }
+
+    .policy-tabs a[aria-current="page"] {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+
+    /* ---------- Layout ---------- */
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 64px;
+      align-items: start;
+      padding-top: 16px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 92px;
+    }
+
+    .toc summary {
+      margin-bottom: 14px;
+      color: var(--faint);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      list-style: none;
+    }
+
+    .toc summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-left: 1px solid var(--line);
+    }
+
+    .toc a {
+      display: block;
+      margin-left: -1px;
+      padding: 6px 0 6px 16px;
+      border-left: 1px solid transparent;
+      color: var(--faint);
+      font-size: 0.87rem;
+      line-height: 1.4;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .toc a:hover {
+      color: var(--text);
+      border-left-color: var(--line-strong);
+    }
+
+    .toc a.is-active {
+      color: var(--accent-soft);
+      border-left-color: var(--accent);
+    }
+
+    /* ---------- Prose ---------- */
+    .prose {
+      max-width: 760px;
+      min-width: 0;
+    }
+
+    .prose section {
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .prose h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin: 0 0 16px;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+    }
+
+    .prose .num {
+      flex: 0 0 auto;
+      color: var(--accent-soft);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .prose h3 {
+      margin: 24px 0 8px;
+      font-size: 1rem;
+    }
+
+    .prose p,
+    .prose li {
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .prose p {
+      margin: 0 0 14px;
+    }
+
+    .prose p:last-child,
+    .prose ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .prose strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .prose a {
+      color: var(--accent-soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(169, 150, 255, 0.4);
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .prose a:hover {
+      color: #cdc2ff;
+    }
+
+    .prose code {
+      padding: 1px 6px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--card);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.85em;
+    }
+
+    .prose ul {
+      display: grid;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .prose li {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .prose li::before {
+      content: "";
+      position: absolute;
+      top: 0.78em;
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+    }
+
+    .prose .note {
+      display: flex;
+      gap: 12px;
+      margin: 18px 0;
+      padding: 14px 16px;
+      border: 1px solid rgba(124, 92, 255, 0.28);
+      border-radius: 12px;
+      background: var(--accent-tint);
+      color: #d9d3ff;
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .prose .note svg {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      fill: none;
+      stroke: var(--accent-soft);
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .cases {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 18px;
+    }
+
+    .case {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .case strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .case span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ---------- Contact + related ---------- */
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 26px;
+      border: 1px solid rgba(124, 92, 255, 0.28);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(ellipse 60% 120% at 100% 0%, rgba(124, 92, 255, 0.2), transparent 60%),
+        var(--bg-raised);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+    }
+
+    .contact-card p {
+      margin: 0;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-actions a.button {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .contact-actions a.button-primary {
+      color: #fff;
+    }
+
+    .related {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .related-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .related-card:hover {
+      border-color: rgba(124, 92, 255, 0.4);
+      background: var(--card-hover);
+    }
+
+    .related-card small {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--faint);
+      font-size: 0.78rem;
+    }
+
+    .related-card strong {
+      font-size: 0.98rem;
+    }
+
+    .related-card svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: var(--accent-soft);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 96px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+      gap: 32px;
+      padding: 56px 0 40px;
+    }
+
+    .footer-about p {
+      max-width: 320px;
+      margin: 14px 0 0;
+      color: var(--faint);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .footer-col ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-col a {
+      color: var(--faint);
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover,
+    .footer-col a[aria-current="page"] {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 22px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: 0.85rem;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (min-width: 901px) {
+      .toc summary {
+        pointer-events: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .legal-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding-top: 0;
+      }
+
+      .toc {
+        position: static;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--bg-raised);
+      }
+
+      .toc summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+
+      .toc summary::after {
+        content: "+";
+        color: var(--muted);
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .toc[open] summary::after {
+        content: "−";
+      }
+
+      .toc ol {
+        margin: 0 16px 14px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: calc(100% - 32px);
+      }
+
+      .nav .nav-text {
+        display: none;
+      }
+
+      .nav .nav-cta {
+        margin-left: 4px;
+        padding: 0 12px;
+      }
+
+      .legal-hero {
+        padding: 40px 0 32px;
+      }
+
+      .intro {
+        font-size: 1rem;
+      }
+
+      .prose h2 {
+        font-size: 1.2rem;
+      }
+
+      .cases,
+      .related {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-card {
+        padding: 20px;
+      }
+
+      .contact-actions,
+      .contact-actions .button {
+        width: 100%;
+      }
+
+      footer {
+        margin-top: 72px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand small {
+        display: none;
+      }
+
+      .policy-tabs {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      .policy-tabs a {
+        display: grid;
+        place-items: center;
+        padding: 8px 6px;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        text-align: center;
+        white-space: normal;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path
+          d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.11-.75.41-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.72 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.18 1.19a10.94 10.94 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.11 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.07.79 2.16v3.03c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="/" aria-label="Erag home">
+        <img src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64" alt="" width="32" height="32">
+        <span>Erag <small>Docs</small></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-text" href="/#docs">Packages</a>
+        <a class="nav-text" href="/#saas-laravel">SaaS Laravel</a>
+        <a class="nav-text" href="/#about">About</a>
+        <a class="nav-icon-link" href="https://github.com/eramitgupta" aria-label="GitHub" title="GitHub"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-github"></use>
+          </svg>
+        </a>
+        <a class="nav-cta" href="https://saas-laravel.com/" target="_blank" rel="noopener">Get Starter Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="shell">
+        <ol class="crumbs" aria-label="Breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li>Legal</li>
+        </ol>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated September 27, 2026</p>
+        <p class="intro">This policy explains what information ERAG Technologies (“we”, “us”) collects when you use erag.in, our open source packages, paid products such as the SaaS Laravel starter kits, and our development services — and how we use and protect it.</p>
+        <nav class="policy-tabs" aria-label="Legal pages">
+          <a href="/privacy-policy.html" aria-current="page">Privacy Policy</a>
+          <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+          <a href="/refund-policy.html">Refund Policy</a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="shell legal-layout">
+      <aside>
+        <details class="toc" open>
+          <summary>On this page</summary>
+          <ol>
+            <li><a href="#who-we-are">Who we are</a></li>
+            <li><a href="#information-we-collect">Information we collect</a></li>
+            <li><a href="#how-we-use-information">How we use information</a></li>
+            <li><a href="#cookies">Cookies and local storage</a></li>
+            <li><a href="#service-providers">Service providers and sharing</a></li>
+            <li><a href="#data-retention">Data retention</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#your-rights">Your rights</a></li>
+            <li><a href="#children">Children’s privacy</a></li>
+            <li><a href="#international-processing">International processing</a></li>
+            <li><a href="#changes">Changes to this policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </details>
+      </aside>
+
+      <article class="prose">
+          <section id="who-we-are">
+            <h2><span class="num">01</span>Who we are</h2>
+            <p>erag.in is operated by <strong>ERAG Technologies</strong> and maintained by Er Amit Gupta. We publish open source Laravel, Vue, and React packages, sell premium developer products such as the <a href="https://saas-laravel.com/" target="_blank" rel="noopener">SaaS Laravel</a> starter kits, and build custom software for clients.</p>
+<p>For any question about this policy, email <a href="mailto:erag.office@gmail.com">erag.office@gmail.com</a>.</p>
+          </section>
+
+          <section id="information-we-collect">
+            <h2><span class="num">02</span>Information we collect</h2>
+            <h3>Information you give us</h3>
+<p>When you email us, ask for support, request a refund, or discuss a project, we receive whatever you choose to send — usually your name, email address, company, message, and any files or technical details you attach.</p>
+<h3>Purchase information</h3>
+<p>Payments are processed by third-party providers such as GitHub Sponsors. From them we receive only what we need to fulfil your order: your GitHub username, purchase email, product or tier, amount, currency, transaction reference, and payment or refund status.</p>
+<p class="note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span>We never receive or store your full card number or bank credentials — those stay with the payment provider.</span></p>
+<h3>Information collected automatically</h3>
+<p>Like most websites, our hosting and analytics providers record standard technical data: IP address, browser and device type, pages visited, referring page, timestamps, and error or security logs.</p>
+          </section>
+
+          <section id="how-we-use-information">
+            <h2><span class="num">03</span>How we use information</h2>
+            <ul><li>To deliver what you buy — confirm payment, grant repository access, and provide updates.</li><li>To answer your questions and provide support.</li><li>To plan, build, and deliver custom projects you engage us for.</li><li>To keep our website and products secure, and to detect fraud, abuse, or unauthorized sharing of paid code.</li><li>To understand how the documentation is used so we can improve it.</li><li>To keep invoices and records required for tax, accounting, and legal purposes.</li></ul>
+<p>We do not sell your personal information, and we do not use it for third-party advertising.</p>
+          </section>
+
+          <section id="cookies">
+            <h2><span class="num">04</span>Cookies and local storage</h2>
+            <p>The website uses a small number of cookies and local-storage entries for basic functionality, remembering preferences, security, and aggregate analytics. You can block or delete them in your browser settings; most of the site will keep working, although some preferences may not be saved.</p>
+          </section>
+
+          <section id="service-providers">
+            <h2><span class="num">05</span>Service providers and sharing</h2>
+            <p>We rely on trusted providers for hosting, email, analytics, payments, and code delivery (for example, GitHub). They process your information only to provide their service to us, under their own privacy policies.</p>
+<p>We share information with anyone else only when the law requires it, when it is needed to protect our rights or the safety of our users, or when you have asked us to.</p>
+          </section>
+
+          <section id="data-retention">
+            <h2><span class="num">06</span>Data retention</h2>
+            <p>We keep information only for as long as we need it:</p><ul><li><strong>Purchase and invoice records</strong> — for as long as tax and accounting laws require.</li><li><strong>Support and project conversations</strong> — while they are useful for ongoing support or work.</li><li><strong>Server and security logs</strong> — for a limited period.</li></ul>
+<p>After that, we delete or anonymize the information.</p>
+          </section>
+
+          <section id="security">
+            <h2><span class="num">07</span>Security</h2>
+            <p>We protect information with restricted access, secured accounts, and reputable infrastructure providers. No online system is completely secure, so please also keep your own GitHub account and repository access safe.</p>
+<p class="note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span>When asking for support, never send passwords, API keys, <code>.env</code> files, or production secrets. Logs, version numbers, and steps to reproduce are all we need.</span></p>
+          </section>
+
+          <section id="your-rights">
+            <h2><span class="num">08</span>Your rights</h2>
+            <p>Depending on where you live, you may have the right to access, correct, delete, or export your personal information, and to object to or restrict certain processing.</p>
+<p>To make a request, email <a href="mailto:erag.office@gmail.com">erag.office@gmail.com</a>. We may need to verify your identity first. Some records, such as invoices, may have to be kept for legal reasons even after you ask us to delete your data.</p>
+          </section>
+
+          <section id="children">
+            <h2><span class="num">09</span>Children’s privacy</h2>
+            <p>Our products and services are built for developers and businesses. We do not knowingly collect information from children. If you believe a child has shared personal information with us, contact us and we will delete it.</p>
+          </section>
+
+          <section id="international-processing">
+            <h2><span class="num">10</span>International processing</h2>
+            <p>We and our service providers may process information in countries other than your own. Wherever it is processed, we protect it as described in this policy.</p>
+          </section>
+
+          <section id="changes">
+            <h2><span class="num">11</span>Changes to this policy</h2>
+            <p>When we update this policy, we change the “Last updated” date at the top of this page. The updated policy applies from that date.</p>
+          </section>
+
+        <section id="contact" style="border: 0; padding: 0; margin: 0;">
+          <div class="contact-card">
+            <div>
+              <h2>Questions?</h2>
+              <p>Email us at <a href="mailto:erag.office@gmail.com">erag.office@gmail.com</a> or
+                <a href="mailto:eramitgupta.info@gmail.com">eramitgupta.info@gmail.com</a>.</p>
             </div>
-        </header>
-
-        <main class="page">
-            <div class="shell">
-                <article class="policy-card">
-                    <h1>Privacy Policy</h1>
-                    <p class="updated">Last Updated: September 15, 2026</p>
-
-                    <h2>Introduction</h2>
-                    <p>
-                        This Privacy Policy explains how ERAG Technologies
-                        collects, uses, stores, shares, and protects information
-                        when you visit this website, read documentation,
-                        purchase or access digital products, request support, or
-                        communicate with us about Laravel/PHP packages,
-                        Vue/React/TypeScript packages, developer tools, SaaS
-                        starter kits, premium source code, digital software
-                        products, and custom SaaS or software projects.
-                    </p>
-                    <p>
-                        We aim to collect only the information needed to operate
-                        the website, deliver products, provide support, manage
-                        licenses or repository access, improve our software, and
-                        meet legal, tax, accounting, and security obligations.
-                    </p>
-
-                    <h2>Information You Provide</h2>
-                    <p>
-                        You may provide personal information when you contact
-                        us, make a purchase, request support, request a refund,
-                        discuss a custom project, join a private repository, or
-                        otherwise interact with ERAG Technologies. This
-                        information may include your name, email address,
-                        company or project name, billing details made available
-                        by a payment provider, support messages, project
-                        requirements, license information, and any files or
-                        technical details you choose to share.
-                    </p>
-
-                    <h2>Contact Information</h2>
-                    <p>
-                        When you contact us by email or through any available
-                        contact channel, we may collect your email address,
-                        message content, subject, enquiry type, attachments, and
-                        related communication history. We use this information
-                        to respond to product questions, licensing enquiries,
-                        purchase issues, support requests, SaaS project
-                        discussions, custom development enquiries, and
-                        partnership communications.
-                    </p>
-
-                    <h2>Purchase, Order, and License Information</h2>
-                    <p>
-                        If you buy a digital product or service, we may receive
-                        or store information related to the order, such as
-                        product name, purchase email, transaction reference,
-                        payment status, invoice status, license key status,
-                        download status, private repository invitation status,
-                        renewal status, refund status, and support eligibility.
-                    </p>
-                    <p>
-                        We do not ask you to send full card numbers or sensitive
-                        payment credentials directly to us. Payment information
-                        is generally handled by third-party payment providers,
-                        checkout platforms, or financial processors according to
-                        their own terms and privacy practices.
-                    </p>
-
-                    <h2>Technical, Device, and Usage Information</h2>
-                    <p>
-                        We may collect limited technical information when you
-                        use the website, documentation, downloads, or digital
-                        services. This may include IP address, browser type,
-                        device type, operating system, referring pages, pages
-                        visited, approximate region, timestamps, error logs,
-                        access logs, security events, and usage patterns.
-                    </p>
-                    <p>
-                        For software products, support requests may require
-                        technical details such as PHP version, Laravel version,
-                        Node.js version, package version, browser console
-                        output, stack traces, configuration snippets, dependency
-                        versions, server environment, or reproduction steps. You
-                        should avoid sharing secrets, passwords, API keys,
-                        tokens, private credentials, or unrelated personal data.
-                    </p>
-
-                    <h2>Cookies and Similar Technologies</h2>
-                    <p>
-                        The website may use cookies, local storage, analytics
-                        tools, or similar technologies for basic functionality,
-                        security, preferences, performance measurement, abuse
-                        prevention, and website improvement. You can control or
-                        block cookies through your browser settings, although
-                        some website features may not work as intended if
-                        cookies are disabled.
-                    </p>
-
-                    <h2>How We Use Information</h2>
-                    <ul>
-                        <li>
-                            To operate, maintain, secure, and improve the
-                            website, documentation, software, and related
-                            services.
-                        </li>
-                        <li>
-                            To process purchases, verify payment status, deliver
-                            downloads, issue license keys, and provide private
-                            repository access.
-                        </li>
-                        <li>
-                            To respond to support, licensing, refund, technical,
-                            custom development, SaaS project, and partnership
-                            enquiries.
-                        </li>
-                        <li>
-                            To diagnose bugs, compatibility issues, installation
-                            issues, product defects, and security concerns.
-                        </li>
-                        <li>
-                            To prevent fraud, unauthorized sharing, license
-                            abuse, spam, misuse, or attacks on the website or
-                            services.
-                        </li>
-                        <li>
-                            To maintain business records, invoices, order
-                            history, license records, support records, and
-                            compliance records.
-                        </li>
-                        <li>
-                            To comply with applicable legal, tax, accounting,
-                            regulatory, security, and dispute-resolution
-                            obligations.
-                        </li>
-                    </ul>
-
-                    <h2>Payments and Third-Party Payment Providers</h2>
-                    <p>
-                        Purchases may be processed through third-party payment
-                        providers, marketplaces, checkout platforms, banks, or
-                        billing services. These providers may collect and
-                        process billing information, payment method details, tax
-                        information, fraud signals, and transaction metadata
-                        under their own privacy policies.
-                    </p>
-                    <p>
-                        We may receive limited payment-related information from
-                        these providers, such as confirmation of payment,
-                        transaction ID, payer email, product purchased, amount,
-                        currency, refund status, chargeback status, and invoice
-                        information.
-                    </p>
-
-                    <h2>Third-Party Services</h2>
-                    <p>
-                        We may use third-party services for hosting, domain
-                        services, analytics, email, payment processing,
-                        repository access, source-code delivery, license
-                        management, issue tracking, customer support,
-                        documentation hosting, security monitoring, backups, and
-                        project collaboration. These services may process
-                        information only as needed to provide their functions.
-                    </p>
-                    <p>
-                        Third-party services are governed by their own terms,
-                        privacy policies, security practices, and data retention
-                        rules. We are not responsible for independent processing
-                        performed by third-party platforms outside our control.
-                    </p>
-
-                    <h2>Custom SaaS and Software Projects</h2>
-                    <p>
-                        For custom software, SaaS, consulting, or development
-                        projects, you may provide business requirements, system
-                        diagrams, access instructions, test data, repository
-                        links, credentials, or project documentation. We use
-                        project information to evaluate, estimate, build, test,
-                        support, and deliver agreed work.
-                    </p>
-                    <p>
-                        You should share only the access and data required for
-                        the project. Where possible, use temporary credentials,
-                        limited permissions, staging environments, test data,
-                        and revocable access.
-                    </p>
-
-                    <h2>Copyright and Intellectual Property Information</h2>
-                    <p>
-                        ERAG Technologies may process information needed to
-                        manage copyright, licensing, private repository access,
-                        license keys, download links, product access, and usage
-                        restrictions. Buying a product gives you a license to
-                        use the software under the applicable terms; it does not
-                        transfer copyright ownership in the source code,
-                        documentation, designs, or related intellectual
-                        property.
-                    </p>
-                    <p>
-                        Paid source code, private repository access, license
-                        keys, download links, and premium digital assets are
-                        intended only for authorized customers and users. Open
-                        source packages remain governed by their respective
-                        open-source licenses.
-                    </p>
-
-                    <h2>Data Retention</h2>
-                    <p>
-                        We retain information for as long as reasonably needed
-                        to provide products and services, support customers,
-                        maintain license and purchase records, resolve disputes,
-                        enforce terms, prevent abuse, improve products, and
-                        comply with legal, tax, accounting, and security
-                        obligations.
-                    </p>
-                    <p>
-                        Support and project communications may be retained to
-                        maintain context for ongoing work, recurring issues,
-                        compatibility decisions, bug reports, and customer
-                        history. When information is no longer needed, we may
-                        delete, anonymize, archive, or securely retain it where
-                        required by law or legitimate business needs.
-                    </p>
-
-                    <h2>Data Security</h2>
-                    <p>
-                        We use reasonable technical and organizational measures
-                        designed to protect information against unauthorized
-                        access, misuse, disclosure, alteration, or loss. These
-                        measures may include limited access, secure accounts,
-                        protected repositories, reputable hosting providers,
-                        monitoring, backups, and security-conscious development
-                        practices.
-                    </p>
-                    <p>
-                        No website, repository, email system, payment provider,
-                        or internet transmission is completely secure. You are
-                        responsible for protecting your own accounts, passwords,
-                        private repository invitations, license keys, download
-                        links, and devices.
-                    </p>
-
-                    <h2>User Privacy Rights</h2>
-                    <p>
-                        Depending on your location, you may have rights to
-                        request access to personal information, correction of
-                        inaccurate information, deletion, restriction,
-                        portability, objection to certain processing, or
-                        withdrawal of consent where processing is based on
-                        consent. These rights may be limited by applicable law,
-                        security needs, fraud prevention, accounting
-                        requirements, legal obligations, or ongoing disputes.
-                    </p>
-                    <p>
-                        To make a privacy request, contact us at
-                        <a class="text-link" href="mailto:erag.office@gmail.com"
-                            >erag.office@gmail.com</a
-                        >. We may need to verify your identity or request
-                        additional details before fulfilling a request.
-                    </p>
-
-                    <h2>Children's Privacy</h2>
-                    <p>
-                        Our website, developer tools, packages, premium source
-                        code, and software services are intended for developers,
-                        businesses, technical teams, and professional users. We
-                        do not knowingly collect personal information from
-                        children. If you believe a child has provided personal
-                        information, contact us so we can review and take
-                        appropriate action.
-                    </p>
-
-                    <h2>International Use</h2>
-                    <p>
-                        Users may access the website and products from different
-                        countries. Information may be processed in locations
-                        where we or our third-party service providers operate.
-                        By using the website, products, or services, you
-                        understand that information may be transferred and
-                        processed outside your region, subject to applicable
-                        law.
-                    </p>
-
-                    <h2>Policy Updates</h2>
-                    <p>
-                        We may update this Privacy Policy when our products,
-                        services, legal obligations, payment flows, support
-                        processes, security practices, or data handling
-                        practices change. The updated version will be posted on
-                        this page with a revised Last Updated date.
-                    </p>
-
-                    <h2>Contact</h2>
-                    <p>
-                        For privacy questions, data requests, or concerns,
-                        contact
-                        <a class="text-link" href="mailto:erag.office@gmail.com"
-                            >erag.office@gmail.com</a
-                        >. For secondary contact, you may also email
-                        <a
-                            class="text-link"
-                            href="mailto:eramitgupta.info@gmail.com"
-                            >eramitgupta.info@gmail.com</a
-                        >.
-                    </p>
-                </article>
+            <div class="contact-actions">
+              <a class="button button-primary" href="mailto:erag.office@gmail.com">Email us</a>
+              <a class="button button-ghost" href="/contact.html">Contact page</a>
             </div>
-        </main>
+          </div>
 
-        <footer>
-            <div class="shell">
-                <div class="footer-card">
-                    <div class="footer-stack">
-                        <span class="footer-copy"
-                            >© <span data-current-year></span> ERAG
-                            Technologies. All rights reserved.</span
-                        >
-                    </div>
-                    <div class="footer-stack">
-                        <nav class="footer-links" aria-label="Footer">
-                            <a href="/privacy-policy.html">Privacy Policy</a>
-                            <a href="/terms-and-conditions.html"
-                                >Terms &amp; Conditions</a
-                            >
-                            <a href="/refund-policy.html">Refund Policy</a>
-                            <a href="/contact.html">Contact</a>
-                        </nav>
-                        <span class="footer-tech"
-                            >PHP · Laravel · Vue.js · Inertia.js · React ·
-                            TypeScript</span
-                        >
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script>
-            document
-                .querySelectorAll('[data-current-year]')
-                .forEach((element) => {
-                    element.textContent = new Date().getFullYear();
-                });
-        </script>
-    </body>
+          <div class="related">
+          <a class="related-card" href="/terms-and-conditions.html"><span><small>Also read</small><strong>Terms &amp; Conditions</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+          <a class="related-card" href="/refund-policy.html"><span><small>Also read</small><strong>Refund Policy</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="/">
+            <img src="https://avatars.githubusercontent.com/u/72160684?v=4&amp;size=64" alt="" width="32" height="32">
+            <span>Erag <small>Docs</small></span>
+          </a>
+          <p>Open source Laravel, Vue &amp; React packages with production-ready documentation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="/laravel-pwa/">Laravel PWA</a></li>
+            <li><a href="/laravel-inertia-toast/">Inertia Toast</a></li>
+            <li><a href="/vue-toastification/">Vue Toastification</a></li>
+            <li><a href="/text-editor-vue/">Text Editor Vue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://saas-laravel.com/" target="_blank" rel="noopener">SaaS Laravel</a></li>
+            <li><a href="https://github.com/eramitgupta" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/eramitgupta/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy.html" aria-current="page">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/refund-policy.html">Refund Policy</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> ERAG Technologies. All rights reserved.</span>
+        <span>PHP · Laravel · Vue.js · Inertia.js · React · TypeScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll("[data-current-year]").forEach((element) => {
+      element.textContent = new Date().getFullYear();
+    });
+
+    (() => {
+      const toc = document.querySelector(".toc");
+      const links = Array.from(toc.querySelectorAll("a"));
+      const isCompact = window.matchMedia("(max-width: 900px)");
+      const syncToc = () => {
+        toc.open = !isCompact.matches;
+      };
+
+      syncToc();
+      isCompact.addEventListener("change", syncToc);
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isCompact.matches) {
+            toc.open = false;
+          }
+        });
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        return;
+      }
+
+      const sections = links
+        .map((link) => document.getElementById(link.hash.slice(1)))
+        .filter(Boolean);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          links.forEach((link) => {
+            link.classList.toggle("is-active", link.hash === `#${entry.target.id}`);
+          });
+        });
+      }, { rootMargin: "-90px 0px -65% 0px" });
+
+      sections.forEach((section) => observer.observe(section));
+    })();
+  </script>
+</body>
+
 </html>
