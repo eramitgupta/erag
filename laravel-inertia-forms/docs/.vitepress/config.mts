@@ -409,7 +409,7 @@ export default defineConfig({
         ],
 
         footer: {
-            message: 'MIT License © ERAG',
+            message: 'MIT License © <a href="https://github.com/erag-labs">ERAG</a>',
         },
 
         outline: {
