@@ -173,7 +173,7 @@
 
 ## 10. Laravel Inertia Forms
 - **URL**: https://erag.in/laravel-inertia-forms/
-- **Repository**: https://github.com/erag-labs/laravel-Inertia-forms
+- **Repository**: https://github.com/eramitgupta/laravel-Inertia-forms
 - **Description**: Define Laravel forms in PHP and render them in Inertia.js with one Form component for Vue, React, or Svelte. Validation rules come from the fields, conditional fields work in the browser and on the server, and file uploads are handled.
 - **Install**:
   ```bash

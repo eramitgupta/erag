@@ -10,7 +10,7 @@ Every page in one file: https://erag.in/laravel-inertia-forms/llms-full.txt
 - **Styling**: Tailwind CSS 4 (add `@source "../../node_modules/@erag/inertia-forms-vue/dist";` to `resources/css/app.css`). All controls (dropdowns, calendar, time picker, color panel, tags input) are built in-house with Tailwind; no third-party UI or editor library.
 - **Accent color**: `Form::accent('#0f766e')` in PHP, the `accent` prop on `<Form>` (wins), or the `--erag-form-accent` CSS variable (default `#4f46e5`)
 - **Documentation**: https://erag.in/laravel-inertia-forms/
-- **Repository**: https://github.com/erag-labs/laravel-Inertia-forms
+- **Repository**: https://github.com/eramitgupta/laravel-Inertia-forms
 - **Author**: Er Amit Gupta (https://erag.in/)
 - **License**: MIT
 
@@ -81,27 +81,48 @@ Set `protected bool $wizard = true;` (or call `wizard(nextLabel: 'Next', backLab
 `=`, `!=`, `>`, `>=`, `<`, `<=`, `in`, `not_in`, `contains`, `empty`, `not_empty`, `truthy`, `falsy`.
 
 ## Docs sitemap
+- https://erag.in/laravel-inertia-forms/
+- https://erag.in/laravel-inertia-forms/demo.html (live demo of every field)
+- https://erag.in/laravel-inertia-forms/icons.html (every icon name for icon())
 - https://erag.in/laravel-inertia-forms/guide/introduction.html
+- https://erag.in/laravel-inertia-forms/guide/requirements.html
 - https://erag.in/laravel-inertia-forms/guide/installation.html
 - https://erag.in/laravel-inertia-forms/guide/quick-start.html
 - https://erag.in/laravel-inertia-forms/concepts/form-class.html
-- https://erag.in/laravel-inertia-forms/concepts/validation.html
+- https://erag.in/laravel-inertia-forms/concepts/fieldsets.html
 - https://erag.in/laravel-inertia-forms/concepts/visibility.html
+- https://erag.in/laravel-inertia-forms/concepts/validation.html
+- https://erag.in/laravel-inertia-forms/concepts/authorization.html
+- https://erag.in/laravel-inertia-forms/concepts/model-binding.html
 - https://erag.in/laravel-inertia-forms/concepts/wizard.html
-- https://erag.in/laravel-inertia-forms/fields/combobox.html
-- https://erag.in/laravel-inertia-forms/fields/date-picker.html
-- https://erag.in/laravel-inertia-forms/fields/tags-input.html
-- https://erag.in/laravel-inertia-forms/fields/key-value.html
-- https://erag.in/laravel-inertia-forms/fields/blocks.html
-- https://erag.in/laravel-inertia-forms/fields/repeater.html
-- https://erag.in/laravel-inertia-forms/fields/link.html
+- https://erag.in/laravel-inertia-forms/fields/text-input.html
+- https://erag.in/laravel-inertia-forms/fields/textarea.html
 - https://erag.in/laravel-inertia-forms/fields/slug.html
+- https://erag.in/laravel-inertia-forms/fields/link.html
+- https://erag.in/laravel-inertia-forms/fields/key-value.html
+- https://erag.in/laravel-inertia-forms/fields/hidden.html
+- https://erag.in/laravel-inertia-forms/fields/combobox.html
+- https://erag.in/laravel-inertia-forms/fields/tags-input.html
+- https://erag.in/laravel-inertia-forms/fields/radio.html
+- https://erag.in/laravel-inertia-forms/fields/checkbox.html
+- https://erag.in/laravel-inertia-forms/fields/checkbox-group.html
+- https://erag.in/laravel-inertia-forms/fields/toggle.html
+- https://erag.in/laravel-inertia-forms/fields/date-picker.html
+- https://erag.in/laravel-inertia-forms/fields/time-picker.html
+- https://erag.in/laravel-inertia-forms/fields/file-upload.html
+- https://erag.in/laravel-inertia-forms/fields/slider.html
+- https://erag.in/laravel-inertia-forms/fields/color-picker.html
 - https://erag.in/laravel-inertia-forms/fields/otp-input.html
 - https://erag.in/laravel-inertia-forms/fields/composer.html
+- https://erag.in/laravel-inertia-forms/fields/repeater.html
+- https://erag.in/laravel-inertia-forms/fields/blocks.html
 - https://erag.in/laravel-inertia-forms/fields/submit.html
 - https://erag.in/laravel-inertia-forms/fields/display.html
 - https://erag.in/laravel-inertia-forms/frontend/form-component.html
 - https://erag.in/laravel-inertia-forms/frontend/styling.html
+- https://erag.in/laravel-inertia-forms/frontend/custom-fields.html
+- https://erag.in/laravel-inertia-forms/frontend/standalone.html
+- https://erag.in/laravel-inertia-forms/reference/visibility-operators.html
 - https://erag.in/laravel-inertia-forms/reference/schema.html
-- https://erag.in/laravel-inertia-forms/demo.html (live demo of every field)
-- https://erag.in/laravel-inertia-forms/icons.html (every icon name for icon())
+- https://erag.in/laravel-inertia-forms/reference/artisan-config.html
+- https://erag.in/laravel-inertia-forms/reference/contributing.html

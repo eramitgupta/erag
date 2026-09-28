@@ -58,7 +58,7 @@ jobs:
       - name: Checkout inertia-forms library
         uses: actions/checkout@v4
         with:
-          repository: erag-labs/laravel-Inertia-forms
+          repository: eramitgupta/laravel-Inertia-forms
           path: inertia-forms-library
 
       - name: Setup Node

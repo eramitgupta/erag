@@ -23,7 +23,7 @@ head:
 
 When you pass a form to Inertia, it is turned into JSON by `Form::toArray()`. This is the `FormSchema` object your page receives. You rarely need to read it directly, but it helps when writing [custom fields](/frontend/custom-fields) or [standalone components](/frontend/standalone).
 
-The excerpts below come from the demo form in the repository (`playground/DemoForm.php`), exported with `php playground/export-schema.php`.
+The excerpts below come from a demo form with one field of each common type.
 
 ## Form
 
@@ -73,7 +73,7 @@ An unauthorized form serializes to `action: null`, `method: 'post'`, empty `fiel
     "brand_color": "#4f46e5",
     "avatar": null,
     "terms": false,
-    "source": "playground"
+    "source": "website"
 }
 ```
 

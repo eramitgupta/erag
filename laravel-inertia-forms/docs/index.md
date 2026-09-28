@@ -17,7 +17,7 @@ hero:
           link: /demo.html
         - theme: alt
           text: GitHub
-          link: https://github.com/erag-labs/laravel-Inertia-forms
+          link: https://github.com/eramitgupta/laravel-Inertia-forms
 head:
     - - meta
       - name: robots
