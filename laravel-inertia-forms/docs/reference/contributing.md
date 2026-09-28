@@ -53,12 +53,10 @@ All four live in one repository: [erag-labs/laravel-Inertia-forms](https://githu
 
 ```bash
 git clone https://github.com/erag-labs/laravel-Inertia-forms.git
-cd inertia-forms
+cd laravel-Inertia-forms
 composer install && vendor/bin/pest
 npm install && npm test && npm run build
 ```
-
-`playground/export-schema.php` writes a real `schema.json` from a demo form, which is handy for testing the frontend packages.
 
 ## Reporting bugs
 
