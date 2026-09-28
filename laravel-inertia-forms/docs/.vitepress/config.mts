@@ -288,7 +288,7 @@ export default defineConfig({
             { text: 'SaaS Kit', link: 'https://saas-laravel.com' },
             {
                 text: '<span class="nav-support-btn">Support the Project <svg class="nav-star-icon" viewBox="0 0 24 24" width="14" height="14" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>',
-                link: 'https://github.com/erag-labs/laravel-Inertia-forms',
+                link: 'https://github.com/eramitgupta/laravel-Inertia-forms',
                 noIcon: true,
             },
         ],
@@ -404,7 +404,7 @@ export default defineConfig({
         socialLinks: [
             {
                 icon: 'github',
-                link: 'https://github.com/erag-labs/laravel-Inertia-forms',
+                link: 'https://github.com/eramitgupta/laravel-Inertia-forms',
             },
         ],
 

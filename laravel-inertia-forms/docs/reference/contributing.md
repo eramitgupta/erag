@@ -28,8 +28,8 @@ Contributions, issues, and pull requests are welcome.
 | Who | Role |
 | --- | --- |
 | [Er Amit Gupta](https://github.com/eramitgupta) | Creator and maintainer |
-| [Erag Labs](https://github.com/erag-labs) | Organization and repository home |
-| [Contributors](https://github.com/erag-labs/laravel-Inertia-forms/graphs/contributors) | Everyone who has sent a fix or improvement |
+| [Erag Labs](https://github.com/erag-labs) | Organization |
+| [Contributors](https://github.com/eramitgupta/laravel-Inertia-forms/graphs/contributors) | Everyone who has sent a fix or improvement |
 
 ## Packages
 
@@ -40,7 +40,7 @@ Contributions, issues, and pull requests are welcome.
 | `@erag/inertia-forms-react` | [npm](https://www.npmjs.com/package/@erag/inertia-forms-react) |
 | `@erag/inertia-forms-svelte` | [npm](https://www.npmjs.com/package/@erag/inertia-forms-svelte) |
 
-All four live in one repository: [erag-labs/laravel-Inertia-forms](https://github.com/erag-labs/laravel-Inertia-forms).
+All four live in one repository: [eramitgupta/laravel-Inertia-forms](https://github.com/eramitgupta/laravel-Inertia-forms).
 
 ## Before opening a PR
 
@@ -53,12 +53,12 @@ All four live in one repository: [erag-labs/laravel-Inertia-forms](https://githu
 
 You need PHP 8.3+ with Composer, and Node.js 22+ with npm.
 
-1. **Fork and clone** [erag-labs/laravel-Inertia-forms](https://github.com/erag-labs/laravel-Inertia-forms):
+1. **Fork and clone** [eramitgupta/laravel-Inertia-forms](https://github.com/eramitgupta/laravel-Inertia-forms):
 
 ```bash
 git clone https://github.com/<your-username>/laravel-Inertia-forms.git
 cd laravel-Inertia-forms
-git remote add upstream https://github.com/erag-labs/laravel-Inertia-forms.git
+git remote add upstream https://github.com/eramitgupta/laravel-Inertia-forms.git
 ```
 
 2. **Install** the PHP package and all three frontend packages (npm workspaces):
@@ -101,17 +101,17 @@ git push origin fix/combobox-keyboard
 
 7. **Open a pull request** against `main` and fill in the template: what changed and why, the type of change, and the checklist. Link the issue it fixes, for example `Fixes #12`.
 
-The full guide, including how to try your change in a Laravel app and how to update these docs, is in [CONTRIBUTING.md](https://github.com/erag-labs/laravel-Inertia-forms/blob/main/CONTRIBUTING.md).
+The full guide, including how to try your change in a Laravel app and how to update these docs, is in [CONTRIBUTING.md](https://github.com/eramitgupta/laravel-Inertia-forms/blob/main/CONTRIBUTING.md).
 
 ## Reporting bugs
 
-Open a [GitHub issue](https://github.com/erag-labs/laravel-Inertia-forms/issues) with:
+Open a [GitHub issue](https://github.com/eramitgupta/laravel-Inertia-forms/issues) with:
 
 - the smallest form class that shows the problem
 - your frontend (Vue, React, or Svelte) and package versions
 - expected and actual behavior
 
-Report security issues privately from the repository's [Security tab](https://github.com/erag-labs/laravel-Inertia-forms/security) (**Report a vulnerability**), not in public issues.
+Report security issues privately from the repository's [Security tab](https://github.com/eramitgupta/laravel-Inertia-forms/security) (**Report a vulnerability**), not in public issues.
 
 ## Support the project
 

@@ -10,7 +10,7 @@ Every page in one file: https://erag.in/laravel-inertia-forms/llms-full.txt
 - **Styling**: Tailwind CSS 4 (add `@source "../../node_modules/@erag/inertia-forms-vue/dist";` to `resources/css/app.css`). All controls (dropdowns, calendar, time picker, color panel, tags input) are built in-house with Tailwind; no third-party UI or editor library.
 - **Accent color**: `Form::accent('#0f766e')` in PHP, the `accent` prop on `<Form>` (wins), or the `--erag-form-accent` CSS variable (default `#4f46e5`)
 - **Documentation**: https://erag.in/laravel-inertia-forms/
-- **Repository**: https://github.com/erag-labs/laravel-Inertia-forms
+- **Repository**: https://github.com/eramitgupta/laravel-Inertia-forms
 - **Author**: Er Amit Gupta (https://erag.in/)
 - **License**: MIT
 
