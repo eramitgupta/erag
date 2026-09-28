@@ -1,0 +1,84 @@
+{
+    "action": "/support-chat",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Text",
+                    "name": "_display_7",
+                    "label": "Display 7",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 12,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "text": "Reply to the customer. Attach screenshots or invoices if they help."
+                },
+                {
+                    "component": "Composer",
+                    "name": "reply",
+                    "label": "First reply",
+                    "help": null,
+                    "placeholder": "Write a reply…",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": {
+                        "message": "",
+                        "attachments": []
+                    },
+                    "attachments": true,
+                    "accept": [
+                        "png",
+                        "jpg",
+                        "pdf"
+                    ],
+                    "maxFiles": 3,
+                    "maxSize": 4096,
+                    "maxLength": 2000,
+                    "submitOnEnter": true,
+                    "sendLabel": "Send",
+                    "rows": 1,
+                    "quickReplies": [
+                        "Thanks for reaching out!",
+                        "Could you share a screenshot?",
+                        "This is fixed now."
+                    ]
+                }
+            ]
+        }
+    ],
+    "data": {
+        "reply": {
+            "message": "",
+            "attachments": []
+        }
+    },
+    "hasFiles": true,
+    "scrollToFirstError": true,
+    "resetOnSuccess": true,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

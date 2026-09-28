@@ -1,0 +1,196 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Repeater",
+                    "name": "contacts",
+                    "label": "Project contacts",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "blocks": [
+                        {
+                            "name": "item",
+                            "label": "Contact",
+                            "description": null,
+                            "icon": "C",
+                            "columns": 2,
+                            "titleFrom": "name",
+                            "fields": [
+                                {
+                                    "component": "TextInput",
+                                    "name": "name",
+                                    "label": "Name",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "text",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                },
+                                {
+                                    "component": "TextInput",
+                                    "name": "email",
+                                    "label": "Email",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "email",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                },
+                                {
+                                    "component": "Combobox",
+                                    "name": "role",
+                                    "label": "Role",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": null,
+                                    "options": [
+                                        {
+                                            "value": "owner",
+                                            "label": "Owner",
+                                            "description": null,
+                                            "disabled": false
+                                        },
+                                        {
+                                            "value": "reviewer",
+                                            "label": "Reviewer",
+                                            "description": null,
+                                            "disabled": false
+                                        },
+                                        {
+                                            "value": "viewer",
+                                            "label": "Viewer",
+                                            "description": null,
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "multiple": false,
+                                    "searchable": false,
+                                    "search": null
+                                },
+                                {
+                                    "component": "Toggle",
+                                    "name": "notify",
+                                    "label": "Email updates",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": false,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": false,
+                                    "trueValue": true,
+                                    "falseValue": false,
+                                    "onLabel": null,
+                                    "offLabel": null
+                                }
+                            ],
+                            "defaults": {
+                                "name": "",
+                                "email": "",
+                                "role": null,
+                                "notify": false
+                            }
+                        }
+                    ],
+                    "addActionLabel": "Add a contact",
+                    "reorderable": true,
+                    "addable": true,
+                    "deletable": true,
+                    "collapsible": true,
+                    "collapsed": true,
+                    "minItems": 1,
+                    "maxItems": 4
+                }
+            ]
+        }
+    ],
+    "data": {
+        "contacts": [
+            {
+                "name": "Aisha Khan",
+                "email": "aisha@example.com",
+                "role": "owner",
+                "notify": true
+            },
+            {
+                "name": "Ravi Mehta",
+                "email": "ravi@example.com",
+                "role": "reviewer",
+                "notify": false
+            }
+        ]
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

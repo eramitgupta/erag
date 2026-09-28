@@ -1,0 +1,105 @@
+{
+    "action": null,
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "name",
+                    "label": "Name",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TagsInput",
+                    "name": "tags",
+                    "label": "Tags",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "suggestions": [
+                        "carry-on",
+                        "water-resistant",
+                        "lightweight",
+                        "laptop-sleeve"
+                    ],
+                    "maxTags": 8,
+                    "maxTagLength": 30,
+                    "reorderable": true
+                },
+                {
+                    "component": "TagsInput",
+                    "name": "search_aliases",
+                    "label": "Search aliases",
+                    "help": "Other words shoppers use for this product.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "suggestions": [],
+                    "maxTags": null,
+                    "maxTagLength": null,
+                    "reorderable": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "name": "Cabin backpack",
+        "tags": [
+            "carry-on",
+            "water-resistant"
+        ],
+        "search_aliases": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

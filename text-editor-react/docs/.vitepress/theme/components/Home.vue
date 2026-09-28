@@ -79,7 +79,7 @@ const heroEditorConfig: EditorInit = {
                             >Get Started</a
                         >
                         <a
-                            href="https://github.com/erag-technologies/text-editor-react"
+                            href="https://github.com/erag-labs/text-editor-react"
                             class="btn btn-secondary"
                             target="_blank"
                             >View on GitHub</a

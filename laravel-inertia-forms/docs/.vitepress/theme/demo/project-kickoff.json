@@ -1,0 +1,403 @@
+{
+    "action": "/project-kickoff",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Project",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "project_name",
+                    "label": "Project name",
+                    "help": null,
+                    "placeholder": "Acme redesign",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": 80,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "contact_email",
+                    "label": "Contact email",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "email",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "client_type",
+                    "label": "Client type",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "personal",
+                            "label": "Personal",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "business",
+                            "label": "Business",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "company",
+                    "label": "Company",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "client_type",
+                            "operator": "=",
+                            "value": "business",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "budget",
+                    "label": "Budget",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "number",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": 100,
+                    "max": null,
+                    "step": null,
+                    "prefix": "$",
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "DatePicker",
+                    "name": "deadline",
+                    "label": "Deadline",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "withTime": false,
+                    "range": false,
+                    "months": 1,
+                    "firstDayOfWeek": 0,
+                    "minDate": "2026-09-27",
+                    "maxDate": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Scope",
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "priority",
+                    "label": "Priority",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "low",
+                            "label": "Low",
+                            "description": "Whenever there is time.",
+                            "disabled": false
+                        },
+                        {
+                            "value": "high",
+                            "label": "High",
+                            "description": "Needs attention this week.",
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": 2,
+                    "buttons": false
+                },
+                {
+                    "component": "Combobox",
+                    "name": "stack",
+                    "label": "Tech stack",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "Laravel",
+                            "label": "Laravel",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Inertia",
+                            "label": "Inertia",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "React",
+                            "label": "React",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Vue",
+                            "label": "Vue",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Svelte",
+                            "label": "Svelte",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Tailwind CSS",
+                            "label": "Tailwind CSS",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": true,
+                    "searchable": true,
+                    "search": null
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "services",
+                    "label": "Services",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "design",
+                            "label": "Design",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "build",
+                            "label": "Build",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "hosting",
+                            "label": "Hosting",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "FileUpload",
+                    "name": "brief",
+                    "label": "Brief",
+                    "help": "Optional project brief.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "multiple": false,
+                    "image": false,
+                    "accept": ".pdf,.docx",
+                    "maxSize": 2048,
+                    "maxFiles": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Start project",
+                    "label": "Start project",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": "Starting…",
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "intent": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "project_name": "",
+        "contact_email": "",
+        "client_type": "personal",
+        "company": "",
+        "budget": "",
+        "deadline": "",
+        "priority": "low",
+        "stack": [],
+        "services": [],
+        "brief": null
+    },
+    "hasFiles": true,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

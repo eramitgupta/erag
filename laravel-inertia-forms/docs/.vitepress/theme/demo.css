@@ -1,0 +1,15 @@
+/*
+ * Tailwind CSS for the live demo only. Preflight is skipped so the VitePress
+ * theme is untouched; demo-reset.css replaces it inside `.erag-demo`.
+ */
+@import 'tailwindcss/theme.css';
+@import 'tailwindcss/utilities.css' source(none);
+
+@source './components';
+@source '../../../examples';
+@source '../../../../../InertiaForms/packages/core/src';
+@source '../../../../../InertiaForms/packages/vue/src';
+@source '../../../../inertia-forms-library/packages/core/src';
+@source '../../../../inertia-forms-library/packages/vue/src';
+
+@custom-variant dark (&:where(.dark, .dark *));

@@ -1,0 +1,50 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "DatePicker",
+                    "name": "birthday",
+                    "label": "Date of birth",
+                    "help": "You must be at least 18.",
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "withTime": false,
+                    "range": false,
+                    "months": 1,
+                    "firstDayOfWeek": 0,
+                    "minDate": "1920-01-01",
+                    "maxDate": "2008-09-27"
+                }
+            ]
+        }
+    ],
+    "data": {
+        "birthday": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

@@ -1,0 +1,61 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Link",
+                    "name": "cta",
+                    "label": "Call to action",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": {
+                        "url": "",
+                        "label": "",
+                        "target": ""
+                    },
+                    "structured": true,
+                    "withLabel": true,
+                    "withTarget": true,
+                    "requireScheme": false,
+                    "allowedSchemes": [
+                        "http",
+                        "https"
+                    ],
+                    "labelPlaceholder": "Get started"
+                }
+            ]
+        }
+    ],
+    "data": {
+        "cta": {
+            "url": "",
+            "label": "",
+            "target": ""
+        }
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

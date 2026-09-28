@@ -1,0 +1,48 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TimePicker",
+                    "name": "start_time",
+                    "label": "Race start",
+                    "help": "Between 07:00 and 09:30, to the second.",
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "withSeconds": true,
+                    "minTime": "07:00:00",
+                    "maxTime": "09:30:00",
+                    "minuteStep": 1
+                }
+            ]
+        }
+    ],
+    "data": {
+        "start_time": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

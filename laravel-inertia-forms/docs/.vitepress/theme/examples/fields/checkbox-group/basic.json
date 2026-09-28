@@ -1,0 +1,67 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "CheckboxGroup",
+                    "name": "topics",
+                    "label": "Topics",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "news",
+                            "label": "Product news",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "tips",
+                            "label": "Tips and tutorials",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "events",
+                            "label": "Events",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": true,
+                    "columns": null,
+                    "buttons": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "topics": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

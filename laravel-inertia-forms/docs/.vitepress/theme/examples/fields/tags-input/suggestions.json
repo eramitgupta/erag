@@ -1,0 +1,55 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TagsInput",
+                    "name": "skills",
+                    "label": "Skills",
+                    "help": "Up to 5. Pick a suggestion or type your own.",
+                    "placeholder": "Add a skill",
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "suggestions": [
+                        "laravel",
+                        "inertia",
+                        "vue",
+                        "react",
+                        "svelte",
+                        "tailwind"
+                    ],
+                    "maxTags": 5,
+                    "maxTagLength": 20,
+                    "reorderable": true
+                }
+            ]
+        }
+    ],
+    "data": {
+        "skills": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

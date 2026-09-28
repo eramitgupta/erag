@@ -151,7 +151,7 @@ export default defineConfig({
                         url: `${siteUrl}/`,
                     },
                     codeRepository:
-                        'https://github.com/erag-technologies/text-editor-react',
+                        'https://github.com/erag-labs/text-editor-react',
                     programmingLanguage: 'TypeScript',
                     license: 'https://opensource.org/licenses/MIT',
                     author: {
@@ -279,7 +279,7 @@ export default defineConfig({
         socialLinks: [
             {
                 icon: 'github',
-                link: 'https://github.com/erag-technologies/text-editor-react',
+                link: 'https://github.com/erag-labs/text-editor-react',
             },
         ],
     },

@@ -1,0 +1,480 @@
+{
+    "action": "/hiring-pipeline",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Role",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "role_title",
+                    "label": "Role title",
+                    "help": null,
+                    "placeholder": "Senior Laravel developer",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "department",
+                    "label": "Department",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "Engineering",
+                            "label": "Engineering",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Design",
+                            "label": "Design",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Product",
+                            "label": "Product",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Marketing",
+                            "label": "Marketing",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Support",
+                            "label": "Support",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "Radio",
+                    "name": "employment",
+                    "label": "Employment",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "full_time",
+                            "label": "Full-time",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "part_time",
+                            "label": "Part-time",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "contract",
+                            "label": "Contract",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "TextInput",
+                    "name": "salary_min",
+                    "label": "Salary min",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "number",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": 0,
+                    "max": null,
+                    "step": null,
+                    "prefix": "$",
+                    "suffix": "/yr",
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "salary_max",
+                    "label": "Salary max",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "number",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": 0,
+                    "max": null,
+                    "step": null,
+                    "prefix": "$",
+                    "suffix": "/yr",
+                    "autocomplete": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Location",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "workplace",
+                    "label": "Workplace",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "remote",
+                            "label": "Remote",
+                            "description": "Work from anywhere",
+                            "disabled": false
+                        },
+                        {
+                            "value": "hybrid",
+                            "label": "Hybrid",
+                            "description": "Two days in the office",
+                            "disabled": false
+                        },
+                        {
+                            "value": "onsite",
+                            "label": "On-site",
+                            "description": "Every day in the office",
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": 3,
+                    "buttons": false
+                },
+                {
+                    "component": "Combobox",
+                    "name": "office",
+                    "label": "Office",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "workplace",
+                            "operator": "!=",
+                            "value": "remote",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "Bengaluru",
+                            "label": "Bengaluru",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Berlin",
+                            "label": "Berlin",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "London",
+                            "label": "London",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "New York",
+                            "label": "New York",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Singapore",
+                            "label": "Singapore",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": true,
+                    "search": null
+                },
+                {
+                    "component": "DatePicker",
+                    "name": "start_date",
+                    "label": "Start date",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "withTime": false,
+                    "range": false,
+                    "months": 1,
+                    "firstDayOfWeek": 0,
+                    "minDate": "2026-09-27",
+                    "maxDate": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Pipeline",
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Combobox",
+                    "name": "skills",
+                    "label": "Skills",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "PHP",
+                            "label": "PHP",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Laravel",
+                            "label": "Laravel",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Inertia",
+                            "label": "Inertia",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "React",
+                            "label": "React",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Vue",
+                            "label": "Vue",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "SQL",
+                            "label": "SQL",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Testing",
+                            "label": "Testing",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "AWS",
+                            "label": "AWS",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": true,
+                    "searchable": true,
+                    "search": null
+                },
+                {
+                    "component": "TagsInput",
+                    "name": "stages",
+                    "label": "Stages",
+                    "help": "Drag the stages into order.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "suggestions": [],
+                    "maxTags": null,
+                    "maxTagLength": null,
+                    "reorderable": true
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Open role",
+                    "label": "Open role",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": "Opening…",
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "intent": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "role_title": "",
+        "department": null,
+        "employment": "full_time",
+        "salary_min": "",
+        "salary_max": "",
+        "workplace": "remote",
+        "office": null,
+        "start_date": "",
+        "skills": [],
+        "stages": [
+            "Screening",
+            "Technical interview",
+            "Team interview",
+            "Offer"
+        ]
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

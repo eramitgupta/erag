@@ -1,0 +1,116 @@
+{
+    "action": "/api/feedback",
+    "method": "put",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "mood",
+                    "label": "How do you feel about the product?",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "love",
+                            "label": "Love it",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "fine",
+                            "label": "It is fine",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "meh",
+                            "label": "Not for me",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "Textarea",
+                    "name": "comment",
+                    "label": "Comment",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "rows": 3,
+                    "autoResize": false,
+                    "minLength": null,
+                    "maxLength": 500,
+                    "showCharacterCount": false
+                },
+                {
+                    "component": "Submit",
+                    "name": "Send feedback",
+                    "label": "Send feedback",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": null,
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "mood": null,
+        "comment": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": true,
+    "class": null,
+    "accent": "#0f766e",
+    "wizard": null
+}

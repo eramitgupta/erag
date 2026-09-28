@@ -1,0 +1,70 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Opening hours",
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TimePicker",
+                    "name": "opens_at",
+                    "label": "Opens at",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "withSeconds": false,
+                    "minTime": "06:00",
+                    "maxTime": "12:00",
+                    "minuteStep": 30
+                },
+                {
+                    "component": "TimePicker",
+                    "name": "closes_at",
+                    "label": "Closes at",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "withSeconds": false,
+                    "minTime": "12:00",
+                    "maxTime": "23:30",
+                    "minuteStep": 30
+                }
+            ]
+        }
+    ],
+    "data": {
+        "opens_at": "09:00",
+        "closes_at": "18:00"
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

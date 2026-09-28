@@ -1,0 +1,342 @@
+{
+    "action": "/property-booking",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Stay",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Combobox",
+                    "name": "property",
+                    "label": "Property",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "lake_house",
+                            "label": "Lake house",
+                            "description": "3 bedrooms, private dock",
+                            "disabled": false
+                        },
+                        {
+                            "value": "city_loft",
+                            "label": "City loft",
+                            "description": "1 bedroom, walk to everything",
+                            "disabled": false
+                        },
+                        {
+                            "value": "forest_cabin",
+                            "label": "Forest cabin",
+                            "description": "2 bedrooms, wood stove",
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "DatePicker",
+                    "name": "stay",
+                    "label": "Check-in and check-out",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "withTime": false,
+                    "range": true,
+                    "months": 2,
+                    "firstDayOfWeek": 0,
+                    "minDate": "2026-09-27",
+                    "maxDate": null
+                },
+                {
+                    "component": "TimePicker",
+                    "name": "arrival",
+                    "label": "Arrival time",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "withSeconds": false,
+                    "minTime": "14:00",
+                    "maxTime": "22:00",
+                    "minuteStep": 30
+                },
+                {
+                    "component": "Slider",
+                    "name": "guests",
+                    "label": "Guests",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": 1,
+                    "min": 1,
+                    "max": 8,
+                    "step": 1,
+                    "showValue": true,
+                    "suffix": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Extras",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "bed_setup",
+                    "label": "Bed setup",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "double",
+                            "label": "Double bed",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "twin",
+                            "label": "Twin beds",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "extras",
+                    "label": "Extras",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "breakfast",
+                            "label": "Breakfast",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "pickup",
+                            "label": "Airport pickup",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "late_checkout",
+                            "label": "Late checkout",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "Toggle",
+                    "name": "pets",
+                    "label": "Travelling with pets",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": "Yes",
+                    "offLabel": "No"
+                },
+                {
+                    "component": "TextInput",
+                    "name": "pet_details",
+                    "label": "Pet details",
+                    "help": null,
+                    "placeholder": "One small dog",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "pets",
+                            "operator": "truthy",
+                            "value": null,
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Textarea",
+                    "name": "requests",
+                    "label": "Special requests",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "rows": 3,
+                    "autoResize": false,
+                    "minLength": null,
+                    "maxLength": 300,
+                    "showCharacterCount": true
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Request booking",
+                    "label": "Request booking",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": "Requesting…",
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "intent": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "property": null,
+        "stay": {
+            "start": "",
+            "end": ""
+        },
+        "arrival": "",
+        "guests": 2,
+        "bed_setup": "double",
+        "extras": [],
+        "pets": false,
+        "pet_details": "",
+        "requests": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

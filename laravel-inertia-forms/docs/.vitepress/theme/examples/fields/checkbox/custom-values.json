@@ -1,0 +1,66 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Checkbox",
+                    "name": "newsletter",
+                    "label": "Send me the monthly newsletter",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "no",
+                    "trueValue": "yes",
+                    "falseValue": "no"
+                },
+                {
+                    "component": "Checkbox",
+                    "name": "marketing_opt_in",
+                    "label": "I’m happy to hear about offers",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": 0,
+                    "trueValue": 1,
+                    "falseValue": 0
+                }
+            ]
+        }
+    ],
+    "data": {
+        "newsletter": "no",
+        "marketing_opt_in": 0
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

@@ -1,0 +1,99 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Privacy",
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Toggle",
+                    "name": "status",
+                    "label": "Account",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "paused",
+                    "trueValue": "active",
+                    "falseValue": "paused",
+                    "onLabel": "Active",
+                    "offLabel": "Paused"
+                },
+                {
+                    "component": "Toggle",
+                    "name": "profile_public",
+                    "label": "Public profile",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": "Anyone can view your profile",
+                    "offLabel": "Only you can view your profile"
+                },
+                {
+                    "component": "Toggle",
+                    "name": "show_email",
+                    "label": "Show my email on my profile",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "profile_public",
+                            "operator": "=",
+                            "value": true,
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": null,
+                    "offLabel": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "status": "active",
+        "profile_public": false,
+        "show_email": false
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

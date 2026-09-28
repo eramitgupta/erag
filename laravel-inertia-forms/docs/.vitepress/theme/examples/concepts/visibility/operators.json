@@ -1,0 +1,293 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "age",
+                    "label": "Age",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "number",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": 1,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "guardian_name",
+                    "label": "Parent or guardian",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "age",
+                            "operator": "<",
+                            "value": 18,
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "country",
+                    "label": "Country",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "IN",
+                            "label": "India",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "US",
+                            "label": "United States",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "DE",
+                            "label": "Germany",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "GB",
+                            "label": "United Kingdom",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "state",
+                    "label": "State",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "country",
+                            "operator": "in",
+                            "value": [
+                                "IN",
+                                "US"
+                            ],
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "interests",
+                    "label": "Interests",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "talks",
+                            "label": "Talks",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "workshops",
+                            "label": "Workshops",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "networking",
+                            "label": "Networking",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": true,
+                    "columns": null,
+                    "buttons": false
+                },
+                {
+                    "component": "TimePicker",
+                    "name": "workshop_slot",
+                    "label": "Workshop slot",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "interests",
+                            "operator": "contains",
+                            "value": "workshops",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "withSeconds": false,
+                    "minTime": null,
+                    "maxTime": null,
+                    "minuteStep": 30
+                },
+                {
+                    "component": "Textarea",
+                    "name": "notes",
+                    "label": "Notes",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "rows": 2,
+                    "autoResize": false,
+                    "minLength": null,
+                    "maxLength": null,
+                    "showCharacterCount": false
+                },
+                {
+                    "component": "Toggle",
+                    "name": "share_notes",
+                    "label": "Share my notes with the speakers",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "notes",
+                            "operator": "not_empty",
+                            "value": null,
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": null,
+                    "offLabel": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "age": "",
+        "guardian_name": "",
+        "country": null,
+        "state": "",
+        "interests": [],
+        "workshop_slot": "",
+        "notes": "",
+        "share_notes": false
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

@@ -1,0 +1,72 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "OtpInput",
+                    "name": "invite_code",
+                    "label": "Invite code",
+                    "help": "Letters and digits, like AB12-CD34. Pasting works too.",
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "length": 8,
+                    "alphanumeric": true,
+                    "masked": false,
+                    "groupSize": 4,
+                    "autoSubmit": false
+                },
+                {
+                    "component": "OtpInput",
+                    "name": "pin",
+                    "label": "Parental control PIN",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "length": 4,
+                    "alphanumeric": false,
+                    "masked": true,
+                    "groupSize": null,
+                    "autoSubmit": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "invite_code": "",
+        "pin": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

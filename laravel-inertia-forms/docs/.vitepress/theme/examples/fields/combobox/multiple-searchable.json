@@ -1,0 +1,144 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Combobox",
+                    "name": "timezone",
+                    "label": "Timezone",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "Asia/Kolkata",
+                            "label": "Asia/Kolkata (UTC+05:30)",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Europe/London",
+                            "label": "Europe/London (UTC+00:00)",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Europe/Berlin",
+                            "label": "Europe/Berlin (UTC+01:00)",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "America/New_York",
+                            "label": "America/New_York (UTC−05:00)",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "America/Los_Angeles",
+                            "label": "America/Los_Angeles (UTC−08:00)",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Asia/Tokyo",
+                            "label": "Asia/Tokyo (UTC+09:00)",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": true,
+                    "search": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "skills",
+                    "label": "Skills",
+                    "help": null,
+                    "placeholder": "Search skills…",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "laravel",
+                            "label": "Laravel",
+                            "description": "PHP framework",
+                            "disabled": false
+                        },
+                        {
+                            "value": "inertia",
+                            "label": "Inertia",
+                            "description": "Server-driven SPAs",
+                            "disabled": false
+                        },
+                        {
+                            "value": "vue",
+                            "label": "Vue",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "react",
+                            "label": "React",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "svelte",
+                            "label": "Svelte",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "tailwind",
+                            "label": "Tailwind CSS",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": true,
+                    "searchable": true,
+                    "search": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "timezone": null,
+        "skills": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

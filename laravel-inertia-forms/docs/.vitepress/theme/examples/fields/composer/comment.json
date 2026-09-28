@@ -1,0 +1,59 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Composer",
+                    "name": "comment",
+                    "label": "Comment",
+                    "help": null,
+                    "placeholder": "Add a comment…",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": {
+                        "message": "",
+                        "attachments": []
+                    },
+                    "attachments": false,
+                    "accept": [],
+                    "maxFiles": 5,
+                    "maxSize": null,
+                    "maxLength": 500,
+                    "submitOnEnter": false,
+                    "sendLabel": "Post comment",
+                    "rows": 3,
+                    "quickReplies": []
+                }
+            ]
+        }
+    ],
+    "data": {
+        "comment": {
+            "message": "",
+            "attachments": []
+        }
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

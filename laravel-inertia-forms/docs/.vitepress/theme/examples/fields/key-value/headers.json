@@ -1,0 +1,54 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "KeyValue",
+                    "name": "headers",
+                    "label": "Request headers",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "keyLabel": "Header",
+                    "valueLabel": "Value",
+                    "keyPlaceholder": "X-Api-Version",
+                    "valuePlaceholder": "2024-06-01",
+                    "addActionLabel": "Add header",
+                    "reorderable": true,
+                    "addable": true,
+                    "deletable": true,
+                    "editableKeys": true,
+                    "maxItems": 5
+                }
+            ]
+        }
+    ],
+    "data": {
+        "headers": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

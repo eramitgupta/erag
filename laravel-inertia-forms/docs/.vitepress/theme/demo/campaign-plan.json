@@ -1,0 +1,377 @@
+{
+    "action": "/campaign-plan",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Campaign",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "campaign_name",
+                    "label": "Campaign name",
+                    "help": null,
+                    "placeholder": "Autumn sale",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Radio",
+                    "name": "goal",
+                    "label": "Goal",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "awareness",
+                            "label": "Awareness",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "leads",
+                            "label": "Leads",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "sales",
+                            "label": "Sales",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "Combobox",
+                    "name": "audiences",
+                    "label": "Audiences",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "New visitors",
+                            "label": "New visitors",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Returning customers",
+                            "label": "Returning customers",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Newsletter subscribers",
+                            "label": "Newsletter subscribers",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Trial users",
+                            "label": "Trial users",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Churned users",
+                            "label": "Churned users",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": true,
+                    "searchable": true,
+                    "search": null
+                },
+                {
+                    "component": "DatePicker",
+                    "name": "flight",
+                    "label": "Flight dates",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "withTime": false,
+                    "range": true,
+                    "months": 2,
+                    "firstDayOfWeek": 0,
+                    "minDate": null,
+                    "maxDate": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Budget",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "budget",
+                    "label": "Budget",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "number",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": 0,
+                    "max": null,
+                    "step": null,
+                    "prefix": "$",
+                    "suffix": "USD",
+                    "autocomplete": null
+                },
+                {
+                    "component": "Slider",
+                    "name": "daily_cap",
+                    "label": "Daily cap",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": 0,
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "showValue": true,
+                    "suffix": "%"
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "channels",
+                    "label": "Channels",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "search",
+                            "label": "Search",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "social",
+                            "label": "Social",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "display",
+                            "label": "Display",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "email",
+                            "label": "Email",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "video",
+                            "label": "Video",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "TagsInput",
+                    "name": "utm_tags",
+                    "label": "UTM tags",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "suggestions": [
+                        "autumn",
+                        "sale",
+                        "retargeting",
+                        "brand"
+                    ],
+                    "maxTags": 6,
+                    "maxTagLength": null,
+                    "reorderable": true
+                },
+                {
+                    "component": "ColorPicker",
+                    "name": "creative_color",
+                    "label": "Creative color",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "swatches": [
+                        "#e11d48",
+                        "#f59e0b",
+                        "#10b981",
+                        "#0ea5e9",
+                        "#7c3aed"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Save plan",
+                    "label": "Save plan",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": "Saving…",
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "intent": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "campaign_name": "",
+        "goal": "leads",
+        "audiences": [],
+        "flight": {
+            "start": "",
+            "end": ""
+        },
+        "budget": "",
+        "daily_cap": 25,
+        "channels": [],
+        "utm_tags": [],
+        "creative_color": "#e11d48"
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

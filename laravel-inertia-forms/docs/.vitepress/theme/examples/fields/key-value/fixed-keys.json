@@ -1,0 +1,67 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "KeyValue",
+                    "name": "limits",
+                    "label": "API limits",
+                    "help": "Only the values can be changed.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "keyLabel": "Limit",
+                    "valueLabel": "Value",
+                    "keyPlaceholder": null,
+                    "valuePlaceholder": null,
+                    "addActionLabel": "Add row",
+                    "reorderable": false,
+                    "addable": false,
+                    "deletable": false,
+                    "editableKeys": false,
+                    "maxItems": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "limits": [
+            {
+                "key": "requests_per_minute",
+                "value": "60"
+            },
+            {
+                "key": "burst",
+                "value": "10"
+            },
+            {
+                "key": "daily_quota",
+                "value": "10000"
+            }
+        ]
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

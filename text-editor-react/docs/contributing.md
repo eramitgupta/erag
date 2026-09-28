@@ -32,7 +32,7 @@ The editor is written in TypeScript with React function components and hooks (`.
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/erag-technologies/text-editor-react.git
+git clone https://github.com/erag-labs/text-editor-react.git
 cd text-editor-react
 ```
 
