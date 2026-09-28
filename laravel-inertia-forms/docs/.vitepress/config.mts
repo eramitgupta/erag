@@ -243,7 +243,8 @@ export default defineConfig({
                 ...(modified ? { dateModified: modified } : {}),
             });
             const crumbs = [
-                { name: 'Home', item: `${siteUrl}/` },
+                { name: 'erag.in', item: `${siteOrigin}/` },
+                { name: siteName, item: `${siteUrl}/` },
                 ...(section ? [{ name: section.name, item: section.url }] : []),
                 { name: pageTitle, item: url },
             ];
@@ -284,6 +285,7 @@ export default defineConfig({
         logoLink: `${siteBase}/index.html`,
 
         nav: [
+            { text: 'All packages', link: `${siteOrigin}/`, target: '_self', noIcon: true },
             { text: 'Icons', link: '/icons.html', activeMatch: '^/icons' },
             { text: 'SaaS Kit', link: 'https://saas-laravel.com' },
             {
