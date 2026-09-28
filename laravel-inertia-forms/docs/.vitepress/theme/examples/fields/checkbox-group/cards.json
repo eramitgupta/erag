@@ -1,0 +1,73 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "CheckboxGroup",
+                    "name": "channels",
+                    "label": "Notify me by",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "email",
+                            "label": "Email",
+                            "description": "A summary once a day",
+                            "disabled": false
+                        },
+                        {
+                            "value": "sms",
+                            "label": "SMS",
+                            "description": "Only for urgent alerts",
+                            "disabled": false
+                        },
+                        {
+                            "value": "push",
+                            "label": "Push",
+                            "description": "On your phone and desktop",
+                            "disabled": false
+                        },
+                        {
+                            "value": "fax",
+                            "label": "Fax",
+                            "description": "Retired",
+                            "disabled": true
+                        }
+                    ],
+                    "inline": false,
+                    "columns": 2,
+                    "buttons": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "channels": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

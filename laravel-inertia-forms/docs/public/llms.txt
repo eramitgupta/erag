@@ -1,0 +1,107 @@
+# Laravel Inertia Forms (erag/inertia-forms)
+
+> Define Laravel forms in PHP and render them in Inertia.js with one <Form> component for Vue, React, or Svelte. Validation rules come from the fields, conditional fields work in the browser and on the server, and file uploads are handled for you.
+
+Every page in one file: https://erag.in/laravel-inertia-forms/llms-full.txt
+
+## Core Information
+- **Laravel package**: `erag/inertia-forms` (Laravel 13, Inertia 3, PHP 8.3+)
+- **Frontend packages**: `@erag/inertia-forms-vue` (Vue 3.5+), `@erag/inertia-forms-react` (React 19), `@erag/inertia-forms-svelte` (Svelte 5)
+- **Styling**: Tailwind CSS 4 (add `@source "../../node_modules/@erag/inertia-forms-vue/dist";` to `resources/css/app.css`). All controls (dropdowns, calendar, time picker, color panel, tags input) are built in-house with Tailwind; no third-party UI or editor library.
+- **Accent color**: `Form::accent('#0f766e')` in PHP, the `accent` prop on `<Form>` (wins), or the `--erag-form-accent` CSS variable (default `#4f46e5`)
+- **Documentation**: https://erag.in/laravel-inertia-forms/
+- **Repository**: https://github.com/erag-labs/laravel-Inertia-forms
+- **Author**: Er Amit Gupta (https://erag.in/)
+- **License**: MIT
+
+## Install
+```bash
+composer require erag/inertia-forms
+npm install @erag/inertia-forms-vue   # or -react / -svelte
+```
+
+## Define a form
+```php
+use Erag\InertiaForms\Fields\{Combobox, Submit, TextInput};
+use Erag\InertiaForms\Form;
+
+class CreateUserForm extends Form
+{
+    protected ?string $actionRoute = 'users.store';
+
+    public function fields(): array
+    {
+        return [
+            TextInput::make('name')->required(),
+            TextInput::make('email')->email()->required(),
+            Combobox::make('role')->options(['admin' => 'Admin', 'editor' => 'Editor']),
+            TextInput::make('company')->visibleWhen('role', 'editor'),
+            Submit::make('Create user'),
+        ];
+    }
+}
+```
+
+## Controller
+```php
+return Inertia::render('Users/Create', ['form' => CreateUserForm::make()]);
+
+public function store(#[Validate] CreateUserForm $form)
+{
+    User::create($form->validated());
+    return to_route('users.index');
+}
+```
+
+## Render
+- Vue: `<Form :form="form" @success="..." @error="..." />`
+- React: `<Form form={form} onSuccess={...} onError={...} />`
+- Svelte: `<Form {form} onSuccess={...} onError={...} />`
+- Client-side checks: `onBeforeSubmit(data, { setErrors })` prop (Vue: `:on-before-submit`); return `false` to cancel the request, `setErrors({ field: 'message' })` to show errors
+
+## Fields
+- **Text and input**: TextInput (email, password, number, url, tel, prefix/suffix), Textarea, Slug (`from('title')` follows another field until edited, `prefix()`, `separator('-'|'_')`, `keepCase()`, `maxLength()`; format-checked), Link (URL string by default; `withLabel()` / `withTarget()` / `structured()` store `['url' => ..., 'label' => ..., 'target' => '_self'|'_blank']`; `requireScheme()`, `allowedSchemes('https', 'mailto')`), KeyValue (editable key/value rows, `keyLabel()`, `valueLabel()`, `addActionLabel()`, `reorderable()`, `addable()`, `deletable()`, `editableKeys()`, `maxItems()`; the browser edits `[{key, value}]` rows and `validated()` returns `['key' => 'value']`), Hidden.
+- **Choices and records**: Combobox (custom dropdown, single or multiple, `searchable()`, option descriptions, server-side search with `searchUsing(fn (string $search) => ...)` and `selectedOptionsUsing(fn (array $values) => ...)`; `Select` is an alias and still works), TagsInput (free-text tags, `suggestions()`, `maxTags()`, `maxTagLength()`, `reorderable()`; value is an array of strings), Radio (`buttons()` for a segmented control), Checkbox, CheckboxGroup (`buttons()` for toggle pills), Toggle.
+- **Dates, values and media**: DatePicker (calendar popover, `withTime()`, `range()` with value `['start' => ..., 'end' => ...]`, `months(1|2)`, `firstDayOfWeek()`), TimePicker (hour/minute columns, `minuteStep()`, `withSeconds()`), FileUpload, Slider, ColorPicker (swatches, color picker, hex box), OtpInput (one box per character, `length(2-12)`, `groupSize()`, `alphanumeric()` upper-cases letters, `password()`, `autoSubmit()`, paste and one-time-code autofill).
+- **Editors and structure**: Composer (chat-style message box, Enter sends / Shift+Enter new line, `attachments()`, `accept()`, `maxFiles()`, `maxSize()`, `quickReplies()`, `sendLabel()`; value `['message' => ..., 'attachments' => [UploadedFile]]`; use with `resetOnSuccess`), Repeater (one group of fields repeated: `fields([...])`, `itemLabel()`, `titleFrom()`, `columns()`, `minItems()`, `maxItems()`; value is plain rows), Blocks (content blocks: `blocks([Block::make('section')->label()->description()->icon()->columns()->titleFrom()->fields([...])])`, `addActionLabel()`, `minItems()`, `maxItems()`, `collapsible()`, `collapsed()`; value is `[{type, data}]`, each block validated with its own fields), Submit (`primary()`/`secondary()`/`danger()`/`outline()`/`ghost()`/`link()`, `small()`/`large()`, `fullWidth()`, `icon('send', 'right')`, `processingLabel()`, `intent('publish')` sends `intent=publish` and only accepts the form's own intents).
+- **Display helpers** (no value, full width, not in data or rules): Heading (`level(1-4)`), Text (escaped), Html (trusted HTML only, rendered as-is), Separator (`spacing('none'|'sm'|'md'|'lg')`), Callout (`Callout::make('Title', 'Body')->info()|success()|warning()|danger()`, `icon()`).
+
+Group with `Fieldset::make('Legend')->columns(2)->icon('user')->fields([...])`.
+
+## Wizard
+Set `protected bool $wizard = true;` (or call `wizard(nextLabel: 'Next', backLabel: 'Back')` in the constructor). Every visible fieldset with fields becomes a step with its icon, legend and description; Continue validates the step on the server via `POST /_inertia-forms/validate-step` (config key `wizard`), files are checked on the final submit, and a failed final submit jumps to the step with the first error. The endpoint rebuilds the form with `YourForm::make()`, so the wizard setting and rules must not depend on constructor arguments or a bound model.
+
+## Common methods
+`label()`, `help()`, `placeholder()`, `default()`, `required()`, `rules()`, `rule()`, `disabled()`, `readonly()`, `columnSpan()`, `class()`, `clearable()`, `visibleWhen($field, $operator?, $value)`, `hiddenWhen()`, `clearWhenHidden()`, `authorizedWhen()`, `authorizedUnless()`.
+
+## Form methods
+`make()`, `route($name, $params)`, `url()`, `method()`, `bind($model)`, `accent($color)`, `wizard()`, `resetOnSuccess()`, `data()`, `rules()`, `validate($request)`, `validated()`, `messages()`, `attributes()`, `authorize()`.
+
+## Visibility operators
+`=`, `!=`, `>`, `>=`, `<`, `<=`, `in`, `not_in`, `contains`, `empty`, `not_empty`, `truthy`, `falsy`.
+
+## Docs sitemap
+- https://erag.in/laravel-inertia-forms/guide/introduction.html
+- https://erag.in/laravel-inertia-forms/guide/installation.html
+- https://erag.in/laravel-inertia-forms/guide/quick-start.html
+- https://erag.in/laravel-inertia-forms/concepts/form-class.html
+- https://erag.in/laravel-inertia-forms/concepts/validation.html
+- https://erag.in/laravel-inertia-forms/concepts/visibility.html
+- https://erag.in/laravel-inertia-forms/concepts/wizard.html
+- https://erag.in/laravel-inertia-forms/fields/combobox.html
+- https://erag.in/laravel-inertia-forms/fields/date-picker.html
+- https://erag.in/laravel-inertia-forms/fields/tags-input.html
+- https://erag.in/laravel-inertia-forms/fields/key-value.html
+- https://erag.in/laravel-inertia-forms/fields/blocks.html
+- https://erag.in/laravel-inertia-forms/fields/repeater.html
+- https://erag.in/laravel-inertia-forms/fields/link.html
+- https://erag.in/laravel-inertia-forms/fields/slug.html
+- https://erag.in/laravel-inertia-forms/fields/otp-input.html
+- https://erag.in/laravel-inertia-forms/fields/composer.html
+- https://erag.in/laravel-inertia-forms/fields/submit.html
+- https://erag.in/laravel-inertia-forms/fields/display.html
+- https://erag.in/laravel-inertia-forms/frontend/form-component.html
+- https://erag.in/laravel-inertia-forms/frontend/styling.html
+- https://erag.in/laravel-inertia-forms/reference/schema.html
+- https://erag.in/laravel-inertia-forms/demo.html (live demo of every field)
+- https://erag.in/laravel-inertia-forms/icons.html (every icon name for icon())

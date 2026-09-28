@@ -1,0 +1,114 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "billing",
+                    "label": "Billing period",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "monthly",
+                            "label": "Monthly",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "yearly",
+                            "label": "Yearly (2 months free)",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "Radio",
+                    "name": "size",
+                    "label": "Size",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "XS",
+                            "label": "XS",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "S",
+                            "label": "S",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "M",
+                            "label": "M",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "L",
+                            "label": "L",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "XL",
+                            "label": "XL",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                }
+            ]
+        }
+    ],
+    "data": {
+        "billing": "monthly",
+        "size": null
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

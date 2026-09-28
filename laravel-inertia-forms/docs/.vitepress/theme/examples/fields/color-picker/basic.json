@@ -1,0 +1,51 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "ColorPicker",
+                    "name": "brand_color",
+                    "label": "Brand color",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "swatches": [
+                        "#4f46e5",
+                        "#0ea5e9",
+                        "#10b981",
+                        "#f59e0b",
+                        "#ef4444"
+                    ]
+                }
+            ]
+        }
+    ],
+    "data": {
+        "brand_color": "#4f46e5"
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

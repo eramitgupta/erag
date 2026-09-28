@@ -1,0 +1,79 @@
+{
+    "action": "/newsletter",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "email",
+                    "label": "Email",
+                    "help": null,
+                    "placeholder": "you@example.com",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "email",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Submit",
+                    "name": "Subscribe",
+                    "label": "Subscribe",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": null,
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "email": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

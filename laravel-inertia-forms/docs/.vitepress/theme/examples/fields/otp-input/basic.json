@@ -1,0 +1,49 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "OtpInput",
+                    "name": "code",
+                    "label": "Verification code",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "length": 6,
+                    "alphanumeric": false,
+                    "masked": false,
+                    "groupSize": null,
+                    "autoSubmit": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "code": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

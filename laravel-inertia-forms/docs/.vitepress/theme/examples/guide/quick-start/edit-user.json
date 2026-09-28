@@ -1,0 +1,204 @@
+{
+    "action": null,
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Account",
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "name",
+                    "label": "Name",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": 100,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "email",
+                    "label": "Email",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": true,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "email",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "role",
+                    "label": "Role",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "admin",
+                            "label": "Admin",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "editor",
+                            "label": "Editor",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "sections",
+                    "label": "Sections this editor can publish to",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "role",
+                            "operator": "=",
+                            "value": "editor",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "news",
+                            "label": "News",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "sport",
+                            "label": "Sport",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "culture",
+                            "label": "Culture",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": true,
+                    "columns": null,
+                    "buttons": false
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Save user",
+                    "label": "Save user",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": "Saving…",
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "name": "Jane Cooper",
+        "email": "jane@example.com",
+        "role": "editor",
+        "sections": [
+            "news",
+            "culture"
+        ]
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

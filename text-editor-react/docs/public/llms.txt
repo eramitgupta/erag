@@ -5,8 +5,8 @@
 ## Core Information
 - **Package**: `@erag/text-editor-react`
 - **Documentation**: https://erag.in/text-editor-react/
-- **Repository**: https://github.com/erag-technologies/text-editor-react
-- **Issues**: https://github.com/erag-technologies/text-editor-react/issues
+- **Repository**: https://github.com/erag-labs/text-editor-react
+- **Issues**: https://github.com/erag-labs/text-editor-react/issues
 - **NPM Package**: https://www.npmjs.com/package/@erag/text-editor-react
 - **Author**: Er Amit Gupta (https://erag.in/)
 - **License**: MIT

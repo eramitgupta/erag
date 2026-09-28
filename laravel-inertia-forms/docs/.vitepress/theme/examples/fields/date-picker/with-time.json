@@ -1,0 +1,50 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "DatePicker",
+                    "name": "meeting_at",
+                    "label": "Meeting",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "withTime": true,
+                    "range": false,
+                    "months": 1,
+                    "firstDayOfWeek": 0,
+                    "minDate": "2026-09-27T17:50",
+                    "maxDate": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "meeting_at": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

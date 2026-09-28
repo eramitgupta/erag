@@ -1,0 +1,62 @@
+/*
+ * Scoped stand-in for Tailwind's preflight, used by the live demo only.
+ * Loaded before demo.css so zero-specificity utilities such as space-y-*
+ * still win over it.
+ */
+:where(.erag-demo),
+:where(.erag-demo) *,
+:where(.erag-demo) ::before,
+:where(.erag-demo) ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+
+:where(.erag-demo) {
+    font-family: var(--vp-font-family-base);
+    line-height: 1.5;
+    color: #18181b;
+}
+
+:where(.erag-demo) :is(button, input, select, textarea) {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+:where(.erag-demo) :is(button, [role='button'], label) {
+    cursor: pointer;
+}
+
+:where(.erag-demo) :disabled {
+    cursor: default;
+}
+
+:where(.erag-demo) :is(ul, ol) {
+    list-style: none;
+}
+
+:where(.erag-demo) :is(svg, img) {
+    display: block;
+    vertical-align: middle;
+}
+
+:where(.erag-demo) :is(input, textarea)::placeholder {
+    color: #a1a1aa;
+    opacity: 1;
+}
+
+:where(.erag-demo) textarea {
+    resize: vertical;
+}
+
+:where(.erag-demo) fieldset {
+    min-width: 0;
+}
+
+:where(.erag-demo) [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+}

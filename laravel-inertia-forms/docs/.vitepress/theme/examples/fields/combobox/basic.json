@@ -1,0 +1,67 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Combobox",
+                    "name": "country",
+                    "label": "Country",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "IN",
+                            "label": "India",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "US",
+                            "label": "United States",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "GB",
+                            "label": "United Kingdom",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "country": null
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

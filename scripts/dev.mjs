@@ -69,6 +69,12 @@ const apps = [
     prefix: '/text-editor-react',
     cwd: join(rootDir, 'text-editor-react'),
     port: 5183
+  },
+  {
+    name: 'laravel-inertia-forms',
+    prefix: '/laravel-inertia-forms',
+    cwd: join(rootDir, 'laravel-inertia-forms'),
+    port: 5184
   }
 ]
 

@@ -23,6 +23,7 @@ on:
       - 'vue-toastification/**'
       - 'text-editor-vue/**'
       - 'text-editor-react/**'
+      - 'laravel-inertia-forms/**'
   workflow_dispatch:
 
 permissions:
@@ -51,8 +52,14 @@ jobs:
       - name: Checkout text-editor-react library
         uses: actions/checkout@v4
         with:
-          repository: erag-technologies/text-editor-react
+          repository: erag-labs/text-editor-react
           path: text-editor-react-library
+
+      - name: Checkout inertia-forms library
+        uses: actions/checkout@v4
+        with:
+          repository: erag-labs/laravel-Inertia-forms
+          path: inertia-forms-library
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -70,6 +77,7 @@ jobs:
           npm ci --prefix vue-toastification
           npm ci --prefix text-editor-vue
           npm ci --prefix text-editor-react
+          npm ci --prefix laravel-inertia-forms
 
       - name: Build docs
         run: |
@@ -82,6 +90,7 @@ jobs:
           npm run build --prefix vue-toastification
           npm run build --prefix text-editor-vue
           npm run build --prefix text-editor-react
+          npm run build --prefix laravel-inertia-forms
 
       - name: Prepare Pages artifact
         run: |
@@ -94,6 +103,7 @@ jobs:
           mkdir -p site/vue-toastification
           mkdir -p site/text-editor-vue
           mkdir -p site/text-editor-react
+          mkdir -p site/laravel-inertia-forms
           cp index.html site/index.html
           cp privacy-policy.html site/privacy-policy.html
           cp terms-and-conditions.html site/terms-and-conditions.html
@@ -109,6 +119,7 @@ jobs:
           cp -R vue-toastification/docs/.vitepress/dist/* site/vue-toastification/
           cp -R text-editor-vue/docs/.vitepress/dist/* site/text-editor-vue/
           cp -R text-editor-react/docs/.vitepress/dist/* site/text-editor-react/
+          cp -R laravel-inertia-forms/docs/.vitepress/dist/* site/laravel-inertia-forms/
           touch site/.nojekyll
 
       - name: Audit generated SEO

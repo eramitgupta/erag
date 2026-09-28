@@ -1,0 +1,129 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "contact_method",
+                    "label": "Contact method",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "email",
+                            "label": "Email",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "phone",
+                            "label": "Phone",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": true,
+                    "columns": null,
+                    "buttons": false
+                },
+                {
+                    "component": "TextInput",
+                    "name": "email",
+                    "label": "Email",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "contact_method",
+                            "operator": "=",
+                            "value": "email",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "email",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "phone",
+                    "label": "Phone",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "contact_method",
+                            "operator": "=",
+                            "value": "phone",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "tel",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "contact_method": "email",
+        "email": "",
+        "phone": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

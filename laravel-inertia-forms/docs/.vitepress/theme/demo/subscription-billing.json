@@ -1,0 +1,400 @@
+{
+    "action": "/subscription-billing",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Plan",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "plan",
+                    "label": "Plan",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "starter",
+                            "label": "Starter",
+                            "description": "$9 per seat, up to 5 seats",
+                            "disabled": false
+                        },
+                        {
+                            "value": "growth",
+                            "label": "Growth",
+                            "description": "$19 per seat, priority support",
+                            "disabled": false
+                        },
+                        {
+                            "value": "scale",
+                            "label": "Scale",
+                            "description": "$39 per seat, SSO and audit log",
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": 3,
+                    "buttons": false
+                },
+                {
+                    "component": "Radio",
+                    "name": "cycle",
+                    "label": "Billing cycle",
+                    "help": "Yearly billing gets two months free.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "monthly",
+                            "label": "Monthly",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "yearly",
+                            "label": "Yearly",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "Slider",
+                    "name": "seats",
+                    "label": "Seats",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": 1,
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "showValue": true,
+                    "suffix": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "coupon",
+                    "label": "Coupon",
+                    "help": null,
+                    "placeholder": "LAUNCH20",
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Billing details",
+            "description": null,
+            "icon": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "billing_email",
+                    "label": "Billing email",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "email",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "country",
+                    "label": "Country",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "IN",
+                            "label": "India",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "US",
+                            "label": "United States",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "GB",
+                            "label": "United Kingdom",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "DE",
+                            "label": "Germany",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "FR",
+                            "label": "France",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "NL",
+                            "label": "Netherlands",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": true,
+                    "search": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "vat_number",
+                    "label": "VAT number",
+                    "help": null,
+                    "placeholder": "DE123456789",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "country",
+                            "operator": "in",
+                            "value": [
+                                "DE",
+                                "FR",
+                                "NL"
+                            ],
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "KeyValue",
+                    "name": "invoice_metadata",
+                    "label": "Invoice metadata",
+                    "help": "Shown on every invoice.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "keyLabel": "Key",
+                    "valueLabel": "Value",
+                    "keyPlaceholder": "region",
+                    "valuePlaceholder": "EMEA",
+                    "addActionLabel": "Add metadata",
+                    "reorderable": true,
+                    "addable": true,
+                    "deletable": true,
+                    "editableKeys": true,
+                    "maxItems": 8
+                },
+                {
+                    "component": "Toggle",
+                    "name": "auto_renew",
+                    "label": "Auto renew",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": "On",
+                    "offLabel": "Off"
+                },
+                {
+                    "component": "Checkbox",
+                    "name": "terms",
+                    "label": "I agree to the subscription terms",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Subscribe",
+                    "label": "Subscribe",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": "Subscribing…",
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "intent": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "plan": "growth",
+        "cycle": "yearly",
+        "seats": 5,
+        "coupon": "",
+        "billing_email": "",
+        "country": null,
+        "vat_number": "",
+        "invoice_metadata": [
+            {
+                "key": "region",
+                "value": "EMEA"
+            },
+            {
+                "key": "cost_center",
+                "value": "OPS-204"
+            }
+        ],
+        "auto_renew": true,
+        "terms": false
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

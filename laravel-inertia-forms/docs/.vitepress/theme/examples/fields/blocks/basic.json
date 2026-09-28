@@ -1,0 +1,178 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Blocks",
+                    "name": "body",
+                    "label": "Article outline",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "blocks": [
+                        {
+                            "name": "section",
+                            "label": "Section",
+                            "description": null,
+                            "icon": "S",
+                            "columns": 1,
+                            "titleFrom": null,
+                            "fields": [
+                                {
+                                    "component": "TextInput",
+                                    "name": "heading",
+                                    "label": "Heading",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "text",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                },
+                                {
+                                    "component": "Textarea",
+                                    "name": "summary",
+                                    "label": "Summary",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": false,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "rows": 3,
+                                    "autoResize": false,
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "showCharacterCount": false
+                                }
+                            ],
+                            "defaults": {
+                                "heading": "",
+                                "summary": ""
+                            }
+                        },
+                        {
+                            "name": "quote",
+                            "label": "Quote",
+                            "description": null,
+                            "icon": "Q",
+                            "columns": 1,
+                            "titleFrom": null,
+                            "fields": [
+                                {
+                                    "component": "Textarea",
+                                    "name": "text",
+                                    "label": "Quote",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "rows": 3,
+                                    "autoResize": false,
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "showCharacterCount": false
+                                },
+                                {
+                                    "component": "TextInput",
+                                    "name": "author",
+                                    "label": "Author",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": false,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "text",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                }
+                            ],
+                            "defaults": {
+                                "text": "",
+                                "author": ""
+                            }
+                        }
+                    ],
+                    "addActionLabel": "Add block",
+                    "reorderable": true,
+                    "addable": true,
+                    "deletable": true,
+                    "collapsible": true,
+                    "collapsed": false,
+                    "minItems": null,
+                    "maxItems": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "body": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

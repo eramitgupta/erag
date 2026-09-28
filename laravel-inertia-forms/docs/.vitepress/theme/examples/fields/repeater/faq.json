@@ -1,0 +1,116 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Repeater",
+                    "name": "faq",
+                    "label": "FAQ",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "blocks": [
+                        {
+                            "name": "item",
+                            "label": "Question",
+                            "description": null,
+                            "icon": "Q",
+                            "columns": 1,
+                            "titleFrom": "question",
+                            "fields": [
+                                {
+                                    "component": "TextInput",
+                                    "name": "question",
+                                    "label": "Question",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "text",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                },
+                                {
+                                    "component": "Textarea",
+                                    "name": "answer",
+                                    "label": "Answer",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "rows": 2,
+                                    "autoResize": false,
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "showCharacterCount": false
+                                }
+                            ],
+                            "defaults": {
+                                "question": "",
+                                "answer": ""
+                            }
+                        }
+                    ],
+                    "addActionLabel": "Add question",
+                    "reorderable": true,
+                    "addable": true,
+                    "deletable": true,
+                    "collapsible": true,
+                    "collapsed": false,
+                    "minItems": null,
+                    "maxItems": 5
+                }
+            ]
+        }
+    ],
+    "data": {
+        "faq": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

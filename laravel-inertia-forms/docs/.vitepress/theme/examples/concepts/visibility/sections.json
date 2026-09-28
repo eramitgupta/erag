@@ -1,0 +1,321 @@
+{
+    "action": null,
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "name",
+                    "label": "Name",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Radio",
+                    "name": "account_type",
+                    "label": "Account type",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "personal",
+                            "label": "Personal",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "business",
+                            "label": "Business",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Company",
+            "description": "Only for business accounts. Cleared when you switch back.",
+            "icon": null,
+            "iconSvg": null,
+            "columns": 2,
+            "class": null,
+            "visibility": [
+                {
+                    "field": "account_type",
+                    "operator": "=",
+                    "value": "business",
+                    "negate": false
+                }
+            ],
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "company.name",
+                    "label": "Name",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "company.country",
+                    "label": "Country",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "DE",
+                            "label": "Germany",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "FR",
+                            "label": "France",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "IT",
+                            "label": "Italy",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "IN",
+                            "label": "India",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "company.vat_number",
+                    "label": "VAT number",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "company.country",
+                            "operator": "in",
+                            "value": [
+                                "DE",
+                                "FR",
+                                "IT"
+                            ],
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Toggle",
+                    "name": "company.pay_by_invoice",
+                    "label": "Pay by invoice",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": null,
+                    "offLabel": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "company.po_number",
+                    "label": "PO number",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": [
+                        {
+                            "field": "company.pay_by_invoice",
+                            "operator": "=",
+                            "value": true,
+                            "negate": false
+                        },
+                        {
+                            "field": "company.country",
+                            "operator": "!=",
+                            "value": "IN",
+                            "negate": false
+                        }
+                    ],
+                    "clearWhenHidden": true,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Submit",
+                    "name": "Create account",
+                    "label": "Create account",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": null,
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "name": "",
+        "account_type": "personal",
+        "company": {
+            "name": "",
+            "country": null,
+            "vat_number": "",
+            "pay_by_invoice": false,
+            "po_number": ""
+        }
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

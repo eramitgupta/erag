@@ -1,0 +1,48 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TimePicker",
+                    "name": "reminder_at",
+                    "label": "Daily reminder",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "withSeconds": false,
+                    "minTime": null,
+                    "maxTime": null,
+                    "minuteStep": 15
+                }
+            ]
+        }
+    ],
+    "data": {
+        "reminder_at": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

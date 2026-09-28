@@ -1,0 +1,49 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "FileUpload",
+                    "name": "resume",
+                    "label": "CV",
+                    "help": null,
+                    "placeholder": "Drop your CV here",
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "multiple": false,
+                    "image": false,
+                    "accept": ".pdf,.doc,.docx",
+                    "maxSize": 5120,
+                    "maxFiles": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "resume": null
+    },
+    "hasFiles": true,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

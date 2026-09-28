@@ -1,0 +1,73 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Combobox",
+                    "name": "plan",
+                    "label": "Plan",
+                    "help": null,
+                    "placeholder": "Choose a plan",
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "starter",
+                            "label": "Starter",
+                            "description": "One project, community support",
+                            "disabled": false
+                        },
+                        {
+                            "value": "team",
+                            "label": "Team",
+                            "description": "Unlimited projects, 10 seats",
+                            "disabled": false
+                        },
+                        {
+                            "value": "business",
+                            "label": "Business",
+                            "description": "SSO and priority support",
+                            "disabled": false
+                        },
+                        {
+                            "value": "legacy",
+                            "label": "Legacy",
+                            "description": "No longer available",
+                            "disabled": true
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "plan": null
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

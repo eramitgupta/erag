@@ -1,0 +1,273 @@
+{
+    "action": null,
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "method",
+                    "label": "Pay with",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "card",
+                            "label": "Card",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "bank",
+                            "label": "Bank transfer",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Card",
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 2,
+            "class": null,
+            "visibility": [
+                {
+                    "field": "method",
+                    "operator": "=",
+                    "value": "card",
+                    "negate": false
+                }
+            ],
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "card.holder",
+                    "label": "Name on card",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "TextInput",
+                    "name": "card.number",
+                    "label": "Card number",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "DatePicker",
+                    "name": "card.expires",
+                    "label": "Expiry date",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "withTime": false,
+                    "range": false,
+                    "months": 1,
+                    "firstDayOfWeek": 0,
+                    "minDate": null,
+                    "maxDate": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": "Bank transfer",
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": [
+                {
+                    "field": "method",
+                    "operator": "=",
+                    "value": "bank",
+                    "negate": false
+                }
+            ],
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "bank.iban",
+                    "label": "IBAN",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                }
+            ]
+        },
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "coupon",
+                    "label": "Coupon",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "text",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Submit",
+                    "name": "Pay now",
+                    "label": "Pay now",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": null,
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "method": "card",
+        "card": {
+            "holder": "",
+            "number": "",
+            "expires": ""
+        },
+        "bank": {
+            "iban": ""
+        },
+        "coupon": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

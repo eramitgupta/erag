@@ -1,0 +1,156 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "CheckboxGroup",
+                    "name": "workdays",
+                    "label": "Workdays",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "mon",
+                            "label": "Mon",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "tue",
+                            "label": "Tue",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "wed",
+                            "label": "Wed",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "thu",
+                            "label": "Thu",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "fri",
+                            "label": "Fri",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "sat",
+                            "label": "Sat",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "sun",
+                            "label": "Sun",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "interests",
+                    "label": "Interests",
+                    "help": "Pick up to three.",
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "Design",
+                            "label": "Design",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Frontend",
+                            "label": "Frontend",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Backend",
+                            "label": "Backend",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "DevOps",
+                            "label": "DevOps",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Testing",
+                            "label": "Testing",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "Security",
+                            "label": "Security",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                }
+            ]
+        }
+    ],
+    "data": {
+        "workdays": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+        ],
+        "interests": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

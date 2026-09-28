@@ -1,0 +1,143 @@
+{
+    "action": "/team/invitations",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "TextInput",
+                    "name": "email",
+                    "label": "Email",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "type": "email",
+                    "minLength": null,
+                    "maxLength": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "prefix": null,
+                    "suffix": null,
+                    "autocomplete": null
+                },
+                {
+                    "component": "Combobox",
+                    "name": "role",
+                    "label": "Role",
+                    "help": "Admins can manage billing and members.",
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "admin",
+                            "label": "Admin",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "editor",
+                            "label": "Editor",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "viewer",
+                            "label": "Viewer",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "multiple": false,
+                    "searchable": false,
+                    "search": null
+                },
+                {
+                    "component": "Textarea",
+                    "name": "message",
+                    "label": "Message",
+                    "help": null,
+                    "placeholder": "Optional note for the invite email",
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "rows": 2,
+                    "autoResize": false,
+                    "minLength": null,
+                    "maxLength": null,
+                    "showCharacterCount": false
+                },
+                {
+                    "component": "Submit",
+                    "name": "Send invite",
+                    "label": "Send invite",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": null,
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "email": "",
+        "role": "viewer",
+        "message": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

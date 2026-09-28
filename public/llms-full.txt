@@ -151,7 +151,7 @@
 
 ## 9. Text Editor React
 - **URL**: https://erag.in/text-editor-react/
-- **Repository**: https://github.com/erag-technologies/text-editor-react
+- **Repository**: https://github.com/erag-labs/text-editor-react
 - **Description**: A modern, dependency-free React rich text editor (WYSIWYG) for React 18 & 19 built with native browser APIs. Features mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable menubars.
 - **Install**:
   ```bash
@@ -167,4 +167,38 @@
     const [content, setContent] = useState('<p>Hello World</p>');
     return <Editor value={content} onChange={setContent} />;
   }
+  ```
+
+---
+
+## 10. Laravel Inertia Forms
+- **URL**: https://erag.in/laravel-inertia-forms/
+- **Repository**: https://github.com/erag-labs/laravel-Inertia-forms
+- **Description**: Define Laravel forms in PHP and render them in Inertia.js with one Form component for Vue, React, or Svelte. Validation rules come from the fields, conditional fields work in the browser and on the server, and file uploads are handled.
+- **Install**:
+  ```bash
+  composer require erag/inertia-forms
+  npm install @erag/inertia-forms-vue   # or -react / -svelte
+  ```
+- **Usage**:
+  ```php
+  class CreateUserForm extends Form
+  {
+      protected ?string $actionRoute = 'users.store';
+
+      public function fields(): array
+      {
+          return [
+              TextInput::make('name')->required(),
+              TextInput::make('email')->email()->required(),
+              Submit::make('Create user'),
+          ];
+      }
+  }
+
+  // Controller: Inertia::render('Users/Create', ['form' => CreateUserForm::make()]);
+  // Store: public function store(#[Validate] CreateUserForm $form) { ... $form->validated() ... }
+  ```
+  ```vue
+  <Form :form="form" />
   ```

@@ -1,0 +1,49 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "FileUpload",
+                    "name": "avatar",
+                    "label": "Profile photo",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "multiple": false,
+                    "image": true,
+                    "accept": "image/*",
+                    "maxSize": 2048,
+                    "maxFiles": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "avatar": null
+    },
+    "hasFiles": true,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

@@ -14,6 +14,7 @@ Main documentation workspace for Erag open source packages.
 - `vue-toastification/` - VitePress docs for Vue Toastification.
 - `text-editor-vue/` - VitePress docs for Text Editor Vue.
 - `text-editor-react/` - VitePress docs for Text Editor React.
+- `laravel-inertia-forms/` - VitePress docs for Laravel Inertia Forms.
 
 ## Local Setup
 
@@ -35,6 +36,7 @@ cd ../laravel-pwa && npm install
 cd ../vue-toastification && npm install
 cd ../text-editor-vue && npm install
 cd ../text-editor-react && npm install
+cd ../laravel-inertia-forms && npm install
 cd ..
 ```
 

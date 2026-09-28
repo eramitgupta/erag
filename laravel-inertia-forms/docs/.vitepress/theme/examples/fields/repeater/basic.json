@@ -1,0 +1,120 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Repeater",
+                    "name": "links",
+                    "label": "Links",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "blocks": [
+                        {
+                            "name": "item",
+                            "label": "Link",
+                            "description": null,
+                            "icon": "L",
+                            "columns": 1,
+                            "titleFrom": null,
+                            "fields": [
+                                {
+                                    "component": "TextInput",
+                                    "name": "label",
+                                    "label": "Label",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "text",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                },
+                                {
+                                    "component": "TextInput",
+                                    "name": "url",
+                                    "label": "URL",
+                                    "help": null,
+                                    "placeholder": null,
+                                    "required": true,
+                                    "disabled": false,
+                                    "readonly": false,
+                                    "autofocus": false,
+                                    "columnSpan": null,
+                                    "class": null,
+                                    "visibility": null,
+                                    "clearWhenHidden": false,
+                                    "clearable": false,
+                                    "emptyValue": "",
+                                    "type": "url",
+                                    "minLength": null,
+                                    "maxLength": null,
+                                    "min": null,
+                                    "max": null,
+                                    "step": null,
+                                    "prefix": null,
+                                    "suffix": null,
+                                    "autocomplete": null
+                                }
+                            ],
+                            "defaults": {
+                                "label": "",
+                                "url": ""
+                            }
+                        }
+                    ],
+                    "addActionLabel": "Add link",
+                    "reorderable": true,
+                    "addable": true,
+                    "deletable": true,
+                    "collapsible": true,
+                    "collapsed": false,
+                    "minItems": null,
+                    "maxItems": null
+                }
+            ]
+        }
+    ],
+    "data": {
+        "links": []
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

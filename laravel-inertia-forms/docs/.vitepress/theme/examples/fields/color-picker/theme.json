@@ -1,0 +1,94 @@
+{
+    "action": "/example",
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": "Theme",
+            "description": "Colors used on your public booking page.",
+            "icon": null,
+            "iconSvg": null,
+            "columns": 2,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "ColorPicker",
+                    "name": "primary",
+                    "label": "Primary",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "swatches": [
+                        "#4f46e5",
+                        "#0f766e",
+                        "#be123c",
+                        "#1d4ed8",
+                        "#18181b"
+                    ]
+                },
+                {
+                    "component": "ColorPicker",
+                    "name": "background",
+                    "label": "Background",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "swatches": [
+                        "#ffffff",
+                        "#fafaf9",
+                        "#f1f5f9",
+                        "#fef3c7"
+                    ]
+                },
+                {
+                    "component": "ColorPicker",
+                    "name": "highlight",
+                    "label": "Highlight",
+                    "help": "Optional. Used for badges and banners.",
+                    "placeholder": "No highlight",
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": 2,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": true,
+                    "emptyValue": "",
+                    "swatches": []
+                }
+            ]
+        }
+    ],
+    "data": {
+        "primary": "#0f766e",
+        "background": "#ffffff",
+        "highlight": ""
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": null,
+    "wizard": null
+}

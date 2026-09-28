@@ -1,0 +1,188 @@
+{
+    "action": null,
+    "method": "post",
+    "fieldsets": [
+        {
+            "id": null,
+            "legend": null,
+            "description": null,
+            "icon": null,
+            "iconSvg": null,
+            "columns": 1,
+            "class": null,
+            "visibility": null,
+            "fields": [
+                {
+                    "component": "Radio",
+                    "name": "room",
+                    "label": "Room",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": null,
+                    "options": [
+                        {
+                            "value": "single",
+                            "label": "Single",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "double",
+                            "label": "Double",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "suite",
+                            "label": "Suite",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": false,
+                    "columns": null,
+                    "buttons": true
+                },
+                {
+                    "component": "DatePicker",
+                    "name": "stay",
+                    "label": "Stay",
+                    "help": null,
+                    "placeholder": null,
+                    "required": true,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "withTime": false,
+                    "range": true,
+                    "months": 2,
+                    "firstDayOfWeek": 0,
+                    "minDate": null,
+                    "maxDate": null
+                },
+                {
+                    "component": "CheckboxGroup",
+                    "name": "extras",
+                    "label": "Extras",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": [],
+                    "options": [
+                        {
+                            "value": "breakfast",
+                            "label": "Breakfast",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "parking",
+                            "label": "Parking",
+                            "description": null,
+                            "disabled": false
+                        },
+                        {
+                            "value": "late_checkout",
+                            "label": "Late checkout",
+                            "description": null,
+                            "disabled": false
+                        }
+                    ],
+                    "inline": true,
+                    "columns": null,
+                    "buttons": false
+                },
+                {
+                    "component": "Toggle",
+                    "name": "newsletter",
+                    "label": "Newsletter",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": false,
+                    "trueValue": true,
+                    "falseValue": false,
+                    "onLabel": null,
+                    "offLabel": null
+                },
+                {
+                    "component": "Submit",
+                    "name": "Book room",
+                    "label": "Book room",
+                    "help": null,
+                    "placeholder": null,
+                    "required": false,
+                    "disabled": false,
+                    "readonly": false,
+                    "autofocus": false,
+                    "columnSpan": null,
+                    "class": null,
+                    "visibility": null,
+                    "clearWhenHidden": false,
+                    "clearable": false,
+                    "emptyValue": "",
+                    "processingLabel": null,
+                    "variant": "primary",
+                    "size": "md",
+                    "fullWidth": false,
+                    "icon": null,
+                    "iconPosition": "left",
+                    "iconSvg": null,
+                    "intent": null,
+                    "disableUntilDirty": false
+                }
+            ]
+        }
+    ],
+    "data": {
+        "room": "double",
+        "stay": {
+            "start": "",
+            "end": ""
+        },
+        "extras": [
+            "breakfast"
+        ],
+        "newsletter": true
+    },
+    "hasFiles": false,
+    "scrollToFirstError": true,
+    "resetOnSuccess": false,
+    "class": null,
+    "accent": "#0f766e",
+    "wizard": null
+}
