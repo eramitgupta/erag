@@ -8,6 +8,15 @@ const activeTab = ref<CodeTab>('request')
 const composerCopied = ref(false)
 const codeCopied = ref(false)
 
+const saasLaravelFeatures = [
+  'Multi-tenancy, a database per tenant',
+  'Passkeys and two-factor sign-in',
+  'Roles and permissions',
+  '17 languages',
+  'Per-domain branding',
+  'Admin dashboard'
+]
+
 const copyToClipboard = async (text: string, type: 'composer' | 'code') => {
   try {
     if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
@@ -650,20 +659,37 @@ const tickerDomains = [
       </div>
     </div>
 
-    <div class="home-cta-panel">
-      <span class="section-label">Explore docs</span>
-      <h2>Install and Configure Laravel Disposable Email</h2>
-      <p>
-        Follow the documentation to install the package, configure validation, sync your domain list, and enable caching.
-      </p>
-      <div class="quick-links">
-        <a :href="withBase('/getting-started.html')">Installation guide</a>
-        <a :href="withBase('/configuration.html')">Configuration options</a>
-        <a :href="withBase('/advanced/rfc-dns.html')">RFC / DNS validation</a>
-        <a :href="withBase('/sync-and-blacklist.html')">Sync and blacklist</a>
-        <a :href="withBase('/caching.html')">Caching notes</a>
+    <section class="home-saas" aria-labelledby="home-sponsors-heading">
+      <div class="home-sponsors-intro">
+        <div class="faq-badge">
+          <span class="badge-pulse-dot"></span>
+          <span class="badge-text">SPONSORS</span>
+        </div>
+        <h2 id="home-sponsors-heading">Block fake sign-ups. Then ship your SaaS faster.</h2>
+        <p>Laravel Disposable Email keeps burner addresses out of your registration forms. SaaS Laravel gives you everything around them — tenancy, passkeys, roles and translations — so you can launch on day one.</p>
       </div>
-    </div>
+
+      <div class="home-saas-card">
+        <div class="home-saas-copy">
+          <span class="home-saas-eyebrow">Featured sponsor</span>
+          <h3 class="home-saas-title">Building a SaaS? Start with SaaS Laravel.</h3>
+          <p>Production-ready, multi-tenant starter kits for Laravel 13 and Inertia 3, in Vue, React or Svelte. Tenancy, sign-in with passkeys and two-factor, roles, translations and an admin dashboard come ready, so you start on your own product on day one.</p>
+          <div class="home-saas-actions">
+            <a class="home-saas-primary" href="https://saas-laravel.com" target="_blank" rel="noopener">
+              Explore SaaS Laravel
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+            <a class="home-saas-secondary" href="https://saas-laravel.com/pricing.html" target="_blank" rel="noopener">See pricing</a>
+          </div>
+        </div>
+        <ul class="home-saas-features" aria-label="What SaaS Laravel includes">
+          <li v-for="feature in saasLaravelFeatures" :key="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+            {{ feature }}
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- FAQ Accordion section (SEO Optimized) -->
     <div class="home-faq-section">
@@ -839,6 +865,21 @@ const tickerDomains = [
           </div>
         </details>
 
+      </div>
+    </div>
+
+    <div class="home-cta-panel">
+      <span class="section-label">Explore docs</span>
+      <h2>Install and Configure Laravel Disposable Email</h2>
+      <p>
+        Follow the documentation to install the package, configure validation, sync your domain list, and enable caching.
+      </p>
+      <div class="quick-links">
+        <a :href="withBase('/getting-started.html')">Installation guide</a>
+        <a :href="withBase('/configuration.html')">Configuration options</a>
+        <a :href="withBase('/advanced/rfc-dns.html')">RFC / DNS validation</a>
+        <a :href="withBase('/sync-and-blacklist.html')">Sync and blacklist</a>
+        <a :href="withBase('/caching.html')">Caching notes</a>
       </div>
     </div>
   </div>
@@ -1058,6 +1099,19 @@ const tickerDomains = [
   font-weight: 700;
   color: var(--vp-c-text-1);
   letter-spacing: -0.015em;
+}
+
+.home-cta-panel {
+  box-sizing: border-box;
+  width: min(1068px, calc(100% - 32px));
+  margin: 56px auto 22px auto;
+}
+
+@media (max-width: 768px) {
+  .home-cta-panel {
+    width: calc(100% - 24px);
+    margin-top: 40px;
+  }
 }
 
 .home-release-copy h2,
@@ -2550,6 +2604,203 @@ const tickerDomains = [
   }
   .faq-question {
     font-size: 0.96rem;
+  }
+}
+
+/* ==========================================================================
+   SPONSORS: SaaS Laravel card
+   ========================================================================== */
+.home-saas {
+  max-width: 1100px;
+  margin: 70px auto 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.home-sponsors-intro {
+  max-width: 760px;
+  margin: 0 auto 36px auto;
+  text-align: center;
+}
+
+.home-sponsors-intro h2 {
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--vp-c-text-1);
+  font-size: clamp(2rem, 3.4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.home-sponsors-intro p {
+  margin: 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.home-saas-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+  padding: 44px;
+  border-radius: 24px;
+  background:
+    radial-gradient(40rem 20rem at 100% 0%, rgba(245, 48, 3, 0.28), transparent 60%),
+    linear-gradient(135deg, #09090b 0%, #18181b 100%);
+  color: #fafafa;
+  box-shadow: 0 30px 60px -20px rgba(9, 9, 11, 0.45);
+}
+
+.home-saas-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px) 0 0 / 20px 20px;
+  pointer-events: none;
+}
+
+.home-saas-copy,
+.home-saas-features {
+  position: relative;
+}
+
+.home-saas-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #ff9a7a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-saas-card .home-saas-title {
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.home-saas-copy p {
+  margin: 0 0 26px 0 !important;
+  color: #d4d4d8;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.home-saas-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-saas-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.home-saas-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.home-saas-primary {
+  background: #ffffff;
+  color: #09090b !important;
+}
+
+.home-saas-primary svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-saas-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff !important;
+}
+
+.home-saas-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-saas-features {
+  display: grid;
+  gap: 10px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.home-saas-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 !important;
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e4e4e7;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.home-saas-features svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+  border-radius: 50%;
+  background: #f53003;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dark .home-saas-card {
+  border: 1px solid #27272a;
+  box-shadow: none;
+}
+
+@media (max-width: 860px) {
+  .home-saas {
+    margin-top: 48px;
+    padding: 0 12px;
+  }
+
+  .home-saas-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px 22px;
+  }
+
+  .home-sponsors-intro h2 {
+    font-size: 1.65rem;
   }
 }
 </style>
