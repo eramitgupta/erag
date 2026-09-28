@@ -1,6 +1,6 @@
 ---
 title: 'Key Value'
-description: 'Editable key and value rows for metadata, headers or settings. Add, remove and reorder rows; validated() returns a plain key => value array.'
+description: 'Editable key and value rows for metadata, headers or settings. Add, remove and reorder rows; validated() returns a plain key-value array.'
 head:
     - - meta
       - name: robots
