@@ -15,6 +15,10 @@
 - [Laravel Inertia Forms](https://erag.in/laravel-inertia-forms/): Define Laravel forms in PHP and render them in Inertia.js with one Form component for Vue, React, or Svelte, with generated validation, conditional fields, and file uploads.
 - [Text Editor React](https://erag.in/text-editor-react/): Dependency-free React rich text editor (WYSIWYG) for React 18 & 19 with mentions (@), merge tags ({{), templates, image uploads, tables, and HTML controls.
 
+## Blog
+
+- [Erag Blog](https://erag.in/blog/): Practical guides by Amit Gupta for Laravel, Inertia.js, Vue and React developers, covering the problems each Erag package solves. RSS: https://erag.in/blog/feed.xml
+
 ## Details
 
 For full API references, installation guides, and code examples, see [Full LLM Documentation](https://erag.in/llms-full.txt).

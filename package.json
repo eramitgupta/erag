@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/dev.mjs",
-    "audit:seo": "node scripts/audit-seo.mjs site"
+    "audit:seo": "node scripts/audit-seo.mjs site",
+    "blog:sitemap": "node scripts/sync-blog-sitemap.mjs"
   },
   "devDependencies": {
     "http-proxy": "^1.18.1"
