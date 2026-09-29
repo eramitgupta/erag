@@ -75,6 +75,12 @@ const apps = [
     prefix: '/laravel-inertia-forms',
     cwd: join(rootDir, 'laravel-inertia-forms'),
     port: 5184
+  },
+  {
+    name: 'blog',
+    prefix: '/blog',
+    cwd: join(rootDir, 'blog'),
+    port: 5185
   }
 ]
 

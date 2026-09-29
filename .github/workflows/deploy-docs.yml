@@ -24,6 +24,7 @@ on:
       - 'text-editor-vue/**'
       - 'text-editor-react/**'
       - 'laravel-inertia-forms/**'
+      - 'blog/**'
   workflow_dispatch:
 
 permissions:
@@ -78,6 +79,7 @@ jobs:
           npm ci --prefix text-editor-vue
           npm ci --prefix text-editor-react
           npm ci --prefix laravel-inertia-forms
+          npm ci --prefix blog
 
       - name: Build docs
         run: |
@@ -91,6 +93,7 @@ jobs:
           npm run build --prefix text-editor-vue
           npm run build --prefix text-editor-react
           npm run build --prefix laravel-inertia-forms
+          npm run build --prefix blog
 
       - name: Prepare Pages artifact
         run: |
@@ -104,6 +107,7 @@ jobs:
           mkdir -p site/text-editor-vue
           mkdir -p site/text-editor-react
           mkdir -p site/laravel-inertia-forms
+          mkdir -p site/blog
           cp index.html site/index.html
           cp privacy-policy.html site/privacy-policy.html
           cp terms-and-conditions.html site/terms-and-conditions.html
@@ -120,6 +124,7 @@ jobs:
           cp -R text-editor-vue/docs/.vitepress/dist/* site/text-editor-vue/
           cp -R text-editor-react/docs/.vitepress/dist/* site/text-editor-react/
           cp -R laravel-inertia-forms/docs/.vitepress/dist/* site/laravel-inertia-forms/
+          cp -R blog/docs/.vitepress/dist/* site/blog/
           touch site/.nojekyll
 
       - name: Audit generated SEO
