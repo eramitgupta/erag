@@ -195,10 +195,10 @@ export default defineConfig({
         const organization = {
             '@type': 'Organization',
             '@id': organizationId,
-            name: 'ERAG Labs',
+            name: 'ERAG',
             url: `${siteOrigin}/`,
             logo: { '@type': 'ImageObject', url: `${siteUrl}/icon-512.png`, width: 512, height: 512 },
-            sameAs: ['https://github.com/erag-labs', 'https://github.com/eramitgupta'],
+            sameAs: ['https://github.com/the-erag', 'https://github.com/eramitgupta'],
         };
         const website = {
             '@type': 'WebSite',

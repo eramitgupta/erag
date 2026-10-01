@@ -1,4 +1,4 @@
-# Erag Open-Source Packages — Full Documentation Reference
+# ERAG Open-Source Packages — Full Documentation Reference
 
 > Author: Er Amit Gupta
 > Website: https://erag.in/
@@ -151,7 +151,7 @@
 
 ## 9. Text Editor React
 - **URL**: https://erag.in/text-editor-react/
-- **Repository**: https://github.com/erag-labs/text-editor-react
+- **Repository**: https://github.com/the-erag/text-editor-react
 - **Description**: A modern, dependency-free React rich text editor (WYSIWYG) for React 18 & 19 built with native browser APIs. Features mentions (@), merge tags ({{), templates, image uploads, tables, HTML editing, and customizable menubars.
 - **Install**:
   ```bash

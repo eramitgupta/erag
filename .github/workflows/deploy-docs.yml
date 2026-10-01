@@ -53,7 +53,7 @@ jobs:
       - name: Checkout text-editor-react library
         uses: actions/checkout@v4
         with:
-          repository: erag-labs/text-editor-react
+          repository: the-erag/text-editor-react
           path: text-editor-react-library
 
       - name: Checkout inertia-forms library

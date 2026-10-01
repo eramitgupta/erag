@@ -41,7 +41,7 @@ export default defineConfig({
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
-    ['meta', { property: 'og:site_name', content: 'Laravel PWA — Erag' }],
+    ['meta', { property: 'og:site_name', content: 'Laravel PWA — ERAG' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Laravel PWA documentation' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
@@ -92,7 +92,7 @@ export default defineConfig({
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Erag',
+        name: 'ERAG',
         url: 'https://erag.in/',
       },
     }

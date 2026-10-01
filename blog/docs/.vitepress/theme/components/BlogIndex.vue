@@ -71,7 +71,7 @@ const packageColor = (slug: string): string => packages[slug]?.color ?? '#a996ff
 <template>
   <div class="blog-index">
     <header class="blog-hero">
-      <span class="blog-kicker">The Erag Blog</span>
+      <span class="blog-kicker">The ERAG Blog</span>
       <h1>Build better Laravel apps, <span class="blog-hero-accent">one real problem at a time.</span></h1>
       <p>
         Hands-on guides for Laravel, Inertia, Vue and React. Every post starts with a problem you will actually run

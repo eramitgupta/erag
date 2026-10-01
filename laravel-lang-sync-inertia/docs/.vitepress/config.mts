@@ -91,7 +91,7 @@ export default defineConfig({
             'meta',
             {
                 property: 'og:site_name',
-                content: 'Laravel Lang Sync Inertia — Erag',
+                content: 'Laravel Lang Sync Inertia — ERAG',
             },
         ],
         [
@@ -153,7 +153,7 @@ export default defineConfig({
             },
             publisher: {
                 '@type': 'Organization',
-                name: 'Erag',
+                name: 'ERAG',
                 url: 'https://erag.in/',
             },
         };

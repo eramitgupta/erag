@@ -330,7 +330,7 @@ const tickerDomains = [
         </div>
         <div class="stat-box">
           <span class="stat-number">100% Offline</span>
-          <span class="stat-label">GDPR &amp; Privacy Safe</span>
+          <span class="stat-label">GDPR & Privacy Safe</span>
         </div>
         <div class="stat-box">
           <span class="stat-number">
@@ -500,7 +500,7 @@ const tickerDomains = [
               <div class="feature-body">
                 <div class="feature-body-header">
                   <strong>Flexible Validation Rules</strong>
-                  <span class="feature-tag">String &amp; Object</span>
+                  <span class="feature-tag">String & Object</span>
                 </div>
                 <p>Seamless support for both classic <code>'disposable_email'</code> string rules and dedicated rule objects.</p>
               </div>
@@ -518,7 +518,7 @@ const tickerDomains = [
               <div class="feature-body">
                 <div class="feature-body-header">
                   <strong>Advanced Protocol Modes</strong>
-                  <span class="feature-tag">RFC &amp; DNS MX</span>
+                  <span class="feature-tag">RFC & DNS MX</span>
                 </div>
                 <p>Optional RFC 5322 strict formatting, active DNS MX lookups, spoof prevention, and PHP filter modes.</p>
               </div>
@@ -533,7 +533,7 @@ const tickerDomains = [
               </div>
               <div class="feature-body">
                 <div class="feature-body-header">
-                  <strong>Facade &amp; Runtime Checks</strong>
+                  <strong>Facade & Runtime Checks</strong>
                   <span class="feature-tag">Zero Overhead</span>
                 </div>
                 <p>Instant <code>Disposable::email(...)</code> verification for service classes, controllers, and custom business logic.</p>
@@ -567,7 +567,7 @@ const tickerDomains = [
               </div>
               <div class="feature-body">
                 <div class="feature-body-header">
-                  <strong>Auto-Sync &amp; Local Cache</strong>
+                  <strong>Auto-Sync & Local Cache</strong>
                   <span class="feature-tag">Production Ready</span>
                 </div>
                 <p>Remote syncing via Artisan commands, custom blacklist files, and memory caching for high-volume pipelines.</p>
@@ -600,7 +600,7 @@ const tickerDomains = [
               <div class="usecase-number-badge">01</div>
               <div class="usecase-body">
                 <div class="usecase-body-header">
-                  <strong>Registration &amp; Account Creation</strong>
+                  <strong>Registration & Account Creation</strong>
                   <span class="usecase-chip chip-cyan">Auth Flows</span>
                 </div>
                 <p>Block burner addresses instantly during signup to prevent database pollution, dead email accounts, and bot spam.</p>
@@ -612,7 +612,7 @@ const tickerDomains = [
               <div class="usecase-number-badge">02</div>
               <div class="usecase-body">
                 <div class="usecase-body-header">
-                  <strong>Free Trial &amp; Promo Protection</strong>
+                  <strong>Free Trial & Promo Protection</strong>
                   <span class="usecase-chip chip-amber">Revenue Shield</span>
                 </div>
                 <p>Prevent users from endlessly creating new accounts to reuse free trial periods, starter credits, or welcome coupons.</p>
@@ -624,7 +624,7 @@ const tickerDomains = [
               <div class="usecase-number-badge">03</div>
               <div class="usecase-body">
                 <div class="usecase-body-header">
-                  <strong>B2B Onboarding &amp; Corporate Leads</strong>
+                  <strong>B2B Onboarding & Corporate Leads</strong>
                   <span class="usecase-chip chip-emerald">Lead Quality</span>
                 </div>
                 <p>Ensure that whitepapers, webinars, demo bookings, and sales inquiries capture genuine business and corporate domains.</p>
@@ -636,7 +636,7 @@ const tickerDomains = [
               <div class="usecase-number-badge">04</div>
               <div class="usecase-body">
                 <div class="usecase-body-header">
-                  <strong>Admin Tools &amp; Security Moderation</strong>
+                  <strong>Admin Tools & Security Moderation</strong>
                   <span class="usecase-chip chip-indigo">SecOps</span>
                 </div>
                 <p>Audit user databases, screen incoming contact form leads, and flag high-risk disposable accounts inside admin dashboards.</p>
@@ -648,7 +648,7 @@ const tickerDomains = [
               <div class="usecase-number-badge">05</div>
               <div class="usecase-body">
                 <div class="usecase-body-header">
-                  <strong>Invite Loops &amp; Referral Systems</strong>
+                  <strong>Invite Loops & Referral Systems</strong>
                   <span class="usecase-chip chip-purple">Anti-Fraud</span>
                 </div>
                 <p>Eliminate referral fraud and fake invite exploits where bad actors trigger referral rewards with burner emails.</p>
@@ -741,7 +741,7 @@ const tickerDomains = [
         <details class="faq-item">
           <summary>
             <div class="faq-summary-left">
-              <span class="faq-tag tag-cyan">RFC &amp; DNS MX</span>
+              <span class="faq-tag tag-cyan">RFC & DNS MX</span>
               <span class="faq-question">How can I enable strict RFC 5322 syntax and live MX record DNS verification?</span>
             </div>
             <span class="faq-icon-arrow">
@@ -789,7 +789,7 @@ const tickerDomains = [
         <details class="faq-item">
           <summary>
             <div class="faq-summary-left">
-              <span class="faq-tag tag-indigo">Sync &amp; Automation</span>
+              <span class="faq-tag tag-indigo">Sync & Automation</span>
               <span class="faq-question">How do I keep the disposable email domains blocklist updated automatically?</span>
             </div>
             <span class="faq-icon-arrow">
@@ -821,7 +821,7 @@ const tickerDomains = [
         <details class="faq-item">
           <summary>
             <div class="faq-summary-left">
-              <span class="faq-tag tag-primary">Performance &amp; Scale</span>
+              <span class="faq-tag tag-primary">Performance & Scale</span>
               <span class="faq-question">How do I cache disposable email domain checks in Redis for maximum throughput?</span>
             </div>
             <span class="faq-icon-arrow">

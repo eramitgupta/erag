@@ -79,7 +79,7 @@ const heroEditorConfig: EditorInit = {
                             >Get Started</a
                         >
                         <a
-                            href="https://github.com/erag-labs/text-editor-react"
+                            href="https://github.com/the-erag/text-editor-react"
                             class="btn btn-secondary"
                             target="_blank"
                             >View on GitHub</a
@@ -219,7 +219,7 @@ const heroEditorConfig: EditorInit = {
                 <div class="trust-badge">Native Browser APIs</div>
                 <div class="trust-badge">TypeScript</div>
                 <div class="trust-badge">Open Source</div>
-                <div class="trust-badge">React 18 &amp; 19</div>
+                <div class="trust-badge">React 18 & 19</div>
                 <div class="trust-badge">Built from Scratch</div>
                 <div class="trust-badge">No TinyMCE / CKEditor</div>
             </div>

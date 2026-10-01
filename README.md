@@ -1,6 +1,8 @@
-# Erag Docs
+# ERAG Docs
 
-Main documentation workspace for Erag open source packages.
+**ERAG — Engineer • Research • Advance • Grow** · [github.com/the-erag](https://github.com/the-erag)
+
+Main documentation workspace for ERAG open source packages.
 
 ## Projects
 
