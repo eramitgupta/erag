@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 
 /** The package for each part of the stack, shown in the hero. */
 const packages = [
-    { key: 'laravel', label: 'Laravel', name: 'erag/inertia-forms', manager: 'composer' },
+    { key: 'laravel', label: 'Laravel', name: 'composer require erag/inertia-forms', manager: 'composer' },
     { key: 'vue', label: 'Vue', name: '@erag/inertia-forms-vue', manager: 'npm' },
     { key: 'react', label: 'React', name: '@erag/inertia-forms-react', manager: 'npm' },
     { key: 'svelte', label: 'Svelte', name: '@erag/inertia-forms-svelte', manager: 'npm' },
