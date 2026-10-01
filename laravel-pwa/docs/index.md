@@ -56,7 +56,7 @@ head:
 <div class="home-container">
 <section class="home-desc">
 <h2>PWA Easy Setup for Laravel</h2>
-<p>Erag Laravel PWA is a package designed to seamlessly integrate Progressive Web Application (PWA) functionality into your Laravel projects. With this package, you can easily configure, update the manifest, and register service workers, enabling any Laravel app to function as a PWA. It requires minimal configuration and works out of the box with Blade, Livewire, Vue, and React environments.</p>
+<p>ERAG Laravel PWA is a package designed to seamlessly integrate Progressive Web Application (PWA) functionality into your Laravel projects. With this package, you can easily configure, update the manifest, and register service workers, enabling any Laravel app to function as a PWA. It requires minimal configuration and works out of the box with Blade, Livewire, Vue, and React environments.</p>
 </section>
 
 <section class="home-faq">

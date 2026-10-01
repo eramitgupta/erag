@@ -60,7 +60,7 @@ export default defineConfig({
         ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
         [
             'meta',
-            { property: 'og:site_name', content: 'Text Editor Vue — Erag' },
+            { property: 'og:site_name', content: 'Text Editor Vue — ERAG' },
         ],
         ['meta', { property: 'og:image', content: socialImage }],
         [
@@ -153,7 +153,7 @@ export default defineConfig({
                     },
                     publisher: {
                         '@type': 'Organization',
-                        name: 'Erag',
+                        name: 'ERAG',
                         url: 'https://erag.in/',
                     },
                 }),

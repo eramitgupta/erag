@@ -52,7 +52,7 @@ const relatedPosts = computed(() => {
       <div>
         <strong>Written by Amit Gupta</strong>
         <p>
-          Full stack engineer and the maintainer of the Erag open source packages for Laravel, Inertia.js, Vue and
+          Full stack engineer and the maintainer of the ERAG open source packages for Laravel, Inertia.js, Vue and
           React. He writes about the problems these packages were built to solve.
         </p>
       </div>

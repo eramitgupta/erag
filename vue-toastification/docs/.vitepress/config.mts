@@ -52,7 +52,7 @@ export default defineConfig({
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
-    ['meta', { property: 'og:site_name', content: 'Vue Toastification — Erag' }],
+    ['meta', { property: 'og:site_name', content: 'Vue Toastification — ERAG' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { property: 'og:image:alt', content: 'Vue Toastification documentation' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -113,7 +113,7 @@ export default defineConfig({
           },
           publisher: {
             '@type': 'Organization',
-            name: 'Erag',
+            name: 'ERAG',
             url: 'https://erag.in/',
           },
         }),

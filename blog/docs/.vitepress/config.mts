@@ -30,8 +30,8 @@ const canonicalUrl = (page: string): string => {
 
 export default defineConfig({
   base: `${siteBase}/`,
-  title: 'Erag Blog',
-  titleTemplate: ':title | Erag Blog',
+  title: 'ERAG Blog',
+  titleTemplate: ':title | ERAG Blog',
   description:
     'Practical guides for Laravel, Inertia.js, Vue and React developers: validation, forms, notifications, PWAs, rich text editors and more.',
   appearance: 'dark',
@@ -49,14 +49,14 @@ export default defineConfig({
     ['meta', { name: 'author', content: authorName }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
-    ['meta', { property: 'og:site_name', content: 'Erag Blog' }],
+    ['meta', { property: 'og:site_name', content: 'ERAG Blog' }],
     ['meta', { property: 'og:image', content: socialImage }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: '@_eramitgupta' }],
     ['meta', { name: 'twitter:image', content: socialImage }],
     ['meta', { name: 'google-site-verification', content: searchConsoleVerification }],
     ['link', { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/72160684?v=4&size=64' }],
-    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'Erag Blog', href: `${siteUrl}/feed.xml` }],
+    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'ERAG Blog', href: `${siteUrl}/feed.xml` }],
   ],
   markdown: {
     config(md) {
@@ -98,7 +98,7 @@ export default defineConfig({
       '<?xml version="1.0" encoding="UTF-8"?>',
       '<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">',
       '  <channel>',
-      '    <title>Erag Blog</title>',
+      '    <title>ERAG Blog</title>',
       `    <link>${siteUrl}/</link>`,
       '    <description>Practical guides for Laravel, Inertia.js, Vue and React developers.</description>',
       '    <language>en-us</language>',
@@ -135,12 +135,12 @@ export default defineConfig({
       ? {
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        name: 'Erag Blog',
+        name: 'ERAG Blog',
         description,
         url,
         inLanguage: 'en-US',
         author,
-        publisher: { '@type': 'Organization', name: 'Erag', url: 'https://erag.in/' },
+        publisher: { '@type': 'Organization', name: 'ERAG', url: 'https://erag.in/' },
       }
       : {
         '@context': 'https://schema.org',
@@ -152,7 +152,7 @@ export default defineConfig({
         inLanguage: 'en-US',
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         author,
-        publisher: { '@type': 'Organization', name: 'Erag', url: 'https://erag.in/' },
+        publisher: { '@type': 'Organization', name: 'ERAG', url: 'https://erag.in/' },
         ...(frontmatter.date ? { datePublished: new Date(frontmatter.date).toISOString() } : {}),
         ...(pageData.lastUpdated || frontmatter.date
           ? { dateModified: new Date(pageData.lastUpdated || frontmatter.date).toISOString() }
@@ -177,7 +177,7 @@ export default defineConfig({
     ]
   },
   themeConfig: {
-    siteTitle: 'Erag Blog',
+    siteTitle: 'ERAG Blog',
     logoLink: `${siteBase}/`,
     nav: [
       { text: 'All posts', link: '/' },
@@ -202,7 +202,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Written by Amit Gupta. Code samples are MIT licensed.',
-      copyright: 'Erag Labs',
+      copyright: 'ERAG — Engineer • Research • Advance • Grow',
     },
   },
 })

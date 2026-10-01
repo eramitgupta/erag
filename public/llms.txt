@@ -1,6 +1,8 @@
-# Erag Documentation
+# ERAG Documentation
 
-> Official documentation for Erag open-source packages for Laravel, Vue 3, and React. Built and maintained by Er Amit Gupta.
+ERAG — Engineer • Research • Advance • Grow. GitHub organization: https://github.com/the-erag
+
+> Official documentation for ERAG open-source packages for Laravel, Vue 3, and React. Built and maintained by Er Amit Gupta.
 
 ## Packages
 
@@ -17,7 +19,7 @@
 
 ## Blog
 
-- [Erag Blog](https://erag.in/blog/): Practical guides by Amit Gupta for Laravel, Inertia.js, Vue and React developers, covering the problems each Erag package solves. RSS: https://erag.in/blog/feed.xml
+- [ERAG Blog](https://erag.in/blog/): Practical guides by Amit Gupta for Laravel, Inertia.js, Vue and React developers, covering the problems each ERAG package solves. RSS: https://erag.in/blog/feed.xml
 
 ## Details
 

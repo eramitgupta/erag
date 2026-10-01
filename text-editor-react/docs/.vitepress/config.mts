@@ -68,7 +68,7 @@ export default defineConfig({
         ['meta', { name: 'bingbot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
         [
             'meta',
-            { property: 'og:site_name', content: 'Text Editor React — Erag' },
+            { property: 'og:site_name', content: 'Text Editor React — ERAG' },
         ],
         ['meta', { property: 'og:image', content: socialImage }],
         [
@@ -151,7 +151,7 @@ export default defineConfig({
                         url: `${siteUrl}/`,
                     },
                     codeRepository:
-                        'https://github.com/erag-labs/text-editor-react',
+                        'https://github.com/the-erag/text-editor-react',
                     programmingLanguage: 'TypeScript',
                     license: 'https://opensource.org/licenses/MIT',
                     author: {
@@ -161,7 +161,7 @@ export default defineConfig({
                     },
                     publisher: {
                         '@type': 'Organization',
-                        name: 'Erag',
+                        name: 'ERAG',
                         url: 'https://erag.in/',
                     },
                 }),
@@ -279,7 +279,7 @@ export default defineConfig({
         socialLinks: [
             {
                 icon: 'github',
-                link: 'https://github.com/erag-labs/text-editor-react',
+                link: 'https://github.com/the-erag/text-editor-react',
             },
         ],
     },

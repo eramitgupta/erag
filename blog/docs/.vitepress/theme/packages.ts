@@ -76,7 +76,7 @@ export const packages: Record<string, PackageInfo> = {
   'text-editor-react': {
     name: 'Text Editor React',
     docs: 'https://erag.in/text-editor-react/',
-    repo: 'https://github.com/erag-labs/text-editor-react',
+    repo: 'https://github.com/the-erag/text-editor-react',
     stack: 'React',
     color: '#61dafb',
   },
