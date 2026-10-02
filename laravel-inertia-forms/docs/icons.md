@@ -93,6 +93,8 @@ Register any SVG under a name, then use it like the others.
 
 Click an icon to copy its name. `map-pin`, `map_pin` and `MapPin` all work as `mapPin`.
 
+The icons Laravel sends are listed in the `Erag\InertiaForms\Support\IconSetEnum` enum, so you can also use a case's value: `->icon(IconSetEnum::Rocket->value)`.
+
 <IconGallery />
 
 ## Your own icons

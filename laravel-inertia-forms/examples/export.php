@@ -9,11 +9,15 @@
  * It is run here and the serialized form is written to
  * docs/.vitepress/theme/examples/<page>/<name>.json.
  *
+ * It also writes the package's icon set (`IconSetEnum`, grouped by
+ * category) to docs/.vitepress/theme/icon-set.json for the Icons gallery.
+ *
  * Run from docs/laravel-inertia-forms with a local InertiaForms checkout:
  * php examples/export.php ../../InertiaForms
  */
 
 use Erag\InertiaForms\Form;
+use Erag\InertiaForms\Support\IconSetEnum;
 use Orchestra\Testbench\Foundation\Application;
 
 $package = rtrim($argv[1] ?? __DIR__.'/../../../InertiaForms', '/');
@@ -76,7 +80,12 @@ foreach ($files as $file) {
     $written++;
 }
 
-echo "Wrote {$written} example(s)".($failed ? ", {$failed} failed" : '').".\n";
+file_put_contents(
+    realpath(__DIR__.'/../docs/.vitepress/theme').'/icon-set.json',
+    json_encode(IconSetEnum::grouped(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE).PHP_EOL,
+);
+
+echo "Wrote {$written} example(s) and the icon set".($failed ? ", {$failed} failed" : '').".\n";
 exit($failed ? 1 : 0);
 
 /**
