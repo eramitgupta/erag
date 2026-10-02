@@ -441,9 +441,10 @@ export default defineConfig({
                     replacement: resolve(librarySource, 'packages/core/src/index.ts'),
                 },
                 {
-                    // The icon set Laravel sends as SVG, shown in the Icons gallery.
+                    // The icon set Laravel sends as SVG (IconSetEnum), shown in the
+                    // Icons gallery. examples/export.php writes it.
                     find: /^@erag\/inertia-forms-icons$/,
-                    replacement: resolve(librarySource, 'resources/icons/icons.json'),
+                    replacement: resolve(__dirname, 'theme/icon-set.json'),
                 },
             ],
             dedupe: ['vue', '@inertiajs/vue3', '@inertiajs/core'],
