@@ -1,6 +1,6 @@
 ---
 title: 'Artisan Command & Config'
-description: 'Generate form classes with php artisan make:form, customize the stub, and publish the inertia-forms config file.'
+description: 'Install with php artisan erag:install-inertia-forms, generate form classes with php artisan make:form, and publish the inertia-forms config file.'
 head:
     - - meta
       - name: robots
@@ -29,20 +29,18 @@ Run it once after `composer require erag/inertia-forms`:
 php artisan erag:install-inertia-forms
 ```
 
-It does three things:
+It does two things:
 
 1. Publishes the config to `config/inertia-forms.php` (see [Configuration](#configuration)).
-2. Publishes the form stub to `stubs/inertia-form.stub` (see [Customizing the stub](#customizing-the-stub)).
-3. Prints the next steps: the npm package to install, the Tailwind `@source` line, and `make:form`. It picks the package from the Inertia adapter in your `package.json` (`@inertiajs/vue3`, `@inertiajs/react` or `@inertiajs/svelte`) and lists all three when it finds none.
+2. Prints the next steps: the npm package for Vue, React or Svelte, the Tailwind `@source` line, and `make:form`.
 
 ```
    INFO  Installing Inertia Forms.
 
   config/inertia-forms.php ............................. PUBLISHED
-  stubs/inertia-form.stub .............................. PUBLISHED
 ```
 
-Files that already exist are kept and shown as `SKIPPED`. Pass `--force` to replace them with the package's current version:
+If the config already exists it is kept and shown as `SKIPPED`. Pass `--force` to replace it with the package's current version:
 
 ```bash
 php artisan erag:install-inertia-forms --force
@@ -50,7 +48,7 @@ php artisan erag:install-inertia-forms --force
 
 | Option | Description |
 | ------ | ----------- |
-| `--force` | Overwrite files that were already published. |
+| `--force` | Overwrite the config if it was already published. |
 
 ## `make:form`
 
@@ -60,7 +58,7 @@ Generate a new form class:
 php artisan make:form CreateUserForm
 ```
 
-This creates `app/Forms/CreateUserForm.php` in the `App\Forms` namespace:
+This creates `app/Forms/CreateUserForm.php` in the `App\Forms` namespace, straight from the stub inside the package. Nothing needs to be published first:
 
 ```php
 <?php
@@ -101,16 +99,6 @@ php artisan make:form Billing/UpdatePlanForm
 ```
 
 The command refuses to overwrite an existing file.
-
-### Customizing the stub
-
-Publish the stub to change what new forms look like:
-
-```bash
-php artisan vendor:publish --tag=inertia-forms-stubs
-```
-
-This copies it to `stubs/inertia-form.stub` in your project. When that file exists, `make:form` uses it instead of the package's stub. The placeholders <code v-pre>{{ namespace }}</code> and <code v-pre>{{ class }}</code> are replaced when the file is generated.
 
 ## Configuration
 

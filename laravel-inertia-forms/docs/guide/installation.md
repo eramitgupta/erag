@@ -35,7 +35,7 @@ Then run the install command:
 php artisan erag:install-inertia-forms
 ```
 
-It publishes `config/inertia-forms.php` and `stubs/inertia-form.stub`, then prints the next steps for your frontend. It reads `package.json` to find your Inertia adapter, so it shows only the Vue, React or Svelte package you need. Files you already published are kept; add `--force` to replace them.
+It publishes `config/inertia-forms.php`, then prints the next steps: the Vue, React and Svelte packages to choose from, the Tailwind `@source` line, and `make:form`. A config you already published is kept; add `--force` to replace it.
 
 The service provider is registered automatically through Laravel package discovery. It adds the `erag:install-inertia-forms` and `make:form` Artisan commands and the `inertia-forms` config.
 
@@ -101,19 +101,15 @@ php artisan boost:install
 
 Already set up Boost? Run `php artisan boost:update --discover` to pick up the new package.
 
-## Publishing files one by one
+## Publishing the config
 
-`erag:install-inertia-forms` already published both files. To publish (or re-publish) just one of them:
+`erag:install-inertia-forms` already published it. To publish (or re-publish) it by hand:
 
 ```bash
-# config/inertia-forms.php
 php artisan vendor:publish --tag=inertia-forms-config
-
-# stubs/inertia-form.stub (used by make:form)
-php artisan vendor:publish --tag=inertia-forms-stubs
 ```
 
-See [Artisan Command & Config](/reference/artisan-config) for what they contain.
+`make:form` needs nothing published; it uses the stub inside the package. See [Artisan Command & Config](/reference/artisan-config) for both.
 
 ## Next step
 
