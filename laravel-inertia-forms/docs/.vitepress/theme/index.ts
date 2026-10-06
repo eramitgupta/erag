@@ -1,6 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
+import CopyPage from './components/CopyPage.vue';
 import { defineAsyncComponent, h, onMounted } from 'vue';
 import HeroBadge from './components/HeroBadge.vue';
 import HeroFloaters from './components/HeroFloaters.vue';
@@ -16,6 +17,7 @@ export default {
         h(DefaultTheme.Layout, null, {
             'home-hero-info-before': () => [h(HeroFloaters), h(HeroBadge)],
             'home-hero-actions-after': () => h(HeroInstall),
+            'doc-before': () => h(CopyPage),
         }),
     enhanceApp({ app, router, siteData }) {
         // Loaded on demand so pages without the demo don't download the forms package.
