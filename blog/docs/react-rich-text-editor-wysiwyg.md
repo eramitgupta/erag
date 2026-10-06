@@ -7,6 +7,9 @@ package: text-editor-react
 category: Tutorial
 tags: [react, wysiwyg, rich-text-editor, nextjs, inertia]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/react-rich-text-editor-wysiwyg.md
+</div>
 
 Most React WYSIWYG editor setups start the same way. You install the editor, then a toolbar package, then a few extensions, and then you write an adapter so the thing behaves like a form field. By the end you have a lot of code whose only job is to make an editor act like an `<input>`.
 

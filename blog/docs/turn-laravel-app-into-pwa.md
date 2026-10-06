@@ -6,6 +6,9 @@ package: laravel-pwa
 category: Tutorial
 tags: [laravel, pwa, blade, inertia, livewire]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/turn-laravel-app-into-pwa.md
+</div>
 
 Sooner or later a client or a user asks whether there's an app for this. You have a working Laravel app, and the last thing you want is a second codebase in the app stores just so people can get an icon on their home screen.
 

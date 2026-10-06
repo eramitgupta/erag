@@ -7,6 +7,9 @@ package: phone-number-vue
 category: Tutorial
 tags: [vue, phone-input, forms, inertia, typescript]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/vue-3-phone-number-input.md
+</div>
 
 A plain `<input type="text">` for phone numbers looks fine until the data comes back. One user types `+91 98765-43210`, another types `09876543210`, a third pastes a number with brackets around the area code. Your database now has four formats for the same kind of value, and nothing tells you which country any of them belong to.
 

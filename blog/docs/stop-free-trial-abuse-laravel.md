@@ -6,6 +6,9 @@ package: laravel-disposable-email
 category: Use case
 tags: [laravel, saas, free-trial, email, security]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/stop-free-trial-abuse-laravel.md
+</div>
 
 You offer a 14-day free trial. Somebody signs up, uses it for 14 days, then signs up again with a new address. Then again. Every time the address is on a temporary inbox service that took them five seconds to open.
 

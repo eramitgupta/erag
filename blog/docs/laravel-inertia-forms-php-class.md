@@ -6,6 +6,9 @@ package: laravel-inertia-forms
 category: Tutorial
 tags: [laravel, inertia, forms, vue, react]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-inertia-forms-php-class.md
+</div>
 
 A typical form in a Laravel Inertia app lives in at least three places. The rules sit in a FormRequest. The inputs, labels and `useForm` setup sit in a Vue or React page. And the glue in between, like the list of statuses for a dropdown or the default value of a checkbox, gets passed as props from the controller.
 

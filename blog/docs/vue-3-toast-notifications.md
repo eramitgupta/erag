@@ -7,6 +7,9 @@ package: vue-toastification
 category: Tutorial
 tags: [vue, vue3, toast, notifications, typescript]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/vue-3-toast-notifications.md
+</div>
 
 You need a "Changes saved" message after a form submit and a "Couldn't reach the server" message when a request fails. That's it. Two small messages in the corner of the screen.
 

@@ -7,6 +7,9 @@ package: vue-toastification
 category: Tutorial
 tags: [vue, vue3, modal, confirm, async]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/promise-confirm-modal-vue-3.md
+</div>
 
 Look at how a typical Vue codebase asks "Are you sure?" before deleting something. Usually it's a `<ConfirmModal>` in the template, a ref for whether it's open, a ref for which item is pending, a handler for `@confirm` and another for `@cancel`. The logic for a single action ends up spread across five places.
 

@@ -6,6 +6,9 @@ package: laravel-pwa
 category: Guide
 tags: [laravel, pwa, manifest, service-worker]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/pwa-manifest-service-worker-laravel.md
+</div>
 
 Two files decide whether a website behaves like an app: the web app manifest and the service worker. When a PWA misbehaves, it's almost always one of the two, and knowing which one saves a lot of guessing.
 

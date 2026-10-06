@@ -7,6 +7,9 @@ package: laravel-inertia-toast
 category: Guide
 tags: [laravel, inertia, flash-messages, session, toast]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-flash-messages-inertia-toasts.md
+</div>
 
 Your controllers end with `return back()->with('message', 'Profile updated')`. In the Blade version of the app, the layout printed that message at the top of the page. After moving to Inertia, the same controllers still run, the same data is still flashed, and the message never shows up.
 

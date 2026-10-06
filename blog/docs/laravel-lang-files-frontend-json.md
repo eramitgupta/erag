@@ -6,6 +6,9 @@ package: laravel-lang-sync-inertia
 category: Guide
 tags: [laravel, localization, json, vite, inertia]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-lang-files-frontend-json.md
+</div>
 
 Laravel lang files are PHP arrays. That's great for Blade, mail and validation, and useless to a JavaScript bundle, which can't `require` a PHP file. So at some point every Laravel app with a real frontend has to answer the same question: how do these strings get from `lang/` to the browser?
 
