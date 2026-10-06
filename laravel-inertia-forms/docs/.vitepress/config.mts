@@ -285,7 +285,6 @@ export default defineConfig({
         logoLink: `${siteBase}/index.html`,
 
         nav: [
-            { text: 'All packages', link: `${siteOrigin}/`, target: '_self', noIcon: true },
             { text: 'Icons', link: '/icons.html', activeMatch: '^/icons' },
             { text: 'SaaS Kit', link: 'https://saas-laravel.com' },
             {
