@@ -7,6 +7,9 @@ package: laravel-inertia-toast
 category: Tutorial
 tags: [laravel, inertia, modal, vue, react]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/confirmation-dialogs-laravel-inertia.md
+</div>
 
 Every Inertia app with a Delete button eventually needs a confirm dialog, the "Are you sure?" step. The quick version is `if (!window.confirm('Are you sure?')) return;`, and honestly, its API is great: one line, returns a boolean, done.
 

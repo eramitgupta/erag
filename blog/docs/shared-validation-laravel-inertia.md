@@ -6,6 +6,9 @@ package: laravel-inertia-forms
 category: Guide
 tags: [laravel, inertia, validation, forms, pest]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/shared-validation-laravel-inertia.md
+</div>
 
 Laravel Inertia validation starts out simple. Rules go in a FormRequest, Laravel redirects back with errors, and Inertia hands them to your page. Then the page needs to know things the rules already know. Which fields get a `*`. What the `maxlength` is. Which options the select offers. Which input to show when "Billing" is picked.
 

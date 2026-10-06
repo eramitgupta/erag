@@ -7,6 +7,9 @@ package: text-editor-vue
 category: Tutorial
 tags: [vue, rich-text-editor, wysiwyg, typescript, laravel]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/vue-3-rich-text-editor.md
+</div>
 
 Sooner or later a form needs more than a `<textarea>`. A blog post body, a product description, a support reply: people want bold text, lists and links, and they don't want to type HTML to get them.
 

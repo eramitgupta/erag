@@ -7,6 +7,9 @@ package: laravel-inertia-toast
 category: Tutorial
 tags: [laravel, inertia, toast, vue, react]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-inertia-toast-notifications.md
+</div>
 
 You save a post, the controller redirects to the index page, and the user sees nothing. The record was created, but there is no "Saved" message anywhere on the screen.
 

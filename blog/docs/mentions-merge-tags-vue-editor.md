@@ -7,6 +7,9 @@ package: text-editor-vue
 category: Tutorial
 tags: [vue, mentions, merge-tags, laravel, rich-text-editor]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/mentions-merge-tags-vue-editor.md
+</div>
 
 Two features come up in almost every app that has a comment box or a template editor. People want to type `@` and tag a teammate. And whoever writes the templates wants to drop in <code>&#123;&#123;client.name&#125;&#125;</code> and have it filled in later.
 

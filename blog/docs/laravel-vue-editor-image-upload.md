@@ -7,6 +7,9 @@ package: text-editor-vue
 category: Tutorial
 tags: [laravel, vue, image-upload, inertia, rich-text-editor]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-vue-editor-image-upload.md
+</div>
 
 Someone pastes a screenshot into your editor and hits save. Depending on the editor, that screenshot is now either missing, a broken icon, or a multi-megabyte base64 string sitting in your `posts.body` column.
 

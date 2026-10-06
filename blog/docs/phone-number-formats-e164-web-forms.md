@@ -7,6 +7,9 @@ package: phone-number-react
 category: Guide
 tags: [react, phone-input, e164, forms, laravel]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/phone-number-formats-e164-web-forms.md
+</div>
 
 Open the `users` table of almost any app that has been running for a while and look at the phone column. You'll find `9876543210`, `+91 98765 43210`, `(555) 123-4567`, `0044 7700 900123` and at least one entry that says `n/a`. Every one of those was typed into the same field.
 

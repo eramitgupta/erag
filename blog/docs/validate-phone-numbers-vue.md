@@ -7,6 +7,9 @@ package: phone-number-vue
 category: Guide
 tags: [vue, validation, phone-input, laravel, accessibility]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/validate-phone-numbers-vue.md
+</div>
 
 Phone validation has a strange reputation. Some forms accept anything, including `asdf`. Others reject perfectly good numbers because someone wrote a regex for their own country and shipped it worldwide.
 

@@ -6,6 +6,9 @@ package: laravel-lang-sync-inertia
 category: Guide
 tags: [laravel, inertia, localization, i18n, vue, react]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/multilingual-laravel-inertia-app.md
+</div>
 
 Getting `__()` to work inside a Vue or React component is the easy part. A real multilingual Laravel Inertia app needs a few more pieces: something that decides the locale on each request, a way for users to switch it, an `<html lang>` attribute that doesn't go stale, validation errors in the right language, and a `lang` folder that still makes sense at forty pages.
 

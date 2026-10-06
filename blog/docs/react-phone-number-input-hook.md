@@ -7,6 +7,9 @@ package: phone-number-react
 category: Tutorial
 tags: [react, phone-input, hooks, forms, inertia]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/react-phone-number-input-hook.md
+</div>
 
 You need a phone field in a React form. You want a country selector, you want the digits cleaned up, and you want to know whether the number is complete before the form is submitted. What you don't want is another component that brings its own CSS and fights your design system for every border.
 

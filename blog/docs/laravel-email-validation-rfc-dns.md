@@ -6,6 +6,9 @@ package: laravel-disposable-email
 category: Guide
 tags: [laravel, validation, email, dns]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-email-validation-rfc-dns.md
+</div>
 
 Most Laravel apps validate email with `'email' => 'required|email'` and never think about it again. Then somebody copies `email:rfc,dns` from an old answer, the test suite starts failing on the CI server, and nobody is quite sure what `dns` was supposed to do.
 

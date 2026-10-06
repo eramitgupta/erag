@@ -6,6 +6,9 @@ package: laravel-inertia-forms
 category: Tutorial
 tags: [laravel, inertia, forms, wizard, validation]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/multi-step-form-wizard-laravel-inertia.md
+</div>
 
 A multi step form in Laravel Inertia sounds like a frontend problem until you build one. Then you're deciding where the current step lives, whether each step gets its own endpoint or FormRequest, how to keep the data around between steps, what Back does, and what happens when the final submit fails on a field from step one.
 

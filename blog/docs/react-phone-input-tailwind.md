@@ -6,6 +6,9 @@ package: phone-number-react
 category: Tutorial
 tags: [react, tailwind, phone-input, forms, ui]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/react-phone-input-tailwind.md
+</div>
 
 Most phone inputs look like two unrelated controls parked next to each other: a country dropdown with one border radius, a text box with another, and a focus ring that only lights up half the field. It works, but it looks unfinished.
 

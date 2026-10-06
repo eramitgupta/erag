@@ -6,6 +6,9 @@ date: 2026-09-29
 category: Best practices
 tags: [laravel, saas, forms, validation, inertia]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-saas-signup-checklist.md
+</div>
 
 The signup form is the first piece of your product every customer touches. It's also the easiest place for junk to get in: fake addresses, phone numbers in five different formats, and error messages that only make sense in English.
 
