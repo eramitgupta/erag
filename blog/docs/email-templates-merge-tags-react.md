@@ -7,6 +7,9 @@ package: text-editor-react
 category: Use case
 tags: [react, email, merge-tags, laravel, inertia]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/email-templates-merge-tags-react.md
+</div>
 
 Transactional emails usually start life as Blade views. That works until the support team wants to reword the invoice reminder, and every wording change becomes a ticket, a pull request and a deploy.
 

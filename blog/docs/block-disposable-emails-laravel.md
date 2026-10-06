@@ -7,6 +7,9 @@ package: laravel-disposable-email
 category: Tutorial
 tags: [laravel, validation, email, registration, pest]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/block-disposable-emails-laravel.md
+</div>
 
 You open the `users` table and half of last week's sign-ups end in `mailinator.com`, `tempmail.com` or some domain you have never heard of. None of them verified their email. Your welcome emails bounce. Your onboarding numbers look worse than they are.
 

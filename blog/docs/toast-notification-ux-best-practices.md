@@ -7,6 +7,9 @@ package: vue-toastification
 category: Best practices
 tags: [ux, toast, accessibility, vue, notifications]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/toast-notification-ux-best-practices.md
+</div>
 
 Toasts are easy to add, and that's the problem. Once showing one is a single line of code, every action gets one. Validation errors end up in a message that disappears after four seconds. A bulk action fires twenty toasts at once. Screen reader users hear nothing at all.
 

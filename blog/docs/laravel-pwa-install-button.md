@@ -6,6 +6,9 @@ package: laravel-pwa
 category: Tutorial
 tags: [laravel, pwa, vue, javascript]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-pwa-install-button.md
+</div>
 
 Your Laravel app is installable now. The manifest is there, the service worker is registered, and Chrome shows a tiny install icon in the address bar. Almost nobody clicks it, because almost nobody notices it.
 

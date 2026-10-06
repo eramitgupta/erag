@@ -6,6 +6,9 @@ package: phone-number-vue
 category: Comparison
 tags: [vue, phone-input, headless-ui, design-systems, forms]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/headless-phone-input-vs-component-libraries.md
+</div>
 
 Every app with a sign-up form hits the phone field question eventually. You can install a finished phone input component with flags, a searchable dropdown and formatting built in. Or you can use a headless phone input: a piece of logic that manages country, digits and validation, and leaves every pixel to you.
 

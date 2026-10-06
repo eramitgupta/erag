@@ -6,6 +6,9 @@ package: laravel-lang-sync-inertia
 category: Tutorial
 tags: [laravel, inertia, vue, react, localization]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/laravel-translations-inertia-vue-react.md
+</div>
 
 Your Laravel translations already live in `lang/en/*.php`. Button labels, the "Welcome back, :name" line on the dashboard, the empty state for invoices. Then you move that page to Inertia and the strings end up on the wrong side of the wire. A Vue or React component can't call Laravel's `__()`.
 

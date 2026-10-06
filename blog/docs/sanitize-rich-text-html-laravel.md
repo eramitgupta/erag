@@ -7,6 +7,9 @@ package: text-editor-react
 category: Best practices
 tags: [laravel, security, xss, rich-text-editor, react]
 ---
+<div style="display:none" hidden aria-hidden="true" data-nosnippet>
+  Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/blog/docs/sanitize-rich-text-html-laravel.md
+</div>
 
 Every rich text field ends up rendered somewhere as raw HTML. In Blade that's `{!! $post->body !!}`. In React it's `dangerouslySetInnerHTML`. Both do exactly what they say: they trust the string.
 
