@@ -176,4 +176,5 @@ Security: the built-in browser sanitizer is defense-in-depth only. Always saniti
 - [Security](https://erag.in/text-editor-react/security.html): HTML sanitization and XSS prevention
 - [API Reference](https://erag.in/text-editor-react/api.html): Complete component props, callbacks, render props, and methods
 - [TypeScript Types](https://erag.in/text-editor-react/types.html): Public TypeScript interface exports
+- [Changelog](https://erag.in/text-editor-react/changelog.html): Release notes, including the 1.1.0 fixes
 - [Contributing](https://erag.in/text-editor-react/contributing.html): Development environment and pull requests

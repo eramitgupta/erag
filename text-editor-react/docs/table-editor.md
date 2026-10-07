@@ -25,7 +25,7 @@ head:
 
 ## Inserting Tables
 
-Click the **Table** icon in the toolbar or navigate to **Table → Insert table** in the menubar. A grid selector allows you to choose row and column dimensions (e.g. 3x3, 4x5).
+Click the **Table** icon in the toolbar or navigate to **Table → Insert table** in the menubar. A grid selector allows you to choose row and column dimensions (e.g. 3x3, 4x5). The table size comes from the grid cell you click, so the picker works the same with a mouse, touch, or the keyboard (`Tab` to a cell and press `Enter`); focusing a cell highlights the size just like hovering it.
 
 ```tsx
 import { useState } from 'react';
@@ -54,8 +54,8 @@ When a table or table cell is focused inside the editor canvas, the Table menu u
 - **Row Operations**: Insert row above, Insert row below, Delete row.
 - **Column Operations**: Insert column before, Insert column after, Delete column.
 - **Table Deletion**: Delete entire table.
-- **Cell Operations**: Cell properties, merge cells, and split cells.
-- **Table Properties**: Width, cell padding, borders, colors, and alignment through the properties dialog.
+- **Cell Operations**: Cell properties, merge cells, and split cells. **Merge cells** from the Table menu joins the current cell with the next cell in the row: the content of both is kept (separated by a line break when both have text) and the column span is added up. Nothing happens when there is no next cell.
+- **Table Properties**: Width, cell padding, borders, colors, and alignment through the properties dialog. The dialog opens with the table's current values.
 
 Table-only actions remain disabled until the current selection is inside a table. Press `Tab` or `Shift+Tab` inside a cell to move forward or backward through table cells.
 

@@ -708,7 +708,7 @@ onBeforeUnmount(() => {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #42b883;
+    background: #61dafb;
 }
 
 .home-editor-demo__code-language {
@@ -755,7 +755,7 @@ onBeforeUnmount(() => {
 }
 
 .home-editor-demo__copy-button:focus-visible {
-    outline: 2px solid #42b883;
+    outline: 2px solid #61dafb;
     outline-offset: 2px;
 }
 

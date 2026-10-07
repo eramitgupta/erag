@@ -41,7 +41,7 @@ Merge tags are disabled by default. The trigger is fixed as <code>&#123;&#123;</
   <div class="feature-card">
     <div class="fc-icon-large"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg></div>
     <h3>Atomic Token Chips</h3>
-    <p>Inserted tags render as non-editable inline tokens that delete cleanly as a single unit when pressing <code>Backspace</code> or <code>Delete</code>.</p>
+    <p>Inserted tags render as non-editable inline tokens that delete cleanly as a single unit when pressing <code>Backspace</code> or <code>Delete</code>. A non-breaking space is added after each token unless a space already follows it.</p>
   </div>
   <div class="feature-card">
     <div class="fc-icon-large"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>

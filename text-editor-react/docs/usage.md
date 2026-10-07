@@ -136,6 +136,8 @@ Customized menubar entries can be array-defined or hidden entirely:
 - **`disabled`**: Disables all interactions, toolbar buttons, and user editing canvas.
 - **`readOnly`**: Allows viewing, text selection, source code inspection, and preview while preventing content mutation.
 
+In read-only mode these actions keep working: **Fullscreen**, **Print**, **Word count**, **Copy**, **Select all** (selects only the editor content), **Preview**, **Source code** (view only), **Shortcuts**, and **About**. All other toolbar buttons and menu items are shown as disabled. The toolbar **More** button stays usable so hidden read-only actions can still be reached.
+
 ```tsx
 <>
     {/* Disabled mode */}

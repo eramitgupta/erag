@@ -19,7 +19,7 @@ head:
 
 # Mentions (`@`)
 
-Mentions enable quick inline user suggestions when typing `@`. As users type, a debounced autocomplete dropdown appears at the cursor location. Selecting a user inserts a non-editable chip element complete with an accessible hover user card.
+Mentions enable quick inline user suggestions when typing `@`. As users type, a debounced autocomplete dropdown appears at the cursor location. Selecting a user inserts a non-editable chip element complete with an accessible hover user card. A non-breaking space is added after the chip (unless a space already follows it), so the next word you type never sticks to the chip, even at the end of a line.
 
 Mentions are disabled by default. Enable them with `mentions: true` or with an object whose `enabled` value is `true`. The trigger is always `@` and is not configurable.
 

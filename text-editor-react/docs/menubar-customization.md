@@ -108,7 +108,7 @@ const noMenubarConfig: EditorInit = {
 
 ### 5. Format Menu (`'format'`)
 
-- **Text Styles**: Bold, Italic, Underline, Strikethrough, Superscript, Subscript, and Inline code.
+- **Text Styles**: Bold, Italic, Underline, Strikethrough, Superscript, Subscript, and Inline code (wraps the selected text in `<code>`; run it again inside inline code to remove it).
 - **Change Case**: UPPERCASE, lowercase, Title Case.
 - **Formats**: Nested heading, inline, block, and alignment groups.
 - **Blocks**: Paragraph, Heading 1–6, Preformatted, and Blockquote.
@@ -123,7 +123,7 @@ const noMenubarConfig: EditorInit = {
 
 ### 7. Table Menu (`'table'`)
 
-- **Table Operations**: Insert row above/below, delete row, insert column before/after, delete column, merge/split cells, edit table properties, and delete the table.
+- **Table Operations**: Insert row above/below, delete row, insert column before/after, delete column, merge/split cells, edit table properties, and delete the table. **Merge cells** joins the current cell with the next one and keeps the content of both.
 - Table-only actions remain disabled until the caret is inside a table cell.
 
 ### 8. Help Menu (`'help'`)
@@ -133,11 +133,13 @@ const noMenubarConfig: EditorInit = {
 
 The **Merge tag** and **Templates** menus appear only when their plugin, feature configuration, and item list are all available. If `menubar` is an explicit array, include `'merge-tags'` or `'templates'` to place the matching menu.
 
+While the editor is read-only, menu items that would change the content are shown as disabled. **Preview**, **Print**, **Fullscreen**, **Source code**, **Word count**, **Copy**, **Select all**, **Shortcuts**, and **About** keep working, and the **Merge tag** and **Templates** menus are disabled.
+
 ---
 
 ## Responsive layout and menu icons
 
-The menubar wraps according to the editor's actual container width. In compact editors (`420px` wide or less), labels are visually hidden and the icon buttons keep their `aria-label` and `title`, so the complete menubar stays usable without overflowing its border.
+The menubar wraps according to the editor's actual container width and keeps its text labels in narrow editors. On screens `680px` wide or narrower it becomes a single row that scrolls sideways, and each dropdown opens directly below its button inside the screen. See [Responsive toolbar and menus](/editing-experience.html#responsive-toolbar-and-menus).
 
 The first dropdown level displays an icon for each action or category. Nested submenus keep their text, active check, shortcut, and direction arrow but omit repeated icons to preserve space.
 

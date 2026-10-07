@@ -1,6 +1,6 @@
 ---
 title: "Editor Workflow and Responsive UI"
-description: "Understand history, clipboard handling, keyboard shortcuts, responsive toolbar overflow, status information, printing, and editor resizing."
+description: "Understand history, clipboard handling, keyboard shortcuts, responsive toolbar and menubar behavior on desktop and mobile, dialogs, status information, printing, and editor resizing."
 head:
     - - meta
       - name: robots
@@ -65,9 +65,11 @@ Browsers may reject programmatic clipboard reads unless the action follows a use
 
 Mention and merge-tag dropdowns handle `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Tab`, and `Escape`. Inside a table, `Tab` and `Shift+Tab` move between cells.
 
+While the editor is read-only, only shortcuts for actions that do not change content (such as **Preview**) run. Other shortcuts are left to the browser, so `Ctrl+F` / `Cmd+F` opens the browser's own find bar instead of being blocked.
+
 ## Responsive toolbar and menus
 
-The toolbar measures its available width with `ResizeObserver`. Complete toolbar groups that no longer fit move behind the **More** (`…`) button instead of overflowing the editor. It recalculates when the editor or its parent changes size, so the behavior also works when a narrow editor is placed inside a wide desktop viewport.
+The toolbar measures its available width with `ResizeObserver`. Complete toolbar groups that no longer fit move behind the **More** (`…`) button instead of overflowing the editor. It recalculates when the editor or its parent changes size, or when the window is resized, so the behavior also works when a narrow editor is placed inside a wide desktop viewport.
 
 Clicking **More** adds the hidden groups as a second toolbar row directly below the primary row. It is not a floating popup. The expanded row:
 
@@ -76,18 +78,35 @@ Clicking **More** adds the hidden groups as a second toolbar row directly below 
 - Closes when **More** is toggled again or the user interacts outside the editor toolbar/content area.
 - Opens alignment, line-height, color, list-style, and case-change popovers from the selected control as usual.
 
-The menubar responds to the editor container width rather than only the viewport width. Menu entries wrap inside the editor, and widths at or below `420px` use compact icon-only buttons with accessible labels and native title tooltips. The editor itself can shrink below the previous `260px` minimum without forcing horizontal page overflow.
+The menubar responds to the editor container width rather than only the viewport width. Menu entries wrap inside the editor and keep their text labels, so every menu stays readable in narrow editors. The editor itself can shrink below the previous `260px` minimum without forcing horizontal page overflow.
 
-Floating menus stay inside the viewport, flip when there is not enough room, close on outside interaction or `Escape`, and support arrow-key navigation. Active formatting uses selected states, while commands that cannot run are disabled.
+### Mobile screens
+
+On screens `680px` wide or narrower, the menubar and the toolbar each become a single row that scrolls sideways. Every toolbar group is shown, so the **More** button and its second row are not used. Swiping one bar sideways does not scroll the page.
+
+### Dropdowns and popovers
+
+Menubar dropdowns and toolbar popovers (text and background color, alignment, list styles, line height, and change case) are positioned next to the button that opened them:
+
+- They open directly below the button and stay inside the screen.
+- They open above the button when there is not enough room below.
+- They follow the button when the toolbar or menubar is scrolled sideways.
+- Nested submenus open to the left, or shift back over their parent menu, when they would go off screen.
+
+Menus close on outside interaction or `Escape` and support arrow-key navigation. Active formatting uses selected states, while commands that cannot run are disabled.
 
 Toolbar icons use dedicated visual symbols for numbered lists, clear formatting, links, line height, checklists, and both indent directions. Dropdown groups show the currently relevant icon, including the active alignment icon.
+
+## Dialogs
+
+While a dialog (Link, Table, Emoji, Source code, Preview, and so on) is open, the page behind it does not scroll. Long lists inside a dialog, such as the emoji grid, still scroll on their own. Page scrolling comes back when the last open dialog closes, even when several editors on the same page have dialogs open.
 
 ## Status bar and word count
 
 With `statusbar: true`, the bottom bar shows:
 
 - The current element path, such as `p`, `ul > li`, or `table > tbody > tr > td`.
-- Current document word and character counts.
+- Current document word and character counts. Words in separate paragraphs, headings, or list items are counted separately, so `<p>one</p><p>two</p>` is two words.
 - The configurable `helpShortcutText`.
 - A resize handle when `resize` is enabled.
 

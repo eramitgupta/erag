@@ -577,8 +577,9 @@ const heroEditorConfig: EditorInit = {
                     </div>
                     <h3>Responsive Editing UI</h3>
                     <p>
-                        Toolbar overflow, viewport-aware menus, active command
-                        states, word counts, and constrained editor resizing.
+                        Toolbar overflow, swipeable bars on mobile, menus
+                        anchored to their button, active command states, word
+                        counts, and constrained editor resizing.
                     </p>
                 </div>
                 <div class="feature-card">
@@ -1394,13 +1395,13 @@ const heroEditorConfig: EditorInit = {
 
 /* Gradients and Text */
 .text-gradient {
-    background: linear-gradient(135deg, #0f766e 0%, #2dd4bf 100%);
+    background: linear-gradient(135deg, #087ea4 0%, #149eca 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
 .dark .text-gradient {
-    background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+    background: linear-gradient(135deg, #61dafb 0%, #149eca 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1493,7 +1494,7 @@ const heroEditorConfig: EditorInit = {
     background: var(--vp-button-brand-hover-bg);
     color: var(--vp-button-brand-hover-text);
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.2);
+    box-shadow: 0 10px 15px -3px rgba(8, 126, 164, 0.2);
 }
 .btn-secondary {
     background: var(--vp-c-bg-soft);

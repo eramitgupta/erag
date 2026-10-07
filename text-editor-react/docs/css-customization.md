@@ -159,8 +159,8 @@ To customize any specific element or state:
 ```css
 /* Custom Mention Chip Override */
 .erag-editor .erag-mention {
-    background-color: #ccfbf1;
-    color: #0f766e;
+    background-color: #e6f7ff;
+    color: #087ea4;
     border-radius: 6px;
 }
 ```
@@ -173,7 +173,11 @@ Load your override stylesheet after `@erag/text-editor-react/style.css`. Avoid `
 
 Responsive toolbar overflow is rendered as `.erag-toolbar__overflow-row`, a full-width second toolbar row below the primary controls. Hidden groups keep the standard `.erag-toolbar__overflow-group`, `.erag-toolbar__button`, and `.erag-toolbar__select` classes.
 
-The menubar uses the editor as a named inline-size container. It wraps at any constrained width, and the package switches to accessible icon-only buttons at `420px` or less.
+The menubar uses the editor as a named inline-size container. It wraps at any constrained width and keeps its text labels; at `420px` or less the buttons only get tighter padding.
+
+At a viewport width of `680px` or less, `.erag-menubar` and `.erag-toolbar` switch to `flex-wrap: nowrap` with `overflow-x: auto`, so each becomes a single row that scrolls sideways. If you override `overflow-x` on `.erag-toolbar`, keep in mind that the toolbar shows every group whenever its computed `overflow-x` is not `visible`.
+
+Menubar dropdowns (`.erag-menu`) and the toolbar popover wrapper (`.erag-toolbar__popover`) use `position: fixed` and get their `top` and `left` from inline styles, so restyle their look (colors, radius, shadow) rather than their position. A nested submenu that opens to the left gets the `.erag-menu--flip` class.
 
 Example compact overrides:
 

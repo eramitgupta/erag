@@ -27,11 +27,13 @@ head:
 
 The internal sanitizer inspects HTML strings before inserting, previewing, or exporting content:
 
-- ❌ **Script Stripping**: Removes `<script>` tags, inline `javascript:` URIs, data-URIs with executable content, and inline event handlers (such as `onload=`, `onerror=`, `onclick=`).
+- ❌ **Script Stripping**: Removes `<script>`, `<style>`, `<noscript>`, `<template>`, `<object>`, and `<embed>` elements together with their content, plus inline `javascript:` URIs, data-URIs with executable content, and inline event handlers (such as `onload=`, `onerror=`, `onclick=`).
+- ❌ **Unsafe Images**: Removes `<img>` elements left without a safe `src`.
 - ❌ **Unsafe Iframe & Style Blocking**: Blocks unauthorized iframe protocols and dangerous style declarations (e.g. `expression()`, `behavior`, `url()` injections).
 - 🔒 **Mention Markup Normalization**: Validates inserted `@` mentions and strips unexpected or tampered attributes, keeping only allowlisted `data-erag-mention-*` properties and `contenteditable="false"`.
 - 🔒 **Merge-Tag Normalization**: Preserves only valid `.erag-merge-tag` tokens with the expected marker, value, and non-editable state; malformed candidates become plain text.
-- 🧹 **Allowlisted Formatting**: Keeps configured tags and attributes while filtering style declarations to the package's safe property set.
+- 🧹 **Allowlisted Formatting**: Keeps configured tags and attributes while filtering style declarations to the package's safe property set. A `style` attribute with no safe declarations left is removed.
+- 🔁 **Legacy Font Tags**: Converts `<font face="…">` and `<font color="…">` into `<span style="font-family: …; color: …">` before the allowed-tags check, so older content keeps its font and color.
 
 ---
 

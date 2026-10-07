@@ -59,6 +59,10 @@ The Decrease Indent and Increase Indent buttons use matching filled format-inden
 
 Selecting a preview creates or updates the current list and applies its `list-style-type`. Arrow keys navigate the preview grid, `Home` and `End` jump to the first or last style, and `Escape` closes it.
 
+### Clean list HTML
+
+Lists are never left nested inside a paragraph. Turning `<p>one</p>` into a bulleted list produces `<ul><li>one</li></ul>`, not `<p><ul>…</ul></p>`, so the saved HTML stays the same after it is parsed again. Turning a list off, or outdenting its last level, puts the text back into a `<p>`. After list changes and indent/outdent, the editor also removes font styles the browser copies onto the moved text when they match what the text already inherits.
+
 ---
 
 ## Interactive checklists

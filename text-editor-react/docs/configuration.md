@@ -57,7 +57,7 @@ export default function ConfiguredEditor() {
 | `branding`           | `boolean`                                   | `false`                  | Reserved presentation flag.                                                                     |
 | `promotion`          | `boolean`                                   | `false`                  | Reserved presentation flag.                                                                     |
 | `resize`             | `boolean`                                   | `true`                   | Enables vertical resizing from the status bar.                                                  |
-| `readonly`           | `boolean`                                   | `false`                  | Configuration-level read-only mode. The `readOnly` prop can also enable it.                                 |
+| `readonly`           | `boolean`                                   | `false`                  | Configuration-level read-only mode. The `readOnly` prop can also enable it. See [read-only mode](/usage.html#disabled-read-only-modes). |
 | `sourceCodeEditable` | `boolean`                                   | `true`                   | Allows editing and applying HTML in the Source code dialog. Set to `false` for inspection only. |
 | `autofocus`          | `boolean`                                   | `false`                  | Focuses the editable root after client mount when editing is allowed.                           |
 | `spellcheck`         | `boolean`                                   | `true`                   | Passes native spellcheck behavior to the editable area.                                         |

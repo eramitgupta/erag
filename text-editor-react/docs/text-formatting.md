@@ -55,7 +55,7 @@ const editorConfig: EditorInit = {
 | **Superscript**       | `superscript`   | Toggles `<sup>` superscript text (e.g. x<sup>2</sup>).                                                        |
 | **Subscript**         | `subscript`     | Toggles `<sub>` subscript text (e.g. H<sub>2</sub>O).                                                         |
 | **Change Case**       | `casechange`    | Dropdown menu offering **UPPERCASE**, **lowercase**, and **Title Case** conversions.                          |
-| **Text Color**        | `forecolor`     | Color picker dropdown for text foreground color.                                                              |
+| **Text Color**        | `forecolor`     | Color picker dropdown for text foreground color, saved as `<span style="color: …">`.                          |
 | **Background Color**  | `backcolor`     | Color picker dropdown for text highlight / background fill color.                                             |
 | **Alignment Group**   | `alignment`     | One dropdown containing left, center, right, and justify with matching icons.                                 |
 | **Align Left**        | `alignleft`     | Aligns text paragraph to the left.                                                                            |
@@ -64,7 +64,9 @@ const editorConfig: EditorInit = {
 | **Justify**           | `alignjustify`  | Justifies text across full container width.                                                                   |
 | **Remove Formatting** | `removeformat`  | Strips inline formatting, styles, and tags from selection.                                                    |
 
-The Format menubar also provides **Inline code** and **Line height**. The current inline-code action changes the selected block to `<pre>`. Line-height choices come from `lineHeightFormats`, are available from both the toolbar and menubar, and are applied as an inline `line-height` style.
+Font family and text color are written as styled spans (`<span style="font-family: …">` and `<span style="color: …">`), so they survive the sanitizer and are kept when the HTML is saved and loaded again. Older content that still contains `<font face="…">` or `<font color="…">` is converted to the same styled spans when it is loaded.
+
+The Format menubar also provides **Inline code** and **Line height**. **Inline code** wraps the selected text in a `<code>` element; with the caret inside existing inline code, it removes the `<code>` wrapper. It needs selected text and does nothing on a plain caret. Use **Blocks → Preformatted** for a `<pre>` code block. Line-height choices come from `lineHeightFormats`, are available from both the toolbar and menubar, and are applied as an inline `line-height` style.
 
 ```ts
 const editorConfig: EditorInit = {

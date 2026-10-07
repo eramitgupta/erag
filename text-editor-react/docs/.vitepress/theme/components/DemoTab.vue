@@ -112,10 +112,10 @@ const activeTab = ref<'preview' | 'code'>('preview');
 }
 
 .demo-card__tab--active {
-    background: var(--vp-c-brand-1);
-    color: #ffffff !important;
+    background: var(--vp-button-brand-bg);
+    color: var(--vp-button-brand-text) !important;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
+    box-shadow: 0 2px 8px rgba(8, 126, 164, 0.25);
 }
 
 .demo-card__body {

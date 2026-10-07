@@ -43,12 +43,12 @@ Clicking the **Link** icon in the toolbar or navigating to **Insert → Link** o
 
 1. **URL (`href`)**: Target hyperlink web address or mailto URL.
 2. **Text to Display**: Text label inserted inside `<a href="...">Text</a>`.
-3. **Title Attribute**: Accessibility tooltip title attribute.
+3. **Title Attribute**: Accessibility tooltip title attribute. When it is left empty, no `title` attribute is written.
 4. **Open in New Tab (`target="_blank"`)**: Adds `target="_blank"` and `rel="noopener noreferrer"` for external links.
 
 ### Modifying Existing Links
 
-Positioning your caret inside an existing link and clicking the **Link** button re-populates the dialog with existing values for quick editing. Click **Unlink** in the dialog or toolbar to strip the `<a>` tag while keeping the text intact.
+Positioning your caret inside an existing link and clicking the **Link** button re-populates the dialog with existing values for quick editing. Click **Unlink** in the dialog to strip the `<a>` tag while keeping the text intact. The caret only needs to be inside the link; you do not have to select its text first.
 
 ---
 
