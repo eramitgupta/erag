@@ -27,8 +27,7 @@ Contributions, issues, and pull requests are welcome.
 
 | Who | Role |
 | --- | --- |
-| [Er Amit Gupta](https://github.com/eramitgupta) | Creator and maintainer |
-| [ERAG](https://github.com/the-erag) | Organization |
+| [Amit Gupta](https://github.com/eramitgupta) | Creator and maintainer |
 | [Contributors](https://github.com/eramitgupta/laravel-Inertia-forms/graphs/contributors) | Everyone who has sent a fix or improvement |
 
 ## Packages
