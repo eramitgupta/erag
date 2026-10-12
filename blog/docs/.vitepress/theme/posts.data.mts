@@ -17,6 +17,11 @@ export { data }
 
 const wordsPerMinute = 220
 
+/**
+ * YAML parses `date: 2026-10-11` into a Date, so turn it back into an ISO day that sorts correctly.
+ */
+const isoDate = (value: unknown): string => (value instanceof Date ? value.toISOString().slice(0, 10) : String(value ?? ''))
+
 export default createContentLoader('*.md', {
   includeSrc: true,
   transform(raw): Post[] {
@@ -33,7 +38,7 @@ export default createContentLoader('*.md', {
           title: frontmatter.title,
           headline: frontmatter.headline ?? frontmatter.title,
           description: frontmatter.description,
-          date: String(frontmatter.date ?? ''),
+          date: isoDate(frontmatter.date),
           package: frontmatter.package ?? '',
           category: frontmatter.category ?? 'Guide',
           tags: frontmatter.tags ?? [],

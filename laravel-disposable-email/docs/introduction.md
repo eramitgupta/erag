@@ -39,3 +39,4 @@ This package eliminates fraudulent registrations using an open-source dataset of
 - [**Configuration**](./configuration.html) — Customize whitelist exceptions, blacklist files, and Redis cache.
 - [**Form Validation**](./validation/basic.html) — Apply the validation rule to controllers and Form Requests.
 - [**Runtime Checks**](./runtime/checks.html) — Check emails programmatically inside services, jobs, and APIs.
+- [**Why This Package**](https://erag.in/blog/laravel-disposable-email-package.html) — What makes it a better way to block disposable emails, with five-minute setup code.

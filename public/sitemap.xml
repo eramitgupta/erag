@@ -954,7 +954,7 @@
   <!-- blog:start -->
   <url>
        <loc>https://erag.in/blog/</loc>
-       <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
@@ -990,6 +990,11 @@
   <url>
        <loc>https://erag.in/blog/inertia-forms-permissions-conditional-fields.html</loc>
        <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-disposable-email-package.html</loc>
+       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
@@ -1038,8 +1043,23 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-react-saas-starter-kit.html</loc>
+       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-saas-signup-checklist.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-saas-starter-kit-multi-tenant.html</loc>
+       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-svelte-saas-starter-kit.html</loc>
+       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
@@ -1050,6 +1070,11 @@
   <url>
        <loc>https://erag.in/blog/laravel-vue-editor-image-upload.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-vue-saas-starter-kit.html</loc>
+       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>

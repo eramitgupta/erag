@@ -20,6 +20,7 @@ ERAG — Engineer • Research • Advance • Grow. GitHub organization: https:
 ## Blog
 
 - [ERAG Blog](https://erag.in/blog/): Practical guides by Amit Gupta for Laravel, Inertia.js, Vue and React developers, covering the problems each ERAG package solves. RSS: https://erag.in/blog/feed.xml
+- [Laravel Disposable Email Package](https://erag.in/blog/laravel-disposable-email-package.html): How erag/laravel-disposable-email blocks 136,000+ temporary email domains in Laravel 10 to 13 with daily updates, no API calls, safe syncing and five-minute setup code.
 
 ## Details
 

@@ -77,7 +77,7 @@ export default defineConfig({
   async buildEnd({ outDir }) {
     const posts = (await createContentLoader('*.md').load())
       .filter(({ url }) => url !== '/' && url !== '/index.html')
-      .sort((first, second) => String(second.frontmatter.date).localeCompare(String(first.frontmatter.date)))
+      .sort((first, second) => new Date(second.frontmatter.date).getTime() - new Date(first.frontmatter.date).getTime())
 
     const items = posts.map(({ url, frontmatter }) => {
       const link = `${siteUrl}${url}`
