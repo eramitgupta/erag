@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
        <loc>https://erag.in/</loc>
@@ -954,7 +954,7 @@
   <!-- blog:start -->
   <url>
        <loc>https://erag.in/blog/</loc>
-       <lastmod>2026-10-12T00:00:00+00:00</lastmod>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
@@ -993,6 +993,14 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-blog-rich-text-editor.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-blog-rich-text-editor.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-disposable-email-package.html</loc>
        <lastmod>2026-10-12T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
@@ -1008,6 +1016,38 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-inertia-crud-toast-notifications.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-crud-toast-notifications.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-date-picker.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-date-picker.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-dynamic-form-fields.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-dynamic-form-fields.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-file-upload.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-file-upload.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-inertia-form-builder-admin-crud.html</loc>
        <lastmod>2026-10-11T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
@@ -1016,6 +1056,22 @@
        <loc>https://erag.in/blog/laravel-inertia-forms-php-class.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-packages.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-packages.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-searchable-select.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-searchable-select.jpg</image:loc>
+       </image:image>
   </url>
   <url>
        <loc>https://erag.in/blog/laravel-inertia-toast-notifications.html</loc>
@@ -1038,9 +1094,41 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-otp-verification-inertia.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-otp-verification-inertia.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-phone-number-validation.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-phone-number-validation.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-prevent-spam-registrations.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-prevent-spam-registrations.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-pwa-install-button.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-pwa-iphone-offline.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-pwa-iphone-offline.jpg</image:loc>
+       </image:image>
   </url>
   <url>
        <loc>https://erag.in/blog/laravel-react-saas-starter-kit.html</loc>
@@ -1056,6 +1144,22 @@
        <loc>https://erag.in/blog/laravel-saas-starter-kit-multi-tenant.html</loc>
        <lastmod>2026-10-12T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-starter-kit-block-disposable-emails.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-starter-kit-block-disposable-emails.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-starter-kit-react-translations.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-starter-kit-react-translations.jpg</image:loc>
+       </image:image>
   </url>
   <url>
        <loc>https://erag.in/blog/laravel-starter-kit-vue-translations.html</loc>
@@ -1123,6 +1227,14 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/react-rich-text-editor-image-upload.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/react-rich-text-editor-image-upload.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/react-rich-text-editor-wysiwyg.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
@@ -1171,6 +1283,14 @@
        <loc>https://erag.in/blog/validate-phone-numbers-vue.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/vue-3-api-error-toasts.html</loc>
+       <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/vue-3-api-error-toasts.jpg</image:loc>
+       </image:image>
   </url>
   <url>
        <loc>https://erag.in/blog/vue-3-phone-number-input.html</loc>

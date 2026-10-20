@@ -4,6 +4,7 @@ import { resolve } from 'node:path'
 const siteOrigin = 'https://erag.in'
 const blogDirectory = resolve('blog/docs')
 const sitemapPath = resolve('public/sitemap.xml')
+const imageNamespace = 'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'
 const startMarker = '  <!-- blog:start -->'
 const endMarker = '  <!-- blog:end -->'
 
@@ -14,11 +15,12 @@ const frontmatterValue = (source, key) => source
 
 const toLastmod = (date) => `${new Date(date).toISOString().slice(0, 19)}+00:00`
 
-const entry = (loc, lastmod, priority) => [
+const entry = (loc, lastmod, priority, image) => [
   '  <url>',
   `       <loc>${loc}</loc>`,
   `       <lastmod>${lastmod}</lastmod>`,
   `       <priority>${priority}</priority>`,
+  ...(image ? ['       <image:image>', `            <image:loc>${image}</image:loc>`, '       </image:image>'] : []),
   '  </url>',
 ].join('\n')
 
@@ -34,7 +36,10 @@ const posts = await Promise.all(postFiles.map(async (file) => {
     throw new Error(`blog/docs/${file} is missing a date in its frontmatter`)
   }
 
-  return { slug: file.replace(/\.md$/, ''), lastmod: toLastmod(date) }
+  // Posts with an `image` cover (served from blog/docs/public) list it so Google Images can index it.
+  const image = frontmatterValue(source, 'image')
+
+  return { slug: file.replace(/\.md$/, ''), lastmod: toLastmod(date), image: image ? `${siteOrigin}/blog${image}` : null }
 }))
 
 const newestPost = posts.map(({ lastmod }) => lastmod).sort().at(-1) ?? toLastmod(new Date())
@@ -42,11 +47,14 @@ const newestPost = posts.map(({ lastmod }) => lastmod).sort().at(-1) ?? toLastmo
 const block = [
   startMarker,
   entry(`${siteOrigin}/blog/`, newestPost, '0.8000'),
-  ...posts.map(({ slug, lastmod }) => entry(`${siteOrigin}/blog/${slug}.html`, lastmod, '0.6400')),
+  ...posts.map(({ slug, lastmod, image }) => entry(`${siteOrigin}/blog/${slug}.html`, lastmod, '0.6400', image)),
   endMarker,
 ].join('\n')
 
-const sitemap = await readFile(sitemapPath, 'utf8')
+const source = await readFile(sitemapPath, 'utf8')
+const sitemap = source.includes(imageNamespace)
+  ? source
+  : source.replace('<urlset ', `<urlset ${imageNamespace} `)
 const start = sitemap.indexOf(startMarker)
 const end = sitemap.indexOf(endMarker)
 

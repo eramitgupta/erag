@@ -52,7 +52,7 @@ Laravel Lang Sync Inertia removes that duplication:
 - **Familiar syntax.** The Vue helper works like Laravel's: `__()`, `trans()`, `transChoice()`, `:name` placeholders and `{0}|{1}|[2,*]` plurals.
 - **No build step.** Translations arrive with each Inertia response, so there is nothing to compile.
 - **Small pages.** Only the files you choose are sent to the browser.
-- **Made for Inertia.** It supports Inertia v1, v2 and v3, Laravel 8 to 13 and works with Vue, React and Svelte.
+- **Made for Inertia.** It supports Inertia v2 and v3, Laravel 8 to 13 and works with Vue, React and Svelte.
 
 It has more than 45,000 installs on Packagist and is the same translation layer used by the [SaaS Laravel starter kits](https://saas-laravel.com/) in 17 languages.
 
@@ -510,7 +510,7 @@ Yes. Use `:name` placeholders with `__()` or `trans()`, and Laravel's plural syn
 
 ### Does it work with Laravel 13 and Inertia v3?
 
-Yes. The package supports Laravel 8 to 13 and Inertia v1, v2 and v3.
+Yes. The package supports Laravel 8 to 13 and Inertia v2 and v3.
 
 ### Can I use it with the React or Svelte starter kits?
 
