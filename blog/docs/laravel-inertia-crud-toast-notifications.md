@@ -73,7 +73,7 @@ createInertiaApp({
 
 Why the `ssr` check? Inertia v3 can render pages on the server, and `withApp` runs there too. The plugin adds its toast area and dialog straight to `document.body`, and there is no `document` on the server. Toasts only matter in the browser, so skipping the plugin on the server is safe.
 
-The plugin mounts three things for you: `ToastContainer`, `ConfirmationBox` and `FlashToastBridge`. The bridge is the important one for CRUD. It reads `props.toast` on the first page load and after every Inertia visit, so a toast you flash before a redirect appears on the next page with no code in your layout. The [Laravel Inertia toast setup guide](./laravel-inertia-toast-notifications.md) covers React and older entry files.
+The plugin mounts three things for you: `ToastContainer`, `ConfirmationBox` and `FlashToastBridge`. The bridge is the important one for CRUD. It reads `props.toast` after every Inertia visit, so a toast you flash before a redirect appears on the next page with no code in your layout. The [Laravel Inertia toast setup guide](./laravel-inertia-toast-notifications.md) covers React and older entry files.
 
 ## Step 3: Create the Post model, migration and factory
 
