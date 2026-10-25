@@ -954,7 +954,7 @@
   <!-- blog:start -->
   <url>
        <loc>https://erag.in/blog/</loc>
-       <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
@@ -998,6 +998,14 @@
        <priority>0.6400</priority>
        <image:image>
             <image:loc>https://erag.in/blog/images/laravel-api-email-validation.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-auth-messages-translation.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-auth-messages-translation.jpg</image:loc>
        </image:image>
   </url>
   <url>
@@ -1103,9 +1111,33 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-lang-artisan-commands.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-lang-artisan-commands.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-lang-files-frontend-json.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-lang-folder-missing.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-lang-folder-missing.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-lang-inertia-vue-react.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-lang-inertia-vue-react.jpg</image:loc>
+       </image:image>
   </url>
   <url>
        <loc>https://erag.in/blog/laravel-lang-sync-locale-drift.html</loc>
@@ -1134,11 +1166,27 @@
        </image:image>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-pagination-translation-vue-react.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-pagination-translation-vue-react.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-phone-number-validation.html</loc>
        <lastmod>2026-10-20T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
        <image:image>
             <image:loc>https://erag.in/blog/images/laravel-phone-number-validation.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-portuguese-brazil-translation.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-portuguese-brazil-translation.jpg</image:loc>
        </image:image>
   </url>
   <url>
@@ -1210,6 +1258,14 @@
        </image:image>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-spanish-translation.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-spanish-translation.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-starter-kit-block-disposable-emails.html</loc>
        <lastmod>2026-10-20T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
@@ -1244,11 +1300,35 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-svelte-translations-inertia.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-svelte-translations-inertia.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-tags-input-inertia.html</loc>
        <lastmod>2026-10-23T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
        <image:image>
             <image:loc>https://erag.in/blog/images/laravel-tags-input-inertia.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-translate-buttons-vue-react.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-translate-buttons-vue-react.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-translated-error-pages-inertia.html</loc>
+       <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-translated-error-pages-inertia.jpg</image:loc>
        </image:image>
   </url>
   <url>
