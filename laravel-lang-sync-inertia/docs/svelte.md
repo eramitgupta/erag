@@ -34,7 +34,7 @@ The package reads translations from `page.props.lang`, then gives you these help
 ## Import the helper
 
 ```ts
-import { svelteLang } from '@erag/lang-sync-inertia';
+import { svelteLang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __, transChoice } = svelteLang();
 ```
@@ -74,7 +74,7 @@ class DashboardController extends Controller
 
 ```svelte [js/Pages/Dashboard.svelte]
 <script module lang="ts">
-import { svelteLang } from '@erag/lang-sync-inertia';
+import { svelteLang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __, transChoice } = svelteLang();
 </script>
@@ -98,7 +98,7 @@ There are 3 apples
 
 ```svelte
 <script module lang="ts">
-import { svelteLang } from '@erag/lang-sync-inertia';
+import { svelteLang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __, transChoice } = svelteLang();
 </script>
@@ -142,10 +142,9 @@ transChoice('auth.apples', 1);
 
 transChoice('auth.apples', 5);
 // There are 5 apples
-
-trans_choice('No items|:count items', 0);
-// 0 items
 ```
+
+The first argument is always a translation key. An inline plural string is not parsed: `trans_choice('No items|:count items', 0)` returns `No items|:count items` unchanged, because no key with that name exists in the synced translations.
 
 Laravel-style exact and interval choices are supported:
 
@@ -233,9 +232,10 @@ If you pass a plain string instead:
 
 ```ts
 __('auth.welcome', 'Amit');
+// Welcome, :name! Amit
 ```
 
-The placeholder is not replaced.
+The placeholder is not replaced. The string is appended to the translated line after a space instead.
 
 ## Reactive usage
 
@@ -243,7 +243,7 @@ Because `svelteLang()` reads from the `page` reactive state at call time, helper
 
 ```svelte
 <script lang="ts">
-import { svelteLang } from '@erag/lang-sync-inertia';
+import { svelteLang } from '@erag/lang-sync-inertia/svelte';
 
 const { __ } = svelteLang();
 
@@ -268,7 +268,7 @@ const lang = $derived(page.props.lang);
 Import the Svelte helper from the package root:
 
 ```ts
-import { svelteLang } from '@erag/lang-sync-inertia';
+import { svelteLang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __ } = svelteLang();
 ```

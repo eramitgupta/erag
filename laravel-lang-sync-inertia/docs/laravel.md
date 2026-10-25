@@ -108,7 +108,7 @@ class DashboardController extends Controller
 
 ```vue [js/Pages/Dashboard.vue]
 <script setup>
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { __, trans, transChoice, trans_choice } = vueLang();
 </script>
@@ -134,7 +134,7 @@ const { __, trans, transChoice, trans_choice } = vueLang();
 ```
 
 ```tsx [js/Pages/Dashboard.tsx]
-import { reactLang } from '@erag/lang-sync-inertia';
+import { reactLang } from '@erag/lang-sync-inertia/react';
 
 export default function Dashboard() {
     const { __, trans, transChoice, trans_choice } = reactLang();

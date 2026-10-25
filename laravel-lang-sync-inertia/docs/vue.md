@@ -30,7 +30,7 @@ The package reads translations from `page.props.lang`, then gives you these help
 ## Import the helper
 
 ```ts
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { trans, __, transChoice } = vueLang();
 ```
@@ -70,7 +70,7 @@ class DashboardController extends Controller
 
 ```vue [js/Pages/Dashboard.vue]
 <script setup>
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { trans, __, transChoice } = vueLang();
 </script>
@@ -96,7 +96,7 @@ There are 3 apples
 
 ```vue
 <script setup lang="ts">
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { trans, __, transChoice } = vueLang();
 </script>
@@ -142,10 +142,9 @@ transChoice('auth.apples', 1);
 
 transChoice('auth.apples', 5);
 // There are 5 apples
-
-trans_choice('No items|:count items', 0);
-// 0 items
 ```
+
+The first argument is always a translation key. An inline plural string is not parsed: `trans_choice('No items|:count items', 0)` returns `No items|:count items` unchanged, because no key with that name exists in the synced translations.
 
 Laravel-style exact and interval choices are supported:
 
@@ -233,9 +232,10 @@ If you pass a plain string instead:
 
 ```ts
 __('auth.welcome', 'Amit');
+// Welcome, :name! Amit
 ```
 
-The placeholder is not replaced.
+The placeholder is not replaced. The string is appended to the translated line after a space instead.
 
 ## Access raw Inertia props
 
@@ -252,7 +252,7 @@ const { lang } = usePage().props;
 Import the Vue helper from the package root:
 
 ```ts
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { trans, __ } = vueLang();
 ```

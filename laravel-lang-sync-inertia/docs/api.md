@@ -138,7 +138,7 @@ All frontend helpers support placeholder replacement, but `trans()` is the clear
 Use synced Laravel keys through the Vue, React, or Svelte helpers. For example, in Vue:
 
 ```ts
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { __, trans, transChoice, trans_choice } = vueLang();
 ```
@@ -215,9 +215,10 @@ If you pass a plain string instead:
 
 ```ts
 __('auth.welcome', 'Amit');
+// Welcome, :name! Amit
 ```
 
-The placeholder is not replaced.
+The placeholder is not replaced. The string is appended to the translated line after a space instead.
 
 Use an object whenever placeholder replacement is needed.
 

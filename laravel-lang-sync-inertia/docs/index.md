@@ -72,7 +72,7 @@ class DashboardController extends Controller
 
 ```vue [Vue]
 <script setup>
-import { vueLang } from '@erag/lang-sync-inertia';
+import { vueLang } from '@erag/lang-sync-inertia/vue';
 
 const { trans, __, transChoice } = vueLang();
 </script>
@@ -88,7 +88,7 @@ const { trans, __, transChoice } = vueLang();
 ```
 
 ```tsx [React]
-import { reactLang } from '@erag/lang-sync-inertia';
+import { reactLang } from '@erag/lang-sync-inertia/react';
 
 export default function Dashboard() {
     const { trans, __, transChoice } = reactLang();
@@ -106,7 +106,7 @@ export default function Dashboard() {
 
 ```svelte [Svelte]
 <script module lang="ts">
-import { svelteLang } from '@erag/lang-sync-inertia';
+import { svelteLang } from '@erag/lang-sync-inertia/svelte';
 
 const { trans, __, transChoice } = svelteLang();
 </script>
