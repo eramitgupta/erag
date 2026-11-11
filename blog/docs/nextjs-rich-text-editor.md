@@ -1,5 +1,5 @@
 ---
-title: "Next.js Rich Text Editor (2026): Pick, Set Up and Save"
+title: "Next.js Rich Text Editor (2026): Pick and Set Up"
 headline: "Next.js Rich Text Editor in 2026: Which One to Pick and How to Save Its HTML Safely"
 description: "Compare Next.js rich text editors (Tiptap, Lexical, Quill, CKEditor, TinyMCE, text-editor-react), then set one up in the App Router and save the HTML safely."
 date: 2026-11-11

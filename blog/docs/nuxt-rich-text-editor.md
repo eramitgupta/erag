@@ -1,5 +1,5 @@
 ---
-title: "Nuxt Rich Text Editor (2026): Pick One, Set Up and Save"
+title: "Nuxt Rich Text Editor (2026): Pick and Set Up"
 headline: "Nuxt Rich Text Editor: Nuxt UI Editor, Tiptap or text-editor-vue, and How to Save the HTML"
 description: "Compare Nuxt rich text editors (Nuxt UI Editor, nuxt-tiptap-editor, Tiptap, text-editor-vue), then add one with v-model, a server route and sanitized HTML."
 date: 2026-11-11

@@ -1,5 +1,5 @@
 ---
-title: "Laravel PWA Icons and Splash Screens for Android and iOS"
+title: "Laravel PWA Icons and Splash Screens (Android, iOS)"
 headline: "Laravel PWA Icons and Splash Screens: Maskable Icons for Android, Launch Images for iPhone"
 description: "Set up Laravel PWA icons and splash screens: 192 and 512 icons, a maskable icon for Android, and apple-touch-startup-image launch images for iPhone and iPad."
 date: 2026-11-11

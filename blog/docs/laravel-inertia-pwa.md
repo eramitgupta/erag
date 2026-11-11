@@ -1,5 +1,5 @@
 ---
-title: "Laravel Inertia PWA: Vue and React Setup and Offline Mode"
+title: "Laravel Inertia PWA: Vue, React and Offline Mode"
 headline: "Laravel Inertia PWA: Turn a Vue or React Inertia App Into a Progressive Web App"
 description: "Build a Laravel Inertia PWA with Vue or React: where the directives go in app.blade.php, how to handle offline clicks, and when vite-plugin-pwa fits better."
 date: 2026-11-11

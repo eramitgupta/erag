@@ -1,5 +1,5 @@
 ---
-title: "Filament: Block Disposable Emails in Forms and Sign-ups"
+title: "Filament: Block Disposable Emails in Forms"
 headline: "Filament: Block Disposable Emails on the Register Page, Profile Page and Resource Forms"
 description: "Block disposable emails in Filament with one validation rule on a TextInput, the Filament 5 Register page, the profile page and resource forms. Tests included."
 date: 2026-11-11

@@ -1,5 +1,5 @@
 ---
-title: "Laravel Multi-Tenant CRUD: Tenant-Scoped, Step by Step"
+title: "Laravel Multi-Tenant CRUD, Step by Step"
 headline: "Laravel Multi-Tenant CRUD: Keep Every Tenant's Records Apart, Step by Step"
 description: "Build a Laravel multi-tenant CRUD: tenant_id with a global scope, or a database per tenant, then a full tenant-scoped Projects CRUD in a SaaS starter kit."
 date: 2026-11-11

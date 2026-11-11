@@ -1,5 +1,5 @@
 ---
-title: "Laravel Livewire SaaS Starter Kit (Livewire 4 + Flux UI)"
+title: "Laravel Livewire SaaS Starter Kit With Flux UI"
 headline: "Laravel Livewire SaaS Starter Kit: A Tour, Plus Wave, SaaSykit and Larafast Compared"
 description: "Laravel Livewire SaaS starter kit: Livewire 4 and Flux UI on a database-per-tenant Laravel 13 backend for $49, compared with Wave, SaaSykit and Larafast."
 date: 2026-11-11
