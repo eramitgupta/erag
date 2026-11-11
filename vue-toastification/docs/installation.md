@@ -44,3 +44,7 @@ pnpm add @erag/vue-toastification
 ## Next steps
 
 Once the package is installed, proceed to the [Setup Guide](./setup.html) to register the plugin in your application.
+
+::: tip Related guide
+[Migrating from vue-toastification to Vue 3](https://erag.in/blog/vue-toastification-vue-3-migration.html) maps the old package's options and calls to this one.
+:::

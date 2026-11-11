@@ -160,3 +160,7 @@ That means your Inertia page payload includes `props.toast` when a toast exists.
 
 - The package is designed for redirect and visit flows where flash session data is already natural.
 - A toast with `duration` set to `0` remains visible until removed on the client side.
+
+::: tip Related guide
+[Inertia v3 error handling with toasts](https://erag.in/blog/inertia-error-handling-toasts.html) shows how to turn 403, 419, 429 and 500 responses into toasts instead of the error modal.
+:::

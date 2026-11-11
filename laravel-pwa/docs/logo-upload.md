@@ -79,3 +79,7 @@ class SettingsController extends Controller
 - The helper checks if the file is valid and meets the size, format, and dimension thresholds.
 - If validation passes, it replaces the existing `logo.png` file inside the `public/` directory.
 - The new logo immediately becomes available at `http://yourdomain.com/logo.png`, matching the manifest definitions.
+
+::: tip Related guide
+[Laravel PWA icons and splash screens](https://erag.in/blog/laravel-pwa-icons-splash-screen.html) covers maskable icons for Android and launch images for iOS.
+:::

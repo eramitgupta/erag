@@ -68,3 +68,7 @@ When using Inertia.js, the page does not reload fully on navigating. The main la
    ```
 
 Because Inertia operates as a Single Page App, the service worker registers successfully on mount and stays active as users navigate between pages.
+
+::: tip Related guide
+[Laravel Inertia PWA with Vue and React](https://erag.in/blog/laravel-inertia-pwa.html) walks through the Inertia v3 root view, offline clicks and an offline banner, and compares this package with vite-plugin-pwa.
+:::

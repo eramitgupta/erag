@@ -211,3 +211,7 @@ export function PhoneField() {
   )
 }
 ```
+
+::: tip Related guide
+[React Hook Form phone number validation](https://erag.in/blog/react-hook-form-phone-number-validation.html) connects `usePhoneNumber` to React Hook Form with a Zod schema and sends E.164 numbers to Laravel.
+:::

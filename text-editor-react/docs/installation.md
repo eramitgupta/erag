@@ -111,3 +111,7 @@ export default function PostEditor() {
 If your application uses a CSS reset, list markers inside standard lists (`<ul>`, `<ol>`) might normally be hidden.
 
 `@erag/text-editor-react` includes scoped marker and indentation styles inside `.erag-editor`, ensuring list items and numbers render cleanly without conflicts.
+
+::: tip Related guide
+[Next.js rich text editor](https://erag.in/blog/nextjs-rich-text-editor.html) sets the editor up in the App Router and saves sanitized HTML with a Server Action.
+:::

@@ -240,3 +240,7 @@ Entries in `attributes()` take priority over labels.
 ## Showing errors
 
 `<Form>` reads Inertia's error bag and shows the first error under each field. Errors for array items (like `tags.0`) are shown under the parent field (`tags`). When the user changes a field, its errors (including item errors) are cleared.
+
+::: tip Related guide
+[Laravel registration form with Inertia](https://erag.in/blog/laravel-registration-form-inertia.html) builds a complete sign-up form with password rules, confirmation and terms from one form class.
+:::

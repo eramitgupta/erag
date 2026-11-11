@@ -90,3 +90,7 @@ import '@erag/text-editor-vue/style.css';
 If your application uses a CSS reset, list markers inside standard lists (`<ul>`, `<ol>`) might normally be hidden.
 
 `@erag/text-editor-vue` includes scoped marker and indentation styles inside `.erag-editor`, ensuring list items and numbers render cleanly without conflicts.
+
+::: tip Related guide
+[Nuxt rich text editor](https://erag.in/blog/nuxt-rich-text-editor.html) sets the editor up in Nuxt with `<ClientOnly>`, `v-model` and a server route that sanitizes the HTML.
+:::

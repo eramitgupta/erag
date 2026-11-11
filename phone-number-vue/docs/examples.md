@@ -177,3 +177,7 @@ const { selectedCountry, countryOptions, localPhone, callingCode, mask, isValid,
   </div>
 </template>
 ```
+
+::: tip Related guide
+[VeeValidate phone number validation in Vue 3](https://erag.in/blog/vee-validate-phone-number-vue.html) connects `usePhoneNumber` to VeeValidate with Zod or Yup.
+:::

@@ -286,3 +286,7 @@ lang/
 ```
 
 For this structure, `syncLangFiles('admin.auth')` reads the current locale's admin auth language file and the frontend uses keys like `admin.auth.name`.
+
+::: tip Related guide
+[Laravel validation messages in French](https://erag.in/blog/laravel-french-translation.html) adds the `fr` locale with laravel-lang and shows the French messages in Vue and React pages.
+:::
