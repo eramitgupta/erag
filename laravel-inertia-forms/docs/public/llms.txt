@@ -9,6 +9,7 @@ Every page in one file: https://erag.in/laravel-inertia-forms/llms-full.txt
 - **Frontend packages**: `@erag/inertia-forms-vue` (Vue 3.5+), `@erag/inertia-forms-react` (React 19), `@erag/inertia-forms-svelte` (Svelte 5)
 - **Styling**: Tailwind CSS 4 (add `@source "../../node_modules/@erag/inertia-forms-vue/dist";` to `resources/css/app.css`). All controls (dropdowns, calendar, time picker, color panel, tags input) are built in-house with Tailwind; no third-party UI or editor library.
 - **Accent color**: `Form::accent('#0f766e')` in PHP, the `accent` prop on `<Form>` (wins), or the `--erag-form-accent` CSS variable (default `#4f46e5`)
+- **Translations**: package validation messages via `php artisan vendor:publish --tag=inertia-forms-lang` (`lang/vendor/inertia-forms/{locale}/inertia-forms.php`); component text (buttons, placeholders, calendar names) via `setTranslations({ ... })` from the frontend package, with `:name` / `:Name` / `:NAME` tokens; your own labels with `__()` in the form class
 - **Documentation**: https://erag.in/laravel-inertia-forms/
 - **Repository**: https://github.com/eramitgupta/laravel-Inertia-forms
 - **Author**: Er Amit Gupta (https://erag.in/)
@@ -120,6 +121,15 @@ Set `protected bool $wizard = true;` (or call `wizard(nextLabel: 'Next', backLab
 - https://erag.in/laravel-inertia-forms/fields/display.html
 - https://erag.in/laravel-inertia-forms/frontend/form-component.html
 - https://erag.in/laravel-inertia-forms/frontend/styling.html
+- https://erag.in/laravel-inertia-forms/translations/index.html
+- https://erag.in/laravel-inertia-forms/translations/laravel.html
+- https://erag.in/laravel-inertia-forms/translations/frontend.html
+- https://erag.in/laravel-inertia-forms/translations/tokens.html
+- https://erag.in/laravel-inertia-forms/translations/calendar.html
+- https://erag.in/laravel-inertia-forms/translations/switching-language.html
+- https://erag.in/laravel-inertia-forms/translations/custom-components.html
+- https://erag.in/laravel-inertia-forms/translations/keys.html
+- https://erag.in/laravel-inertia-forms/translations/dutch-starter.html
 - https://erag.in/laravel-inertia-forms/frontend/custom-fields.html
 - https://erag.in/laravel-inertia-forms/frontend/standalone.html
 - https://erag.in/laravel-inertia-forms/reference/visibility-operators.html

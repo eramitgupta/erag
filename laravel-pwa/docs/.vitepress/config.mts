@@ -153,7 +153,7 @@ export default defineConfig({
     search: { provider: 'local' },
     outline: { level: [2, 3], label: 'On this page' },
     docFooter: { prev: 'Previous', next: 'Next' },
-    footer: { message: 'MIT License. Copyright Er Amit Gupta' },
+    footer: { message: 'MIT License © <a href="https://github.com/eramitgupta">eramitgupta</a>' },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/eramitgupta/laravel-pwa' },
     ],

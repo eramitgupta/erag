@@ -1,6 +1,6 @@
 ---
 title: 'Artisan Command & Config'
-description: 'Install with php artisan erag:install-inertia-forms, generate form classes with php artisan make:form, and publish the inertia-forms config file.'
+description: 'Install with php artisan erag:install-inertia-forms, generate form classes with php artisan make:form, and publish the inertia-forms config and language files.'
 head:
     - - meta
       - name: robots
@@ -99,6 +99,16 @@ php artisan make:form Billing/UpdatePlanForm
 ```
 
 The command refuses to overwrite an existing file.
+
+## Language file
+
+Publish the package's validation messages and attribute names to translate them:
+
+```bash
+php artisan vendor:publish --tag=inertia-forms-lang
+```
+
+This creates `lang/vendor/inertia-forms/en/inertia-forms.php`. Add a folder per locale next to it. Button text, placeholders and calendar names are translated in JavaScript instead. See [Laravel Messages](/translations/laravel) and [Frontend Setup](/translations/frontend).
 
 ## Configuration
 

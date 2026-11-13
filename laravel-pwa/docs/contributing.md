@@ -54,4 +54,4 @@ composer install
 
 ## License
 
-MIT — Copyright Er Amit Gupta
+MIT License © [eramitgupta](https://github.com/eramitgupta)

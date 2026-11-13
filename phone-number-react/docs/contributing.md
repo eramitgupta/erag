@@ -62,4 +62,4 @@ This project follows the [Contributor Covenant Code of Conduct](https://github.c
 
 ## License
 
-MIT — Copyright Er Amit Gupta
+MIT License © [eramitgupta](https://github.com/eramitgupta)

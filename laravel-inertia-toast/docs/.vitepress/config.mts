@@ -160,7 +160,7 @@ export default defineConfig({
       provider: 'local',
     },
     footer: {
-      message: 'MIT License. Copyright Er Amit Gupta',
+      message: 'MIT License © <a href="https://github.com/eramitgupta">eramitgupta</a>',
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/eramitgupta/laravel-inertia-toast' }

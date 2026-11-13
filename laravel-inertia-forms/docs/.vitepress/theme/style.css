@@ -3427,3 +3427,55 @@ body:has(.VPHome) .VPNavBar .container,
     background: rgba(236, 72, 153, 0.12);
     color: #f9a8d4 !important;
 }
+
+
+/* Home: prompt library */
+.home-prompts {
+    max-width: 1152px;
+    margin: 0 auto !important;
+    padding: 96px 24px !important;
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.home-prompts h2 {
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: #09090b;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.home-prompts-lead {
+    max-width: 720px;
+    margin: 0 auto !important;
+    color: #52525b;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.home-prompts-lead code {
+    font-size: 0.9em;
+}
+
+.dark .home-prompts {
+    border-color: #27272a;
+}
+
+.dark .home-prompts h2 {
+    color: #fafafa;
+}
+
+.dark .home-prompts-lead {
+    color: #a1a1aa;
+}
+
+@media (max-width: 640px) {
+    .home-prompts {
+        padding: 64px 16px !important;
+    }
+}

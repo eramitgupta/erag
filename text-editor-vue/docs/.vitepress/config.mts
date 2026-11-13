@@ -266,7 +266,7 @@ export default defineConfig({
         docFooter: { prev: 'Previous', next: 'Next' },
         footer: {
             message:
-                'Released under the MIT License. Copyright © Er Amit Gupta',
+                'MIT License © <a href="https://github.com/eramitgupta">eramitgupta</a>',
         },
         socialLinks: [
             {

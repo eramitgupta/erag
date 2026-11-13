@@ -201,7 +201,7 @@ export default defineConfig({
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/eramitgupta/' },
     ],
     footer: {
-      message: 'Written by Amit Gupta. Code samples are MIT licensed.',
+      message: 'Code samples: MIT License © <a href="https://github.com/eramitgupta">eramitgupta</a>',
       copyright: 'ERAG — Engineer • Research • Advance • Grow',
     },
   },

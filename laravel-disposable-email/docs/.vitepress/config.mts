@@ -307,7 +307,7 @@ export default defineConfig({
       next: 'Next'
     },
     footer: {
-      message: 'MIT License. Copyright Er Amit Gupta',
+      message: 'MIT License © <a href="https://github.com/eramitgupta">eramitgupta</a>',
     }
   }
 })

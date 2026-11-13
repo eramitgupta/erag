@@ -126,9 +126,9 @@ The longest message allowed.
 
 Send with Enter (and add lines with Shift+Enter). On by default.
 
-### `sendLabel(string $label)`
+### `sendLabel(?string $label)`
 
-Text of the send button. Defaults to "Send".
+Text of the send button. When it is not set, the button shows the `composer_send` [translation](/translations/keys#composer) ("Send" in English); `null` goes back to that default.
 
 ### `rows(int $rows)`
 

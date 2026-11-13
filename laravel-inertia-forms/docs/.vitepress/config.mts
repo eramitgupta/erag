@@ -388,6 +388,21 @@ export default defineConfig({
                 ],
             },
             {
+                text: 'Translations',
+                collapsed: false,
+                items: [
+                    { text: 'Overview', link: '/translations/index.html' },
+                    { text: 'Laravel Messages', link: '/translations/laravel.html' },
+                    { text: 'Frontend Setup', link: '/translations/frontend.html' },
+                    { text: 'Tokens & Functions', link: '/translations/tokens.html' },
+                    { text: 'Calendar & Dates', link: '/translations/calendar.html' },
+                    { text: 'Switching Language', link: '/translations/switching-language.html' },
+                    { text: 'Custom Components', link: '/translations/custom-components.html' },
+                    { text: 'Key Reference', link: '/translations/keys.html' },
+                    { text: 'Dutch Starter File', link: '/translations/dutch-starter.html' },
+                ],
+            },
+            {
                 text: 'Reference',
                 items: [
                     { text: 'Visibility Operators', link: '/reference/visibility-operators.html' },
@@ -410,7 +425,7 @@ export default defineConfig({
         ],
 
         footer: {
-            message: 'MIT License © <a href="https://github.com/eramitgupta">Amit Gupta</a>',
+            message: 'MIT License © <a href="https://github.com/eramitgupta">eramitgupta</a>',
         },
 
         outline: {

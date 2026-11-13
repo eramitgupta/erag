@@ -6,6 +6,7 @@ import { defineAsyncComponent, h, onMounted } from 'vue';
 import HeroBadge from './components/HeroBadge.vue';
 import HeroFloaters from './components/HeroFloaters.vue';
 import HeroInstall from './components/HeroInstall.vue';
+import PromptLibrary from './components/PromptLibrary.vue';
 import './demo-reset.css';
 import './demo.css';
 import { installFrameworkTabs } from './framework-tabs';
@@ -20,6 +21,7 @@ export default {
             'doc-before': () => h(CopyPage),
         }),
     enhanceApp({ app, router, siteData }) {
+        app.component('PromptLibrary', PromptLibrary);
         // Loaded on demand so pages without the demo don't download the forms package.
         app.component(
             'FormPlayground',

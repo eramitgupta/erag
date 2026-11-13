@@ -28,6 +28,9 @@ head:
     - - meta
       - name: bingbot
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    - - script
+      - type: application/ld+json
+      - '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Laravel Inertia Forms?", "acceptedAnswer": {"@type": "Answer", "text": "It''s a free Laravel package that saves you from writing the same form over and over. You write the form once in PHP: which fields it has, how they''re laid out and what the rules are. Then you show it on your Vue, React or Svelte page with a single component. When someone submits it, the same PHP class checks the data."}}, {"@type": "Question", "name": "Is it free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, completely. It''s open source under the MIT license, so you can use it in your own projects and in client or commercial work without paying anything."}}, {"@type": "Question", "name": "Which versions of Laravel and Inertia does it work with?", "acceptedAnswer": {"@type": "Answer", "text": "You need Laravel 13, Inertia 3 and PHP 8.3 or newer. For the frontend, it works with Vue 3.5, React 19 and Svelte 5, and the styling is done with Tailwind CSS 4."}}, {"@type": "Question", "name": "How do I install it?", "acceptedAnswer": {"@type": "Answer", "text": "You install two things: the Laravel package with Composer, and the package for your frontend (Vue, React or Svelte) with npm. After that you add one line to your CSS file so Tailwind picks up the styles. It takes a few minutes, and the installation guide and quick start walk you through it."}}, {"@type": "Question", "name": "Do I need to write my validation rules twice?", "acceptedAnswer": {"@type": "Answer", "text": "No, and that''s one of the main reasons the package exists. When you mark a field as required, as an email, or give it a maximum length, the rule is added for you. You can still add any extra Laravel rule you like. The form checks the data on the server, and any errors show up right under the field that caused them."}}, {"@type": "Question", "name": "Can a field show up only when it''s needed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. For example, you can show a \"Company name\" field only when someone ticks \"I''m buying for a company\". Fields that are hidden aren''t checked and aren''t saved, so a hidden required field will never stop someone from submitting. Read more in conditional visibility."}}, {"@type": "Question", "name": "Can I use the same form for creating and editing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. On the edit page you pass in the record, for example the user being edited, and the form opens with their current details already filled in. You don''t need a second form for editing. See model binding."}}, {"@type": "Question", "name": "Can I split a long form into steps?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Long forms like sign-ups or onboarding can be shown as steps, with a progress bar and Back and Continue buttons. Each step is checked before the person can move on, so they fix mistakes as they go instead of all at the end. See wizard forms."}}, {"@type": "Question", "name": "Can people upload files and images?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. People can drag and drop files or click to pick them, see a preview of images, and upload more than one file if you allow it. You decide the allowed file types and the maximum size. See file upload."}}, {"@type": "Question", "name": "What kinds of fields can I use?", "acceptedAnswer": {"@type": "Answer", "text": "There are 22 ready-made fields. You get the usual ones like text, textarea, select, radio buttons, checkboxes and toggles, plus date and time pickers, a color picker, a slider, file uploads and tags. For bigger forms there are repeating rows, content blocks, links, slugs, one-time codes and even a chat-style message box."}}, {"@type": "Question", "name": "Can my forms be shown in other languages?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your own labels use Laravel''s normal translation files, just like the rest of your app. The text that comes with the package, like button labels, placeholders and the month names in the calendar, can be translated too, and it switches as soon as the user changes language. See translations."}}, {"@type": "Question", "name": "Can I make the forms match my design?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can add your own CSS classes to any field or section, change the main accent color, put fields side by side in columns, and dark mode works on its own. See styling."}}, {"@type": "Question", "name": "What if I need a field that isn''t included?", "acceptedAnswer": {"@type": "Answer", "text": "You can build your own. You make a small PHP class for the field and a matching component for your frontend, and the package takes care of the label, help text and error message for you, just like it does for the built-in fields. See custom fields."}}, {"@type": "Question", "name": "Do I need to install other UI or date libraries?", "acceptedAnswer": {"@type": "Answer", "text": "No. The dropdowns, calendar, time picker, color picker and upload box are all part of the package. Apart from Inertia and the framework you already use, there''s nothing else to install, and it even comes with its own icons."}}, {"@type": "Question", "name": "Are the forms accessible?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we care about this a lot. Every field has a proper label, screen readers announce errors, the pickers can be used with just a keyboard, and after a failed submit the cursor jumps straight to the first mistake."}}, {"@type": "Question", "name": "Can AI tools like Claude Code or Cursor build forms with it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The package comes with instructions for Laravel Boost, so tools like Claude Code, Cursor, Codex and GitHub Copilot know how to use it properly instead of guessing. You can simply describe the form you want in plain words. See the example agent sessions above."}}, {"@type": "Question", "name": "Why not just write Inertia forms by hand?", "acceptedAnswer": {"@type": "Answer", "text": "You can, but it gets repetitive fast. Every hand-written form needs its inputs, its state, its error messages and its validation rules, often spread over a few files. With this package a form is one short PHP class, so there''s less to write, less to test, and all your forms look and work the same way."}}]}'
 ---
 <div style="display:none" hidden aria-hidden="true" data-nosnippet>
   Are you an LLM? You can read better optimized documentation at https://raw.githubusercontent.com/eramitgupta/erag/main/laravel-inertia-forms/docs/index.md
@@ -189,6 +192,16 @@ head:
 </div>
 </section>
 
+<section class="home-prompts" aria-labelledby="home-prompts-heading">
+  <div class="features-badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>
+    <span>Prompts</span>
+  </div>
+  <h2 id="home-prompts-heading">Give a prompt. Get a working form.</h2>
+  <p class="home-prompts-lead">Tell your coding agent what you need in plain words. It plans the work, writes the form class, controller and page, runs the tests and tells you what it added. Run <code>php artisan boost:install</code> once so Claude Code, Codex, Cursor and other agents know the form API.</p>
+  <PromptLibrary />
+</section>
+
 <section class="home-split home-split-reverse" aria-labelledby="home-core-heading">
 <div class="home-split-copy">
   <div class="features-badge">
@@ -296,59 +309,124 @@ head:
 
   <section class="home-faq" aria-labelledby="faq-heading">
     <h2 id="faq-heading">Frequently Asked Questions</h2>
-    <p class="faq-subtext">Common questions about Laravel Inertia Forms, validation, frontends, and customization.</p>
+    <p class="faq-subtext">Quick answers to the things people ask most before they try Laravel Inertia Forms.</p>
 
 <details class="faq-item" open>
-<summary>Which frameworks and versions are supported?</summary>
+<summary>What is Laravel Inertia Forms?</summary>
 <div class="faq-content">
-<p>Laravel 13 with Inertia 3 and PHP 8.3+. On the frontend, pick the package for your stack: <code>@erag/inertia-forms-vue</code> (Vue 3.5+), <code>@erag/inertia-forms-react</code> (React 19), or <code>@erag/inertia-forms-svelte</code> (Svelte 5). Styling uses Tailwind CSS 4.</p>
+<p>It's a free Laravel package that saves you from writing the same form over and over. You write the form once in PHP: which fields it has, how they're laid out and what the rules are. Then you show it on your Vue, React or Svelte page with a single component. When someone submits it, the same PHP class checks the data.</p>
 </div>
 </details>
 
 <details class="faq-item">
-<summary>Do I still write validation rules?</summary>
+<summary>Is it free to use?</summary>
 <div class="faq-content">
-<p>Most rules are generated from the field setup, like <code>required()</code>, <code>email()</code>, <code>maxLength()</code>, option lists, and file types. Add anything else with <code>->rule()</code> or <code>->rules()</code>, for example <code>unique:users,email</code>. Validate with the <code>#[Validate]</code> attribute or <code>$form-&gt;validate($request)</code>.</p>
+<p>Yes, completely. It's open source under the MIT license, so you can use it in your own projects and in client or commercial work without paying anything.</p>
 </div>
 </details>
 
 <details class="faq-item">
-<summary>What happens to fields that are hidden by visibleWhen()?</summary>
+<summary>Which versions of Laravel and Inertia does it work with?</summary>
 <div class="faq-content">
-<p>They are removed from the page in the browser and skipped during validation, so a hidden required field never blocks a submission and its value is left out of <code>validated()</code>. Add <code>clearWhenHidden()</code> to reset the value when the field disappears.</p>
-</div>
-</details>
-
-<details class="faq-item">
-<summary>Can I use it for edit forms?</summary>
-<div class="faq-content">
-<p>Yes. Call <code>->bind($model)</code> to fill the form from an Eloquent model or an array, and point it at an update route with <code>->route('users.update', $user)</code>. The HTTP method is read from the route.</p>
-</div>
-</details>
-
-<details class="faq-item">
-<summary>How do I add my own field type?</summary>
-<div class="faq-content">
-<p>Create a PHP class that extends <code>Field</code> and returns a component name, then register a matching component on <code>&lt;Form&gt;</code> with the <code>components</code> prop. Your component receives the field, its value, and its error, and is wrapped with the label and help text automatically.</p>
-</div>
-</details>
-
-<details class="faq-item">
-<summary>Can I change the look of the form?</summary>
-<div class="faq-content">
-<p>Yes. Every field, fieldset, and the form accept extra CSS classes, and dark mode follows Tailwind's <code>dark:</code> variant. Point Tailwind at the package with one <code>@source</code> line so its classes are generated.</p>
+<p>You need Laravel 13, Inertia 3 and PHP 8.3 or newer. For the frontend, it works with Vue 3.5, React 19 and Svelte 5, and the styling is done with Tailwind CSS 4.</p>
 </div>
 </details>
 
 <details class="faq-item">
 <summary>How do I install it?</summary>
 <div class="faq-content">
-<p>Install the Laravel package and the frontend package for your stack:</p>
-<div class="faq-install-box">
-<div class="faq-install-row"><span class="faq-install-tag">Backend</span><code>composer require erag/inertia-forms</code></div>
-<div class="faq-install-row"><span class="faq-install-tag">Frontend</span><code>npm install @erag/inertia-forms-vue</code></div>
+<p>You install two things: the Laravel package with Composer, and the package for your frontend (Vue, React or Svelte) with npm. After that you add one line to your CSS file so Tailwind picks up the styles. It takes a few minutes, and the <a href="./guide/installation.html">installation guide</a> and <a href="./guide/quick-start.html">quick start</a> walk you through it.</p>
 </div>
-<p>Use <code>@erag/inertia-forms-react</code> or <code>@erag/inertia-forms-svelte</code> for React or Svelte, then follow the <a href="./guide/quick-start.html">Quick Start</a>.</p>
+</details>
+
+<details class="faq-item">
+<summary>Do I need to write my validation rules twice?</summary>
+<div class="faq-content">
+<p>No, and that's one of the main reasons the package exists. When you mark a field as required, as an email, or give it a maximum length, the rule is added for you. You can still add any extra Laravel rule you like. The form checks the data on the server, and any errors show up right under the field that caused them.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can a field show up only when it's needed?</summary>
+<div class="faq-content">
+<p>Yes. For example, you can show a "Company name" field only when someone ticks "I'm buying for a company". Fields that are hidden aren't checked and aren't saved, so a hidden required field will never stop someone from submitting. Read more in <a href="./concepts/visibility.html">conditional visibility</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can I use the same form for creating and editing?</summary>
+<div class="faq-content">
+<p>Yes. On the edit page you pass in the record, for example the user being edited, and the form opens with their current details already filled in. You don't need a second form for editing. See <a href="./concepts/model-binding.html">model binding</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can I split a long form into steps?</summary>
+<div class="faq-content">
+<p>Yes. Long forms like sign-ups or onboarding can be shown as steps, with a progress bar and Back and Continue buttons. Each step is checked before the person can move on, so they fix mistakes as they go instead of all at the end. See <a href="./concepts/wizard.html">wizard forms</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can people upload files and images?</summary>
+<div class="faq-content">
+<p>Yes. People can drag and drop files or click to pick them, see a preview of images, and upload more than one file if you allow it. You decide the allowed file types and the maximum size. See <a href="./fields/file-upload.html">file upload</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>What kinds of fields can I use?</summary>
+<div class="faq-content">
+<p>There are 22 ready-made fields. You get the usual ones like text, textarea, select, radio buttons, checkboxes and toggles, plus date and time pickers, a color picker, a slider, file uploads and tags. For bigger forms there are repeating rows, content blocks, links, slugs, one-time codes and even a chat-style message box.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can my forms be shown in other languages?</summary>
+<div class="faq-content">
+<p>Yes. Your own labels use Laravel's normal translation files, just like the rest of your app. The text that comes with the package, like button labels, placeholders and the month names in the calendar, can be translated too, and it switches as soon as the user changes language. See <a href="./translations/">translations</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can I make the forms match my design?</summary>
+<div class="faq-content">
+<p>Yes. You can add your own CSS classes to any field or section, change the main accent color, put fields side by side in columns, and dark mode works on its own. See <a href="./frontend/styling.html">styling</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>What if I need a field that isn't included?</summary>
+<div class="faq-content">
+<p>You can build your own. You make a small PHP class for the field and a matching component for your frontend, and the package takes care of the label, help text and error message for you, just like it does for the built-in fields. See <a href="./frontend/custom-fields.html">custom fields</a>.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Do I need to install other UI or date libraries?</summary>
+<div class="faq-content">
+<p>No. The dropdowns, calendar, time picker, color picker and upload box are all part of the package. Apart from Inertia and the framework you already use, there's nothing else to install, and it even comes with its own icons.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Are the forms accessible?</summary>
+<div class="faq-content">
+<p>Yes, we care about this a lot. Every field has a proper label, screen readers announce errors, the pickers can be used with just a keyboard, and after a failed submit the cursor jumps straight to the first mistake.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Can AI tools like Claude Code or Cursor build forms with it?</summary>
+<div class="faq-content">
+<p>Yes. The package comes with instructions for Laravel Boost, so tools like Claude Code, Cursor, Codex and GitHub Copilot know how to use it properly instead of guessing. You can simply describe the form you want in plain words. See the <a href="#home-prompts-heading">example agent sessions</a> above.</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>Why not just write Inertia forms by hand?</summary>
+<div class="faq-content">
+<p>You can, but it gets repetitive fast. Every hand-written form needs its inputs, its state, its error messages and its validation rules, often spread over a few files. With this package a form is one short PHP class, so there's less to write, less to test, and all your forms look and work the same way.</p>
 </div>
 </details>
   </section>

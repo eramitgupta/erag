@@ -203,12 +203,12 @@ Some keys are adjusted when the form is serialized:
 - `TimePicker.minuteStep` is between `1` and `30` (default `5`).
 - `TagsInput.suggestions` are strings; `reorderable` defaults to `true`.
 - `Blocks` data is a list of `{ "type": "section", "data": { ... } }` blocks; each block's `fields` use the same schema as top-level fields, with names relative to the block.
-- `Repeater` data is a plain list of row objects, like `[{ "question": "...", "answer": "..." }]`; `addActionLabel` defaults to `"Add "` plus the item label in lower case.
+- `Repeater` data is a plain list of row objects, like `[{ "question": "...", "answer": "..." }]`; `addActionLabel` is `null` unless you set one; the frontend then shows the `repeater_add` [translation](/translations/keys#repeater-and-blocks) ("Add " plus the item label in lower case).
 - `Link` data is a string, or `{ "url": "" }` plus the enabled `label` / `target` keys when `structured` is `true`.
 - `Composer` data is `{ "message": "", "attachments": [] }`.
 - `OtpInput.length` is between `2` and `12`.
 - `Heading`, `Text`, `Html`, `Separator` and `Callout` have a generated `name`, `columnSpan: 12`, and no entry in `data`.
-- `KeyValue` data is a list of `{ "key": "...", "value": "..." }` rows; `addActionLabel` defaults to `"Add row"`.
+- `KeyValue` data is a list of `{ "key": "...", "value": "..." }` rows; `addActionLabel`, `keyLabel` and `valueLabel` are `null` unless you set them; the frontend then shows the `key_value_add`, `key_value_key` and `key_value_value` [translations](/translations/keys#key-value).
 
 For example, a range picker and a tags field:
 

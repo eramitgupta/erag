@@ -29,4 +29,4 @@ Thank you for considering contributing to Laravel Lang Sync Inertia.
 
 ## License
 
-Laravel Lang Sync Inertia is open-sourced software licensed under the MIT license.
+MIT License © [eramitgupta](https://github.com/eramitgupta)

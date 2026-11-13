@@ -119,7 +119,7 @@ public function __construct()
 }
 ```
 
-`wizard(bool $wizard = true, ?string $nextLabel = null, ?string $backLabel = null)` defaults to **Continue** and **Back**. `wizard(false)` turns it off again.
+`wizard(bool $wizard = true, ?string $nextLabel = null, ?string $backLabel = null)` shows **Continue** and **Back** by default. These come from the `wizard_next` and `wizard_back` [translation keys](/translations/keys#wizard), so pass labels only when one form needs different text. `wizard(false)` turns it off again.
 
 ::: warning Turn it on inside the class
 Step checks run on a package endpoint that rebuilds your form with `YourForm::make()`, without arguments, the same way [remote combobox search](/fields/combobox#searchusing-closure-callback) does. The endpoint only answers for forms that are a wizard **after** `make()`, so set `$wizard` (or call `wizard()` in the constructor) rather than calling `->wizard()` in a controller. For the same reason, the fields of a wizard must not depend on a bound model or on constructor arguments to decide their rules.
@@ -172,8 +172,8 @@ A wizard form serializes a `wizard` object (it is `null` for other forms):
 
 ```json
 "wizard": {
-    "nextLabel": "Continue",
-    "backLabel": "Back",
+    "nextLabel": null,
+    "backLabel": null,
     "validateUrl": "https://example.test/_inertia-forms/validate-step",
     "token": "eyJpdiI6..."
 }
