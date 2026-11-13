@@ -912,6 +912,51 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/laravel.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/frontend.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/tokens.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/calendar.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/switching-language.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/custom-components.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/keys.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/laravel-inertia-forms/translations/dutch-starter.html</loc>
+       <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
        <loc>https://erag.in/laravel-inertia-forms/guide/installation.html</loc>
        <lastmod>2026-09-01T19:00:41+00:00</lastmod>
        <priority>0.6400</priority>
