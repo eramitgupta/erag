@@ -144,7 +144,17 @@ transChoice('auth.apples', 5);
 // There are 5 apples
 ```
 
-The first argument is always a translation key. An inline plural string is not parsed: `trans_choice('No items|:count items', 0)` returns `No items|:count items` unchanged, because no key with that name exists in the synced translations.
+The first argument is looked up as a translation key. Since v3.1.1, if no key with that name exists, the string itself is used as the plural line, so an inline string works too:
+
+```ts
+trans_choice('{0} No items|{1} One item|[2,*] :count items', 0);
+// No items
+
+trans_choice('{0} No items|{1} One item|[2,*] :count items', 7);
+// 7 items
+```
+
+An inline string is never translated, so keep plural lines in a lang file when the text must change per language.
 
 Laravel-style exact and interval choices are supported:
 
@@ -211,11 +221,13 @@ Welcome, Taylor
 
 ```ts
 __('I love programming.');
+// I love programming.
+
+__('Hello, :name', { name: 'Amit' });
+// Hello, Amit
 ```
 
-```text
-I love programming.
-```
+Placeholders in the fallback text are still replaced (since v3.1.1). A dotted key such as `messages.welcome` with no synced value comes back as `messages.welcome`.
 
 ## Placeholder replacements
 

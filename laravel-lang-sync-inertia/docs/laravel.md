@@ -238,16 +238,14 @@ Output:
 
 ## Translation string keys
 
-Laravel also supports using the translation string itself as the key. If no synced key is found, the frontend helper returns the original string unchanged:
+Laravel also supports using the translation string itself as the key. If no synced key is found, the frontend helper uses the original string as the text and still replaces its placeholders, just like Laravel's `__()`:
 
 ```ts
 __('I love programming.');
-```
+// I love programming.
 
-Output:
-
-```text
-I love programming.
+__('Hello, :name', { name: 'Amit' });
+// Hello, Amit
 ```
 
 ## How it works

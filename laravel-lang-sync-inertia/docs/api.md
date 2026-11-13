@@ -182,15 +182,17 @@ Welcome, Taylor
 
 ### Missing key fallback
 
-If no Laravel translation key is found, the original key is returned unchanged.
+If no Laravel translation key is found, the original key is used as the text.
 
 ```ts
 __('I love programming.');
+// I love programming.
+
+__('Hello, :name', { name: 'Amit' });
+// Hello, Amit
 ```
 
-```text
-I love programming.
-```
+Placeholders in the fallback text are still replaced (since v3.1.1). A dotted key such as `messages.welcome` with no synced value comes back as `messages.welcome`.
 
 ## Placeholder replacement
 

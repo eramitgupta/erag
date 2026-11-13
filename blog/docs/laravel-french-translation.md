@@ -401,7 +401,7 @@ The fix is to write the condition into the line, as in `workshops.php` above:
 
 Both sides match `[0,1]` and `[2,*]` intervals before falling back to their own rules, so PHP and JavaScript now return the same sentence for every count. A `{0}` form works too, for example `'{0} Complet|{1} :count place restante|[2,*] :count places restantes'`.
 
-`transChoice()` takes a translation **key**. Passing the `'a|b'` string itself returns it unchanged, so the pipe-separated line has to live in a lang file.
+`transChoice()` looks the first argument up as a translation **key**. Since v3.1.1, a pipe-separated string with no matching key is used as the plural line itself, but it is never translated, so French plural lines still belong in a lang file.
 
 ## How do I show the same French text in React?
 
