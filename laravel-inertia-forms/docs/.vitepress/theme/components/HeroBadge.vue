@@ -3,9 +3,9 @@ import { withBase } from 'vitepress';
 </script>
 
 <template>
-    <a class="hero-badge" :href="withBase('/icons.html')">
-        <span class="hero-badge-new">v1</span>
-        <span>Zero UI libraries, 210 hand-drawn icons, ready for AI agents</span>
+    <a class="hero-badge" :href="withBase('/translations/')">
+        <span class="hero-badge-new">v0.0.3</span>
+        <span>New: translate every form into any language</span>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
     </a>
 </template>
