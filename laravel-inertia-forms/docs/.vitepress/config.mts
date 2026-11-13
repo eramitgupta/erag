@@ -221,7 +221,7 @@ export default defineConfig({
                 image,
                 applicationCategory: 'DeveloperApplication',
                 operatingSystem: 'Any',
-                softwareVersion: '1.0.0',
+                softwareVersion: '0.0.3',
                 license: 'https://opensource.org/licenses/MIT',
                 downloadUrl: 'https://packagist.org/packages/erag/inertia-forms',
                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
