@@ -77,6 +77,12 @@ const apps = [
     port: 5184
   },
   {
+    name: 'laravel-orphan-files',
+    prefix: '/laravel-orphan-files',
+    cwd: join(rootDir, 'laravel-orphan-files'),
+    port: 5186
+  },
+  {
     name: 'blog',
     prefix: '/blog',
     cwd: join(rootDir, 'blog'),
