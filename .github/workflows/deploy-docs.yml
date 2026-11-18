@@ -24,6 +24,7 @@ on:
       - 'text-editor-vue/**'
       - 'text-editor-react/**'
       - 'laravel-inertia-forms/**'
+      - 'laravel-orphan-files/**'
       - 'blog/**'
   workflow_dispatch:
 
@@ -79,6 +80,7 @@ jobs:
           npm ci --prefix text-editor-vue
           npm ci --prefix text-editor-react
           npm ci --prefix laravel-inertia-forms
+          npm ci --prefix laravel-orphan-files
           npm ci --prefix blog
 
       - name: Build docs
@@ -93,6 +95,7 @@ jobs:
           npm run build --prefix text-editor-vue
           npm run build --prefix text-editor-react
           npm run build --prefix laravel-inertia-forms
+          npm run build --prefix laravel-orphan-files
           npm run build --prefix blog
 
       - name: Prepare Pages artifact
@@ -107,6 +110,7 @@ jobs:
           mkdir -p site/text-editor-vue
           mkdir -p site/text-editor-react
           mkdir -p site/laravel-inertia-forms
+          mkdir -p site/laravel-orphan-files
           mkdir -p site/blog
           cp index.html site/index.html
           cp privacy-policy.html site/privacy-policy.html
@@ -124,6 +128,7 @@ jobs:
           cp -R text-editor-vue/docs/.vitepress/dist/* site/text-editor-vue/
           cp -R text-editor-react/docs/.vitepress/dist/* site/text-editor-react/
           cp -R laravel-inertia-forms/docs/.vitepress/dist/* site/laravel-inertia-forms/
+          cp -R laravel-orphan-files/docs/.vitepress/dist/* site/laravel-orphan-files/
           cp -R blog/docs/.vitepress/dist/* site/blog/
           touch site/.nojekyll
 
