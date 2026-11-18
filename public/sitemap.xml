@@ -1124,7 +1124,7 @@
   <!-- blog:start -->
   <url>
        <loc>https://erag.in/blog/</loc>
-       <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+       <lastmod>2026-11-18T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
@@ -1161,6 +1161,14 @@
        </image:image>
   </url>
   <url>
+       <loc>https://erag.in/blog/filament-style-forms-inertia.html</loc>
+       <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/filament-style-forms-inertia.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/headless-phone-input-vs-component-libraries.html</loc>
        <lastmod>2026-09-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
@@ -1171,6 +1179,14 @@
        <priority>0.6400</priority>
        <image:image>
             <image:loc>https://erag.in/blog/images/inertia-error-handling-toasts.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/inertia-form-component-vs-form-builder.html</loc>
+       <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/inertia-form-component-vs-form-builder.jpg</image:loc>
        </image:image>
   </url>
   <url>
@@ -1258,6 +1274,14 @@
        </image:image>
   </url>
   <url>
+       <loc>https://erag.in/blog/laravel-inertia-edit-form.html</loc>
+       <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-edit-form.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
        <loc>https://erag.in/blog/laravel-inertia-file-upload.html</loc>
        <lastmod>2026-10-20T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
@@ -1269,6 +1293,14 @@
        <loc>https://erag.in/blog/laravel-inertia-form-builder-admin-crud.html</loc>
        <lastmod>2026-10-11T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-form-builders-compared.html</loc>
+       <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-form-builders-compared.jpg</image:loc>
+       </image:image>
   </url>
   <url>
        <loc>https://erag.in/blog/laravel-inertia-forms-php-class.html</loc>
@@ -1305,6 +1337,14 @@
        <priority>0.6400</priority>
        <image:image>
             <image:loc>https://erag.in/blog/images/laravel-inertia-searchable-select.jpg</image:loc>
+       </image:image>
+  </url>
+  <url>
+       <loc>https://erag.in/blog/laravel-inertia-svelte-forms.html</loc>
+       <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+       <image:image>
+            <image:loc>https://erag.in/blog/images/laravel-inertia-svelte-forms.jpg</image:loc>
        </image:image>
   </url>
   <url>
