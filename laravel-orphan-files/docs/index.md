@@ -3,7 +3,7 @@ layout: home
 markdownStyles: false
 title: "Laravel Orphan Files - Clean Up Unused Uploads in Laravel"
 titleTemplate: false
-description: "Find files on your Laravel disks that no database row points to any more, and move them to a trash folder you can restore from. Works with local, public, S3 and S3-compatible storage such as MinIO and RustFS."
+description: "Find the uploaded files your Laravel app no longer uses and clean them up safely, with a preview and a restorable trash. Works with local, S3, MinIO and RustFS."
 head:
     - - meta
       - name: robots
