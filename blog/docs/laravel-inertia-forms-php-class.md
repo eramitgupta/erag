@@ -29,7 +29,7 @@ composer require erag/inertia-forms
 php artisan erag:install-inertia-forms
 ```
 
-The install command publishes `config/inertia-forms.php` and a stub for new form classes, then prints the next steps for your frontend. It reads your `package.json` to see which Inertia adapter you use.
+The install command publishes `config/inertia-forms.php`, then prints the next steps: the npm package for Vue, React or Svelte, the Tailwind `@source` line, and `make:form`.
 
 Install the frontend package for your framework:
 
