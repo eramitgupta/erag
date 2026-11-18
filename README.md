@@ -17,6 +17,7 @@ Main documentation workspace for ERAG open source packages.
 - `text-editor-vue/` - VitePress docs for Text Editor Vue.
 - `text-editor-react/` - VitePress docs for Text Editor React.
 - `laravel-inertia-forms/` - VitePress docs for Laravel Inertia Forms.
+- `laravel-orphan-files/` - VitePress docs for Laravel Orphan Files.
 
 ## Local Setup
 
@@ -39,6 +40,7 @@ cd ../vue-toastification && npm install
 cd ../text-editor-vue && npm install
 cd ../text-editor-react && npm install
 cd ../laravel-inertia-forms && npm install
+cd ../laravel-orphan-files && npm install
 cd ..
 ```
 
