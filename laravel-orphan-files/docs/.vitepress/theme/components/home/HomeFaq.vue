@@ -28,7 +28,7 @@ const questions = [
   },
   {
     q: 'Where does the trash live?',
-    a: 'In .orphan-trash/{disk}/{date}/{original path}, on the same disk or on the disk you set as trash.disk. Scans never look inside it, and orphan:purge-trash empties it after 30 days.',
+    a: 'In .orphan-trash/{disk}/{date}/{original path}, on the same disk or on the disk you set as trash.disk. Scans never look inside it, and orphan:purge-trash deletes trash older than 30 days when you run it.',
   },
   {
     q: 'Which Laravel and PHP versions are supported?',
