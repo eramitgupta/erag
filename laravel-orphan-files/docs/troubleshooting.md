@@ -66,7 +66,7 @@ In `auto` mode this doesn't stop the run. The package stays in memory and logs a
 
 That's the grace period at work: files modified in the 24 hours before the database was read aren't cleaned. They'll be cleanable on a later run if they're still unreferenced.
 
-Files you just restored on S3 or MinIO count as recent too. A restore there is a copy, so the file gets a new "last modified" time. See [How a file moves](./guides/first-cleanup.md#how-a-file-moves).
+Files you just restored on S3 or MinIO count as recent too. A restore there is a copy, so the file gets a new "last modified" time. See [How a file moves](./quick-start.md#how-a-file-moves).
 
 ## explain is slow
 
