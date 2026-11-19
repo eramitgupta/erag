@@ -194,4 +194,4 @@ A restored file goes back to its exact original path. Its "last modified" time d
 - On a local disk, with the trash on the same disk, the file is renamed back and keeps its original time.
 - On S3 and S3-compatible storage such as MinIO, a restore is a copy, so the file gets a new "last modified" time. The same happens when `trash.disk` is a different disk.
 
-A new time means the grace period starts again. If the restored file is still unreferenced, the next clean leaves it alone until it is older than the grace period (24 hours by default). See [How a file moves](../guides/first-cleanup.md#how-a-file-moves) for the full picture.
+A new time means the grace period starts again. If the restored file is still unreferenced, the next clean leaves it alone until it is older than the grace period (24 hours by default). See [How a file moves](../quick-start.md#how-a-file-moves) for the full picture.
