@@ -18,7 +18,21 @@ head:
 
 # orphan:install
 
-Creates `config/orphan-files.php` and tells you what to do next. Run it once, right after `composer require`.
+## What it does
+
+It creates `config/orphan-files.php` with the package defaults and prints what to do next.
+
+## When to use it
+
+Once, right after `composer require erag/laravel-orphan-files`. Run it again later only if you want to go back to the default config.
+
+::: tip Does it change anything?
+**Writes one file.** It creates `config/orphan-files.php`. An existing file is only replaced if you answer yes or pass `--force`. Your storage and your database are never touched.
+:::
+
+## Example
+
+### First install
 
 ```bash
 php artisan orphan:install
@@ -35,26 +49,52 @@ php artisan orphan:install
   Docs: https://erag.in/laravel-orphan-files/
 ```
 
+### The config already exists
+
+If `config/orphan-files.php` is already there, the command asks before it writes anything. The default answer is no, so pressing Enter keeps your file:
+
+```bash
+php artisan orphan:install
+```
+
+```
+  config/orphan-files.php already exists. Overwrite it with the package defaults? (yes/no) [no]
+❯ no
+
+   INFO  Kept your existing config/orphan-files.php.
+
+  Next steps
+  1. In config/orphan-files.php, list your upload folders under 'disks' and the columns that store file paths under 'sources'.
+  2. Run php artisan orphan:scan to see how many orphaned files you have.
+  3. Run php artisan orphan:clean for a dry run, then php artisan orphan:clean --force to move the orphans to the trash.
+
+  Docs: https://erag.in/laravel-orphan-files/
+```
+
 ## Options
 
 | Option | Description |
 | --- | --- |
 | `--force` | Overwrite an existing `config/orphan-files.php` without asking. |
 
-## When the config already exists
+## What happens to an existing config
 
-If `config/orphan-files.php` is already there, the command asks first:
+| You run | No config yet | Config already exists |
+| --- | --- | --- |
+| `php artisan orphan:install` | Created | Asks first. The default answer, no, keeps your file. |
+| `php artisan orphan:install --no-interaction` | Created | Kept. There is no question, and the answer is no. |
+| `php artisan orphan:install --force` | Created | Overwritten with the defaults, without asking. |
 
-```
-  config/orphan-files.php already exists. Overwrite it with the package defaults? (yes/no) [no]
-```
-
-The default answer is no. Saying no keeps your file and prints `Kept your existing config/orphan-files.php.` followed by the same next steps. Without a terminal, for example with `--no-interaction` or in a deploy script, the answer is also no, so a run never replaces your config by accident.
+Without a terminal, for example in a deploy script, the command behaves like `--no-interaction`. A deploy never replaces your config by accident.
 
 ::: warning --force replaces your settings
-With `--force` the file is overwritten with the package defaults, and your `disks` and `sources` are lost. Keep a copy, or use version control, before forcing it.
+With `--force` the file is overwritten with the package defaults, and your `disks` and `sources` are gone. Keep a copy, or commit the file to version control, before you force it.
 :::
 
 ## What it doesn't do
 
-It never touches your database. It creates no migrations and no tables, and it doesn't scan or clean anything. The only file it writes is `config/orphan-files.php`.
+It creates no migrations and no tables, and it doesn't scan or clean anything. The only file it writes is `config/orphan-files.php`.
+
+Laravel's own `php artisan vendor:publish --tag=orphan-files-config` creates the same file, but it skips the overwrite question and the next steps.
+
+Next: fill in `disks` and `sources` and follow [Step by step: your first cleanup](../guides/first-cleanup.md).
