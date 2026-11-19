@@ -86,11 +86,12 @@ Long scans of big buckets can run longer than your worker's `--timeout`. Give th
 
 ```
 disk,path,size,last_modified,status,reason
-public,avatars/maya-patel-old.jpg,455373,2026-10-02T09:14:11Z,cleanable,
-public,avatars/default.png,1840,2026-01-12T08:00:00Z,protected,"it matches the excluded pattern [avatars/default.png]"
+s3,uploads/orphan-test/new/n1.jpg,6000,2026-11-19T17:56:02Z,protected,"it was modified within the grace period (3 minutes)"
+s3,uploads/orphan-test/orphans/nested/o4.jpg,4500,2026-11-19T17:52:43Z,cleanable,
+s3,uploads/orphan-test/orphans/o1.jpg,3000,2026-11-19T17:52:43Z,cleanable,
 ```
 
-`status` is `cleanable` or `protected`, and `reason` says why a protected file is kept.
+`status` is `cleanable` or `protected`, and `reason` says why a protected file is kept. Excluded files are skipped before the scan counts anything, so they are never in the export. The sample comes from a test run with a 3 minute grace period; see [orphan:scan](../commands/scan.md#csv-export) for the whole file.
 
 ## Events
 
