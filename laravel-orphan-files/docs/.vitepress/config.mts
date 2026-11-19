@@ -133,7 +133,6 @@ export default defineConfig({
           { text: 'Introduction', link: '/introduction.html' },
           { text: 'Installation', link: '/installation.html' },
           { text: 'Quick Start', link: '/quick-start.html' },
-          { text: 'First Cleanup, Step by Step', link: '/guides/first-cleanup.html' },
         ],
       },
       {
