@@ -6,7 +6,7 @@ const items = [
   {
     title: 'Exclusions and globs',
     tag: 'exclude_patterns',
-    text: 'Paths and patterns like defaults/* or *.pdf are never cleaned.',
+    text: 'Paths and patterns like defaults/* or *.pdf are skipped: never counted, never cleaned.',
     link: '/configuration/filters.html',
     icon: '<circle cx="12" cy="12" r="9"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>',
   },
