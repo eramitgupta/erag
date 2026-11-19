@@ -7,6 +7,7 @@
 - [GitHub](https://github.com/eramitgupta/laravel-orphan-files)
 - [Packagist](https://packagist.org/packages/erag/laravel-orphan-files)
 - [Quick start](https://erag.in/laravel-orphan-files/quick-start.html)
+- [Step by step: your first cleanup](https://erag.in/laravel-orphan-files/guides/first-cleanup.html)
 - [Sources](https://erag.in/laravel-orphan-files/configuration/sources.html)
 - [Running it safely](https://erag.in/laravel-orphan-files/guides/safety.html)
 - [Using it from code](https://erag.in/laravel-orphan-files/guides/code.html)
@@ -20,11 +21,11 @@ php artisan orphan:install
 
 ## Commands
 - `php artisan orphan:install` creates `config/orphan-files.php` and prints the next steps.
-- `php artisan orphan:scan` reports files, references, orphans and reclaimable size. Read-only.
-- `php artisan orphan:clean` is a dry run; `--force` moves orphans to `.orphan-trash/`.
-- `php artisan orphan:restore {path}` moves trashed files back.
-- `php artisan orphan:purge-trash` deletes trash older than `trash.retention_days` (30).
-- `php artisan orphan:explain {path}` shows which rows reference a file.
+- `php artisan orphan:scan` reports files, references, orphans and reclaimable size. Read-only. Excluded paths are skipped and not counted.
+- `php artisan orphan:clean` is a dry run; `--force` moves orphans to `.orphan-trash/{disk}/{date}/`; `--mode=delete` deletes them for good. A forced clean stops (exit code 1) when more than `max_orphan_ratio` (90%) of a disk would go.
+- `php artisan orphan:restore {path}` moves trashed files back to their original path, looking in the trash of every configured disk unless `--disk` is given. `--list` shows the trash, `--all` restores everything.
+- `php artisan orphan:purge-trash` deletes trash older than `trash.retention_days` (30) on every disk, for good. `--days=N` keeps the last N days, `--all` removes everything, `--dry-run` only counts.
+- `php artisan orphan:explain {path}` shows which rows reference a file, or why it is kept, excluded or an orphan. Read-only.
 
 ## Rules for agents
 Always run a scan or a dry run first and show the result. Never use `--force`, `--mode=delete`, `--force-ratio` or `orphan:purge-trash` without the user's approval. Never lower `grace_period_hours` without asking.
