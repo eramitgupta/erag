@@ -107,7 +107,7 @@ After a purge there is no copy left. Run it with `--dry-run` first, especially w
 
 Each day's trash lives in a folder named after the date, for example `.orphan-trash/public/2026-10-15/`. A folder is purged when its date is more than `retention_days` before today. With 30 days, on 2026-11-15 the `2026-10-15` folder is purged and the `2026-10-16` folder is kept.
 
-The date comes from the folder name, not from the file. That matters because a file's own time changes in different ways on different disks (see [How a file moves](../guides/first-cleanup.md#how-a-file-moves)).
+The date comes from the folder name, not from the file. That matters because a file's own time changes in different ways on different disks (see [How a file moves](../quick-start.md#how-a-file-moves)).
 
 Only the files that were listed are deleted. A folder is removed when it ends up empty and nothing failed. Folders in the trash whose names aren't dates are never touched. If a file can't be deleted, it is listed with its error and the command exits with code 1.
 
