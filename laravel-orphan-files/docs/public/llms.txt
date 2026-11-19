@@ -7,7 +7,6 @@
 - [GitHub](https://github.com/eramitgupta/laravel-orphan-files)
 - [Packagist](https://packagist.org/packages/erag/laravel-orphan-files)
 - [Quick start](https://erag.in/laravel-orphan-files/quick-start.html)
-- [Step by step: your first cleanup](https://erag.in/laravel-orphan-files/guides/first-cleanup.html)
 - [Sources](https://erag.in/laravel-orphan-files/configuration/sources.html)
 - [Running it safely](https://erag.in/laravel-orphan-files/guides/safety.html)
 - [Using it from code](https://erag.in/laravel-orphan-files/guides/code.html)
