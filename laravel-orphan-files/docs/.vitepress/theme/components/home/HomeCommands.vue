@@ -61,7 +61,7 @@ const commands = [
 | users.avatar | path | 2   | avatars/maya-patel.jpg |
 +--------------+------+-----+------------------------+
 
-   INFO  Kept: referenced by 1 row(s).`,
+   INFO  Kept: referenced by 1 row.`,
     link: '/commands/explain.html',
   },
   {
