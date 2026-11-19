@@ -18,7 +18,7 @@ head:
 
 # Exclusions and Grace Period
 
-Filters decide which orphans are kept anyway. A kept orphan shows up as "Protected" in the scan, and `orphan:explain` tells you which rule kept it.
+Exclusions take files out of the scan completely. The other rules on this page keep orphans that the scan still counts: those show up as "Protected", and `orphan:explain` tells you which rule kept them.
 
 ## Exclusions
 
@@ -37,6 +37,8 @@ Filters decide which orphans are kept anyway. A kept orphan shows up as "Protect
 `exclude_paths` holds exact paths. An entry without a slash matches that file name in any folder, so `.gitignore` also keeps `avatars/.gitignore`. An entry ending in a slash keeps a whole folder, for example `'avatars/defaults/'`.
 
 `exclude_patterns` holds glob patterns, where `*` matches across folders. A pattern without a slash is matched against the file name, so `*.pdf` keeps every PDF.
+
+Excluded files are skipped before anything is counted. The scan doesn't list them as files, orphans or "Protected", they don't count toward the orphan ratio, and `orphan:clean` never touches them. That makes exclusions the right tool for folders that aren't your app's, like another project's files in a shared bucket.
 
 Placeholder images are the usual reason to exclude something: `avatars/default.png` is often not stored in any row, because the app falls back to it in code.
 
