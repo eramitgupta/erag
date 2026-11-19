@@ -36,10 +36,12 @@ The package deletes files, so every default leans towards keeping a file when in
 By default a clean moves files to `.orphan-trash/{disk}/{date}/` with their original paths. Nothing is lost until `orphan:purge-trash` removes trash older than 30 days.
 
 ```bash
-php artisan orphan:restore --list                   # what's in the trash
+php artisan orphan:restore --list                   # what's in the trash, on every disk
 php artisan orphan:restore avatars/jane.jpg          # put one file back
 php artisan orphan:restore --all --date=2026-11-15   # undo a whole day
 ```
+
+Without `--disk`, `orphan:restore` looks in the trash of every configured disk. [How a file moves](./first-cleanup.md#how-a-file-moves) shows the whole path of a file, from storage to the trash and back.
 
 ::: danger Delete mode
 `'mode' => 'delete'` or `--mode=delete` skips the trash. There's no undo. Keep trash mode until you've done several cleans and restored nothing.
