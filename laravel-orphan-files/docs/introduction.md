@@ -58,4 +58,4 @@ The [Running it safely](./guides/safety.md) guide covers these in more detail.
 
 S3, MinIO, RustFS and other S3-compatible disks also need `league/flysystem-aws-s3-v3`, which most apps using S3 already have.
 
-Next: [Installation](./installation.md).
+Next: [Installation](./installation.md). To see a whole first run before you start, with real output at every step, read [Step by step: your first cleanup](./guides/first-cleanup.md).
