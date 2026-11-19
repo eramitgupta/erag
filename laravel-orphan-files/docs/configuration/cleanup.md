@@ -44,7 +44,7 @@ On S3 and S3-compatible disks, delete mode uses `DeleteObjects` with up to 1,000
 
 With `disk` set to `null`, the trash lives on the same disk as the file, so a clean is a rename on a local disk and a server-side copy on S3. Set it to another disk, for example `'local'`, to keep the trash somewhere else. Files are then copied across and the original is removed.
 
-`orphan:restore` moves files back the same way. A copy gets a new "last modified" time, so a file restored on S3, or from a trash on another disk, is inside the grace period again. A rename on a local disk keeps the original time. [How a file moves](../guides/first-cleanup.md#how-a-file-moves) shows the whole path.
+`orphan:restore` moves files back the same way. A copy gets a new "last modified" time, so a file restored on S3, or from a trash on another disk, is inside the grace period again. A rename on a local disk keeps the original time. [How a file moves](../quick-start.md#how-a-file-moves) shows the whole path.
 
 Files keep their original path inside the trash:
 
