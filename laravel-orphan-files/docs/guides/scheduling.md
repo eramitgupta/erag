@@ -28,7 +28,7 @@ Schedule::command('orphan:clean --force')->weekly()->sundays()->at('03:00')->wit
 Schedule::command('orphan:purge-trash')->daily();
 ```
 
-Do the first cleanup by hand before you schedule anything. [Step by step: your first cleanup](./first-cleanup.md) walks through it.
+Do the first cleanup by hand before you schedule anything. The [Quick Start](../quick-start.md) walks through it.
 
 ## Start with the scan only
 
