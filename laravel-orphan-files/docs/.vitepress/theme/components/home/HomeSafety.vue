@@ -25,7 +25,7 @@ const guards = [
   {
     value: '30 days',
     title: 'Trash retention',
-    text: 'orphan:purge-trash only deletes trashed files older than 30 days. You choose when it runs.',
+    text: 'By default, orphan:purge-trash only deletes trashed files older than 30 days. You choose when it runs.',
   },
   {
     value: 'Read-only',
