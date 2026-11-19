@@ -201,4 +201,4 @@ A clean reads the database first, then lists storage twice: once to build the re
 
 Moves are done in batches of `chunk_size` files, and each batch dispatches an `OrphanFilesTrashed` (or `OrphanFilesDeleted`) event with the paths and bytes.
 
-To see where a file goes after a clean, and how it comes back, read [How a file moves](../guides/first-cleanup.md#how-a-file-moves).
+To see where a file goes after a clean, and how it comes back, read [How a file moves](../quick-start.md#how-a-file-moves).
