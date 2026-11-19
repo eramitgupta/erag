@@ -18,7 +18,9 @@ head:
 
 # Filters
 
-A filter can keep an orphan that would otherwise be cleaned. The built-in exclusions, size and extension rules and the grace period are filters too. Write your own for rules that depend on your app.
+A filter can keep an orphan that would otherwise be cleaned. The built-in grace period and the size and extension rules work the same way. Write your own for rules that depend on your app.
+
+Exclusions are different: `exclude_paths` and `exclude_patterns` skip a file before the scan counts it, so an excluded file is never an orphan and never shows up as Protected. A filter only sees files the scan counts.
 
 ## Example: keep files of archived tenants
 
@@ -52,7 +54,7 @@ class ArchivedTenantFilter implements FileFilter
 }
 ```
 
-Return a short reason to keep the file, or `null` if it may be cleaned. The reason shows up in `orphan:explain`, in the CSV export and as a "Protected" line in the scan.
+Return a short reason to keep the file, or `null` if it may be cleaned. The reason shows up in `orphan:explain` and in the CSV export. In the scan, the file counts as Protected, with a line named after the filter class, for example `Protected on [public] by archived_tenant`.
 
 Register it in the config:
 
