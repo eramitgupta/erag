@@ -97,4 +97,4 @@ It creates no migrations and no tables, and it doesn't scan or clean anything. T
 
 Laravel's own `php artisan vendor:publish --tag=orphan-files-config` creates the same file, but it skips the overwrite question and the next steps.
 
-Next: fill in `disks` and `sources` and follow [Step by step: your first cleanup](../guides/first-cleanup.md).
+Next: fill in `disks` and `sources` and follow the [Quick Start](../quick-start.md).
