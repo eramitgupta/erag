@@ -32,7 +32,17 @@ Before your first clean, to see how many orphans you have and whether the number
 
 ## Example
 
-The output on this page comes from a real test run on two disks: `s3` (a MinIO bucket) with the folder `uploads/orphan-test/`, and `public` with the folder `orphan-test/`. Each folder held 11 files: 4 used by a row, 4 that no row uses, 1 new upload whose row didn't exist yet, and 2 in an excluded folder. The grace period was set to 3 minutes for the test. The default is 24 hours. The [first cleanup guide](../guides/first-cleanup.md#the-test-setup) shows the full setup.
+The output on this page, and on the other command pages, comes from a real test run on two disks: `s3` (a MinIO bucket) with the folder `uploads/orphan-test/`, and `public` with the folder `orphan-test/`. A table called `orphan_test_items` has a `file_path` column with a plain path and a `gallery` column with JSON like `[{"path": "orphan-test/gallery/g1.jpg"}]`. Each folder held the same 11 files:
+
+| Files | Why they are there | What should happen |
+| --- | --- | --- |
+| `ref/a.jpg`, `ref/b.jpg` | A row's `file_path` points to them. | Kept |
+| `gallery/g1.jpg`, `gallery/g2.jpg` | A row's `gallery` lists them. | Kept |
+| `orphans/o1.jpg`, `orphans/o2.jpg`, `orphans/o3.pdf`, `orphans/nested/o4.jpg` | No row points to them. | Cleaned |
+| `new/n1.jpg` | Just uploaded, and its row isn't saved yet. | Kept for now, by the grace period |
+| `excluded/e1.jpg`, `excluded/e2.jpg` | They sit in an excluded folder. | Skipped completely |
+
+The files on `public` were two days old and the files on `s3` a few minutes old. The grace period was set to 3 minutes so the test didn't have to wait a day. The default is 24 hours; keep it on a real app.
 
 ```bash
 php artisan orphan:scan
