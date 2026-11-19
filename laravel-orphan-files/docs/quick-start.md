@@ -22,6 +22,8 @@ This walks through a typical first setup: user avatars on the `public` disk and 
 
 If you haven't installed the package yet, run `composer require erag/laravel-orphan-files` and then `php artisan orphan:install`. The [installation page](./installation.md) explains both.
 
+For the same flow with real output and a "what to check" list at every step, read [Step by step: your first cleanup](./guides/first-cleanup.md).
+
 ## 1. Tell it where files live
 
 In `config/orphan-files.php`, list the disks and the folders that hold uploads:
@@ -97,4 +99,4 @@ The files move to `.orphan-trash/public/{today's date}/` with their original pat
 php artisan orphan:restore avatars/jane.jpg
 ```
 
-After 30 days, `orphan:purge-trash` deletes the trash for good. See [Scheduling](./guides/scheduling.md) to run all of this weekly.
+Without `--disk`, `orphan:restore` looks in the trash of every configured disk. Trashed files stay until `orphan:purge-trash` deletes the ones older than 30 days for good. See [Scheduling](./guides/scheduling.md) to run all of this weekly, and [How a file moves](./guides/first-cleanup.md#how-a-file-moves) for the full path of a file from storage to the trash and back.
